@@ -62,7 +62,7 @@ export default function PartyStats({ politicians, selectedParty, onPartySelect }
       .map(s => {
         const shortName = s.partyName.split('(')[0].trim()
         const entry = {
-          name: shortName.length > 14 ? shortName.slice(0, 12) + '...' : shortName,
+          name: shortName,
           fullName: shortName
         }
         INCIDENT_TYPES.forEach(t => {
@@ -112,16 +112,16 @@ export default function PartyStats({ politicians, selectedParty, onPartySelect }
 
         {/* Chart */}
         {chartData.length > 0 ? (
-          <ResponsiveContainer width="100%" height={400}>
-            <BarChart data={chartData} margin={{ bottom: 20 }}>
+          <ResponsiveContainer width="100%" height={500}>
+            <BarChart data={chartData} margin={{ bottom: 140, left: 0, right: 0, top: 20 }}>
               <CartesianGrid strokeDasharray="3 3" />
               <XAxis
                 dataKey="name"
-                angle={-35}
+                angle={-45}
                 textAnchor="end"
-                height={120}
+                height={140}
                 interval={0}
-                tick={{ fontSize: 11 }}
+                tick={{ fontSize: 12, fill: '#374151' }}
               />
               <YAxis allowDecimals={false} />
               <Tooltip
