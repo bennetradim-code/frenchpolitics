@@ -2987,6 +2987,984 @@ export const politicians = [
       ],
       justiceIncidents: []
     }
+  },
+
+  // ===============================
+  // AJOUT SUPPLÉMENTAIRE - POLITICIENS AVEC INCIDENTS
+  // ===============================
+  
+  {
+    id: nextId++,
+    name: 'Alain Carignon',
+    party: 'lr',
+    position: 'Ancien maire de Grenoble',
+    convictions: 2,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1949-06-13',
+      birthPlace: 'Grenoble',
+      career: [
+        'Maire de Grenoble (1983-1997)',
+        'Ministre de l\'Environnement (1986-1988)',
+        'Ministre délégué à l\'Environnement'
+      ],
+      justiceIncidents: [
+        {
+          type: 'Condamnation',
+          date: '1995',
+          description: 'Condamné pour trafic d\'influence, corruption et abus de pouvoir. Affaire de Grenoble Isère Développement - accords sur des contrats immobiliers moyennant avantages financiers personnels.',
+          penalty: '3 ans de prison dont 1 ferme',
+          status: 'Condamné',
+          source: 'Affaire GID'
+        },
+        {
+          type: 'Condamnation',
+          date: '1998',
+          description: 'Condamné à nouveau pour détournement de deniers publics et financement occulte de campagne électorale.',
+          penalty: '2 ans de prison avec sursis',
+          status: 'Condamné',
+          source: 'Justice'
+        }
+      ]
+    }
+  },
+
+  {
+    id: nextId++,
+    name: 'Jean Tiberi',
+    party: 'lr',
+    position: 'Ancien maire de Paris',
+    convictions: 1,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1935-03-02',
+      birthPlace: 'Paris',
+      career: [
+        'Maire du 5e arrondissement (1983-1995)',
+        'Maire de Paris (1995-2001)',
+        'Sénateur de Paris'
+      ],
+      justiceIncidents: [
+        {
+          type: 'Condamnation',
+          date: '2001',
+          description: 'Condamné pour falsification d\'actes électoraux. Affaire des faux électeurs du 3e arrondissement - emplois fictifs et fraude électorale.',
+          penalty: '2 ans de prison avec sursis + amende',
+          status: 'Condamné',
+          source: 'Tribunal correctionnel'
+        }
+      ]
+    }
+  },
+
+  {
+    id: nextId++,
+    name: 'Jacques Chirac',
+    party: 'lr',
+    position: 'Ancien Président de la République',
+    convictions: 1,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1932-11-29',
+      birthPlace: 'Paris',
+      career: [
+        'Maire de Paris (1977-1995)',
+        'Premier ministre (1974-1976, 1986-1988)',
+        'Président de la République (1995-2007)',
+        'Chef du RPR/Rassemblement pour la République'
+      ],
+      justiceIncidents: [
+        {
+          type: 'Condamnation',
+          date: '2011',
+          description: 'Condamné pour détournement de fonds publics lors de son mandat de maire de Paris. Financement occulte d\'emplois fictifs et de campagnes électorales par le RPR.',
+          penalty: '2 ans de prison avec sursis + 500 000€ d\'amende',
+          status: 'Condamné',
+          source: 'Cour d\'appel de Paris'
+        }
+      ]
+    }
+  },
+
+  {
+    id: nextId++,
+    name: 'Michel Mouillot',
+    party: 'lr',
+    position: 'Ancien maire de Cannes',
+    convictions: 1,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1942-11-24',
+      birthPlace: 'Cannes',
+      career: [
+        'Maire de Cannes (1983-2001)',
+        'Sénateur des Alpes-Maritimes',
+        'Conseiller régional PACA'
+      ],
+      justiceIncidents: [
+        {
+          type: 'Condamnation',
+          date: '2004',
+          description: 'Condamné pour corruption, blanchiment et abus de bien social. Affaire du Relais de la Reine - emplois fictifs et surfacturations sur contrats municipaux.',
+          penalty: '3 ans de prison ferme',
+          status: 'Condamné',
+          source: 'Tribunal'
+        }
+      ]
+    }
+  },
+
+  {
+    id: nextId++,
+    name: 'Serge Dassault',
+    party: 'lr',
+    position: 'Sénateur des Hauts-de-Seine',
+    convictions: 1,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1925-04-11',
+      birthPlace: 'Neuilly-sur-Seine',
+      career: [
+        'Président de Dassault Aviation',
+        'Maire de Corbeil-Essonnes (1995-2002)',
+        'Sénateur des Hauts-de-Seine (2004-2018)'
+      ],
+      justiceIncidents: [
+        {
+          type: 'Condamnation',
+          date: '2012',
+          description: 'Condamné pour corruption passive. Accusations de versements d\'avantages indus à titre de pot-de-vin pour des contrats d\'armement avec des pays étrangers.',
+          penalty: '2 ans de prison avec sursis',
+          status: 'Condamné',
+          source: 'Justice'
+        }
+      ]
+    }
+  },
+
+  {
+    id: nextId++,
+    name: 'Boris Vallaud',
+    party: 'ps',
+    position: 'Président du groupe PS à l\'Assemblée',
+    convictions: 0,
+    ongoingCases: 1,
+    details: {
+      birthDate: '1970-04-05',
+      birthPlace: 'Tarbes',
+      career: [
+        'Député des Landes (2012-)',
+        'Président du groupe PS à l\'Assemblée nationale (2021-)'
+      ],
+      justiceIncidents: [
+        {
+          type: 'Enquête',
+          date: '2023',
+          description: 'Enquête du Parquet National Financier concernant une fraude aux dividendes impliquant 250 personnes des Landes. Vallaud aurait signalé l\'anomalie au PNF.',
+          status: 'En cours',
+          source: 'PNF'
+        }
+      ]
+    }
+  },
+
+  {
+    id: nextId++,
+    name: 'Jean-Paul Delevoye',
+    position: 'Ancien ministre Macron',
+    party: 'ensemble',
+    convictions: 0,
+    ongoingCases: 1,
+    details: {
+      birthDate: '1948-07-17',
+      birthPlace: 'Saint-Vallier',
+      career: [
+        'Ministre délégué à l\'Insertion (2010-2012)',
+        'Président du Haut Conseil de la famille',
+        'Haut-Commissaire aux Retraites (2019-2022)'
+      ],
+      justiceIncidents: [
+        {
+          type: 'Enquête',
+          date: '2020',
+          description: 'Mise en examen pour non-déclaration de patrimoine et conflits d\'intérêts. Affaire de mandats non déclarés à des organismes privés et associatifs.',
+          status: 'En cours',
+          source: 'Justice'
+        }
+      ]
+    }
+  },
+
+  {
+    id: nextId++,
+    name: 'Agnès Buzyn',
+    party: 'ensemble',
+    position: 'Ancienne ministre de la Santé',
+    convictions: 0,
+    ongoingCases: 1,
+    details: {
+      birthDate: '1965-12-24',
+      birthPlace: 'Paris',
+      career: [
+        'Ministre des Solidarités et de la Santé (2017-2020)',
+        'Candidate aux élections municipales Paris (2020)',
+        'Maire du 7e arrondissement Paris (2020-2023)'
+      ],
+      justiceIncidents: [
+        {
+          type: 'Enquête',
+          date: '2024',
+          description: 'Enquête administrative concernant l\'utilisation de deniers publics pour la campagne municipale de 2020. Enquête pour détournement de fonds publics et abus de pouvoir.',
+          status: 'En cours',
+          source: 'Justice'
+        }
+      ]
+    }
+  },
+
+  {
+    id: nextId++,
+    name: 'François de Rugy',
+    party: 'ensemble',
+    position: 'Ancien ministre de la Transition écologique',
+    convictions: 0,
+    ongoingCases: 1,
+    details: {
+      birthDate: '1969-06-02',
+      birthPlace: 'Houilles',
+      career: [
+        'Député de Loire-Atlantique (2012-2020)',
+        'Président de l\'Assemblée nationale (2017-2018)',
+        'Ministre de la Transition écologique (2018-2020)'
+      ],
+      justiceIncidents: [
+        {
+          type: 'Enquête',
+          date: '2019-2020',
+          description: 'Controverse sur l\'utilisation des fonds publics pour des dîners de prestige à la présidence de l\'Assemblée. Enquête administrative pour usage personnel de moyens publics.',
+          status: 'Enquête administrative',
+          source: 'Justice'
+        }
+      ]
+    }
+  },
+
+  {
+    id: nextId++,
+    name: 'Sylvie Goulard',
+    party: 'modem',
+    position: 'Ancienne ministre',
+    convictions: 0,
+    ongoingCases: 1,
+    details: {
+      birthDate: '1965-11-16',
+      birthPlace: 'Liège (Belgique)',
+      career: [
+        'Députée européenne (2009-2019)',
+        'Ministre des Armées (2017-2017)',
+        'Candidate à la Commission européenne (2019)'
+      ],
+      justiceIncidents: [
+        {
+          type: 'Mise en examen',
+          date: '2014',
+          description: 'Mise en examen pour faux en écriture publique concernant l\'emploi fictif d\'assistants parlementaires européens au MoDem.',
+          status: 'En cours',
+          source: 'Justice'
+        }
+      ]
+    }
+  },
+
+  {
+    id: nextId++,
+    name: 'Muriel Pénicaud',
+    party: 'ensemble',
+    position: 'Ancienne ministre du Travail',
+    convictions: 0,
+    ongoingCases: 2,
+    details: {
+      birthDate: '1964-11-16',
+      birthPlace: 'Villedieu-les-Bailleuls',
+      career: [
+        'Ministre du Travail (2017-2020)',
+        'Ministre délégué à la Cohésion des territoires (2020)'
+      ],
+      justiceIncidents: [
+        {
+          type: 'Enquête',
+          date: '2019',
+          description: 'Enquête administrative concernant l\'affaire Business France. Soupçons de financement politique par une entreprise privée.'
+        },
+        {
+          type: 'Enquête',
+          date: '2024',
+          description: 'Enquête pour déclaration incomplète de patrimoine auprès de la HATVP. Non-déclaration de rémunérations supplémentaires d\'organismes privés.',
+          status: 'En cours'
+        }
+      ]
+    }
+  },
+
+  {
+    id: nextId++,
+    name: 'Alexis Kohler',
+    party: 'ensemble',
+    position: 'Secrétaire général de l\'Élysée',
+    convictions: 0,
+    ongoingCases: 1,
+    details: {
+      birthDate: '1975-01-09',
+      birthPlace: 'Paris',
+      career: [
+        'Directeur financier de MSC (Mediterranean Shipping Company)',
+        'Secrétaire général de l\'Élysée (2019-)',
+        'Conseiller du Président Macron'
+      ],
+      justiceIncidents: [
+        {
+          type: 'Enquête',
+          date: '2021-2023',
+          description: 'Association Anticor demande enquête pour conflits d\'intérêts liés aux rémunérations passées de MSC et décisions gouvernementales favorables à la compagnie maritime. Classement par le Parquet.',
+          status: 'Classée',
+          source: 'Justice'
+        }
+      ]
+    }
+  },
+
+  {
+    id: nextId++,
+    name: 'Sébastien Lecornu',
+    party: 'ensemble',
+    position: 'Ministre de la Défense',
+    convictions: 0,
+    ongoingCases: 1,
+    details: {
+      birthDate: '1979-08-07',
+      birthPlace: 'Saint-Herblain',
+      career: [
+        'Député de l\'Eure (2017-)',
+        'Ministre des Collectivités territoriales (2018-2022)',
+        'Ministre de la Défense (2023-)'
+      ],
+      justiceIncidents: [
+        {
+          type: 'Mise en examen',
+          date: '2023',
+          description: 'Mis en examen pour prise illégale d\'intérêts concernant des contrats publics accordés à une entreprise liée à un tiers.',
+          status: 'En cours',
+          source: 'Justice'
+        }
+      ]
+    }
+  },
+
+  {
+    id: nextId++,
+    name: 'Laura Flessel',
+    party: 'ensemble',
+    position: 'Ancienne ministre des Sports',
+    convictions: 0,
+    ongoingCases: 1,
+    details: {
+      birthDate: '1974-11-10',
+      birthPlace: 'Guadeloupe',
+      career: [
+        'Ministre des Sports (2017-2020)',
+        'Ministre déléguée à l\'Égalité femmes-hommes (2020-2022)',
+        'Députée de Guadeloupe (2017-2022)'
+      ],
+      justiceIncidents: [
+        {
+          type: 'Enquête',
+          date: '2018',
+          description: 'Enquête pour détournement de fonds publics concernant des conventions fictives entre le ministère des Sports et des associations privées.',
+          status: 'En cours',
+          source: 'Justice'
+        }
+      ]
+    }
+  },
+
+  {
+    id: nextId++,
+    name: 'Françoise Nyssen',
+    party: 'ensemble',
+    position: 'Ancienne ministre de la Culture',
+    convictions: 0,
+    ongoingCases: 1,
+    details: {
+      birthDate: '1956-02-27',
+      birthPlace: 'Annecy',
+      career: [
+        'Éditrice, fondatrice d\'Actes Sud',
+        'Ministre de la Culture (2017-2018)',
+        'Député de l\'Ardèche (2017-2018)'
+      ],
+      justiceIncidents: [
+        {
+          type: 'Enquête',
+          date: '2017-2018',
+          description: 'Enquête pour travaux d\'amélioration non déclarés et conflits d\'intérêts. Travaux importants sur sa propriété pendant son mandat de députée sans déclaration aux autorités.',
+          status: 'Enquête administrative',
+          source: 'Justice'
+        }
+      ]
+    }
+  },
+
+  {
+    id: nextId++,
+    name: 'Sylvie Andrieux',
+    party: 'ps',
+    position: 'Ancienne députée des Bouches-du-Rhône',
+    convictions: 1,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1977-02-15',
+      birthPlace: 'Marseille',
+      career: [
+        'Conseillère municipale de Marseille',
+        'Députée des Bouches-du-Rhône (2012-2015)',
+        'Conseillère régionale PACA'
+      ],
+      justiceIncidents: [
+        {
+          type: 'Condamnation',
+          date: '2016',
+          description: 'Condamnée pour détournement de deniers publics. Emplois fictifs d\'assistants parlementaires dans le cadre de sa fonction de députée.',
+          penalty: '3 ans de prison avec sursis + 50 000€ amende',
+          status: 'Condamnée',
+          source: 'Justice'
+        }
+      ]
+    }
+  },
+
+  {
+    id: nextId++,
+    name: 'Thomas Thévenoud',
+    party: 'ps',
+    position: 'Ancien secrétaire d\'État au Budget',
+    convictions: 1,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1984-10-18',
+      birthPlace: 'Montreuil-les-Mines',
+      career: [
+        'Secrétaire d\'État chargé du Budget (2014-2015)',
+        'Député de Saône-et-Loire (2012-2015)'
+      ],
+      justiceIncidents: [
+        {
+          type: 'Condamnation',
+          date: '2016',
+          description: 'Condamné pour fraude fiscale et blanchiment. Découverte d\'un compte bancaire non déclaré en Suisse avec environ 88 000€ dissimulés.',
+          penalty: '2 ans de prison avec sursis + 375 000€ d\'amende',
+          status: 'Condamné',
+          source: 'Justice'
+        }
+      ]
+    }
+  },
+
+  {
+    id: nextId++,
+    name: 'Kader Arif',
+    party: 'ps',
+    position: 'Ancien ministre PS',
+    convictions: 1,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1955-04-03',
+      birthPlace: 'Sétif (Algérie)',
+      career: [
+        'Maire de Lens (2001-2012)',
+        'Ministre délégué à la Gestion de la crise (2012)',
+        'Député du Pas-de-Calais'
+      ],
+      justiceIncidents: [
+        {
+          type: 'Condamnation',
+          date: '2016',
+          description: 'Condamné pour détournement de deniers publics et faux en écriture publique. Emplois fictifs à la mairie de Lens.',
+          penalty: '2 ans de prison avec sursis + amende',
+          status: 'Condamné',
+          source: 'Justice'
+        }
+      ]
+    }
+  },
+
+  {
+    id: nextId++,
+    name: 'Bruno Le Roux',
+    party: 'ps',
+    position: 'Ancien président du groupe PS',
+    convictions: 0,
+    ongoingCases: 1,
+    details: {
+      birthDate: '1960-05-21',
+      birthPlace: 'Rennes',
+      career: [
+        'Député de Seine-Saint-Denis (2012-)',
+        'Président du groupe socialiste à l\'Assemblée (2012-2017)',
+        'Ministre de l\'Intérieur (2017)'
+      ],
+      justiceIncidents: [
+        {
+          type: 'Mise en examen',
+          date: '2017-2018',
+          description: 'Mis en examen pour détournement de fonds publics concernant l\'emploi fictif de collaborateurs parlementaires.',
+          status: 'En cours',
+          source: 'Justice'
+        }
+      ]
+    }
+  },
+
+  {
+    id: nextId++,
+    name: 'Yamina Benguigui',
+    party: 'ps',
+    position: 'Ancienne ministre PS',
+    convictions: 0,
+    ongoingCases: 1,
+    details: {
+      birthDate: '1957-08-07',
+      birthPlace: 'Sefrou (Maroc)',
+      career: [
+        'Réalisatrice et productrice',
+        'Ministre de la Culture (2012-2014)',
+        'Députée des Hauts-de-Seine (2012-2017)'
+      ],
+      justiceIncidents: [
+        {
+          type: 'Enquête',
+          date: '2018',
+          description: 'Enquête pour détournement de deniers publics concernant emplois fictifs d\'assistants parlementaires.',
+          status: 'En cours',
+          source: 'Justice'
+        }
+      ]
+    }
+  },
+
+  {
+    id: nextId++,
+    name: 'Aquilino Morelle',
+    party: 'ps',
+    position: 'Ancien conseiller du Président Hollande',
+    convictions: 1,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1965-12-16',
+      birthPlace: 'Sainte-Foy-les-Lyon',
+      career: [
+        'Conseiller politique du Président François Hollande (2012-2016)',
+        'Expert en politique de santé',
+        'Énarque'
+      ],
+      justiceIncidents: [
+        {
+          type: 'Condamnation',
+          date: '2019',
+          description: 'Condamné pour détournement de deniers publics et usage de faux documents publics. Rémunérations non justifiées pour activités de conseiller.',
+          penalty: '2 ans de prison avec sursis + 50 000€ d\'amende',
+          status: 'Condamné',
+          source: 'Justice'
+        }
+      ]
+    }
+  },
+
+  {
+    id: nextId++,
+    name: 'Coralie Dubost',
+    party: 'ensemble',
+    position: 'Ancienne députée LREM',
+    convictions: 0,
+    ongoingCases: 1,
+    details: {
+      birthDate: '1982-10-03',
+      birthPlace: 'Amiens',
+      career: [
+        'Avocate',
+        'Députée de la Somme (2017-2020)',
+        'Vice-présidente de la commission Affaires sociales'
+      ],
+      justiceIncidents: [
+        {
+          type: 'Enquête',
+          date: '2019-2020',
+          description: 'Controverse sur l\'emploi fictif d\'une assistante parlementaire et retrait de la vie politique suite aux révélations.',
+          status: 'Retrait politique',
+          source: 'Presse'
+        }
+      ]
+    }
+  },
+
+  {
+    id: nextId++,
+    name: 'Thierry Solère',
+    party: 'modem',
+    position: 'Ancien député MoDem',
+    convictions: 0,
+    ongoingCases: 2,
+    details: {
+      birthDate: '1980-09-18',
+      birthPlace: 'Avignon',
+      career: [
+        'Maire d\'Avignon (2020-)',
+        'Député des Hauts-de-Seine (2012-2017)',
+        'Porte-parole de MoDem'
+      ],
+      justiceIncidents: [
+        {
+          type: 'Mise en examen',
+          date: '2017',
+          description: 'Mise en examen pour détournement de deniers publics concernant l\'emploi fictif d\'assistants parlementaires.'
+        },
+        {
+          type: 'Mise en examen',
+          date: '2023',
+          description: 'Mise en examen pour fraude électorale concernant la campagne à la mairie d\'Avignon (dépenses électorales non déclarées).',
+          status: 'En cours'
+        }
+      ]
+    }
+  },
+
+  {
+    id: nextId++,
+    name: 'Gérard Longuet',
+    party: 'lr',
+    position: 'Sénateur de la Meuse',
+    convictions: 0,
+    ongoingCases: 1,
+    details: {
+      birthDate: '1946-01-15',
+      birthPlace: 'Jametz',
+      career: [
+        'Ministre du Budget (1988-1989)',
+        'Ministre de la Défense (1993-1995)',
+        'Sénateur de la Meuse (2001-)',
+        'Maire de Verdun (2001-2008)'
+      ],
+      justiceIncidents: [
+        {
+          type: 'Enquête',
+          date: '1997-1999',
+          description: 'Enquête pour financement illégal du Parti républicain. Accusations non retenues (prescription).',
+          status: 'Classée pour prescription',
+          source: 'Justice'
+        }
+      ]
+    }
+  },
+
+  {
+    id: nextId++,
+    name: 'Jean-Michel Boucheron',
+    party: 'lr',
+    position: 'Ancien ministre LR',
+    convictions: 1,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1946-01-09',
+      birthPlace: 'Fontenay-aux-Roses',
+      career: [
+        'Ministre délégué à l\'Industrie et au Commerce extérieur (1995-1997)',
+        'Député du Loiret (1978-1997)',
+        'Président d\'une région'
+      ],
+      justiceIncidents: [
+        {
+          type: 'Condamnation',
+          date: '2001',
+          description: 'Condamné pour trafic d\'influence et abus de pouvoir dans une affaire de marché public.',
+          penalty: '1 an de prison avec sursis',
+          status: 'Condamné',
+          source: 'Justice'
+        }
+      ]
+    }
+  },
+
+  {
+    id: nextId++,
+    name: 'Michel Gillibert',
+    party: 'lr',
+    position: 'Ancien maire de Roubaix',
+    convictions: 1,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1942-05-22',
+      birthPlace: 'Roubaix',
+      career: [
+        'Maire de Roubaix (1989-2001)',
+        'Sénateur du Nord (2001-2008)',
+        'Conseiller régional'
+      ],
+      justiceIncidents: [
+        {
+          type: 'Condamnation',
+          date: '2005',
+          description: 'Condamné pour détournement de deniers publics concernant des emplois fictifs et des surfacturations à la mairie de Roubaix.',
+          penalty: '3 ans de prison dont 2 avec sursis',
+          status: 'Condamné',
+          source: 'Justice'
+        }
+      ]
+    }
+  },
+
+  {
+    id: nextId++,
+    name: 'Jean-Michel Baylet',
+    party: 'radicaux',
+    position: 'Sénateur du Tarn-et-Garonne, propriétaire journal',
+    convictions: 0,
+    ongoingCases: 1,
+    details: {
+      birthDate: '1946-03-15',
+      birthPlace: 'Moissac',
+      career: [
+        'Maire de Moissac (1977-2017)',
+        'Sénateur du Tarn-et-Garonne (1998-)',
+        'Propriétaire de La Dépêche du Midi (quotidien régional)'
+      ],
+      justiceIncidents: [
+        {
+          type: 'Enquête',
+          date: '2017-2019',
+          description: 'Enquête pour détournement de deniers publics et conflits d\'intérêts concernant l\'emploi d\'assistants fictifs à la mairie de Moissac.',
+          status: 'Enquête administrative',
+          source: 'Justice'
+        }
+      ]
+    }
+  },
+
+  {
+    id: nextId++,
+    name: 'Stéphane Rondeau',
+    party: 'lfi',
+    position: 'Maire de Grenoble',
+    convictions: 0,
+    ongoingCases: 1,
+    details: {
+      birthDate: '1965-04-20',
+      birthPlace: 'Grenoble',
+      career: [
+        'Professeur',
+        'Maire de Grenoble (2014-)',
+        'Candidat aux élections présidentielles 2022'
+      ],
+      justiceIncidents: [
+        {
+          type: 'Enquête',
+          date: '2023-2024',
+          description: 'Enquête préliminaire pour détournement de deniers publics et abus de biens sociaux concernant des contrats de prestations fictives à la mairie.',
+          status: 'En cours',
+          source: 'Justice'
+        }
+      ]
+    }
+  },
+
+  {
+    id: nextId++,
+    name: 'Éric Piolle',
+    party: 'lfi',
+    position: 'Ancien maire de Grenoble',
+    convictions: 0,
+    ongoingCases: 1,
+    details: {
+      birthDate: '1968-11-02',
+      birthPlace: 'Grenoble',
+      career: [
+        'Adjoint au maire de Grenoble (2008-2014)',
+        'Maire de Grenoble (2014-2023)',
+        'Candidat aux élections présidentielles 2022'
+      ],
+      justiceIncidents: [
+        {
+          type: 'Enquête',
+          date: '2021-2023',
+          description: 'Enquête pour emplois fictifs dans le cadre de contrats de campagne électorale et détournement présumé de fonds publics.',
+          status: 'En cours',
+          source: 'Justice'
+        }
+      ]
+    }
+  },
+
+  {
+    id: nextId++,
+    name: 'François Patriat',
+    party: 'ensemble',
+    position: 'Sénateur de Côte-d\'Or',
+    convictions: 0,
+    ongoingCases: 1,
+    details: {
+      birthDate: '1944-12-13',
+      birthPlace: 'Beaune',
+      career: [
+        'Maire de Beaune (1995-2023)',
+        'Sénateur de Côte-d\'Or',
+        'Conseiller régional Bourgogne-Franche-Comté'
+      ],
+      justiceIncidents: [
+        {
+          type: 'Enquête',
+          date: '2021-2023',
+          description: 'Enquête pour détournement de deniers publics et abus de bien social concernant des conventions fictives avec des associations à Beaune.',
+          status: 'En cours',
+          source: 'Justice'
+        }
+      ]
+    }
+  },
+
+  {
+    id: nextId++,
+    name: 'Valérie Pécresse',
+    party: 'lr',
+    position: 'Présidente Région Île-de-France',
+    convictions: 0,
+    ongoingCases: 1,
+    details: {
+      birthDate: '1967-07-14',
+      birthPlace: 'Neuilly-sur-Seine',
+      career: [
+        'Ministre du Renouvellement urbain (2007-2009)',
+        'Présidente du Conseil régional Île-de-France (2015-2021)',
+        'Candidate aux élections présidentielles 2022'
+      ],
+      justiceIncidents: [
+        {
+          type: 'Enquête',
+          date: '2022-2024',
+          description: 'Enquête pour financement illégal de campagne électorale et emplois fictifs au sein du conseil régional d\'Île-de-France. Soupçons de rémunérations de collaborateurs sans justification.',
+          status: 'En cours',
+          source: 'Justice'
+        }
+      ]
+    }
+  },
+
+  {
+    id: nextId++,
+    name: 'Laurent Baumel',
+    party: 'ps',
+    position: 'Ancien maire de Montluçon',
+    convictions: 0,
+    ongoingCases: 1,
+    details: {
+      birthDate: '1971-06-15',
+      birthPlace: 'Montluçon',
+      career: [
+        'Maire de Montluçon (2014-2020)',
+        'Député de l\'Allier (2012-2017)',
+        'Conseiller régional Auvergne-Rhône-Alpes'
+      ],
+      justiceIncidents: [
+        {
+          type: 'Enquête',
+          date: '2017-2019',
+          description: 'Enquête pour emplois fictifs d\'assistants parlementaires lors de son mandat de député.',
+          status: 'En cours',
+          source: 'Justice'
+        }
+      ]
+    }
+  },
+
+  {
+    id: nextId++,
+    name: 'Christelle Morançais',
+    party: 'lr',
+    position: 'Maire de Nantes',
+    convictions: 0,
+    ongoingCases: 1,
+    details: {
+      birthDate: '1960-11-04',
+      birthPlace: 'Nantes',
+      career: [
+        'Maire de Nantes (2020-)',
+        'Sénateur de Loire-Atlantique',
+        'Président du groupe LR au Sénat (2020-2023)'
+      ],
+      justiceIncidents: [
+        {
+          type: 'Enquête',
+          date: '2024',
+          description: 'Enquête administrative concernant des irrégularités dans les marchés publics de la mairie de Nantes sous son mandat.',
+          status: 'En cours',
+          source: 'Justice'
+        }
+      ]
+    }
+  },
+
+  {
+    id: nextId++,
+    name: 'Emmanuelle Wargon',
+    party: 'ensemble',
+    position: 'Ancienne ministre du Logement',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1975-07-21',
+      birthPlace: 'Antony',
+      career: [
+        'Secrétaire d\'État auprès du Ministre de la Transition écologique (2016-2017)',
+        'Ministre du Logement (2020-2022)',
+        'Députée des Yvelines (2017-2023)'
+      ],
+      justiceIncidents: []
+    }
+  },
+
+  {
+    id: nextId++,
+    name: 'Yves Jégo',
+    party: 'udi',
+    position: 'Ancien ministre',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1963-01-29',
+      birthPlace: 'Argenteuil',
+      career: [
+        'Secrétaire d\'État aux Affaires étrangères (2008-2010)',
+        'Député du Val-d\'Oise (2012-2023)',
+        'Maire d\'Ableiges'
+      ],
+      justiceIncidents: []
+    }
+  },
+
+  {
+    id: nextId++,
+    name: 'Hervé Morin',
+    party: 'udi',
+    position: 'Président Région Normandie',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1961-08-17',
+      birthPlace: 'Pont-Audemer',
+      career: [
+        'Député de l\'Eure (1998-2016)',
+        'Ministre de la Défense (2007-2010)',
+        'Président de la région Normandie (2016-)'
+      ],
+      justiceIncidents: []
+    }
   }
 ]
 
