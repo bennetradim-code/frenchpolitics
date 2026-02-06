@@ -86,9 +86,6 @@ export default function PartyCard({ party }) {
                 </div>
               )}
             </div>
-            <p className="text-xs text-gray-600 mt-2">
-              {stats.percentageWithIncidents}% des politiciens du parti avec incidents
-            </p>
           </div>
         ) : (
           <div className="border-t pt-4">
