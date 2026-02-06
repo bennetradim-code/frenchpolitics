@@ -311,9 +311,29 @@ export const politicians = [
         'Chef de l\'UMP puis LR'
       ],
       justiceIncidents: [
-        { type: 'Condamnation', date: '2021', description: 'Condamné à 3 ans de prison (dont 2 avec sursis) pour corruption et trafic d\'influence' },
-        { type: 'Condamnation', date: '2021', description: 'Condamné pour financement illégal de sa campagne de 2012' },
-        { type: 'Enquête/Mise en examen', date: '2023', description: 'Affaire des contrats libyens, mise en examen pour blanchiment de fraude' }
+        {
+          type: 'Condamnation',
+          date: '2021',
+          description: 'Condamné pour corruption et trafic d\'influence. Affaire de l\'écoute entre Nicolas Sarkozy et son avocat Thierry Herzog.',
+          penalty: '3 ans de prison (2 avec sursis)',
+          status: 'Condamné',
+          source: 'Cour de Justice de la République'
+        },
+        {
+          type: 'Condamnation',
+          date: '2021',
+          description: 'Condamné pour financement illégal de sa campagne présidentielle de 2012 (affaire Bygmalion). Dépassement massif des plafonds légaux de dépenses.',
+          penalty: '1 an de prison ferme, 10 ans d\'inéligibilité',
+          status: 'Condamné',
+          source: 'Tribunal correctionnel'
+        },
+        {
+          type: 'Mise en examen',
+          date: '2023',
+          description: 'Affaire des contrats libyens. Mise en examen pour blanchiment de fraude concernant les financements reçus du régime libyen de Kadhafi.',
+          status: 'En cours',
+          source: 'Justice française'
+        }
       ]
     }
   },
@@ -334,7 +354,14 @@ export const politicians = [
         'Candidat présidentiel 2017'
       ],
       justiceIncidents: [
-        { type: 'Condamnation', date: '2020', description: 'Condamné pour détournement de fonds publics: emplois fictifs de son épouse à l\'Assemblée' }
+        {
+          type: 'Condamnation',
+          date: '2020',
+          description: 'Condamné pour détournement de fonds publics. Affaire des emplois fictifs: son épouse Penelope Fillon aurait perçu plus de 900 000€ pour un travail inexistant en tant que assistante parlementaire.',
+          penalty: '5 ans d\'inéligibilité, 375 000€ d\'amende',
+          status: 'Condamné en appel',
+          source: 'Tribunal correctionnel de Paris'
+        }
       ]
     }
   },
@@ -603,7 +630,14 @@ export const politicians = [
         'Ministre du Budget (2012-2013)'
       ],
       justiceIncidents: [
-        { type: 'Condamnation', date: '2018', description: 'Condamné à 2 ans de prison ferme pour fraude fiscale et blanchiment (compte bancaire non déclaré en Suisse)' }
+        {
+          type: 'Condamnation',
+          date: '2018',
+          description: 'Condamné à 2 ans de prison ferme pour fraude fiscale et blanchiment. Avait dissimulé un compte bancaire non déclaré en Suisse avec 600 000€.',
+          penalty: '2 ans de prison ferme, 250 000€ d\'amende',
+          status: 'Condamné',
+          source: 'Tribunal correctionnel'
+        }
       ]
     }
   },
