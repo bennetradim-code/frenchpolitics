@@ -153,19 +153,39 @@ export default function PoliticianDetail() {
                   {/* Description */}
                   <p className="text-gray-700 text-sm leading-relaxed mb-3">{incident.description}</p>
 
-                  {/* Penalty and Source if available */}
-                  {(incident.penalty || incident.source) && (
-                    <div className="pt-3 border-t border-gray-200 flex flex-wrap gap-4">
+                  {/* Penalty and Sources if available */}
+                  {(incident.penalty || incident.source || incident.sources) && (
+                    <div className="pt-3 border-t border-gray-200 space-y-3">
                       {incident.penalty && (
                         <div className="flex items-center gap-2">
                           <span className="text-xs font-semibold text-gray-600">Peine:</span>
                           <span className="text-sm text-gray-700">{incident.penalty}</span>
                         </div>
                       )}
-                      {incident.source && (
-                        <div className="flex items-center gap-2">
-                          <span className="text-xs font-semibold text-gray-600">Source:</span>
-                          <span className="text-sm text-gray-700">{incident.source}</span>
+                      
+                      {/* Support both old format (source) and new format (sources array) */}
+                      {(incident.source || incident.sources) && (
+                        <div className="flex flex-col gap-2">
+                          <span className="text-xs font-semibold text-gray-600">Sources:</span>
+                          {incident.sources && incident.sources.length > 0 ? (
+                            <div className="flex flex-wrap gap-2">
+                              {incident.sources.map((src, sidx) => (
+                                <a
+                                  key={sidx}
+                                  href={src.url}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="inline-flex items-center gap-1 px-2.5 py-1 rounded text-xs bg-blue-50 text-blue-700 hover:bg-blue-100 transition-colors"
+                                  title={src.title}
+                                >
+                                  🔗
+                                  <span className="font-medium">{src.title}</span>
+                                </a>
+                              ))}
+                            </div>
+                          ) : incident.source ? (
+                            <span className="text-sm text-gray-700">{incident.source}</span>
+                          ) : null}
                         </div>
                       )}
                     </div>

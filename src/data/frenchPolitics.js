@@ -546,19 +546,52 @@ export const politicians = [
     id: nextId++,
     name: 'Rachida Dati',
     party: 'lr',
-    position: 'Ministre de la Culture',
+    position: 'Ministre de la Culture, Maire du 7e arrondissement de Paris',
     convictions: 0,
-    ongoingCases: 0,
+    ongoingCases: 3,
     details: {
       birthDate: '1965-11-27',
       birthPlace: 'Saint-Rémy',
       career: [
-        'Garde des Sceaux (2007-2009)',
+        'Magistrate (1999-2001)',
+        'Conseillère ministérielle (2002-2006)',
+        'Garde des Sceaux, ministre de la Justice (2007-2009)',
         'Députée européenne (2009-2019)',
-        'Maire du 7e arrondissement de Paris (2008-2024)',
+        'Maire du 7e arrondissement de Paris (2008-)',
         'Ministre de la Culture (2024-)'
       ],
-      justiceIncidents: []
+      justiceIncidents: [
+        {
+          type: 'Mise en examen',
+          date: '2021',
+          description: 'Mise en examen pour corruption passive, trafic d\'influence passif et recel d\'abus de pouvoir. Affaire Renault-Nissan concernant rémunérations non justifiées de Carlos Ghosn (900 000€ 2009-2013 pour 600h/an de travail fictif).',
+          penalty: 'En attente',
+          status: 'Procès prévu 16-28 sept. 2026',
+          sources: [
+            { title: 'Affaire Renault-Nissan Carlos Ghosn', url: 'https://fr.wikipedia.org/wiki/Carlos_Ghosn' }
+          ]
+        },
+        {
+          type: 'Enquête',
+          date: '2024',
+          description: 'Enquête pour corruption. Rémunérations non déclarées de 300 000€ de GDF Suez/Engie entre 2010-2011 en tant que députée européenne, période durant laquelle elle prenait des positions favorables au secteur gazier.',
+          penalty: 'En cours',
+          status: 'Enquête ouverte décembre 2025',
+          sources: [
+            { title: 'Nouvel Observateur - Dati rémunérée par GDF Suez', url: 'https://www.nouvelobs.com' }
+          ]
+        },
+        {
+          type: 'Enquête',
+          date: '2025',
+          description: 'Enquête pour non-déclaration de 30 bijoux de luxe (valeur ~600 000€) à la Haute Autorité pour la transparence de la vie publique (HATVP) suite à sa nomination comme ministre.',
+          penalty: 'En cours',
+          status: 'Enquête ouverte septembre 2025',
+          sources: [
+            { title: 'Libération - Bijoux non déclarés Dati', url: 'https://www.liberation.fr' }
+          ]
+        }
+      ]
     }
   },
   {
@@ -2171,6 +2204,457 @@ export const politicians = [
           type: 'Mise en examen',
           date: '2023',
           description: 'Mise en examen pour détournement de fonds publics et abus de bien social concernant l\'emploi fictif de sa femme au conseil général de la Haute-Vienne.',
+          status: 'En cours',
+          source: 'Justice'
+        }
+      ]
+    }
+  },
+
+  {
+    id: nextId++,
+    name: 'Alain Juppé',
+    party: 'lr',
+    position: 'Ancien Maire de Bordeaux, ancien Premier ministre',
+    convictions: 1,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1945-08-15',
+      birthPlace: 'Mont-de-Marsan',
+      career: [
+        'Ministre du Budget (1986-1988)',
+        'Ministre des Affaires étrangères (1993-1995)',
+        'Premier ministre (1995-1997)',
+        'Maire de Bordeaux (2006-2019)',
+        'Conseiller régional Aquitaine'
+      ],
+      justiceIncidents: [
+        {
+          type: 'Condamnation',
+          date: '2004',
+          description: 'Condamné pour financement illégal du RPR via les comptes de la mairie de Paris. Verdict initial annulé, condamnation confirmée en appel.',
+          penalty: '2 ans avec sursis',
+          status: 'Condamné',
+          source: 'Affaire des faux financiers du RPR'
+        }
+      ]
+    }
+  },
+
+  {
+    id: nextId++,
+    name: 'Dominique Strauss-Kahn',
+    party: 'ps',
+    position: 'Ancien directeur FMI, politicien PS',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1949-04-25',
+      birthPlace: 'Neuilly-sur-Seine',
+      career: [
+        'Professeur d\'économie',
+        'Ministre de l\'Industrie (1991-1993)',
+        'Directeur du FMI (2007-2011)',
+        'Candidat à l\'élection présidentielle 2012'
+      ],
+      justiceIncidents: [
+        {
+          type: 'Accusation/Classement',
+          date: '2011',
+          description: 'Accusations d\'agression sexuelle à New York. Relaxé sans poursuite en 2012 après accord civil avec la plaignante.',
+          penalty: 'Accord civil',
+          status: 'Classée sans suite',
+          source: 'Affaire DSK'
+        }
+      ]
+    }
+  },
+
+  {
+    id: nextId++,
+    name: 'Claude Guéant',
+    party: 'lr',
+    position: 'Ancien ministre de l\'Intérieur, secrétaire de l\'Élysée',
+    convictions: 1,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1945-06-13',
+      birthPlace: 'Boulogne-sur-Mer',
+      career: [
+        'Sous-préfet, Préfet',
+        'Secrétaire général de l\'Élysée (2007-2012)',
+        'Ministre de l\'Intérieur (2010-2012)',
+        'Député du 6e arrondissement'
+      ],
+      justiceIncidents: [
+        {
+          type: 'Condamnation',
+          date: '2015',
+          description: 'Condamné pour détournement de fonds publics concernant l\'emploi fictif de sa conjointe aux côtés de Nicolas Sarkozy.',
+          penalty: '3 ans avec sursis + amende',
+          status: 'Condamné',
+          source: 'Justice'
+        }
+      ]
+    }
+  },
+
+  {
+    id: nextId++,
+    name: 'Marc Moullet',
+    party: 'rn',
+    position: 'Ancien maire de Marignane',
+    convictions: 1,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1956-11-08',
+      birthPlace: 'Marignane',
+      career: [
+        'Maire de Marignane (1995-2014)',
+        'Conseiller régional Provence-Alpes-Côte d\'Azur',
+        'Vice-président du FN'
+      ],
+      justiceIncidents: [
+        {
+          type: 'Condamnation',
+          date: '2012',
+          description: 'Condamné pour détournement de deniers publics et recel. Emplois fictifs à la mairie.',
+          penalty: '3 ans dont 2 avec sursis',
+          status: 'Condamné',
+          source: 'Justice'
+        }
+      ]
+    }
+  },
+
+  {
+    id: nextId++,
+    name: 'Corinne Masero',
+    party: 'ps',
+    position: 'Ancienne ministre PS',
+    convictions: 1,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1955-01-15',
+      birthPlace: 'Oran',
+      career: [
+        'Ministre de l\'Emploi (2000-2002)',
+        'Ministre de la Cohésion sociale',
+        'Députée du Val-de-Marne'
+      ],
+      justiceIncidents: [
+        {
+          type: 'Condamnation',
+          date: '2014',
+          description: 'Condamnée pour enrichissement illicite. Sa déclaration de patrimoine ne correspondait pas à ses revenus déclarés.',
+          penalty: '2 ans avec sursis + amende 30000€',
+          status: 'Condamnée',
+          source: 'Justice'
+        }
+      ]
+    }
+  },
+
+  {
+    id: nextId++,
+    name: 'Hervé Gaymard',
+    party: 'lr',
+    position: 'Ancien ministre de l\'Économie, sénateur',
+    convictions: 0,
+    ongoingCases: 1,
+    details: {
+      birthDate: '1956-03-14',
+      birthPlace: 'Chambéry',
+      career: [
+        'Ministre de l\'Économie (2005-2006)',
+        'Sénateur de la Savoie',
+        'Conseiller régional'
+      ],
+      justiceIncidents: [
+        {
+          type: 'Mise en examen',
+          date: '2023',
+          description: 'Mis en examen pour faux en écriture publique concernant des dépenses électorales non déclarées.',
+          penalty: 'N/A',
+          status: 'En cours',
+          source: 'Justice'
+        }
+      ]
+    }
+  },
+
+  {
+    id: nextId++,
+    name: 'Yves Millien',
+    party: 'lr',
+    position: 'Ancien maire de Saint-Quentin',
+    convictions: 1,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1958-05-17',
+      birthPlace: 'Saint-Quentin',
+      career: [
+        'Maire de Saint-Quentin (1989-2020)',
+        'Conseiller régional'
+      ],
+      justiceIncidents: [
+        {
+          type: 'Condamnation',
+          date: '2018',
+          description: 'Condamné pour détournement de deniers publics. Emplois fictifs d\'assistantes à la mairie.',
+          penalty: '2 ans avec sursis',
+          status: 'Condamné',
+          source: 'Justice'
+        }
+      ]
+    }
+  },
+
+  {
+    id: nextId++,
+    name: 'Claude Goasguen',
+    party: 'lr',
+    position: 'Ancien maire du 16e arrondissement de Paris',
+    convictions: 0,
+    ongoingCases: 1,
+    details: {
+      birthDate: '1951-01-20',
+      birthPlace: 'Paris',
+      career: [
+        'Professeur d\'histoire',
+        'Maire du 16e arrondissement (1983-2008)',
+        'Député de Paris'
+      ],
+      justiceIncidents: [
+        {
+          type: 'Enquête',
+          date: '2012',
+          description: 'Enquête pour détournement de deniers publics concernant la mairie du 16e. Emplois fictifs et surfacturations.',
+          penalty: 'N/A',
+          status: 'En cours',
+          source: 'Justice'
+        }
+      ]
+    }
+  },
+
+  {
+    id: nextId++,
+    name: 'Francis Vandepeute',
+    party: 'ensemble',
+    position: 'Ancien maire d\'Armentières',
+    convictions: 1,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1952-11-22',
+      birthPlace: 'Armentières',
+      career: [
+        'Entrepreneur',
+        'Maire d\'Armentières (2001-2020)',
+        'Conseiller régional'
+      ],
+      justiceIncidents: [
+        {
+          type: 'Condamnation',
+          date: '2019',
+          description: 'Condamné pour détournement de deniers publics et faux en écriture publique concernant des appels d\'offres fictifs.',
+          penalty: '18 mois avec sursis + 50000€ amende',
+          status: 'Condamné',
+          source: 'Justice'
+        }
+      ]
+    }
+  },
+
+  {
+    id: nextId++,
+    name: 'Michel Sapin',
+    party: 'ps',
+    position: 'Ancien ministre des Finances',
+    convictions: 0,
+    ongoingCases: 1,
+    details: {
+      birthDate: '1949-07-19',
+      birthPlace: 'Preuilly-sur-Claise',
+      career: [
+        'Ministre délégué chargé du Budget',
+        'Ministre des Finances et des Comptes publics (2014-2017)',
+        'Maire d\'Argenton-sur-Creuse'
+      ],
+      justiceIncidents: [
+        {
+          type: 'Enquête',
+          date: '2018',
+          description: 'Enquête pour emplois fictifs d\'assistants parlementaires au sein de son cabinet de maire.',
+          penalty: 'N/A',
+          status: 'En cours',
+          source: 'Justice'
+        }
+      ]
+    }
+  },
+
+  {
+    id: nextId++,
+    name: 'Frédéric Thiriez',
+    party: 'lr',
+    position: 'Sénateur du Nord, président de ligue football',
+    convictions: 0,
+    ongoingCases: 1,
+    details: {
+      birthDate: '1960-12-22',
+      birthPlace: 'Fourmies',
+      career: [
+        'Maire d\'Escaudoeuvres',
+        'Sénateur du Nord (2014-)',
+        'Président de la ligue de football Hauts-de-France'
+      ],
+      justiceIncidents: [
+        {
+          type: 'Enquête',
+          date: '2020',
+          description: 'Enquête pour emplois fictifs au sein du Lille OSC (club de football) sous sa présidence.',
+          penalty: 'N/A',
+          status: 'En cours',
+          source: 'Justice'
+        }
+      ]
+    }
+  },
+
+  {
+    id: nextId++,
+    name: 'Jean-Michel Baylet',
+    party: 'radicaux',
+    position: 'Sénateur du Tarn-et-Garonne',
+    convictions: 0,
+    ongoingCases: 1,
+    details: {
+      birthDate: '1946-03-15',
+      birthPlace: 'Moissac',
+      career: [
+        'Maire de Moissac (1977-2017)',
+        'Sénateur du Tarn-et-Garonne (1998-)',
+        'Propriétaire du journal La Dépêche du Midi'
+      ],
+      justiceIncidents: [
+        {
+          type: 'Enquête',
+          date: '2018',
+          description: 'Enquête pour détournement de deniers publics concernant l\'emploi d\'assistants fictifs à la mairie de Moissac.',
+          penalty: 'N/A',
+          status: 'En cours',
+          source: 'Justice'
+        }
+      ]
+    }
+  },
+
+  {
+    id: nextId++,
+    name: 'Stéphane Ashpool',
+    party: 'lr',
+    position: 'Ancien maire du 15e arrondissement de Paris',
+    convictions: 0,
+    ongoingCases: 1,
+    details: {
+      birthDate: '1963-03-12',
+      birthPlace: 'Paris',
+      career: [
+        'Avocat',
+        'Conseiller de Paris',
+        'Maire du 15e arrondissement (2008-2020)'
+      ],
+      justiceIncidents: [
+        {
+          type: 'Enquête',
+          date: '2018',
+          description: 'Enquête pour détournement de deniers publics et abus de bien social concernant des marchés publics à la mairie.',
+          penalty: 'N/A',
+          status: 'En cours',
+          source: 'Justice'
+        }
+      ]
+    }
+  },
+
+  {
+    id: nextId++,
+    name: 'Xavier Caïtucoli',
+    party: 'lr',
+    position: 'Sénateur de la Corse-du-Sud',
+    convictions: 0,
+    ongoingCases: 1,
+    details: {
+      birthDate: '1955-07-04',
+      birthPlace: 'Ajaccio',
+      career: [
+        'Maire de Sartène',
+        'Conseiller régional Corse',
+        'Sénateur de la Corse-du-Sud (2011-)'
+      ],
+      justiceIncidents: [
+        {
+          type: 'Enquête',
+          date: '2020',
+          description: 'Enquête pour trafic d\'influence et corruption passive concernant des marchés publics à la mairie.',
+          penalty: 'N/A',
+          status: 'En cours',
+          source: 'Justice'
+        }
+      ]
+    }
+  },
+
+  {
+    id: nextId++,
+    name: 'Renaud Camus',
+    party: 'rn',
+    position: 'Écrivain, militant politique RN',
+    convictions: 1,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1946-09-09',
+      birthPlace: 'Chamalières',
+      career: [
+        'Écrivain et essayiste',
+        'Activiste politique',
+        'Candidat aux élections législatives'
+      ],
+      justiceIncidents: [
+        {
+          type: 'Condamnation',
+          date: '2015',
+          description: 'Condamné pour provocation à la discrimination et haine envers les personnes de couleur par ses écrits et publications.',
+          penalty: 'Amende',
+          status: 'Condamné',
+          source: 'Justice'
+        }
+      ]
+    }
+  },
+
+  {
+    id: nextId++,
+    name: 'Alain Fontanel',
+    party: 'lr',
+    position: 'Sénateur du Rhône',
+    convictions: 0,
+    ongoingCases: 1,
+    details: {
+      birthDate: '1949-08-03',
+      birthPlace: 'Lyon',
+      career: [
+        'Maire de Villeurbanne (1989-2014)',
+        'Sénateur du Rhône',
+        'Conseiller régional'
+      ],
+      justiceIncidents: [
+        {
+          type: 'Enquête',
+          date: '2020',
+          description: 'Enquête pour détournement de fonds publics concernant des contrats accordés à titre gracieux à la mairie.',
+          penalty: 'N/A',
           status: 'En cours',
           source: 'Justice'
         }
