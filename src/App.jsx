@@ -89,7 +89,20 @@ function HomePage() {
         <div className="mb-8">
           <button
             onClick={() => setShowParties(!showParties)}
-            className="bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 text-white font-bold py-3 px-6 rounded-lg transition shadow-md"
+            style={{
+              backgroundColor: '#2563eb',
+              color: '#ffffff',
+              padding: '12px 24px',
+              borderRadius: '8px',
+              border: 'none',
+              fontWeight: 'bold',
+              fontSize: '16px',
+              cursor: 'pointer',
+              boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
+              transition: 'background-color 0.2s'
+            }}
+            onMouseEnter={(e) => e.target.style.backgroundColor = '#1d4ed8'}
+            onMouseLeave={(e) => e.target.style.backgroundColor = '#2563eb'}
           >
             {showParties ? 'Masquer les partis politiques' : 'Afficher les partis politiques'}
           </button>
