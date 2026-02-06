@@ -1,4 +1,4 @@
-/* Tailwind CSS loaded via CDN in index.html */
+@import "tailwindcss";
 
 body {
   background-color: rgb(249 250 251);
