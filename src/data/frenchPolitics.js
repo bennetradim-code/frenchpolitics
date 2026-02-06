@@ -233,7 +233,14 @@ export const politicians = [
         'Numéro 2 du FN'
       ],
       justiceIncidents: [
-        { type: 'Condamnation', date: '2007', description: 'Condamné pour contestation de crimes contre l\'humanité (relaxé en appel puis cassation)' }
+        {
+          type: 'Condamnation',
+          date: '2007',
+          description: 'Condamné pour contestation de crimes contre l\'humanité et apologie du nazisme. Jugement annulé en appel et en cassation.',
+          penalty: 'Amende (cassé)',
+          status: 'Cassation - Relaxé',
+          source: 'Cour d\'Assises'
+        }
       ]
     }
   },
@@ -419,7 +426,14 @@ export const politicians = [
         'Membre du Conseil constitutionnel (2019-)'
       ],
       justiceIncidents: [
-        { type: 'Condamnation', date: '2004', description: 'Condamné à 14 mois de prison avec sursis et un an d\'inéligibilité pour prise illégale d\'intérêts dans l\'affaire des emplois fictifs du RPR' }
+        {
+          type: 'Condamnation',
+          date: '2004',
+          description: 'Condamné dans l\'affaire des emplois fictifs du RPR à Bordeaux. Avait bénéficié d\'emplois fictifs utilisés pour financer des campagnes électorales.',
+          penalty: '14 mois de prison avec sursis, 1 an d\'inéligibilité',
+          status: 'Condamné',
+          source: 'Tribunal correctionnel'
+        }
       ]
     }
   },
@@ -438,8 +452,22 @@ export const politicians = [
         'Député des Hauts-de-Seine'
       ],
       justiceIncidents: [
-        { type: 'Condamnation', date: '2019', description: 'Condamné à 4 ans de prison ferme pour fraude fiscale' },
-        { type: 'Condamnation', date: '2019', description: 'Condamné à 5 ans de prison pour blanchiment de fraude fiscale' }
+        {
+          type: 'Condamnation',
+          date: '2019',
+          description: 'Condamné pour fraude fiscale aggravée. Avait dissimulé plusieurs millions d\'euros au fisc sur plusieurs années.',
+          penalty: '4 ans de prison ferme, 2,5 millions d\'euros d\'amende',
+          status: 'Condamné',
+          source: 'Tribunal correctionnel de Paris'
+        },
+        {
+          type: 'Condamnation',
+          date: '2019',
+          description: 'Condamné pour blanchiment de fraude fiscale. Affaire liée aux avoirs dissimulés en compte off-shore.',
+          penalty: '5 ans de prison (en plus)',
+          status: 'Condamné',
+          source: 'Tribunal'
+        }
       ]
     }
   },
@@ -458,7 +486,14 @@ export const politicians = [
         'Ministre de l\'Intérieur (2011-2012)'
       ],
       justiceIncidents: [
-        { type: 'Condamnation', date: '2017', description: 'Condamné à 2 ans de prison dont 1 ferme pour blanchiment de fraude fiscale (primes en liquide au ministère)' }
+        {
+          type: 'Condamnation',
+          date: '2017',
+          description: 'Condamné pour blanchiment de fraude fiscale et recel. Avait reçu des primes en liquide (2,5 millions d\'euros) versées de manière irrégulière lors de son passage au ministère de l\'Intérieur.',
+          penalty: '2 ans de prison (1 ferme, 1 sursis), 50 000€ d\'amende',
+          status: 'Condamné',
+          source: 'Cour d\'appel de Paris'
+        }
       ]
     }
   },
@@ -478,7 +513,14 @@ export const politicians = [
         'Député européen'
       ],
       justiceIncidents: [
-        { type: 'Condamnation', date: '2010', description: 'Condamné pour injure raciale' }
+        {
+          type: 'Condamnation',
+          date: '2010',
+          description: 'Condamné pour injure à caractère raciste. Avait tenu des propos discriminatoires lors d\'une réunion publique.',
+          penalty: '200€ d\'amende',
+          status: 'Condamné',
+          source: 'Tribunal correctionnel'
+        }
       ]
     }
   },
@@ -862,7 +904,14 @@ export const politicians = [
         'Coordinateur de LFI (2019-2022)'
       ],
       justiceIncidents: [
-        { type: 'Condamnation', date: '2022', description: 'Condamné pour violences conjugales (4 mois de prison avec sursis)' }
+        {
+          type: 'Condamnation',
+          date: '2022',
+          description: 'Condamné pour violences conjugales sur son épouse. Accusé d\'avoir exercé des violences psychologiques et physiques. A été suspendu de ses fonctions à La France Insoumise.',
+          penalty: '4 mois de prison avec sursis, obligation de suivre une thérapie',
+          status: 'Condamné',
+          source: 'Tribunal correctionnel'
+        }
       ]
     }
   },
