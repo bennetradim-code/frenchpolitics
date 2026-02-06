@@ -150,13 +150,14 @@ export const politicians = [
           ]
         },
         { 
-          type: 'Mise en examen', 
-          date: '2023', 
-          description: 'Mise en examen pour détournement de deniers publics et emplois fictifs au Parlement européen',
-          penalty: 'En attente procès',
-          status: 'En cours',
+          type: 'Condamnation (première instance)', 
+          date: '2025-03', 
+          description: 'Condamnée pour détournement de deniers publics et emplois fictifs au Parlement européen. Affaire des assistants parlementaires du Front national.',
+          penalty: '4 ans de prison (2 ferme), 5 ans d\'inéligibilité avec exécution provisoire',
+          status: 'Procès en appel en cours depuis janvier 2026',
           sources: [
-            { title: 'Mise en examen Le Pen - France 24', url: 'https://www.france24.com' }
+            { title: 'Marine Le Pen - Wikipedia', url: 'https://fr.wikipedia.org/wiki/Marine_Le_Pen' },
+            { title: 'Affaire des assistants parlementaires - Wikipedia', url: 'https://fr.wikipedia.org/wiki/Affaire_des_assistants_parlementaires_du_Front_national_au_Parlement_europ%C3%A9en' }
           ]
         }
       ]
@@ -411,12 +412,15 @@ export const politicians = [
       ],
       justiceIncidents: [
         {
-          type: 'Condamnation',
-          date: '2020',
-          description: 'Condamné pour détournement de fonds publics. Affaire des emplois fictifs: son épouse Penelope Fillon aurait perçu plus de 900 000€ pour un travail inexistant en tant que assistante parlementaire.',
-          penalty: '5 ans d\'inéligibilité, 375 000€ d\'amende',
-          status: 'Condamné en appel',
-          source: 'Tribunal correctionnel de Paris'
+          type: 'Condamnation (appel)',
+          date: '2025-06',
+          description: 'Condamné en appel pour détournement de fonds publics. Affaire des emplois fictifs: son épouse Penelope Fillon a perçu plus de 900 000€ pour un travail inexistant en tant qu\'assistante parlementaire. Son épouse également condamnée.',
+          penalty: '5 ans d\'inéligibilité, 375 000€ d\'amende, remboursement de 800 000€ à l\'Assemblée nationale',
+          status: 'Condamné en appel (exécutoire)',
+          sources: [
+            { title: 'François Fillon - Wikipedia', url: 'https://fr.wikipedia.org/wiki/Fran%C3%A7ois_Fillon' },
+            { title: 'Affaire Fillon - Wikipedia', url: 'https://fr.wikipedia.org/wiki/Affaire_Fillon' }
+          ]
         }
       ]
     }
@@ -1804,7 +1808,7 @@ export const politicians = [
     party: 'agir',
     position: 'Ancien secrétaire d\'État',
     convictions: 0,
-    ongoingCases: 1,
+    ongoingCases: 0,
     details: {
       birthDate: '1977-12-04',
       birthPlace: 'Boulogne-Billancourt',
@@ -1812,9 +1816,7 @@ export const politicians = [
         'Député des Hauts-de-Seine (2017-2022)',
         'Secrétaire d\'État à la Protection de l\'enfance (2019-2022)'
       ],
-      justiceIncidents: [
-        { type: 'Mise en examen', date: '2023', description: 'Mis en examen pour viol' }
-      ]
+      justiceIncidents: []
     }
   },
   {
