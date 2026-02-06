@@ -1,12 +1,14 @@
 import { useState, useMemo } from 'react'
+import { Routes, Route, Link } from 'react-router-dom'
 import SearchBar from './components/SearchBar'
 import PartyStats from './components/PartyStats'
 import PoliticiansList from './components/PoliticiansList'
 import PartyCard from './components/PartyCard'
+import PoliticianDetail from './components/PoliticianDetail'
 import { politicians as politiciansData, parties as partiesData } from './data/frenchPolitics'
 import './index.css'
 
-function App() {
+function HomePage() {
   const [searchTerm, setSearchTerm] = useState('')
   const [selectedParty, setSelectedParty] = useState(null)
   const [showParties, setShowParties] = useState(false)
@@ -21,7 +23,7 @@ function App() {
   }, [searchTerm, selectedParty, politicians])
 
   const visibleParties = useMemo(() => {
-    return partiesData.filter(party => 
+    return partiesData.filter(party =>
       politicians.some(p => p.party === party.id)
     )
   }, [politicians])
@@ -36,13 +38,14 @@ function App() {
   }, [politicians])
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+    <>
       <header className="bg-white shadow">
         <div className="max-w-6xl mx-auto px-4 py-8">
-          <h1 className="text-4xl font-bold text-gray-900">🇫🇷 French Politics Tracker</h1>
+          <Link to="/" className="text-4xl font-bold text-gray-900 hover:text-blue-700 transition">
+            French Politics Tracker
+          </Link>
           <p className="text-gray-600 mt-2">Suivi complet des partis politiques français et des affaires judiciaires des hommes politiques</p>
-          
-          {/* Global Statistics */}
+
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-6">
             <div className="bg-blue-50 p-4 rounded">
               <p className="text-xs text-gray-600 uppercase tracking-wide">Politiciens</p>
@@ -65,19 +68,17 @@ function App() {
       </header>
 
       <main className="max-w-6xl mx-auto px-4 py-8">
-        <SearchBar searchTerm={searchTerm} onSearchChange={setSearchTerm} />
-        
-        {/* Parties Overview Toggle */}
+        <SearchBar searchTerm={searchTerm} onSearchChange={setSearchTerm} politicians={politiciansData} />
+
         <div className="mb-8">
           <button
             onClick={() => setShowParties(!showParties)}
             className="bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 text-white font-bold py-3 px-6 rounded-lg transition shadow-md"
           >
-            {showParties ? '📋 Masquer les partis politiques' : '📊 Afficher les partis politiques'}
+            {showParties ? 'Masquer les partis politiques' : 'Afficher les partis politiques'}
           </button>
         </div>
 
-        {/* Parties Section */}
         {showParties && (
           <div className="mb-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">Partis Politiques Français</h2>
@@ -88,7 +89,7 @@ function App() {
             </div>
           </div>
         )}
-        
+
         <PartyStats
           politicians={politicians}
           selectedParty={selectedParty}
@@ -97,12 +98,22 @@ function App() {
 
         <PoliticiansList politicians={filteredPoliticians} />
       </main>
+    </>
+  )
+}
 
-      {/* Footer */}
+function App() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/politician/:id" element={<PoliticianDetail />} />
+      </Routes>
+
       <footer className="bg-gray-900 text-gray-300 mt-12">
         <div className="max-w-6xl mx-auto px-4 py-8">
           <p className="text-sm">
-            📊 <strong>French Politics Tracker</strong> - Données compilées depuis Wikipedia, Wikimedia Commons, et sources gouvernementales officielles.
+            <strong>French Politics Tracker</strong> - Données compilées depuis Wikipedia, Wikimedia Commons, et sources gouvernementales officielles.
           </p>
           <p className="text-xs mt-2 text-gray-500">
             Dernière mise à jour: {new Date().toLocaleDateString('fr-FR')} | Source des images: Wikimedia Commons (domaine public)

@@ -1,9 +1,9 @@
-import { BarChart, Bar, PieChart, Pie, Cell, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts'
+import { BarChart, Bar, PieChart, Pie, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts'
 import { parties } from '../data/frenchPolitics'
 
 export default function PartyStats({ politicians, selectedParty, onPartySelect }) {
   const partyIds = [...new Set(politicians.map(p => p.party))]
-  
+
   const partyStats = partyIds.map(partyId => {
     const partyObj = parties.find(p => p.id === partyId)
     const partyPols = politicians.filter(p => p.party === partyId)
@@ -17,13 +17,19 @@ export default function PartyStats({ politicians, selectedParty, onPartySelect }
     }
   })
 
-  const convictionData = partyStats.map(s => ({
-    name: s.partyName.split('(')[0].trim(),
-    convictions: s.convictions
-  }))
+  const convictionData = partyStats.map(s => {
+    const shortName = s.partyName.split('(')[0].trim()
+    return {
+      name: shortName.length > 14 ? shortName.slice(0, 12) + '...' : shortName,
+      fullName: shortName,
+      convictions: s.convictions
+    }
+  })
 
   const caseData = partyStats.map(s => ({
-    name: s.partyName.split('(')[0].trim(),
+    name: s.partyName.split('(')[0].trim().length > 18
+      ? s.partyName.split('(')[0].trim().slice(0, 16) + '...'
+      : s.partyName.split('(')[0].trim(),
     value: s.ongoingCases,
     color: s.color
   }))
@@ -33,17 +39,30 @@ export default function PartyStats({ politicians, selectedParty, onPartySelect }
   return (
     <div className="mb-12">
       <h2 className="text-2xl font-bold text-gray-900 mb-6">Statistiques par parti</h2>
-      
+
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
         {/* Histogram - Convictions */}
         <div className="bg-white rounded-lg shadow p-6">
           <h3 className="text-lg font-semibold text-gray-800 mb-4">Condamnations par parti</h3>
-          <ResponsiveContainer width="100%" height={300}>
-            <BarChart data={convictionData}>
+          <ResponsiveContainer width="100%" height={350}>
+            <BarChart data={convictionData} margin={{ bottom: 20 }}>
               <CartesianGrid strokeDasharray="3 3" />
-              <XAxis dataKey="name" angle={-45} textAnchor="end" height={100} />
+              <XAxis
+                dataKey="name"
+                angle={-35}
+                textAnchor="end"
+                height={120}
+                interval={0}
+                tick={{ fontSize: 11 }}
+              />
               <YAxis />
-              <Tooltip />
+              <Tooltip
+                formatter={(value) => [`${value}`, 'Condamnations']}
+                labelFormatter={(label) => {
+                  const item = convictionData.find(d => d.name === label)
+                  return item?.fullName || label
+                }}
+              />
               <Bar dataKey="convictions" fill="#EF4444" />
             </BarChart>
           </ResponsiveContainer>
@@ -52,14 +71,14 @@ export default function PartyStats({ politicians, selectedParty, onPartySelect }
         {/* Pie Chart - Ongoing Cases */}
         <div className="bg-white rounded-lg shadow p-6">
           <h3 className="text-lg font-semibold text-gray-800 mb-4">Affaires en cours par parti</h3>
-          <ResponsiveContainer width="100%" height={300}>
+          <ResponsiveContainer width="100%" height={400}>
             <PieChart>
               <Pie
                 data={caseData}
                 cx="50%"
-                cy="50%"
-                labelLine={false}
-                label={({ name, value }) => `${name}: ${value}`}
+                cy="40%"
+                labelLine={true}
+                label={({ value }) => value > 0 ? value : ''}
                 outerRadius={80}
                 fill="#8884d8"
                 dataKey="value"
@@ -69,6 +88,13 @@ export default function PartyStats({ politicians, selectedParty, onPartySelect }
                 ))}
               </Pie>
               <Tooltip />
+              <Legend
+                layout="horizontal"
+                verticalAlign="bottom"
+                align="center"
+                wrapperStyle={{ fontSize: '11px', paddingTop: '10px' }}
+                formatter={(value) => value.length > 20 ? value.slice(0, 18) + '...' : value}
+              />
             </PieChart>
           </ResponsiveContainer>
         </div>

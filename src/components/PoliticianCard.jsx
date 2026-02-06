@@ -1,18 +1,17 @@
 import { useState, useMemo } from 'react'
+import { Link } from 'react-router-dom'
 import { getPartyById } from '../data/frenchPolitics'
+import ConfidenceGauge from './ConfidenceGauge'
 
-/**
- * Generate a placeholder SVG image for a politician
- */
 function generatePlaceholderImage(name, color = '#3B82F6') {
   const initials = name.split(' ').map(n => n[0]).join('').toUpperCase().slice(0, 2)
   const bgColor = color || '#3B82F6'
-  
+
   const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
     <rect width="200" height="200" fill="${bgColor}"/>
     <text x="100" y="120" font-size="60" font-weight="bold" fill="white" text-anchor="middle" font-family="Arial, sans-serif">${initials}</text>
   </svg>`
-  
+
   const encoded = encodeURIComponent(svg)
   return `data:image/svg+xml;utf8,${encoded}`
 }
@@ -25,7 +24,7 @@ export default function PoliticianCard({ politician }) {
 
   return (
     <div className="bg-white rounded-lg shadow hover:shadow-lg transition overflow-hidden">
-      <div 
+      <div
         className="aspect-square bg-gray-200 overflow-hidden flex items-center justify-center"
         style={{ borderBottom: `3px solid ${partyColor}` }}
       >
@@ -35,12 +34,12 @@ export default function PoliticianCard({ politician }) {
           className="w-full h-full object-cover"
         />
       </div>
-      
+
       <div className="p-6">
         <h3 className="text-xl font-bold text-gray-900">{politician.name}</h3>
         <p className="text-sm font-semibold" style={{ color: partyColor }}>{party?.name || politician.party}</p>
         <p className="text-sm text-gray-600 mb-4">{politician.position}</p>
-        
+
         <div className="grid grid-cols-2 gap-4 mb-4">
           <div className="bg-red-50 p-3 rounded">
             <p className="text-xs text-gray-600">Condamnations</p>
@@ -52,6 +51,10 @@ export default function PoliticianCard({ politician }) {
           </div>
         </div>
 
+        <div className="mb-4">
+          <ConfidenceGauge politician={politician} />
+        </div>
+
         <button
           onClick={() => setShowDetails(!showDetails)}
           className="w-full bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 rounded transition"
@@ -59,11 +62,18 @@ export default function PoliticianCard({ politician }) {
           {showDetails ? 'Masquer détails' : 'Voir détails'}
         </button>
 
+        <Link
+          to={`/politician/${politician.id}`}
+          className="block w-full text-center mt-2 text-blue-500 hover:text-blue-700 text-sm font-medium transition"
+        >
+          Voir la fiche complète &rarr;
+        </Link>
+
         {showDetails && (
           <div className="mt-4 pt-4 border-t border-gray-200">
             <p className="text-sm text-gray-600"><strong>Né:</strong> {politician.details.birthDate}</p>
             <p className="text-sm text-gray-600"><strong>Lieu:</strong> {politician.details.birthPlace}</p>
-            
+
             <div className="mt-3">
               <p className="text-sm font-semibold text-gray-700">Carrière:</p>
               <ul className="text-sm text-gray-600 list-disc list-inside">
@@ -79,9 +89,9 @@ export default function PoliticianCard({ politician }) {
                 <div className="mt-2 space-y-2">
                   {politician.details.justiceIncidents.map((incident, idx) => (
                     <div key={idx} className="bg-gray-50 p-2 rounded text-sm">
-                      <span className="inline-block px-2 py-1 rounded text-xs font-semibold text-white mr-2" 
-                        style={{ 
-                          backgroundColor: incident.type === 'Condamnation' ? '#dc2626' : 
+                      <span className="inline-block px-2 py-1 rounded text-xs font-semibold text-white mr-2"
+                        style={{
+                          backgroundColor: incident.type === 'Condamnation' ? '#dc2626' :
                                          incident.type === 'Mise en examen' ? '#ea580c' : '#0284c7'
                         }}>
                         {incident.type}
