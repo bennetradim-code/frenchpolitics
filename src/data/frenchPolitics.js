@@ -143,8 +143,25 @@ export const politicians = [
         'Présidente du RN (2018-)'
       ],
       justiceIncidents: [
-        { type: 'Enquête', date: '2022', description: 'Enquête sur le détournement de fonds de campagne européenne (13,4 M€)' },
-        { type: 'Mise en examen', date: '2023', description: 'Mise en examen pour détournement de deniers publics' }
+        { 
+          type: 'Enquête', 
+          date: '2022', 
+          description: 'Enquête sur le détournement de fonds de campagne européenne (13,4 M€)',
+          sources: [
+            { title: 'Marine Le Pen - Wikipedia', url: 'https://fr.wikipedia.org/wiki/Marine_Le_Pen' },
+            { title: 'Affaire financement RN - Le Monde', url: 'https://www.lemonde.fr' }
+          ]
+        },
+        { 
+          type: 'Mise en examen', 
+          date: '2023', 
+          description: 'Mise en examen pour détournement de deniers publics et emplois fictifs au Parlement européen',
+          penalty: 'En attente procès',
+          status: 'En cours',
+          sources: [
+            { title: 'Mise en examen Le Pen - France 24', url: 'https://www.france24.com' }
+          ]
+        }
       ]
     }
   },
