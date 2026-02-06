@@ -150,27 +150,6 @@ export const politicians = [
   },
   {
     id: nextId++,
-    name: 'Jean-Marie Le Pen',
-    party: 'rn',
-    position: 'Fondateur du Front National',
-    convictions: 2,
-    ongoingCases: 0,
-    details: {
-      birthDate: '1928-06-20',
-      birthPlace: 'La Trinité-sur-Mer',
-      career: [
-        'Candidat présidentiel (1974, 1988, 1995, 2002)',
-        'Fondateur du Front National (1972)',
-        'Député (1986-1988, 1997-2002)'
-      ],
-      justiceIncidents: [
-        { type: 'Condamnation', date: '1998', description: 'Condamné pour propos antisémites' },
-        { type: 'Condamnation', date: '2015', description: 'Condamné pour propos homophobes' }
-      ]
-    }
-  },
-  {
-    id: nextId++,
     name: 'Jordan Bardella',
     party: 'rn',
     position: 'Président du RN',
@@ -395,26 +374,6 @@ export const politicians = [
         'Président de LR (2022-)'
       ],
       justiceIncidents: []
-    }
-  },
-  {
-    id: nextId++,
-    name: 'Jacques Chirac',
-    party: 'lr',
-    position: 'Ancien Président de la République',
-    convictions: 1,
-    ongoingCases: 0,
-    details: {
-      birthDate: '1932-11-29',
-      birthPlace: 'Paris',
-      career: [
-        'Maire de Paris (1977-1995)',
-        'Premier ministre (1974-1976, 1986-1988)',
-        'Président de la République (1995-2007)'
-      ],
-      justiceIncidents: [
-        { type: 'Condamnation', date: '2011', description: 'Condamné à 2 ans de prison avec sursis pour détournement de fonds publics et abus de confiance (emplois fictifs à la mairie de Paris)' }
-      ]
     }
   },
   {
