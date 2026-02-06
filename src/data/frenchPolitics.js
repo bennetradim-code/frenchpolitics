@@ -187,8 +187,8 @@ export const politicians = [
     name: 'Louis Aliot',
     party: 'rn',
     position: 'Maire de Perpignan',
-    convictions: 0,
-    ongoingCases: 0,
+    convictions: 1,
+    ongoingCases: 1,
     details: {
       birthDate: '1969-09-04',
       birthPlace: 'Toulouse',
@@ -197,7 +197,18 @@ export const politicians = [
         'Député européen (2014-2019)',
         'Maire de Perpignan (2020-)'
       ],
-      justiceIncidents: []
+      justiceIncidents: [
+        {
+          type: 'Condamnation (première instance)',
+          date: '2025-03-31',
+          description: 'Condamné dans l\'affaire des assistants parlementaires du FN au Parlement européen. Laurent Salles, employé comme assistant parlementaire de juillet 2014 à février 2015, n\'aurait jamais vraiment travaillé pour lui. Seul un SMS documenté entre eux sur cette période. Montant du détournement: environ 3200€ net par mois.',
+          penalty: '18 mois de prison (12 mois avec sursis), 8 000€ d\'amende, 3 ans d\'inéligibilité',
+          status: 'Procès en appel en cours depuis janvier 2026',
+          sources: [
+            { title: 'Wikipedia - Affaire des assistants parlementaires', url: 'https://fr.wikipedia.org/wiki/Affaire_des_assistants_parlementaires_du_Front_national_au_Parlement_europ%C3%A9en' }
+          ]
+        }
+      ]
     }
   },
   {
@@ -239,8 +250,8 @@ export const politicians = [
     name: 'Bruno Gollnisch',
     party: 'rn',
     position: 'Ancien député européen',
-    convictions: 1,
-    ongoingCases: 0,
+    convictions: 2,
+    ongoingCases: 1,
     details: {
       birthDate: '1950-01-14',
       birthPlace: 'Neuilly-sur-Seine',
@@ -257,6 +268,17 @@ export const politicians = [
           penalty: 'Amende (cassé)',
           status: 'Cassation - Relaxé',
           source: 'Cour d\'Assises'
+        },
+        {
+          type: 'Condamnation (première instance)',
+          date: '2025-03-31',
+          description: 'Condamné dans l\'affaire des assistants parlementaires du FN au Parlement européen (2004-2016). Aurait employé de façon fictive deux assistants parlementaires - Guillaume Lhuillier (ancien directeur de cabinet de Jean-Marie Le Pen) et Micheline Bruna (ancienne conseillère d\'Île-de-France et secrétaire particulière de Jean-Marie Le Pen). Ces assistants n\'ont jamais vraiment travaillé pour lui. Montant du détournement estimé à plusieurs dizaines de milliers d\'euros.',
+          penalty: '3 ans de prison (1 an ferme, aménageable sous surveillance électronique), 50 000€ d\'amende, 5 ans d\'inéligibilité',
+          status: 'Procès en appel en cours depuis janvier 2026',
+          sources: [
+            { title: 'Wikipedia - Affaire des assistants parlementaires du Front national', url: 'https://fr.wikipedia.org/wiki/Affaire_des_assistants_parlementaires_du_Front_national_au_Parlement_europ%C3%A9en' },
+            { title: 'Le Monde - Procès RN assistants parlementaires', url: 'https://www.lemonde.fr' }
+          ]
         }
       ]
     }
@@ -301,8 +323,8 @@ export const politicians = [
     name: 'Julien Odoul',
     party: 'rn',
     position: 'Député de l\'Yonne',
-    convictions: 0,
-    ongoingCases: 0,
+    convictions: 1,
+    ongoingCases: 1,
     details: {
       birthDate: '1985-08-12',
       birthPlace: 'Auxerre',
@@ -311,7 +333,20 @@ export const politicians = [
         'Député de l\'Yonne (2022-)',
         'Porte-parole du RN'
       ],
-      justiceIncidents: []
+      justiceIncidents: [
+        {
+          type: 'Condamnation (première instance)',
+          date: '2025',
+          description: 'Condamné dans l\'affaire des assistants parlementaires du FN au Parlement européen. Aurait bénéficié d\'un emploi fictif d\'assistant parlementaire de l\'eurodéputée Mylène Troszczynski entre 2014-2015, alors qu\'il ne travaillait que pour le FN à des fonctions bien éloignées du travail parlementaire.',
+          penalty: '8 mois de prison avec sursis, 1 an d\'inéligibilité',
+          status: 'Procès en appel en cours (février 2025)',
+          sources: [
+            { title: 'France Bleu - Julien Odoul condamné', url: 'https://www.francebleu.fr' },
+            { title: 'Le Figaro - Procès en appel', url: 'https://www.lefigaro.fr' },
+            { title: 'Wikipedia - Affaire des assistants parlementaires', url: 'https://fr.wikipedia.org/wiki/Affaire_des_assistants_parlementaires_du_Front_national_au_Parlement_europ%C3%A9en' }
+          ]
+        }
+      ]
     }
   },
 
