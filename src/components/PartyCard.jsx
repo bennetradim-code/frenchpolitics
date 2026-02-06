@@ -61,7 +61,7 @@ export default function PartyCard({ party }) {
             <p className="text-lg font-bold text-green-600">{party.seats}</p>
           </div>
           <div className="bg-orange-50 p-3 rounded text-center">
-            <p className="text-xs text-gray-600">Politique</p>
+            <p className="text-xs text-gray-600">Personnalités</p>
             <p className="text-lg font-bold text-orange-600">{stats.count}</p>
           </div>
         </div>
@@ -70,20 +70,16 @@ export default function PartyCard({ party }) {
         {stats.totalConvictions > 0 || stats.totalOngoingCases > 0 ? (
           <div className="border-t pt-4">
             <p className="text-sm font-semibold text-gray-700 mb-2">Incidents de justice:</p>
-            <div className="flex gap-2">
+            <div className="flex flex-wrap gap-2">
               {stats.totalConvictions > 0 && (
-                <div className="flex items-center gap-1">
-                  <span className="text-xs font-semibold text-red-600">
-                    {stats.totalConvictions} condamnation{stats.totalConvictions > 1 ? 's' : ''}
-                  </span>
-                </div>
+                <span className="inline-flex items-center px-2 py-1 rounded text-xs font-bold text-white bg-red-600">
+                  {stats.totalConvictions} condamnation{stats.totalConvictions > 1 ? 's' : ''}
+                </span>
               )}
               {stats.totalOngoingCases > 0 && (
-                <div className="flex items-center gap-1">
-                  <span className="text-xs font-semibold text-orange-600">
-                    {stats.totalOngoingCases} affaire{stats.totalOngoingCases > 1 ? 's' : ''} en cours
-                  </span>
-                </div>
+                <span className="inline-flex items-center px-2 py-1 rounded text-xs font-bold text-white bg-orange-500">
+                  {stats.totalOngoingCases} affaire{stats.totalOngoingCases > 1 ? 's' : ''} en cours
+                </span>
               )}
             </div>
           </div>

@@ -14,13 +14,29 @@ function HomePage() {
   const [showParties, setShowParties] = useState(false)
   const [politicians] = useState(politiciansData)
 
+  const isSearching = searchTerm.length > 0 || selectedParty !== null
+
   const filteredPoliticians = useMemo(() => {
-    return politicians.filter(p => {
+    let result = politicians.filter(p => {
       const matchesSearch = p.name.toLowerCase().includes(searchTerm.toLowerCase())
       const matchesParty = !selectedParty || p.party === selectedParty
       return matchesSearch && matchesParty
     })
-  }, [searchTerm, selectedParty, politicians])
+
+    // Sort by most implicated (convictions + ongoing cases)
+    result = [...result].sort((a, b) => {
+      const scoreA = a.convictions * 2 + a.ongoingCases
+      const scoreB = b.convictions * 2 + b.ongoingCases
+      return scoreB - scoreA
+    })
+
+    // Show only top 20 unless user is searching/filtering
+    if (!isSearching) {
+      result = result.slice(0, 20)
+    }
+
+    return result
+  }, [searchTerm, selectedParty, politicians, isSearching])
 
   const visibleParties = useMemo(() => {
     return partiesData.filter(party =>
@@ -44,11 +60,11 @@ function HomePage() {
           <Link to="/" className="text-4xl font-bold text-gray-900 hover:text-blue-700 transition">
             French Politics Tracker
           </Link>
-          <p className="text-gray-600 mt-2">Suivi complet des partis politiques français et des affaires judiciaires des hommes politiques</p>
+          <p className="text-gray-600 mt-2">Suivi complet des partis politiques français et des affaires judiciaires des personnalités politiques</p>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-6">
             <div className="bg-blue-50 p-4 rounded">
-              <p className="text-xs text-gray-600 uppercase tracking-wide">Politiciens</p>
+              <p className="text-xs text-gray-600 uppercase tracking-wide">Personnalités</p>
               <p className="text-3xl font-bold text-blue-600">{totalStats.politicians}</p>
             </div>
             <div className="bg-red-50 p-4 rounded">
@@ -96,7 +112,7 @@ function HomePage() {
           onPartySelect={setSelectedParty}
         />
 
-        <PoliticiansList politicians={filteredPoliticians} />
+        <PoliticiansList politicians={filteredPoliticians} isSearching={isSearching} totalCount={politicians.length} />
       </main>
     </>
   )

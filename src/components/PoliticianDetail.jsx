@@ -10,7 +10,7 @@ export default function PoliticianDetail() {
   if (!politician) {
     return (
       <main className="max-w-4xl mx-auto px-4 py-12 text-center">
-        <p className="text-xl text-gray-600">Politicien non trouvé.</p>
+        <p className="text-xl text-gray-600">Personnalité non trouvée.</p>
         <Link to="/" className="text-blue-500 hover:underline mt-4 inline-block">
           &larr; Retour à l'accueil
         </Link>

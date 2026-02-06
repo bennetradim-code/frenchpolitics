@@ -1,7 +1,7 @@
 /**
- * Base de données complète des partis politiques français et des politiciens avec incidents de justice
+ * Base de données complète des partis politiques français et des personnalités politiques avec incidents de justice
  * Sources: Wikipedia, sources gouvernementales officielles, presse française
- * 
+ *
  * Les images sont générées dynamiquement en fonction du nom du politicien et de la couleur de son parti
  */
 
@@ -120,12 +120,14 @@ export const parties = [
   }
 ]
 
-export const politicians = [
-  // Politiciens avec incidents de justice
+let nextId = 1
 
-  // RASSEMBLEMENT NATIONAL
+export const politicians = [
+  // ===============================
+  // RASSEMBLEMENT NATIONAL (RN)
+  // ===============================
   {
-    id: 1,
+    id: nextId++,
     name: 'Marine Le Pen',
     party: 'rn',
     position: 'Présidente du RN',
@@ -141,21 +143,13 @@ export const politicians = [
         'Présidente du RN (2018-)'
       ],
       justiceIncidents: [
-        {
-          type: 'Enquête',
-          date: '2022',
-          description: 'Enquête sur le détournement de fonds de campagne européenne (13,4 M€)'
-        },
-        {
-          type: 'Mise en examen',
-          date: '2023',
-          description: 'Mise en examen pour détournement de deniers publics'
-        }
+        { type: 'Enquête', date: '2022', description: 'Enquête sur le détournement de fonds de campagne européenne (13,4 M€)' },
+        { type: 'Mise en examen', date: '2023', description: 'Mise en examen pour détournement de deniers publics' }
       ]
     }
   },
   {
-    id: 2,
+    id: nextId++,
     name: 'Jean-Marie Le Pen',
     party: 'rn',
     position: 'Fondateur du Front National',
@@ -170,23 +164,159 @@ export const politicians = [
         'Député (1986-1988, 1997-2002)'
       ],
       justiceIncidents: [
-        {
-          type: 'Condamnation',
-          date: '1998',
-          description: 'Condamné pour propos antisémites'
-        },
-        {
-          type: 'Condamnation',
-          date: '2015',
-          description: 'Condamné pour propos homophobes'
-        }
+        { type: 'Condamnation', date: '1998', description: 'Condamné pour propos antisémites' },
+        { type: 'Condamnation', date: '2015', description: 'Condamné pour propos homophobes' }
       ]
     }
   },
-
-  // LES RÉPUBLICAINS / SARKOZY
   {
-    id: 3,
+    id: nextId++,
+    name: 'Jordan Bardella',
+    party: 'rn',
+    position: 'Président du RN',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1995-09-13',
+      birthPlace: 'Drancy',
+      career: [
+        'Député européen (2019-)',
+        'Président du RN (2022-)'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Louis Aliot',
+    party: 'rn',
+    position: 'Maire de Perpignan',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1969-09-04',
+      birthPlace: 'Toulouse',
+      career: [
+        'Vice-président du FN/RN',
+        'Député européen (2014-2019)',
+        'Maire de Perpignan (2020-)'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Sébastien Chenu',
+    party: 'rn',
+    position: 'Vice-président de l\'Assemblée nationale',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1973-02-07',
+      birthPlace: 'Béthune',
+      career: [
+        'Député du Nord (2017-)',
+        'Vice-président de l\'Assemblée nationale (2022-)'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Laure Lavalette',
+    party: 'rn',
+    position: 'Députée du Var',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1989-03-15',
+      birthPlace: 'Toulon',
+      career: [
+        'Porte-parole du RN',
+        'Députée du Var (2022-)'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Bruno Gollnisch',
+    party: 'rn',
+    position: 'Ancien député européen',
+    convictions: 1,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1950-01-14',
+      birthPlace: 'Neuilly-sur-Seine',
+      career: [
+        'Député européen (1989-2019)',
+        'Professeur de droit',
+        'Numéro 2 du FN'
+      ],
+      justiceIncidents: [
+        { type: 'Condamnation', date: '2007', description: 'Condamné pour contestation de crimes contre l\'humanité (relaxé en appel puis cassation)' }
+      ]
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Steeve Briois',
+    party: 'rn',
+    position: 'Maire d\'Hénin-Beaumont',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1972-01-28',
+      birthPlace: 'Lens',
+      career: [
+        'Maire d\'Hénin-Beaumont (2014-)',
+        'Secrétaire général du RN',
+        'Député européen (2014-2019)'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Edwige Diaz',
+    party: 'rn',
+    position: 'Députée de la Gironde',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1987-04-22',
+      birthPlace: 'Bordeaux',
+      career: [
+        'Vice-présidente du RN',
+        'Députée de la Gironde (2022-)'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Julien Odoul',
+    party: 'rn',
+    position: 'Député de l\'Yonne',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1985-08-12',
+      birthPlace: 'Auxerre',
+      career: [
+        'Conseiller régional de Bourgogne-Franche-Comté',
+        'Député de l\'Yonne (2022-)',
+        'Porte-parole du RN'
+      ],
+      justiceIncidents: []
+    }
+  },
+
+  // ===============================
+  // LES RÉPUBLICAINS (LR)
+  // ===============================
+  {
+    id: nextId++,
     name: 'Nicolas Sarkozy',
     party: 'lr',
     position: 'Ancien Président de la République',
@@ -202,26 +332,14 @@ export const politicians = [
         'Chef de l\'UMP puis LR'
       ],
       justiceIncidents: [
-        {
-          type: 'Condamnation',
-          date: '2021',
-          description: 'Condamné à 3 ans de prison (dont 2 avec sursis) pour corruption et trafic d\'influence'
-        },
-        {
-          type: 'Condamnation',
-          date: '2021',
-          description: 'Condamné pour financement illégal de sa campagne de 2012'
-        },
-        {
-          type: 'Enquête/Mise en examen',
-          date: '2023',
-          description: 'Affaire des contrats libyen, mise en examen pour blanchiment de fraude'
-        }
+        { type: 'Condamnation', date: '2021', description: 'Condamné à 3 ans de prison (dont 2 avec sursis) pour corruption et trafic d\'influence' },
+        { type: 'Condamnation', date: '2021', description: 'Condamné pour financement illégal de sa campagne de 2012' },
+        { type: 'Enquête/Mise en examen', date: '2023', description: 'Affaire des contrats libyens, mise en examen pour blanchiment de fraude' }
       ]
     }
   },
   {
-    id: 4,
+    id: nextId++,
     name: 'François Fillon',
     party: 'lr',
     position: 'Ancien Premier ministre',
@@ -237,64 +355,265 @@ export const politicians = [
         'Candidat présidentiel 2017'
       ],
       justiceIncidents: [
-        {
-          type: 'Condamnation',
-          date: '2020',
-          description: 'Condamné pour détournement de fonds publics: emplois fictifs de son épouse à l\'Assemblée'
-        }
+        { type: 'Condamnation', date: '2020', description: 'Condamné pour détournement de fonds publics: emplois fictifs de son épouse à l\'Assemblée' }
       ]
     }
   },
   {
-    id: 5,
+    id: nextId++,
     name: 'Laurent Wauquiez',
     party: 'lr',
-    position: 'Ancien président de région',
+    position: 'Président de la région Auvergne-Rhône-Alpes',
     convictions: 0,
     ongoingCases: 1,
     details: {
-      birthDate: '1973-11-09',
-      birthPlace: 'Le Puy-en-Velay',
+      birthDate: '1975-04-12',
+      birthPlace: 'Lyon',
       career: [
-        'Maire du Puy-en-Velay (2014-2020)',
-        'Président de la région Auvergne-Rhône-Alpes (2016-2021)',
-        'Président de LR (2022-2023)'
+        'Maire du Puy-en-Velay (2008-2016)',
+        'Président de LR (2017-2019)',
+        'Président de la région Auvergne-Rhône-Alpes (2016-)'
       ],
       justiceIncidents: [
-        {
-          type: 'Mise en examen',
-          date: '2023',
-          description: 'Mise en examen pour détournement de fonds publics et blanchiment'
-        }
+        { type: 'Mise en examen', date: '2023', description: 'Mise en examen pour détournement de fonds publics et blanchiment' }
       ]
     }
   },
-
-  // PARTI SOCIALISTE / HOLLANDE
   {
-    id: 6,
+    id: nextId++,
+    name: 'Éric Ciotti',
+    party: 'lr',
+    position: 'Président des Républicains',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1965-09-28',
+      birthPlace: 'Nice',
+      career: [
+        'Député des Alpes-Maritimes (2007-)',
+        'Président du conseil départemental des Alpes-Maritimes (2008-2013)',
+        'Président de LR (2022-)'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Jacques Chirac',
+    party: 'lr',
+    position: 'Ancien Président de la République',
+    convictions: 1,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1932-11-29',
+      birthPlace: 'Paris',
+      career: [
+        'Maire de Paris (1977-1995)',
+        'Premier ministre (1974-1976, 1986-1988)',
+        'Président de la République (1995-2007)'
+      ],
+      justiceIncidents: [
+        { type: 'Condamnation', date: '2011', description: 'Condamné à 2 ans de prison avec sursis pour détournement de fonds publics et abus de confiance (emplois fictifs à la mairie de Paris)' }
+      ]
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Alain Juppé',
+    party: 'lr',
+    position: 'Ancien Premier ministre',
+    convictions: 1,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1945-08-15',
+      birthPlace: 'Mont-de-Marsan',
+      career: [
+        'Premier ministre (1995-1997)',
+        'Maire de Bordeaux (1995-2019)',
+        'Membre du Conseil constitutionnel (2019-)'
+      ],
+      justiceIncidents: [
+        { type: 'Condamnation', date: '2004', description: 'Condamné à 14 mois de prison avec sursis et un an d\'inéligibilité pour prise illégale d\'intérêts dans l\'affaire des emplois fictifs du RPR' }
+      ]
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Patrick Balkany',
+    party: 'lr',
+    position: 'Ancien maire de Levallois-Perret',
+    convictions: 2,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1948-08-16',
+      birthPlace: 'Neuilly-sur-Seine',
+      career: [
+        'Maire de Levallois-Perret (1983-2019)',
+        'Député des Hauts-de-Seine'
+      ],
+      justiceIncidents: [
+        { type: 'Condamnation', date: '2019', description: 'Condamné à 4 ans de prison ferme pour fraude fiscale' },
+        { type: 'Condamnation', date: '2019', description: 'Condamné à 5 ans de prison pour blanchiment de fraude fiscale' }
+      ]
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Claude Guéant',
+    party: 'lr',
+    position: 'Ancien ministre de l\'Intérieur',
+    convictions: 1,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1945-07-09',
+      birthPlace: 'Vimy',
+      career: [
+        'Secrétaire général de l\'Élysée (2007-2011)',
+        'Ministre de l\'Intérieur (2011-2012)'
+      ],
+      justiceIncidents: [
+        { type: 'Condamnation', date: '2017', description: 'Condamné à 2 ans de prison dont 1 ferme pour blanchiment de fraude fiscale (primes en liquide au ministère)' }
+      ]
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Brice Hortefeux',
+    party: 'lr',
+    position: 'Ancien ministre de l\'Intérieur',
+    convictions: 1,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1958-05-11',
+      birthPlace: 'Neuilly-sur-Seine',
+      career: [
+        'Ministre de l\'Immigration (2007-2009)',
+        'Ministre de l\'Intérieur (2009-2011)',
+        'Député européen'
+      ],
+      justiceIncidents: [
+        { type: 'Condamnation', date: '2010', description: 'Condamné pour injure raciale' }
+      ]
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Jean-François Copé',
+    party: 'lr',
+    position: 'Maire de Meaux',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1964-05-05',
+      birthPlace: 'Boulogne-Billancourt',
+      career: [
+        'Ministre du Budget (2004-2007)',
+        'Président de l\'UMP (2012-2014)',
+        'Maire de Meaux (1995-)'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Rachida Dati',
+    party: 'lr',
+    position: 'Ministre de la Culture',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1965-11-27',
+      birthPlace: 'Saint-Rémy',
+      career: [
+        'Garde des Sceaux (2007-2009)',
+        'Députée européenne (2009-2019)',
+        'Maire du 7e arrondissement de Paris (2008-2024)',
+        'Ministre de la Culture (2024-)'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Xavier Bertrand',
+    party: 'lr',
+    position: 'Président de la région Hauts-de-France',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1965-03-21',
+      birthPlace: 'Châlons-en-Champagne',
+      career: [
+        'Ministre de la Santé (2005-2007)',
+        'Ministre du Travail (2007-2009, 2010-2012)',
+        'Président de la région Hauts-de-France (2016-)'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Nadine Morano',
+    party: 'lr',
+    position: 'Députée européenne',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1963-11-06',
+      birthPlace: 'Nancy',
+      career: [
+        'Secrétaire d\'État à la Famille (2008-2010)',
+        'Ministre de l\'Apprentissage (2010-2012)',
+        'Députée européenne (2014-)'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Bruno Retailleau',
+    party: 'lr',
+    position: 'Ministre de l\'Intérieur',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1960-11-20',
+      birthPlace: 'Cholet',
+      career: [
+        'Sénateur de la Vendée (2004-2024)',
+        'Président du groupe LR au Sénat (2014-2024)',
+        'Ministre de l\'Intérieur (2024-)'
+      ],
+      justiceIncidents: []
+    }
+  },
+
+  // ===============================
+  // PARTI SOCIALISTE (PS)
+  // ===============================
+  {
+    id: nextId++,
     name: 'François Hollande',
     party: 'ps',
     position: 'Ancien Président de la République',
     convictions: 0,
     ongoingCases: 0,
     details: {
-      birthDate: '1965-08-12',
+      birthDate: '1954-08-12',
       birthPlace: 'Rouen',
       career: [
-        'Mayor de Tulle (1995-2017)',
-        'Sénateur (1995-2012)',
-        'Premier Secrétaire du PS (1997-2008)',
+        'Maire de Tulle (2001-2008)',
+        'Premier secrétaire du PS (1997-2008)',
         'Président de la République (2012-2017)'
       ],
       justiceIncidents: []
     }
   },
   {
-    id: 7,
+    id: nextId++,
     name: 'Dominique Strauss-Kahn',
     party: 'ps',
-    position: 'Ancien ministre de l\'Économie',
+    position: 'Ancien directeur du FMI',
     convictions: 0,
     ongoingCases: 0,
     details: {
@@ -303,91 +622,386 @@ export const politicians = [
       career: [
         'Ministre de l\'Industrie (1991-1993)',
         'Ministre de l\'Économie (1997-1999)',
-        'Directeur général du FMI (2007-2011)',
-        'Candidat présidentiel (2011 - retiré)'
+        'Directeur général du FMI (2007-2011)'
       ],
       justiceIncidents: [
-        {
-          type: 'Accusation/Enquête',
-          date: '2011',
-          description: 'Accusé d\'agression sexuelle à New York (affaire classée, accord de 6M$)'
-        }
+        { type: 'Accusation/Enquête', date: '2011', description: 'Accusé d\'agression sexuelle à New York (affaire classée, accord de 6M$)' }
       ]
     }
   },
   {
-    id: 8,
+    id: nextId++,
+    name: 'Jérôme Cahuzac',
+    party: 'ps',
+    position: 'Ancien ministre du Budget',
+    convictions: 1,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1952-06-19',
+      birthPlace: 'Talence',
+      career: [
+        'Député du Lot-et-Garonne (1997-2012)',
+        'Ministre du Budget (2012-2013)'
+      ],
+      justiceIncidents: [
+        { type: 'Condamnation', date: '2018', description: 'Condamné à 2 ans de prison ferme pour fraude fiscale et blanchiment (compte bancaire non déclaré en Suisse)' }
+      ]
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Christiane Taubira',
+    party: 'ps',
+    position: 'Ancienne ministre de la Justice',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1952-02-02',
+      birthPlace: 'Cayenne (Guyane française)',
+      career: [
+        'Députée de Guyane (1993-2012)',
+        'Ministre de la Justice (2012-2016)',
+        'Candidate présidentielle (2022)'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Olivier Faure',
+    party: 'ps',
+    position: 'Premier Secrétaire du PS',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1968-05-22',
+      birthPlace: 'Boulogne-Billancourt',
+      career: [
+        'Député de Seine-et-Marne (2012-)',
+        'Premier secrétaire du PS (2018-)'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Anne Hidalgo',
+    party: 'ps',
+    position: 'Maire de Paris',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1959-06-19',
+      birthPlace: 'San Fernando (Espagne)',
+      career: [
+        'Première adjointe au maire de Paris (2001-2014)',
+        'Maire de Paris (2014-)',
+        'Candidate présidentielle (2022)'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Bernard Cazeneuve',
+    party: 'ps',
+    position: 'Ancien Premier ministre',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1963-06-02',
+      birthPlace: 'Senlis',
+      career: [
+        'Ministre de l\'Intérieur (2014-2016)',
+        'Premier ministre (2016-2017)'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Ségolène Royal',
+    party: 'ps',
+    position: 'Ancienne candidate présidentielle',
+    convictions: 0,
+    ongoingCases: 1,
+    details: {
+      birthDate: '1953-09-22',
+      birthPlace: 'Dakar (Sénégal)',
+      career: [
+        'Ministre déléguée (1992-1993, 1997-2002)',
+        'Présidente de la région Poitou-Charentes (2004-2014)',
+        'Candidate présidentielle (2007)',
+        'Ambassadrice des pôles (2017-2020)'
+      ],
+      justiceIncidents: [
+        { type: 'Mise en examen', date: '2023', description: 'Mise en examen pour détournement de fonds publics dans ses fonctions d\'ambassadrice des pôles' }
+      ]
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Jack Lang',
+    party: 'ps',
+    position: 'Ancien ministre de la Culture',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1939-09-02',
+      birthPlace: 'Mirecourt',
+      career: [
+        'Ministre de la Culture (1981-1986, 1988-1993)',
+        'Ministre de l\'Éducation nationale (2000-2002)',
+        'Président de l\'Institut du monde arabe (2013-)'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Manuel Valls',
+    party: 'ps',
+    position: 'Ancien Premier ministre',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1962-08-13',
+      birthPlace: 'Barcelone (Espagne)',
+      career: [
+        'Maire d\'Évry (2001-2012)',
+        'Ministre de l\'Intérieur (2012-2014)',
+        'Premier ministre (2014-2016)'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
     name: 'Éric Besson',
     party: 'ps',
     position: 'Ancien ministre de l\'Immigration',
     convictions: 1,
     ongoingCases: 0,
     details: {
-      birthDate: '1965-12-20',
-      birthPlace: 'Périgueux',
+      birthDate: '1958-03-02',
+      birthPlace: 'Marrakech (Maroc)',
       career: [
-        'Ministre du Travail (2008-2010)',
-        'Ministre de l\'Immigration (2010-2011)',
-        'Député (2012-2017)'
+        'Secrétaire national du PS',
+        'Ministre de l\'Immigration (2009-2010)',
+        'Ministre de l\'Industrie (2010-2012)'
       ],
       justiceIncidents: [
-        {
-          type: 'Condamnation',
-          date: '2022',
-          description: 'Condamné pour corruption dans un contrat d\'armement avec la Tunisie'
-        }
+        { type: 'Condamnation', date: '2022', description: 'Condamné pour corruption dans un contrat d\'armement avec la Tunisie' }
       ]
     }
   },
-
-  // LA FRANCE INSOUMISE
   {
-    id: 9,
+    id: nextId++,
+    name: 'Martine Aubry',
+    party: 'ps',
+    position: 'Maire de Lille',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1950-08-08',
+      birthPlace: 'Paris',
+      career: [
+        'Ministre du Travail (1991-1993, 1997-2000)',
+        'Première secrétaire du PS (2008-2012)',
+        'Maire de Lille (2001-)'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Benoît Hamon',
+    party: 'ps',
+    position: 'Ancien candidat présidentiel',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1967-06-26',
+      birthPlace: 'Saint-Renan',
+      career: [
+        'Député des Yvelines (2012-2017)',
+        'Ministre de l\'Éducation nationale (2014)',
+        'Candidat présidentiel PS (2017)'
+      ],
+      justiceIncidents: []
+    }
+  },
+
+  // ===============================
+  // LA FRANCE INSOUMISE (LFI)
+  // ===============================
+  {
+    id: nextId++,
     name: 'Jean-Luc Mélenchon',
     party: 'lfi',
     position: 'Chef de La France Insoumise',
     convictions: 0,
     ongoingCases: 0,
     details: {
-      birthDate: '1951-08-02',
+      birthDate: '1951-08-19',
       birthPlace: 'Tanger (Maroc)',
       career: [
-        'Sénateur (2011-2012)',
-        'Candidat présidentiel (2012, 2017, 2022)',
-        'Fondateur et chef de LFI (2016-)',
-        'Député (2012-2015, 2017-)'
+        'Sénateur de l\'Essonne (1986-2000)',
+        'Ministre délégué à l\'Enseignement professionnel (2000-2002)',
+        'Fondateur de LFI (2016)',
+        'Candidat présidentiel (2012, 2017, 2022)'
       ],
       justiceIncidents: []
     }
   },
   {
-    id: 10,
+    id: nextId++,
     name: 'Adrien Quatennens',
     party: 'lfi',
-    position: 'Député LFI',
-    convictions: 0,
-    ongoingCases: 1,
+    position: 'Ancien député du Nord',
+    convictions: 1,
+    ongoingCases: 0,
     details: {
-      birthDate: '1989-07-12',
-      birthPlace: 'Villemomble',
+      birthDate: '1990-01-23',
+      birthPlace: 'Lille',
       career: [
-        'Secrétaire national de LFI',
-        'Député de Nord (2017-)',
-        'Candidat aux élections régionales'
+        'Député du Nord (2017-2024)',
+        'Coordinateur de LFI (2019-2022)'
       ],
       justiceIncidents: [
-        {
-          type: 'Enquête',
-          date: '2022',
-          description: 'Enquête pour violences conjugales et non-représentation d\'enfant'
-        }
+        { type: 'Condamnation', date: '2022', description: 'Condamné pour violences conjugales (4 mois de prison avec sursis)' }
       ]
     }
   },
-
-  // ENSEMBLE POUR LA RÉPUBLIQUE / MACRON
   {
-    id: 11,
+    id: nextId++,
+    name: 'Mathilde Panot',
+    party: 'lfi',
+    position: 'Présidente du groupe LFI à l\'Assemblée',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1989-09-13',
+      birthPlace: 'Limoges',
+      career: [
+        'Députée du Val-de-Marne (2017-)',
+        'Présidente du groupe LFI à l\'Assemblée nationale (2022-)'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'François Ruffin',
+    party: 'lfi',
+    position: 'Député de la Somme',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1975-10-18',
+      birthPlace: 'Calais',
+      career: [
+        'Journaliste, fondateur de Fakir',
+        'Réalisateur (Merci patron!, 2016)',
+        'Député de la Somme (2017-)'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Clémentine Autain',
+    party: 'lfi',
+    position: 'Ancienne députée de Seine-Saint-Denis',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1973-05-26',
+      birthPlace: 'Paris',
+      career: [
+        'Adjointe au maire de Paris (2001-2008)',
+        'Députée de Seine-Saint-Denis (2017-2024)'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Alexis Corbière',
+    party: 'lfi',
+    position: 'Député de Seine-Saint-Denis',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1968-08-18',
+      birthPlace: 'Béziers',
+      career: [
+        'Conseiller de Paris (2008-2017)',
+        'Député de Seine-Saint-Denis (2017-)'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Manuel Bompard',
+    party: 'lfi',
+    position: 'Coordinateur de LFI',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1986-09-11',
+      birthPlace: 'Montpellier',
+      career: [
+        'Député européen (2019-2022)',
+        'Député des Bouches-du-Rhône (2022-)',
+        'Coordinateur de LFI (2022-)'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Sandrine Rousseau',
+    party: 'lfi',
+    position: 'Députée de Paris',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1972-09-13',
+      birthPlace: 'Haubourdin',
+      career: [
+        'Vice-présidente de l\'Université de Lille',
+        'Candidate à la primaire EELV (2021)',
+        'Députée de Paris (2022-)'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Raquel Garrido',
+    party: 'lfi',
+    position: 'Députée de Seine-Saint-Denis',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1974-05-12',
+      birthPlace: 'Buenos Aires (Argentine)',
+      career: [
+        'Avocate',
+        'Porte-parole de LFI',
+        'Députée de Seine-Saint-Denis (2022-)'
+      ],
+      justiceIncidents: []
+    }
+  },
+
+  // ===============================
+  // ENSEMBLE POUR LA RÉPUBLIQUE
+  // ===============================
+  {
+    id: nextId++,
     name: 'Emmanuel Macron',
     party: 'ensemble',
     position: 'Président de la République',
@@ -407,143 +1021,693 @@ export const politicians = [
     }
   },
   {
-    id: 12,
-    name: 'Alain Griset',
-    party: 'modem',
-    position: 'Ministre des PME',
+    id: nextId++,
+    name: 'Gabriel Attal',
+    party: 'ensemble',
+    position: 'Ancien Premier ministre',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1989-03-16',
+      birthPlace: 'Clamart',
+      career: [
+        'Secrétaire d\'État à la Jeunesse (2020-2022)',
+        'Ministre du Budget (2022-2023)',
+        'Ministre de l\'Éducation nationale (2023-2024)',
+        'Premier ministre (2024)'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Élisabeth Borne',
+    party: 'ensemble',
+    position: 'Ancienne Première ministre',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1961-04-18',
+      birthPlace: 'Paris',
+      career: [
+        'Ministre des Transports (2017-2019)',
+        'Ministre de la Transition écologique (2019-2020)',
+        'Ministre du Travail (2020-2022)',
+        'Première ministre (2022-2024)'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Gérald Darmanin',
+    party: 'ensemble',
+    position: 'Ancien ministre de l\'Intérieur',
     convictions: 0,
     ongoingCases: 1,
     details: {
-      birthDate: '1967-03-29',
-      birthPlace: 'Fontenu',
+      birthDate: '1982-10-11',
+      birthPlace: 'Valenciennes',
       career: [
-        'Maire de Fontenu (1995-)',
-        'Président du MODEM (2017-2022)',
-        'Ministre des PME (2020-2022)',
-        'Secrétaire d\'État auprès de Macron'
+        'Maire de Tourcoing (2014-2017)',
+        'Ministre de l\'Action et des Comptes publics (2017-2020)',
+        'Ministre de l\'Intérieur (2020-2024)'
       ],
       justiceIncidents: [
-        {
-          type: 'Mise en examen',
-          date: '2023',
-          description: 'Mise en examen pour abus de confiance et détournement de fonds collectivités'
-        }
+        { type: 'Enquête', date: '2020', description: 'Accusé de viol et harcèlement sexuel (enquête classée puis rouverte)' }
+      ]
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Éric Dupond-Moretti',
+    party: 'ensemble',
+    position: 'Ancien ministre de la Justice',
+    convictions: 0,
+    ongoingCases: 1,
+    details: {
+      birthDate: '1961-04-20',
+      birthPlace: 'Maubeuge',
+      career: [
+        'Avocat pénaliste',
+        'Garde des Sceaux, ministre de la Justice (2020-2024)'
+      ],
+      justiceIncidents: [
+        { type: 'Mise en examen', date: '2021', description: 'Mise en examen pour prise illégale d\'intérêts (relaxé par la CJR en 2023, mais procédure en cours)' }
+      ]
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Richard Ferrand',
+    party: 'ensemble',
+    position: 'Ancien président de l\'Assemblée nationale',
+    convictions: 0,
+    ongoingCases: 1,
+    details: {
+      birthDate: '1962-10-06',
+      birthPlace: 'Rodez',
+      career: [
+        'Député du Finistère (2012-2022)',
+        'Président de l\'Assemblée nationale (2018-2022)'
+      ],
+      justiceIncidents: [
+        { type: 'Mise en examen', date: '2019', description: 'Mise en examen pour prise illégale d\'intérêts dans une affaire immobilière des Mutuelles de Bretagne' }
+      ]
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Olivier Dussopt',
+    party: 'ensemble',
+    position: 'Ancien ministre du Travail',
+    convictions: 0,
+    ongoingCases: 1,
+    details: {
+      birthDate: '1978-08-16',
+      birthPlace: 'Annonay',
+      career: [
+        'Député de l\'Ardèche (2007-2022)',
+        'Secrétaire d\'État (2017-2020)',
+        'Ministre du Travail (2022-2024)'
+      ],
+      justiceIncidents: [
+        { type: 'Mise en examen', date: '2023', description: 'Mis en examen pour favoritisme lors de la passation d\'un marché public à Annonay' }
+      ]
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Édouard Philippe',
+    party: 'ensemble',
+    position: 'Ancien Premier ministre',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1970-11-28',
+      birthPlace: 'Rouen',
+      career: [
+        'Maire du Havre (2010-2017, 2020-)',
+        'Premier ministre (2017-2020)',
+        'Fondateur d\'Horizons (2021)'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Christophe Castaner',
+    party: 'ensemble',
+    position: 'Ancien ministre de l\'Intérieur',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1966-01-03',
+      birthPlace: 'Ollioules',
+      career: [
+        'Député des Alpes-de-Haute-Provence (2012-2017)',
+        'Délégué général de LREM (2017-2018)',
+        'Ministre de l\'Intérieur (2018-2020)'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Stéphane Séjourné',
+    party: 'ensemble',
+    position: 'Ancien ministre des Affaires étrangères',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1985-12-28',
+      birthPlace: 'Versailles',
+      career: [
+        'Député européen (2019-2024)',
+        'Secrétaire général de Renaissance (2022-2024)',
+        'Ministre des Affaires étrangères (2024)'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Marlène Schiappa',
+    party: 'ensemble',
+    position: 'Ancienne secrétaire d\'État',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1982-10-18',
+      birthPlace: 'Paris',
+      career: [
+        'Secrétaire d\'État à l\'Égalité femmes-hommes (2017-2020)',
+        'Ministre déléguée à la Citoyenneté (2020-2022)',
+        'Secrétaire d\'État à l\'Économie sociale (2022-2023)'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Damien Abad',
+    party: 'ensemble',
+    position: 'Ancien ministre des Solidarités',
+    convictions: 0,
+    ongoingCases: 1,
+    details: {
+      birthDate: '1980-04-05',
+      birthPlace: 'Nîmes',
+      career: [
+        'Député de l\'Ain (2012-2024)',
+        'Président du groupe LR à l\'Assemblée (2019-2022)',
+        'Ministre des Solidarités (2022)'
+      ],
+      justiceIncidents: [
+        { type: 'Mise en examen', date: '2023', description: 'Mis en examen pour tentative de viol' }
       ]
     }
   },
 
-  // SOCIALISTES - AUTRES
+  // ===============================
+  // MoDem
+  // ===============================
   {
-    id: 13,
-    name: 'Olivier Faure',
-    party: 'ps',
-    position: 'Premier Secrétaire du PS',
+    id: nextId++,
+    name: 'François Bayrou',
+    party: 'modem',
+    position: 'Premier ministre',
+    convictions: 0,
+    ongoingCases: 1,
+    details: {
+      birthDate: '1951-05-25',
+      birthPlace: 'Bordères',
+      career: [
+        'Ministre de l\'Éducation nationale (1993-1997)',
+        'Candidat présidentiel (2002, 2007, 2012)',
+        'Fondateur du MoDem (2007)',
+        'Maire de Pau (2014-)',
+        'Premier ministre (2024-)'
+      ],
+      justiceIncidents: [
+        { type: 'Mise en examen', date: '2019', description: 'Mise en examen pour complicité de détournement de fonds publics (affaire des assistants parlementaires européens du MoDem)' }
+      ]
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Alain Griset',
+    party: 'modem',
+    position: 'Ancien ministre des PME',
+    convictions: 1,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1954-06-29',
+      birthPlace: 'Roubaix',
+      career: [
+        'Président de l\'U2P (Union des entreprises de proximité)',
+        'Ministre des PME (2020-2021)'
+      ],
+      justiceIncidents: [
+        { type: 'Condamnation', date: '2022', description: 'Condamné pour déclaration incomplète de patrimoine (3 mois de prison avec sursis et 3 ans d\'inéligibilité)' }
+      ]
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Marielle de Sarnez',
+    party: 'modem',
+    position: 'Ancienne députée européenne',
     convictions: 0,
     ongoingCases: 0,
     details: {
-      birthDate: '1966-05-22',
-      birthPlace: 'Lyon',
+      birthDate: '1951-03-27',
+      birthPlace: 'Paris',
       career: [
-        'Député de Saône-et-Loire (2012-)',
-        'Premier Secrétaire du PS (2018-)',
-        'Vice-président du Conseil régional'
+        'Députée européenne (1999-2017)',
+        'Ministre des Affaires européennes (2017)',
+        'Députée de Paris (2017-2021)'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Marc Fesneau',
+    party: 'modem',
+    position: 'Ancien ministre de l\'Agriculture',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1971-04-05',
+      birthPlace: 'Blois',
+      career: [
+        'Député du Loir-et-Cher (2017-2022)',
+        'Ministre des Relations avec le Parlement (2020-2022)',
+        'Ministre de l\'Agriculture (2022-2024)'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Patrick Mignola',
+    party: 'modem',
+    position: 'Député de la Savoie',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1971-06-18',
+      birthPlace: 'Chambéry',
+      career: [
+        'Député de la Savoie (2017-)',
+        'Président du groupe MoDem à l\'Assemblée nationale (2018-2022)'
       ],
       justiceIncidents: []
     }
   },
 
-  // ÉCOLOGISTES
+  // ===============================
+  // EUROPE ÉCOLOGIE LES VERTS (EELV)
+  // ===============================
   {
-    id: 14,
+    id: nextId++,
     name: 'Yannick Jadot',
     party: 'ecolo',
     position: 'Candidat écologiste 2022',
     convictions: 0,
     ongoingCases: 0,
     details: {
-      birthDate: '1968-07-30',
-      birthPlace: 'Neuilly-sur-Seine',
+      birthDate: '1967-07-27',
+      birthPlace: 'Clacy-et-Thierret',
       career: [
-        'Directeur de Greenpeace France (1998-2012)',
-        'Député européen (2009-2019)',
-        'Candidat présidentiel (2022)',
-        'Sénateur'
+        'Directeur des campagnes de Greenpeace France (2002-2008)',
+        'Député européen (2009-)',
+        'Candidat présidentiel (2022)'
       ],
       justiceIncidents: []
     }
   },
-
-  // AUTRES PARTIS
   {
-    id: 15,
+    id: nextId++,
+    name: 'Marine Tondelier',
+    party: 'ecolo',
+    position: 'Secrétaire nationale d\'EELV',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1986-11-17',
+      birthPlace: 'Hénin-Beaumont',
+      career: [
+        'Conseillère municipale d\'Hénin-Beaumont',
+        'Secrétaire nationale d\'EELV (2022-)'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Julien Bayou',
+    party: 'ecolo',
+    position: 'Ancien député de Paris',
+    convictions: 0,
+    ongoingCases: 1,
+    details: {
+      birthDate: '1980-01-13',
+      birthPlace: 'Valence',
+      career: [
+        'Secrétaire national d\'EELV (2019-2022)',
+        'Député de Paris (2022-2024)'
+      ],
+      justiceIncidents: [
+        { type: 'Enquête', date: '2022', description: 'Enquête pour harcèlement moral à l\'encontre de son ex-compagne' }
+      ]
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Eva Joly',
+    party: 'ecolo',
+    position: 'Ancienne candidate présidentielle',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1943-12-05',
+      birthPlace: 'Oslo (Norvège)',
+      career: [
+        'Juge d\'instruction (affaire Elf)',
+        'Candidate présidentielle EELV (2012)',
+        'Députée européenne (2009-2019)'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Cécile Duflot',
+    party: 'ecolo',
+    position: 'Ancienne ministre du Logement',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1975-04-01',
+      birthPlace: 'Villeneuve-Saint-Georges',
+      career: [
+        'Secrétaire nationale des Verts (2006-2012)',
+        'Ministre du Logement (2012-2014)',
+        'Députée de Paris (2012-2017)'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Noël Mamère',
+    party: 'ecolo',
+    position: 'Ancien député de Gironde',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1948-12-25',
+      birthPlace: 'Libourne',
+      career: [
+        'Journaliste à Antenne 2',
+        'Député de la Gironde (1997-2017)',
+        'Maire de Bègles (1989-2017)',
+        'Candidat présidentiel (2002)'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Denis Baupin',
+    party: 'ecolo',
+    position: 'Ancien vice-président de l\'Assemblée nationale',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1962-05-22',
+      birthPlace: 'Paris',
+      career: [
+        'Adjoint au maire de Paris (2001-2014)',
+        'Député de Paris (2012-2016)',
+        'Vice-président de l\'Assemblée nationale (2014-2016)'
+      ],
+      justiceIncidents: [
+        { type: 'Accusation/Enquête', date: '2016', description: 'Accusations de harcèlement sexuel et agressions sexuelles par plusieurs femmes (plainte classée pour prescription)' }
+      ]
+    }
+  },
+
+  // ===============================
+  // PARTI COMMUNISTE FRANÇAIS (PCF)
+  // ===============================
+  {
+    id: nextId++,
     name: 'Fabien Roussel',
     party: 'pcf',
     position: 'Secrétaire national du PCF',
     convictions: 0,
     ongoingCases: 0,
     details: {
-      birthDate: '1970-08-28',
-      birthPlace: 'Saint-Ouen',
+      birthDate: '1969-04-16',
+      birthPlace: 'Saint-Amand-les-Eaux',
       career: [
-        'Secrétaire régional du PCF (2008-2018)',
+        'Député du Nord (2017-)',
         'Secrétaire national du PCF (2018-)',
-        'Candidat présidentiel (2022)',
-        'Député (2012-)'
+        'Candidat présidentiel (2022)'
       ],
       justiceIncidents: []
     }
   },
   {
-    id: 16,
-    name: 'Arlette Laguiller',
-    party: 'npa',
-    position: 'Fondatrice du NPA',
+    id: nextId++,
+    name: 'Pierre Laurent',
+    party: 'pcf',
+    position: 'Ancien secrétaire national du PCF',
     convictions: 0,
     ongoingCases: 0,
     details: {
-      birthDate: '1934-04-02',
+      birthDate: '1957-07-01',
       birthPlace: 'Paris',
       career: [
-        'Candidate présidentielle (1974, 1981, 1988, 1995, 2002, 2007, 2012)',
-        'Fondatrice du NPA (2009)',
-        'Militante syndicaliste'
+        'Directeur de l\'Humanité (2000-2010)',
+        'Secrétaire national du PCF (2010-2018)',
+        'Sénateur de Paris (2017-)'
       ],
       justiceIncidents: []
     }
   },
   {
-    id: 17,
-    name: 'Marine Tondelier',
-    party: 'ecolo',
-    position: 'Coprésident d\'EELV',
+    id: nextId++,
+    name: 'André Chassaigne',
+    party: 'pcf',
+    position: 'Député du Puy-de-Dôme',
     convictions: 0,
     ongoingCases: 0,
     details: {
-      birthDate: '1980-04-29',
-      birthPlace: 'Le Havre',
+      birthDate: '1950-06-12',
+      birthPlace: 'Thiers',
       career: [
-        'Conseillère communautaire',
-        'Coprésident d\'EELV (2022-)',
-        'Candidate aux élections (2022)'
+        'Député du Puy-de-Dôme (2002-)',
+        'Président du groupe GDR à l\'Assemblée nationale (2012-)'
       ],
       justiceIncidents: []
     }
   },
   {
-    id: 18,
-    name: 'Christiane Taubira',
-    party: 'ps',
-    position: 'Ancienne ministre de la Justice',
+    id: nextId++,
+    name: 'Elsa Faucillon',
+    party: 'pcf',
+    position: 'Députée des Hauts-de-Seine',
     convictions: 0,
     ongoingCases: 0,
     details: {
-      birthDate: '1952-02-02',
-      birthPlace: 'Cayenne (Guyane française)',
+      birthDate: '1981-12-03',
+      birthPlace: 'Nanterre',
       career: [
-        'Présidente du Parlement européen',
-        'Ministre de la Justice (2012-2016)',
-        'Députée de Guyane française',
-        'Candidate présidentielle (2022)'
+        'Conseillère départementale des Hauts-de-Seine',
+        'Députée des Hauts-de-Seine (2017-)'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Ian Brossat',
+    party: 'pcf',
+    position: 'Sénateur de Paris',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1980-02-22',
+      birthPlace: 'Brest',
+      career: [
+        'Adjoint à la maire de Paris (2014-)',
+        'Tête de liste PCF aux européennes (2019)',
+        'Sénateur de Paris (2023-)'
+      ],
+      justiceIncidents: []
+    }
+  },
+
+  // ===============================
+  // NPA
+  // ===============================
+  {
+    id: nextId++,
+    name: 'Arlette Laguiller',
+    party: 'npa',
+    position: 'Ancienne porte-parole de Lutte Ouvrière',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1940-03-18',
+      birthPlace: 'Paris',
+      career: [
+        'Porte-parole de Lutte Ouvrière',
+        'Candidate présidentielle (1974, 1981, 1988, 1995, 2002, 2007)'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Olivier Besancenot',
+    party: 'npa',
+    position: 'Cofondateur du NPA',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1974-04-18',
+      birthPlace: 'Levallois-Perret',
+      career: [
+        'Facteur',
+        'Porte-parole de la LCR (2002-2009)',
+        'Cofondateur du NPA (2009)',
+        'Candidat présidentiel (2002, 2007)'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Philippe Poutou',
+    party: 'npa',
+    position: 'Porte-parole du NPA',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1967-03-14',
+      birthPlace: 'Bordeaux',
+      career: [
+        'Ouvrier chez Ford',
+        'Porte-parole du NPA',
+        'Candidat présidentiel (2012, 2017, 2022)'
+      ],
+      justiceIncidents: []
+    }
+  },
+
+  // ===============================
+  // UDI
+  // ===============================
+  {
+    id: nextId++,
+    name: 'Jean-Christophe Lagarde',
+    party: 'udi',
+    position: 'Président de l\'UDI',
+    convictions: 0,
+    ongoingCases: 1,
+    details: {
+      birthDate: '1967-10-24',
+      birthPlace: 'Paris',
+      career: [
+        'Maire de Drancy (2001-2017)',
+        'Député de Seine-Saint-Denis (2002-2022)',
+        'Président de l\'UDI (2014-)'
+      ],
+      justiceIncidents: [
+        { type: 'Mise en examen', date: '2021', description: 'Mise en examen pour financement illégal de campagne électorale' }
+      ]
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Jean-Louis Borloo',
+    party: 'udi',
+    position: 'Ancien ministre',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1951-04-07',
+      birthPlace: 'Paris',
+      career: [
+        'Maire de Valenciennes (1989-2002)',
+        'Ministre de la Ville (2002-2004)',
+        'Ministre de l\'Emploi (2004-2007)',
+        'Ministre de l\'Écologie (2007-2010)'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Hervé Morin',
+    party: 'udi',
+    position: 'Président de la région Normandie',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1961-08-17',
+      birthPlace: 'Pont-Audemer',
+      career: [
+        'Député de l\'Eure (1998-2016)',
+        'Ministre de la Défense (2007-2010)',
+        'Président de la région Normandie (2016-)'
+      ],
+      justiceIncidents: []
+    }
+  },
+
+  // ===============================
+  // AGIR
+  // ===============================
+  {
+    id: nextId++,
+    name: 'Adrien Taquet',
+    party: 'agir',
+    position: 'Ancien secrétaire d\'État',
+    convictions: 0,
+    ongoingCases: 1,
+    details: {
+      birthDate: '1977-12-04',
+      birthPlace: 'Boulogne-Billancourt',
+      career: [
+        'Député des Hauts-de-Seine (2017-2022)',
+        'Secrétaire d\'État à la Protection de l\'enfance (2019-2022)'
+      ],
+      justiceIncidents: [
+        { type: 'Mise en examen', date: '2023', description: 'Mis en examen pour viol' }
+      ]
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Franck Riester',
+    party: 'agir',
+    position: 'Ancien ministre de la Culture',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1974-01-03',
+      birthPlace: 'Meaux',
+      career: [
+        'Député de Seine-et-Marne (2007-2018)',
+        'Fondateur d\'Agir (2017)',
+        'Ministre de la Culture (2018-2020)',
+        'Ministre du Commerce extérieur (2020-2022)'
       ],
       justiceIncidents: []
     }
@@ -591,7 +1755,7 @@ export const getPartyStats = (partyId) => {
     count: partyPols.length,
     totalConvictions: partyPols.reduce((sum, p) => sum + p.convictions, 0),
     totalOngoingCases: partyPols.reduce((sum, p) => sum + p.ongoingCases, 0),
-    percentageWithIncidents: partyPols.length > 0 
+    percentageWithIncidents: partyPols.length > 0
       ? (partyPols.filter(p => p.convictions > 0 || p.ongoingCases > 0).length / partyPols.length * 100).toFixed(1)
       : 0
   }

@@ -1,51 +1,119 @@
-import { BarChart, Bar, PieChart, Pie, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts'
+import { useState, useMemo } from 'react'
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts'
 import { parties } from '../data/frenchPolitics'
 
+const INCIDENT_TYPES = [
+  { key: 'convictions', label: 'Condamnations', color: '#DC2626' },
+  { key: 'ongoingCases', label: 'Affaires en cours', color: '#EA580C' },
+  { key: 'enquetes', label: 'Enquêtes', color: '#0284C7' },
+  { key: 'misesEnExamen', label: 'Mises en examen', color: '#7C3AED' }
+]
+
 export default function PartyStats({ politicians, selectedParty, onPartySelect }) {
+  const [activeFilters, setActiveFilters] = useState(
+    INCIDENT_TYPES.reduce((acc, t) => ({ ...acc, [t.key]: true }), {})
+  )
+
+  const toggleFilter = (key) => {
+    setActiveFilters(prev => ({ ...prev, [key]: !prev[key] }))
+  }
+
   const partyIds = [...new Set(politicians.map(p => p.party))]
 
-  const partyStats = partyIds.map(partyId => {
-    const partyObj = parties.find(p => p.id === partyId)
-    const partyPols = politicians.filter(p => p.party === partyId)
-    return {
-      partyId,
-      partyName: partyObj?.name || partyId,
-      color: partyObj?.color || '#999',
-      count: partyPols.length,
-      convictions: partyPols.reduce((sum, p) => sum + p.convictions, 0),
-      ongoingCases: partyPols.reduce((sum, p) => sum + p.ongoingCases, 0)
-    }
-  })
+  const partyStats = useMemo(() => {
+    return partyIds.map(partyId => {
+      const partyObj = parties.find(p => p.id === partyId)
+      const partyPols = politicians.filter(p => p.party === partyId)
 
-  const convictionData = partyStats.map(s => {
-    const shortName = s.partyName.split('(')[0].trim()
-    return {
-      name: shortName.length > 14 ? shortName.slice(0, 12) + '...' : shortName,
-      fullName: shortName,
-      convictions: s.convictions
-    }
-  })
+      let enquetes = 0
+      let misesEnExamen = 0
+      partyPols.forEach(pol => {
+        const incidents = pol.details?.justiceIncidents || []
+        incidents.forEach(inc => {
+          const type = inc.type || ''
+          if (type.includes('Enquête') || type.includes('Accusation')) {
+            enquetes++
+          }
+          if (type.includes('Mise en examen')) {
+            misesEnExamen++
+          }
+        })
+      })
 
-  const caseData = partyStats.map(s => ({
-    name: s.partyName.split('(')[0].trim().length > 18
-      ? s.partyName.split('(')[0].trim().slice(0, 16) + '...'
-      : s.partyName.split('(')[0].trim(),
-    value: s.ongoingCases,
-    color: s.color
-  }))
+      return {
+        partyId,
+        partyName: partyObj?.name || partyId,
+        color: partyObj?.color || '#999',
+        count: partyPols.length,
+        convictions: partyPols.reduce((sum, p) => sum + p.convictions, 0),
+        ongoingCases: partyPols.reduce((sum, p) => sum + p.ongoingCases, 0),
+        enquetes,
+        misesEnExamen
+      }
+    })
+  }, [politicians, partyIds])
 
-  const COLORS = partyStats.map(s => s.color)
+  const chartData = useMemo(() => {
+    return partyStats
+      .filter(s => {
+        const hasData = INCIDENT_TYPES.some(t => activeFilters[t.key] && s[t.key] > 0)
+        return hasData
+      })
+      .map(s => {
+        const shortName = s.partyName.split('(')[0].trim()
+        const entry = {
+          name: shortName.length > 14 ? shortName.slice(0, 12) + '...' : shortName,
+          fullName: shortName
+        }
+        INCIDENT_TYPES.forEach(t => {
+          if (activeFilters[t.key]) {
+            entry[t.key] = s[t.key]
+          }
+        })
+        return entry
+      })
+  }, [partyStats, activeFilters])
+
+  const activeTypes = INCIDENT_TYPES.filter(t => activeFilters[t.key])
 
   return (
     <div className="mb-12">
       <h2 className="text-2xl font-bold text-gray-900 mb-6">Statistiques par parti</h2>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
-        {/* Histogram - Convictions */}
-        <div className="bg-white rounded-lg shadow p-6">
-          <h3 className="text-lg font-semibold text-gray-800 mb-4">Condamnations par parti</h3>
-          <ResponsiveContainer width="100%" height={350}>
-            <BarChart data={convictionData} margin={{ bottom: 20 }}>
+      <div className="bg-white rounded-lg shadow p-6 mb-8">
+        <h3 className="text-lg font-semibold text-gray-800 mb-4">Incidents de justice par parti</h3>
+
+        {/* Filters */}
+        <div className="flex flex-wrap gap-3 mb-6">
+          {INCIDENT_TYPES.map(type => (
+            <label
+              key={type.key}
+              className="flex items-center gap-2 cursor-pointer select-none"
+            >
+              <input
+                type="checkbox"
+                checked={activeFilters[type.key]}
+                onChange={() => toggleFilter(type.key)}
+                className="w-4 h-4 rounded"
+                style={{ accentColor: type.color }}
+              />
+              <span
+                className="text-sm font-medium px-2 py-1 rounded"
+                style={{
+                  backgroundColor: activeFilters[type.key] ? type.color + '20' : '#f3f4f6',
+                  color: activeFilters[type.key] ? type.color : '#6b7280'
+                }}
+              >
+                {type.label}
+              </span>
+            </label>
+          ))}
+        </div>
+
+        {/* Chart */}
+        {chartData.length > 0 ? (
+          <ResponsiveContainer width="100%" height={400}>
+            <BarChart data={chartData} margin={{ bottom: 20 }}>
               <CartesianGrid strokeDasharray="3 3" />
               <XAxis
                 dataKey="name"
@@ -55,49 +123,28 @@ export default function PartyStats({ politicians, selectedParty, onPartySelect }
                 interval={0}
                 tick={{ fontSize: 11 }}
               />
-              <YAxis />
+              <YAxis allowDecimals={false} />
               <Tooltip
-                formatter={(value) => [`${value}`, 'Condamnations']}
                 labelFormatter={(label) => {
-                  const item = convictionData.find(d => d.name === label)
+                  const item = chartData.find(d => d.name === label)
                   return item?.fullName || label
                 }}
               />
-              <Bar dataKey="convictions" fill="#EF4444" />
+              <Legend />
+              {activeTypes.map(type => (
+                <Bar
+                  key={type.key}
+                  dataKey={type.key}
+                  name={type.label}
+                  fill={type.color}
+                  stackId="incidents"
+                />
+              ))}
             </BarChart>
           </ResponsiveContainer>
-        </div>
-
-        {/* Pie Chart - Ongoing Cases */}
-        <div className="bg-white rounded-lg shadow p-6">
-          <h3 className="text-lg font-semibold text-gray-800 mb-4">Affaires en cours par parti</h3>
-          <ResponsiveContainer width="100%" height={400}>
-            <PieChart>
-              <Pie
-                data={caseData}
-                cx="50%"
-                cy="40%"
-                labelLine={true}
-                label={({ value }) => value > 0 ? value : ''}
-                outerRadius={80}
-                fill="#8884d8"
-                dataKey="value"
-              >
-                {caseData.map((entry, index) => (
-                  <Cell key={`cell-${index}`} fill={entry.color || COLORS[index % COLORS.length]} />
-                ))}
-              </Pie>
-              <Tooltip />
-              <Legend
-                layout="horizontal"
-                verticalAlign="bottom"
-                align="center"
-                wrapperStyle={{ fontSize: '11px', paddingTop: '10px' }}
-                formatter={(value) => value.length > 20 ? value.slice(0, 18) + '...' : value}
-              />
-            </PieChart>
-          </ResponsiveContainer>
-        </div>
+        ) : (
+          <p className="text-gray-500 text-center py-8">Sélectionnez au moins un type d'incident pour afficher le graphique.</p>
+        )}
       </div>
 
       {/* Party Selection */}

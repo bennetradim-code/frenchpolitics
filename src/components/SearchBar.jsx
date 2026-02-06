@@ -59,7 +59,7 @@ export default function SearchBar({ searchTerm, onSearchChange, politicians }) {
     <div className="mb-8 relative" ref={wrapperRef}>
       <input
         type="text"
-        placeholder="Chercher un homme politique..."
+        placeholder="Chercher une personnalité politique..."
         value={searchTerm}
         onChange={(e) => {
           onSearchChange(e.target.value)

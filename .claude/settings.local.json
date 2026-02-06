@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(powershell -Command \"npm install\")",
+      "Bash(cmd.exe /c \"npm install\")",
+      "Bash(git rm:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git pull:*)",
+      "Bash(powershell -ExecutionPolicy Bypass -Command \"npm install\")",
+      "Bash(git checkout:*)"
+    ]
+  }
+}
