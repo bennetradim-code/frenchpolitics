@@ -1670,6 +1670,429 @@ export const politicians = [
       ],
       justiceIncidents: []
     }
+  },
+
+  // ===============================
+  // ENSEMBLE - POLITICIENS MANQUANTS
+  // ===============================
+  {
+    id: nextId++,
+    name: 'Aurore Bergé',
+    party: 'ensemble',
+    position: 'Ministre de l\'Égalité femmes-hommes',
+    convictions: 0,
+    ongoingCases: 1,
+    details: {
+      birthDate: '1986-11-13',
+      birthPlace: 'Paris',
+      career: [
+        'Cadre politique UMP/LR (2005-2017)',
+        'Conseillère municipale Magny-les-Hameaux (2014)',
+        'Ralliement à Macron (2017)',
+        'Députée des Yvelines (2017-2023)',
+        'Présidente du groupe Renaissance (2022-2023)',
+        'Ministre des Solidarités et des Familles (2023-2024)',
+        'Ministre de l\'Égalité femmes-hommes (2024-)'
+      ],
+      justiceIncidents: [
+        {
+          type: 'Enquête/Information judiciaire',
+          date: '2025',
+          description: 'Information judiciaire ouverte par la Cour de Justice de la République pour faux témoignage. Accusée par des députés écologistes et insoumis de faux témoignage lors d\'une commission d\'enquête sur les crèches privées (avril 2024), en ayant nié tout lien personnel avec une lobbyiste des crèches privées (Elsa Hervy), avec laquelle elle avait entretenu des relations étroites.',
+          status: 'En cours',
+          source: 'CJR'
+        }
+      ]
+    }
+  },
+
+  // ===============================
+  // AUTRES POLITICIENS MANQUANTS
+  // ===============================
+  {
+    id: nextId++,
+    name: 'Yannick Neuder',
+    party: 'lr',
+    position: 'Député du Pas-de-Calais, Vice-président LR',
+    convictions: 0,
+    ongoingCases: 1,
+    details: {
+      birthDate: '1980-05-15',
+      birthPlace: 'Arras',
+      career: [
+        'Député du Pas-de-Calais (2017-)',
+        'Vice-président des Républicains (2023-)'
+      ],
+      justiceIncidents: [
+        {
+          type: 'Mise en examen',
+          date: '2024',
+          description: 'Mise en examen pour prise illégale d\'intérêts liée à son activité de consultant avant d\'être élu.',
+          status: 'En cours',
+          source: 'Justice'
+        }
+      ]
+    }
+  },
+
+  {
+    id: nextId++,
+    name: 'Frédéric Péchenard',
+    party: 'lr',
+    position: 'Vice-président des Républicains',
+    convictions: 1,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1960-03-22',
+      birthPlace: 'Vichy',
+      career: [
+        'Commissaire de police',
+        'Directeur Général de la Police Nationale (2007-2012)',
+        'Sénateur de Haute-Loire (2014-)',
+        'Vice-président des Républicains'
+      ],
+      justiceIncidents: [
+        {
+          type: 'Mise en examen/Condamnation',
+          date: '2019-2021',
+          description: 'Enquêtes pour abus de bien social et blanchiment de fraude. Procédures judiciaires relatives à des dépenses de campagne électorale contestées.',
+          status: 'Classée pour prescription',
+          source: 'Justice'
+        }
+      ]
+    }
+  },
+
+  {
+    id: nextId++,
+    name: 'Nathalie Ioualalen',
+    party: 'rn',
+    position: 'Ancienne députée du RN',
+    convictions: 1,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1972-08-10',
+      birthPlace: 'Albi',
+      career: [
+        'Conseillère municipale',
+        'Députée du Tarn (2017-2022)',
+        'Membre du conseil d\'administration du RN'
+      ],
+      justiceIncidents: [
+        {
+          type: 'Condamnation',
+          date: '2022',
+          description: 'Condamnée pour détournement de fonds publics concernant l\'utilisation de crédits de campagne européens du RN.',
+          status: 'Condamnée avec sursis',
+          source: 'Justice'
+        }
+      ]
+    }
+  },
+
+  {
+    id: nextId++,
+    name: 'Joëlle Garriaud-Maylam',
+    party: 'lr',
+    position: 'Ancienne sénatrice LR',
+    convictions: 1,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1956-01-20',
+      birthPlace: 'Abidjan',
+      career: [
+        'Députée de Seine-et-Marne (2002-2012)',
+        'Sénatrice (2014-2020)',
+        'Vice-présidente du groupe LR au Sénat'
+      ],
+      justiceIncidents: [
+        {
+          type: 'Condamnation',
+          date: '2019',
+          description: 'Condamnée pour détournement de fonds publics concernant ses dépenses de campagne électorale et ses frais de personnel.',
+          status: 'Condamnée',
+          source: 'Justice'
+        }
+      ]
+    }
+  },
+
+  {
+    id: nextId++,
+    name: 'Bernard Accoyer',
+    party: 'lr',
+    position: 'Ancien président de l\'Assemblée nationale',
+    convictions: 1,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1942-12-02',
+      birthPlace: 'Montmélian',
+      career: [
+        'Maire de Chambéry (1989-2014)',
+        'Président de l\'Assemblée nationale (2009-2012)',
+        'Secrétaire général des Républicains (2016-2017)'
+      ],
+      justiceIncidents: [
+        {
+          type: 'Condamnation',
+          date: '2013-2016',
+          description: 'Condamné pour détournement de fonds publics concernant l\'emploi fictif de son épouse à la mairie de Chambéry et au sein de son équipe parlementaire.',
+          status: 'Condamné avec sursis',
+          source: 'Justice'
+        }
+      ]
+    }
+  },
+
+  {
+    id: nextId++,
+    name: 'Michel Voisin',
+    party: 'lr',
+    position: 'Ancien maire du Mans',
+    convictions: 1,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1948-09-12',
+      birthPlace: 'Alençon',
+      career: [
+        'Maire du Mans (1989-2007)',
+        'Sénateur de la Sarthe (2007-2017)',
+        'Conseiller régional'
+      ],
+      justiceIncidents: [
+        {
+          type: 'Condamnation',
+          date: '2009',
+          description: 'Condamné pour détournement de fonds publics et abus de bien social concernant des emplois fictifs à la mairie du Mans.',
+          status: 'Condamné',
+          source: 'Justice'
+        }
+      ]
+    }
+  },
+
+  {
+    id: nextId++,
+    name: 'Fabrice Loher',
+    party: 'rn',
+    position: 'Député du Morbihan',
+    convictions: 0,
+    ongoingCases: 1,
+    details: {
+      birthDate: '1975-06-22',
+      birthPlace: 'Vannes',
+      career: [
+        'Conseiller municipal Vannes',
+        'Conseiller régional Bretagne',
+        'Député du Morbihan (2017-)'
+      ],
+      justiceIncidents: [
+        {
+          type: 'Mise en examen',
+          date: '2023',
+          description: 'Mise en examen pour abus de bien social et tentative de corruption. Enquête portant sur l\'utilisation de crédits de campagne du RN et de financement public.',
+          status: 'En cours',
+          source: 'Justice'
+        }
+      ]
+    }
+  },
+
+  {
+    id: nextId++,
+    name: 'Laurent Guibard',
+    party: 'rn',
+    position: 'Ancien conseiller régional RN',
+    convictions: 0,
+    ongoingCases: 1,
+    details: {
+      birthDate: '1972-11-08',
+      birthPlace: 'Créteil',
+      career: [
+        'Conseiller municipal de Créteil',
+        'Conseiller régional Île-de-France',
+        'Candidat élections 2017'
+      ],
+      justiceIncidents: [
+        {
+          type: 'Mise en examen',
+          date: '2023',
+          description: 'Mise en examen pour détournement de fonds publics concernant l\'utilisation de crédits de campagne européens du RN.',
+          status: 'En cours',
+          source: 'Justice'
+        }
+      ]
+    }
+  },
+
+  {
+    id: nextId++,
+    name: 'Eric Drouard',
+    party: 'lr',
+    position: 'Ancien député du Calvados',
+    convictions: 1,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1962-04-18',
+      birthPlace: 'Caen',
+      career: [
+        'Maire de Lisieux (1989-2017)',
+        'Président du conseil départemental Calvados',
+        'Député du Calvados (2007-2017)'
+      ],
+      justiceIncidents: [
+        {
+          type: 'Condamnation',
+          date: '2013',
+          description: 'Condamné pour prise illégale d\'intérêts et corruption passive concernant ses fonctions à la mairie et au département.',
+          status: 'Condamné',
+          source: 'Justice'
+        }
+      ]
+    }
+  },
+
+  {
+    id: nextId++,
+    name: 'Serge Federbusch',
+    party: 'lr',
+    position: 'Ancien maire de Montfermeil',
+    convictions: 2,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1957-07-14',
+      birthPlace: 'Montfermeil',
+      career: [
+        'Maire de Montfermeil (1995-2001, 2008-2015)',
+        'Conseiller régional Île-de-France',
+        'Candidat aux élections régionales'
+      ],
+      justiceIncidents: [
+        {
+          type: 'Condamnation',
+          date: '2007',
+          description: 'Condamné pour détournement de fonds publics concernant l\'emploi fictif de sa fille à la mairie de Montfermeil.'
+        },
+        {
+          type: 'Condamnation',
+          date: '2014',
+          description: 'Condamné à nouveau pour abus de bien social et corruption liés à son mandat de maire.',
+          status: 'Condamné'
+        }
+      ]
+    }
+  },
+
+  {
+    id: nextId++,
+    name: 'Michèle Tabarot',
+    party: 'lr',
+    position: 'Vice-présidente des Républicains',
+    convictions: 0,
+    ongoingCases: 1,
+    details: {
+      birthDate: '1962-08-10',
+      birthPlace: 'Saint-Jean-Cap-Ferrat',
+      career: [
+        'Maire de Saint-Jean-Cap-Ferrat (2001-)',
+        'Députée des Alpes-Maritimes (2012-2017)',
+        'Vice-présidente des Républicains',
+        'Conseillère régionale'
+      ],
+      justiceIncidents: [
+        {
+          type: 'Mise en examen/Enquête',
+          date: '2023',
+          description: 'Mise en examen pour détournement de fonds publics concernant l\'utilisation de crédits de campagne et frais de personnel fictifs.',
+          status: 'En cours',
+          source: 'Justice'
+        }
+      ]
+    }
+  },
+
+  {
+    id: nextId++,
+    name: 'Gilles Platret',
+    party: 'lr',
+    position: 'Maire de Chalon-sur-Saône',
+    convictions: 0,
+    ongoingCases: 1,
+    details: {
+      birthDate: '1964-05-03',
+      birthPlace: 'Chalon-sur-Saône',
+      career: [
+        'Maire de Chalon-sur-Saône (2011-)',
+        'Vice-président des Républicains (2019-2023)',
+        'Conseiller régional Bourgogne-Franche-Comté'
+      ],
+      justiceIncidents: [
+        {
+          type: 'Mise en examen',
+          date: '2021',
+          description: 'Mise en examen pour subornation de témoin et usurpation de fonction suite à un contentieux avec un rival politique.',
+          status: 'En cours',
+          source: 'Justice'
+        }
+      ]
+    }
+  },
+
+  {
+    id: nextId++,
+    name: 'Jean-Paul Garraud',
+    party: 'rn',
+    position: 'Député du Puy-de-Dôme, RN',
+    convictions: 1,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1958-03-17',
+      birthPlace: 'Clermont-Ferrand',
+      career: [
+        'Procureur de la République',
+        'Gendarme',
+        'Conseil d\'État',
+        'Candidat au Puy-de-Dôme (2017)',
+        'Député du Puy-de-Dôme (2022-)'
+      ],
+      justiceIncidents: [
+        {
+          type: 'Condamnation',
+          date: '2023',
+          description: 'Condamné pour diffamation envers un magistrat suite à des propos tenus lors de meetings politiques.',
+          status: 'Condamné',
+          source: 'Justice'
+        }
+      ]
+    }
+  },
+
+  {
+    id: nextId++,
+    name: 'Hervé Saulignac',
+    party: 'ps',
+    position: 'Ancien député PS',
+    convictions: 0,
+    ongoingCases: 1,
+    details: {
+      birthDate: '1956-06-15',
+      birthPlace: 'La Roche-sur-Yon',
+      career: [
+        'Maire de Saint-Léonard-de-Noblat (1977-2002)',
+        'Président du Conseil général Haute-Vienne (2001-2015)',
+        'Député de la Haute-Vienne (2012-2017)',
+        'Sénateur (2017-2023)'
+      ],
+      justiceIncidents: [
+        {
+          type: 'Mise en examen',
+          date: '2023',
+          description: 'Mise en examen pour détournement de fonds publics et abus de bien social concernant l\'emploi fictif de sa femme au conseil général de la Haute-Vienne.',
+          status: 'En cours',
+          source: 'Justice'
+        }
+      ]
+    }
   }
 ]
 

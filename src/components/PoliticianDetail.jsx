@@ -26,7 +26,30 @@ export default function PoliticianDetail() {
   function getIncidentColor(type) {
     if (type === 'Condamnation') return '#dc2626'
     if (type.includes('Mise en examen')) return '#ea580c'
+    if (type.includes('Enquête')) return '#f59e0b'
     return '#0284c7'
+  }
+
+  function getIncidentIcon(type) {
+    const icons = {
+      'Condamnation': '⚖️',
+      'Mise en examen': '📋',
+      'Enquête': '🔍',
+      'Mise en examen/Enquête': '📋',
+      'Enquête/Information judiciaire': '📋',
+      'Enquête/Mise en examen': '🔍',
+      'Accusation/Enquête': '❓',
+      'Condamnation/Enquête': '⚖️'
+    }
+    return icons[type] ? icons[type] + ' ' : ''
+  }
+
+  function getStatusColor(status) {
+    if (!status) return { bg: '#e5e7eb', text: '#374151' }
+    if (status.includes('Condamn')) return { bg: '#fee2e2', text: '#991b1b' }
+    if (status.includes('En cours')) return { bg: '#fef3c7', text: '#92400e' }
+    if (status.includes('Classée') || status.includes('classé')) return { bg: '#e0e7ff', text: '#3730a3' }
+    return { bg: '#e5e7eb', text: '#374151' }
   }
 
   return (
@@ -93,23 +116,60 @@ export default function PoliticianDetail() {
         <div className="p-6 border-t">
           <h2 className="text-xl font-bold text-gray-900 mb-4">Incidents de justice</h2>
           {incidents.length > 0 ? (
-            <div className="space-y-3">
+            <div className="space-y-4">
               {incidents.map((incident, idx) => (
                 <div
                   key={idx}
-                  className="bg-gray-50 p-4 rounded-lg border-l-4"
+                  className="bg-gray-50 p-5 rounded-lg border-l-4 border-gray-200 hover:shadow-md transition-shadow"
                   style={{ borderLeftColor: getIncidentColor(incident.type) }}
                 >
-                  <div className="flex items-center gap-2 mb-1">
-                    <span
-                      className="inline-block px-2 py-1 rounded text-xs font-semibold text-white"
-                      style={{ backgroundColor: getIncidentColor(incident.type) }}
-                    >
-                      {incident.type}
-                    </span>
-                    <span className="text-sm text-gray-500">{incident.date}</span>
+                  {/* Header: Type and Date */}
+                  <div className="flex items-start justify-between mb-3 gap-3">
+                    <div className="flex items-center gap-2">
+                      <span
+                        className="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold text-white whitespace-nowrap"
+                        style={{ backgroundColor: getIncidentColor(incident.type) }}
+                      >
+                        {getIncidentIcon(incident.type)}
+                        {incident.type}
+                      </span>
+                      <span className="inline-block px-2 py-1 bg-blue-100 text-blue-800 rounded text-xs font-medium">
+                        {incident.date}
+                      </span>
+                    </div>
+                    {incident.status && (
+                      <span
+                        className="inline-block px-2 py-1 rounded text-xs font-semibold whitespace-nowrap"
+                        style={{
+                          backgroundColor: getStatusColor(incident.status).bg,
+                          color: getStatusColor(incident.status).text
+                        }}
+                      >
+                        {incident.status}
+                      </span>
+                    )}
                   </div>
-                  <p className="text-gray-700">{incident.description}</p>
+
+                  {/* Description */}
+                  <p className="text-gray-700 text-sm leading-relaxed mb-3">{incident.description}</p>
+
+                  {/* Penalty and Source if available */}
+                  {(incident.penalty || incident.source) && (
+                    <div className="pt-3 border-t border-gray-200 flex flex-wrap gap-4">
+                      {incident.penalty && (
+                        <div className="flex items-center gap-2">
+                          <span className="text-xs font-semibold text-gray-600">Peine:</span>
+                          <span className="text-sm text-gray-700">{incident.penalty}</span>
+                        </div>
+                      )}
+                      {incident.source && (
+                        <div className="flex items-center gap-2">
+                          <span className="text-xs font-semibold text-gray-600">Source:</span>
+                          <span className="text-sm text-gray-700">{incident.source}</span>
+                        </div>
+                      )}
+                    </div>
+                  )}
                 </div>
               ))}
             </div>
