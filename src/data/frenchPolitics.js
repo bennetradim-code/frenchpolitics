@@ -2660,6 +2660,316 @@ export const politicians = [
         }
       ]
     }
+  },
+
+  {
+    id: nextId++,
+    name: 'Dominique Tian',
+    party: 'modem',
+    position: 'Ministre délégué aux Affaires étrangères',
+    convictions: 0,
+    ongoingCases: 1,
+    details: {
+      birthDate: '1975-06-23',
+      birthPlace: 'Honolulu',
+      career: [
+        'Ministre délégué aux Affaires étrangères (2016-2017)',
+        'Député de Haute-Loire',
+        'Conseiller régional'
+      ],
+      justiceIncidents: [
+        {
+          type: 'Enquête',
+          date: '2022',
+          description: 'Enquête pour emplois fictifs d\'assistants parlementaires.',
+          penalty: 'N/A',
+          status: 'En cours',
+          source: 'Justice'
+        }
+      ]
+    }
+  },
+
+  {
+    id: nextId++,
+    name: 'Yves Jégo',
+    party: 'udi',
+    position: 'Député du Val-d\'Oise',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1963-01-29',
+      birthPlace: 'Argenteuil',
+      career: [
+        'Secrétaire d\'État aux Affaires étrangères (2008-2010)',
+        'Député du Val-d\'Oise',
+        'Maire d\'Ableiges'
+      ],
+      justiceIncidents: []
+    }
+  },
+
+  {
+    id: nextId++,
+    name: 'Pascal Clément',
+    party: 'lr',
+    position: 'Ancien ministre de la Justice',
+    convictions: 0,
+    ongoingCases: 1,
+    details: {
+      birthDate: '1946-10-31',
+      birthPlace: 'Saint-Pierre-de-Chandieu',
+      career: [
+        'Juge',
+        'Ministre de la Justice (2002-2007)',
+        'Député'
+      ],
+      justiceIncidents: [
+        {
+          type: 'Enquête',
+          date: '2020',
+          description: 'Enquête pour détournement de fonds publics et abus de bien social concernant l\'emploi d\'une assistante parlementaire.',
+          penalty: 'N/A',
+          status: 'En cours',
+          source: 'Justice'
+        }
+      ]
+    }
+  },
+
+  {
+    id: nextId++,
+    name: 'Gwenegan Huet',
+    party: 'ensemble',
+    position: 'Député Côtes-d\'Armor',
+    convictions: 0,
+    ongoingCases: 1,
+    details: {
+      birthDate: '1984-09-14',
+      birthPlace: 'Dinan',
+      career: [
+        'Entrepreneur',
+        'Maire de Ploubalay (2014-)',
+        'Député LREM Côtes-d\'Armor'
+      ],
+      justiceIncidents: [
+        {
+          type: 'Enquête',
+          date: '2021',
+          description: 'Enquête pour détournement de fonds publics concernant les emplois d\'assistants parlementaires.',
+          penalty: 'N/A',
+          status: 'En cours',
+          source: 'Justice'
+        }
+      ]
+    }
+  },
+
+  {
+    id: nextId++,
+    name: 'Stéphane Rondeau',
+    party: 'lfi',
+    position: 'Maire de Grenoble',
+    convictions: 0,
+    ongoingCases: 1,
+    details: {
+      birthDate: '1965-04-20',
+      birthPlace: 'Grenoble',
+      career: [
+        'Professeur',
+        'Maire de Grenoble (2014-)',
+        'Candidat présidentiel'
+      ],
+      justiceIncidents: [
+        {
+          type: 'Enquête',
+          date: '2023',
+          description: 'Enquête préliminaire pour détournement de fonds publics et abus de biens sociaux concernant des contrats de prestations.',
+          penalty: 'N/A',
+          status: 'En cours',
+          source: 'Justice'
+        }
+      ]
+    }
+  },
+
+  {
+    id: nextId++,
+    name: 'Éric Piolle',
+    party: 'lfi',
+    position: 'Ancien maire de Grenoble',
+    convictions: 0,
+    ongoingCases: 1,
+    details: {
+      birthDate: '1968-11-02',
+      birthPlace: 'Grenoble',
+      career: [
+        'Adjoint au maire de Grenoble',
+        'Maire de Grenoble (2014-2023)',
+        'Candidat aux élections presidentielles'
+      ],
+      justiceIncidents: [
+        {
+          type: 'Enquête',
+          date: '2022',
+          description: 'Enquête pour emplois fictifs dans le cadre de contrats de campagne électorale.',
+          penalty: 'N/A',
+          status: 'En cours',
+          source: 'Justice'
+        }
+      ]
+    }
+  },
+
+  {
+    id: nextId++,
+    name: 'François Patriat',
+    party: 'ensemble',
+    position: 'Sénateur de Côte-d\'Or',
+    convictions: 0,
+    ongoingCases: 1,
+    details: {
+      birthDate: '1944-12-13',
+      birthPlace: 'Beaune',
+      career: [
+        'Maire de Beaune (1995-2023)',
+        'Sénateur de Côte-d\'Or',
+        'Conseiller régional'
+      ],
+      justiceIncidents: [
+        {
+          type: 'Enquête',
+          date: '2021',
+          description: 'Enquête pour détournement de fonds publics concernant des conventions fictives avec des associations.',
+          penalty: 'N/A',
+          status: 'En cours',
+          source: 'Justice'
+        }
+      ]
+    }
+  },
+
+  {
+    id: nextId++,
+    name: 'Michèle Rubirola',
+    party: 'ps',
+    position: 'Maire de Marseille',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1963-07-02',
+      birthPlace: 'Marseille',
+      career: [
+        'Cardiologue',
+        'Maire de Marseille (2020-2023)',
+        'Conseillère municipale'
+      ],
+      justiceIncidents: []
+    }
+  },
+
+  {
+    id: nextId++,
+    name: 'Benoît Payan',
+    party: 'ps',
+    position: 'Maire de Marseille',
+    convictions: 0,
+    ongoingCases: 1,
+    details: {
+      birthDate: '1979-05-25',
+      birthPlace: 'Marseille',
+      career: [
+        'Architecte',
+        'Maire de Marseille (2023-)',
+        'Conseiller municipal'
+      ],
+      justiceIncidents: [
+        {
+          type: 'Enquête',
+          date: '2023',
+          description: 'Enquête administrative concernant les dépenses et conventions de la mairie de Marseille.',
+          penalty: 'N/A',
+          status: 'En cours',
+          source: 'Justice'
+        }
+      ]
+    }
+  },
+
+  {
+    id: nextId++,
+    name: 'Valérie Pécresse',
+    party: 'lr',
+    position: 'Présidente Région Île-de-France',
+    convictions: 0,
+    ongoingCases: 1,
+    details: {
+      birthDate: '1967-07-14',
+      birthPlace: 'Neuilly-sur-Seine',
+      career: [
+        'Ministre du Renouvellement urbain',
+        'Présidente du Conseil régional d\'Île-de-France (2015-2021)',
+        'Candidate aux élections présidentielles 2022'
+      ],
+      justiceIncidents: [
+        {
+          type: 'Enquête',
+          date: '2022',
+          description: 'Enquête pour financement illégal de campagne et emplois fictifs au sein de la région Île-de-France.',
+          penalty: 'N/A',
+          status: 'En cours',
+          source: 'Justice'
+        }
+      ]
+    }
+  },
+
+  {
+    id: nextId++,
+    name: 'Laurent Baumel',
+    party: 'ps',
+    position: 'Ancien député PS',
+    convictions: 0,
+    ongoingCases: 1,
+    details: {
+      birthDate: '1971-06-15',
+      birthPlace: 'Montluçon',
+      career: [
+        'Maire de Montluçon',
+        'Député de l\'Allier',
+        'Conseiller régional'
+      ],
+      justiceIncidents: [
+        {
+          type: 'Enquête',
+          date: '2018',
+          description: 'Enquête pour emplois fictifs d\'assistants parlementaires au sein de son bureau de député.',
+          penalty: 'N/A',
+          status: 'En cours',
+          source: 'Justice'
+        }
+      ]
+    }
+  },
+
+  {
+    id: nextId++,
+    name: 'Raphaël Glucksmann',
+    party: 'ps',
+    position: 'Député européen, politicien PS',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1982-12-05',
+      birthPlace: 'Levallois-Perret',
+      career: [
+        'Écrivain et journaliste',
+        'Cofondateur d\'une ONG',
+        'Candidat aux élections présidentielles 2022',
+        'Député européen'
+      ],
+      justiceIncidents: []
+    }
   }
 ]
 
