@@ -112,41 +112,36 @@ export default function PartyStats({ politicians, selectedParty, onPartySelect }
 
         {/* Chart */}
         {chartData.length > 0 ? (
-          <div>
-            <ResponsiveContainer width="100%" height={400}>
-              <BarChart data={chartData} margin={{ bottom: 20, left: 0, right: 0, top: 20 }}>
-                <CartesianGrid strokeDasharray="3 3" />
-                <XAxis
-                  dataKey="name"
-                  tick={false}
+          <ResponsiveContainer width="100%" height={550}>
+            <BarChart data={chartData} margin={{ bottom: 150, left: 0, right: 0, top: 20 }}>
+              <CartesianGrid strokeDasharray="3 3" />
+              <XAxis
+                dataKey="name"
+                angle={-45}
+                textAnchor="end"
+                height={150}
+                interval={0}
+                tick={{ fontSize: 12, fill: '#374151' }}
+              />
+              <YAxis allowDecimals={false} />
+              <Tooltip
+                labelFormatter={(label) => {
+                  const item = chartData.find(d => d.name === label)
+                  return item?.fullName || label
+                }}
+              />
+              <Legend />
+              {activeTypes.map(type => (
+                <Bar
+                  key={type.key}
+                  dataKey={type.key}
+                  name={type.label}
+                  fill={type.color}
+                  stackId="incidents"
                 />
-                <YAxis allowDecimals={false} />
-                <Tooltip
-                  labelFormatter={(label) => {
-                    const item = chartData.find(d => d.name === label)
-                    return item?.fullName || label
-                  }}
-                />
-                <Legend />
-                {activeTypes.map(type => (
-                  <Bar
-                    key={type.key}
-                    dataKey={type.key}
-                    name={type.label}
-                    fill={type.color}
-                    stackId="incidents"
-                  />
-                ))}
-              </BarChart>
-            </ResponsiveContainer>
-            <div className="mt-6 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
-              {chartData.map((item) => (
-                <div key={item.name} className="bg-gray-50 p-3 rounded border border-gray-200 text-center">
-                  <p className="text-sm font-semibold text-gray-900 break-words">{item.fullName}</p>
-                </div>
               ))}
-            </div>
-          </div>
+            </BarChart>
+          </ResponsiveContainer>
         ) : (
           <p className="text-gray-500 text-center py-8">Sélectionnez au moins un type d'incident pour afficher le graphique.</p>
         )}
