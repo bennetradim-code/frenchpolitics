@@ -84,9 +84,11 @@ export default function PoliticianDetail() {
               {party?.name || politician.party}
             </Link>
             <p className="text-gray-600 mt-1">{politician.position}</p>
-            <p className="text-sm text-gray-500 mt-2">
-              Né(e) le {politician.details.birthDate} à {politician.details.birthPlace}
-            </p>
+            {politician.details.birthDate && (
+              <p className="text-sm text-gray-500 mt-2">
+                Né(e) le {politician.details.birthDate}{politician.details.birthPlace ? ` à ${politician.details.birthPlace}` : ''}
+              </p>
+            )}
 
             <div className="mt-4">
               <ConfidenceGauge politician={politician} />

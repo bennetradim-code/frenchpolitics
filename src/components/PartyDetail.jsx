@@ -33,7 +33,9 @@ export default function PartyDetail() {
   const stats = getPartyStats(party.id)
   const logoSVG = generatePartyLogoSVG(party.name, party.color)
 
-  const sortedPoliticians = [...politicians].sort((a, b) => {
+  const livingPoliticians = politicians.filter(p => !p.deceased)
+
+  const sortedPoliticians = [...livingPoliticians].sort((a, b) => {
     const scoreA = a.convictions * 2 + a.ongoingCases
     const scoreB = b.convictions * 2 + b.ongoingCases
     if (scoreB !== scoreA) return scoreB - scoreA
@@ -97,7 +99,7 @@ export default function PartyDetail() {
         {/* Liste des membres */}
         <div className="p-6 border-t">
           <h2 className="text-xl font-bold text-gray-900 mb-4">
-            Membres ({politicians.length})
+            Membres ({livingPoliticians.length})
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
             {sortedPoliticians.map(pol => {

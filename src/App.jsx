@@ -13,7 +13,7 @@ function HomePage() {
   const [searchTerm, setSearchTerm] = useState('')
   const [selectedParty, setSelectedParty] = useState(null)
   const [showParties, setShowParties] = useState(false)
-  const [politicians] = useState(politiciansData)
+  const [politicians] = useState(() => politiciansData.filter(p => !p.deceased))
 
   const isSearching = searchTerm.length > 0 || selectedParty !== null
 
@@ -85,7 +85,7 @@ function HomePage() {
       </header>
 
       <main className="max-w-6xl mx-auto px-4 py-8">
-        <SearchBar searchTerm={searchTerm} onSearchChange={setSearchTerm} politicians={politiciansData} />
+        <SearchBar searchTerm={searchTerm} onSearchChange={setSearchTerm} politicians={politicians} />
 
         <div className="mb-8">
           <button

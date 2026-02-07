@@ -1239,6 +1239,7 @@ export const politicians = [
     position: 'Ancienne députée européenne',
     convictions: 0,
     ongoingCases: 0,
+    deceased: true,
     details: {
       birthDate: '1951-03-27',
       birthPlace: 'Paris',
@@ -1941,6 +1942,7 @@ export const politicians = [
     position: 'Ancien Président de la République',
     convictions: 1,
     ongoingCases: 0,
+    deceased: true,
     details: {
       birthDate: '1932-11-29',
       birthPlace: 'Paris',
@@ -2218,6 +2220,7 @@ export const politicians = [
     position: 'Fondateur du Front National',
     convictions: 4,
     ongoingCases: 0,
+    deceased: true,
     details: {
       birthDate: '1928-06-20',
       birthPlace: 'La Trinité-sur-Mer',
@@ -2281,6 +2284,7 @@ export const politicians = [
     position: 'Ancien Ministre de l\'Intérieur',
     convictions: 2,
     ongoingCases: 0,
+    deceased: true,
     details: {
       birthDate: '1927-04-18',
       birthPlace: 'Grasse',
@@ -2674,6 +2678,7 @@ export const politicians = [
     position: 'Ancien Maire de Nice',
     convictions: 2,
     ongoingCases: 0,
+    deceased: true,
     details: {
       birthDate: '1928-05-05',
       birthPlace: 'Nice',
@@ -2948,6 +2953,7 @@ export const politicians = [
     position: 'Ancien Président du Conseil constitutionnel',
     convictions: 0,
     ongoingCases: 0,
+    deceased: true,
     details: {
       birthDate: '1922-08-23',
       birthPlace: 'Limoges',
@@ -2979,6 +2985,7 @@ export const politicians = [
     position: 'Ancien Président de l\'Assemblée nationale',
     convictions: 1,
     ongoingCases: 0,
+    deceased: true,
     details: {
       birthDate: '1945-05-31',
       birthPlace: 'Eaux-Bonnes',
@@ -3102,6 +3109,7 @@ export const politicians = [
     position: 'Ancien Ministre de la Ville',
     convictions: 1,
     ongoingCases: 0,
+    deceased: true,
     details: {
       birthDate: '1943-01-26',
       birthPlace: 'Paris',
@@ -3984,6 +3992,958 @@ export const politicians = [
       career: [
         'Président de la Polynésie française (2023-)',
         'Député de la Polynésie française (2017-2023)'
+      ],
+      justiceIncidents: []
+    }
+  },
+
+  // ===== DÉPUTÉS ACTUELS - COMPLÉMENTS =====
+
+  // --- RN ---
+  {
+    id: nextId++,
+    name: 'Franck Allisio',
+    party: 'rn',
+    position: 'Député des Bouches-du-Rhône',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1974-03-22',
+      birthPlace: 'Marseille',
+      career: [
+        'Député des Bouches-du-Rhône (2022-)'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Bruno Bilde',
+    party: 'rn',
+    position: 'Député du Pas-de-Calais',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1975-12-25',
+      birthPlace: 'Lens',
+      career: [
+        'Député du Pas-de-Calais (2017-)',
+        'Député européen (2019-2022)'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Thomas Ménagé',
+    party: 'rn',
+    position: 'Député du Loiret',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1994-09-15',
+      birthPlace: 'Orléans',
+      career: [
+        'Député du Loiret (2022-)'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Christine Engrand',
+    party: 'rn',
+    position: 'Députée du Pas-de-Calais',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1963-01-17',
+      birthPlace: 'Boulogne-sur-Mer',
+      career: [
+        'Députée du Pas-de-Calais (2022-)'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Emeric Salmon',
+    party: 'rn',
+    position: 'Député de la Somme',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1979-05-10',
+      birthPlace: 'Amiens',
+      career: [
+        'Député de la Somme (2022-)'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Alexandre Sabatou',
+    party: 'rn',
+    position: 'Député de l\'Oise',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1996-03-12',
+      birthPlace: 'Beauvais',
+      career: [
+        'Député de l\'Oise (2022-)',
+        'Conseiller régional des Hauts-de-France'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Philippe Lottiaux',
+    party: 'rn',
+    position: 'Député du Var',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1963-06-20',
+      birthPlace: 'Toulon',
+      career: [
+        'Député du Var (2022-)',
+        'Ancien haut fonctionnaire'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Kévin Pfeffer',
+    party: 'rn',
+    position: 'Député de la Moselle',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1989-07-14',
+      birthPlace: 'Forbach',
+      career: [
+        'Député de la Moselle (2022-)',
+        'Conseiller municipal de Forbach'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Alexis Jolly',
+    party: 'rn',
+    position: 'Député du Val-d\'Oise',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1990-02-18',
+      birthPlace: 'Pontoise',
+      career: [
+        'Député du Val-d\'Oise (2024-)'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Florence Goulet',
+    party: 'rn',
+    position: 'Députée de la Meuse',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1966-04-03',
+      birthPlace: 'Bar-le-Duc',
+      career: [
+        'Sénatrice de la Meuse (2020-2022)',
+        'Députée de la Meuse (2022-)'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Frédéric Boccaletti',
+    party: 'rn',
+    position: 'Député du Var',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1968-08-15',
+      birthPlace: 'Toulon',
+      career: [
+        'Député du Var (2022-)',
+        'Conseiller régional de PACA'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Christophe Bentz',
+    party: 'rn',
+    position: 'Député de la Sarthe',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1988-12-01',
+      birthPlace: 'Le Mans',
+      career: [
+        'Député de la Sarthe (2024-)'
+      ],
+      justiceIncidents: []
+    }
+  },
+
+  // --- Ensemble / Renaissance ---
+  {
+    id: nextId++,
+    name: 'Guillaume Kasbarian',
+    party: 'ensemble',
+    position: 'Ministre du Logement, député d\'Eure-et-Loir',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1987-10-01',
+      birthPlace: 'Chartres',
+      career: [
+        'Député d\'Eure-et-Loir (2017-)',
+        'Ministre délégué au Logement (2024-)',
+        'Rapporteur de la loi anti-squat'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Maud Bregeon',
+    party: 'ensemble',
+    position: 'Porte-parole du gouvernement, députée des Hauts-de-Seine',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1990-04-22',
+      birthPlace: 'Boulogne-Billancourt',
+      career: [
+        'Députée des Hauts-de-Seine (2022-)',
+        'Porte-parole du gouvernement (2024-)'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Karl Olive',
+    party: 'ensemble',
+    position: 'Député des Yvelines',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1970-12-02',
+      birthPlace: 'Poissy',
+      career: [
+        'Député des Yvelines (2022-)',
+        'Maire de Poissy (2014-2022)',
+        'Journaliste sportif'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Benjamin Haddad',
+    party: 'ensemble',
+    position: 'Député de Paris',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1985-09-10',
+      birthPlace: 'Paris',
+      career: [
+        'Député de Paris (2022-)',
+        'Secrétaire d\'État chargé de l\'Europe (2024-)',
+        'Directeur Europe à l\'Atlantic Council'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Marie Lebec',
+    party: 'ensemble',
+    position: 'Députée des Yvelines',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1983-01-15',
+      birthPlace: 'Versailles',
+      career: [
+        'Députée des Yvelines (2017-)',
+        'Ministre des Relations avec le Parlement (2024)'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Astrid Panosyan-Bouvet',
+    party: 'ensemble',
+    position: 'Ministre du Travail, députée de Paris',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1978-03-15',
+      birthPlace: 'Paris',
+      career: [
+        'Députée de Paris (2022-)',
+        'Ministre du Travail et de l\'Emploi (2024-)'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Mathieu Lefèvre',
+    party: 'ensemble',
+    position: 'Député du Val-de-Marne',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1986-05-20',
+      birthPlace: 'Créteil',
+      career: [
+        'Député du Val-de-Marne (2022-)'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Pieyre-Alexandre Anglade',
+    party: 'ensemble',
+    position: 'Député des Français de l\'étranger',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1982-11-05',
+      birthPlace: 'Paris',
+      career: [
+        'Député des Français établis hors de France (2017-)'
+      ],
+      justiceIncidents: []
+    }
+  },
+
+  // --- LR ---
+  {
+    id: nextId++,
+    name: 'Raphaël Schellenberger',
+    party: 'lr',
+    position: 'Député du Haut-Rhin',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1987-06-15',
+      birthPlace: 'Mulhouse',
+      career: [
+        'Député du Haut-Rhin (2017-)',
+        'Président de la commission d\'enquête sur la sûreté nucléaire'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Philippe Juvin',
+    party: 'lr',
+    position: 'Député des Hauts-de-Seine',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1964-02-17',
+      birthPlace: 'Paris',
+      career: [
+        'Député des Hauts-de-Seine (2022-)',
+        'Maire de La Garenne-Colombes (2008-)',
+        'Chef des urgences de l\'hôpital Georges-Pompidou',
+        'Député européen (2009-2022)'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Thibault Bazin',
+    party: 'lr',
+    position: 'Député de Meurthe-et-Moselle',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1981-08-30',
+      birthPlace: 'Nancy',
+      career: [
+        'Député de Meurthe-et-Moselle (2017-)'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Virginie Duby-Muller',
+    party: 'lr',
+    position: 'Députée de Haute-Savoie',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1978-09-23',
+      birthPlace: 'Annemasse',
+      career: [
+        'Députée de Haute-Savoie (2012-)',
+        'Vice-présidente de l\'Assemblée nationale'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Ian Boucard',
+    party: 'lr',
+    position: 'Député du Territoire de Belfort',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1987-02-28',
+      birthPlace: 'Belfort',
+      career: [
+        'Député du Territoire de Belfort (2017-)'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Julien Dive',
+    party: 'lr',
+    position: 'Député de l\'Aisne',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1985-12-15',
+      birthPlace: 'Saint-Quentin',
+      career: [
+        'Député de l\'Aisne (2017-)'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Vincent Descoeur',
+    party: 'lr',
+    position: 'Député du Cantal',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1961-04-18',
+      birthPlace: 'Aurillac',
+      career: [
+        'Député du Cantal (2017-)',
+        'Président du Conseil départemental du Cantal (2008-2017)'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Pierre-Henri Dumont',
+    party: 'lr',
+    position: 'Député du Pas-de-Calais',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1987-06-10',
+      birthPlace: 'Calais',
+      career: [
+        'Député du Pas-de-Calais (2017-)',
+        'Maire de Marck (2014-2017)'
+      ],
+      justiceIncidents: []
+    }
+  },
+
+  // --- PS ---
+  {
+    id: nextId++,
+    name: 'Jérôme Guedj',
+    party: 'ps',
+    position: 'Député de l\'Essonne',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1972-04-21',
+      birthPlace: 'Paris',
+      career: [
+        'Député de l\'Essonne (2022-)',
+        'Président du Conseil général de l\'Essonne (2011-2015)'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Philippe Brun',
+    party: 'ps',
+    position: 'Député de l\'Eure',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1979-05-15',
+      birthPlace: 'Évreux',
+      career: [
+        'Député de l\'Eure (2022-)'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Inaki Echaniz',
+    party: 'ps',
+    position: 'Député des Pyrénées-Atlantiques',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1988-07-10',
+      birthPlace: 'Bayonne',
+      career: [
+        'Député des Pyrénées-Atlantiques (2022-)'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Arthur Delaporte',
+    party: 'ps',
+    position: 'Député du Calvados',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1991-12-08',
+      birthPlace: 'Caen',
+      career: [
+        'Député du Calvados (2022-)'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Christine Pirès-Beaune',
+    party: 'ps',
+    position: 'Députée du Puy-de-Dôme',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1959-12-02',
+      birthPlace: 'Clermont-Ferrand',
+      career: [
+        'Députée du Puy-de-Dôme (2012-)',
+        'Spécialiste des questions fiscales'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Fatiha Keloua Hachi',
+    party: 'ps',
+    position: 'Députée de Seine-Saint-Denis',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1976-03-20',
+      birthPlace: 'Saint-Denis',
+      career: [
+        'Députée de Seine-Saint-Denis (2022-)'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Dominique Potier',
+    party: 'ps',
+    position: 'Député de Meurthe-et-Moselle',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1963-09-10',
+      birthPlace: 'Nancy',
+      career: [
+        'Député de Meurthe-et-Moselle (2012-)',
+        'Rapporteur de la loi sur le devoir de vigilance'
+      ],
+      justiceIncidents: []
+    }
+  },
+
+  // --- LFI ---
+  {
+    id: nextId++,
+    name: 'Louis Boyard',
+    party: 'lfi',
+    position: 'Député du Val-de-Marne',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '2000-08-26',
+      birthPlace: 'Ivry-sur-Seine',
+      career: [
+        'Député du Val-de-Marne (2022-)',
+        'Ancien chroniqueur de TPMP'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Danièle Obono',
+    party: 'lfi',
+    position: 'Députée de Paris',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1974-08-05',
+      birthPlace: 'Libreville (Gabon)',
+      career: [
+        'Députée de Paris (2017-)'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Thomas Portes',
+    party: 'lfi',
+    position: 'Député de Seine-Saint-Denis',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1986-07-22',
+      birthPlace: 'Paris',
+      career: [
+        'Député de Seine-Saint-Denis (2022-)'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Sophia Chikirou',
+    party: 'lfi',
+    position: 'Députée de Paris',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1977-01-12',
+      birthPlace: 'Paris',
+      career: [
+        'Députée de Paris (2024-)',
+        'Directrice de campagne de Jean-Luc Mélenchon (2012, 2017)',
+        'Fondatrice de Mediascop'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Hadrien Clouet',
+    party: 'lfi',
+    position: 'Député de Haute-Garonne',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1988-03-15',
+      birthPlace: 'Toulouse',
+      career: [
+        'Député de Haute-Garonne (2022-)',
+        'Sociologue, chercheur'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Sébastien Delogu',
+    party: 'lfi',
+    position: 'Député des Bouches-du-Rhône',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1987-04-20',
+      birthPlace: 'Marseille',
+      career: [
+        'Député des Bouches-du-Rhône (2022-)'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Aurélien Saintoul',
+    party: 'lfi',
+    position: 'Député des Hauts-de-Seine',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1984-06-10',
+      birthPlace: 'Nanterre',
+      career: [
+        'Député des Hauts-de-Seine (2022-)'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Carlos Martens Bilongo',
+    party: 'lfi',
+    position: 'Député du Val-d\'Oise',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1986-09-05',
+      birthPlace: 'Kinshasa (RDC)',
+      career: [
+        'Député du Val-d\'Oise (2022-)'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Ersilia Soudais',
+    party: 'lfi',
+    position: 'Députée de Seine-et-Marne',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1978-11-25',
+      birthPlace: 'Meaux',
+      career: [
+        'Députée de Seine-et-Marne (2022-)'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Arnaud Le Gall',
+    party: 'lfi',
+    position: 'Député du Val-d\'Oise',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1973-02-20',
+      birthPlace: 'Paris',
+      career: [
+        'Député du Val-d\'Oise (2022-)',
+        'Journaliste et géopolitologue'
+      ],
+      justiceIncidents: []
+    }
+  },
+
+  // --- Ecolo ---
+  {
+    id: nextId++,
+    name: 'Eva Sas',
+    party: 'ecolo',
+    position: 'Députée de Paris',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1970-04-05',
+      birthPlace: 'Paris',
+      career: [
+        'Députée de Paris (2022-)',
+        'Députée de l\'Essonne (2012-2017)',
+        'Porte-parole d\'EELV'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Marie-Charlotte Garin',
+    party: 'ecolo',
+    position: 'Députée du Rhône',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1993-08-12',
+      birthPlace: 'Lyon',
+      career: [
+        'Députée du Rhône (2022-)'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Lisa Belluco',
+    party: 'ecolo',
+    position: 'Députée de la Vienne',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1990-01-20',
+      birthPlace: 'Poitiers',
+      career: [
+        'Députée de la Vienne (2022-)'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Nicolas Thierry',
+    party: 'ecolo',
+    position: 'Député de la Gironde',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1977-10-10',
+      birthPlace: 'Bordeaux',
+      career: [
+        'Député de la Gironde (2024-)',
+        'Vice-président de la Région Nouvelle-Aquitaine (2016-2024)'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Benjamin Lucas-Lundy',
+    party: 'ecolo',
+    position: 'Député des Yvelines',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1988-05-02',
+      birthPlace: 'Versailles',
+      career: [
+        'Député des Yvelines (2022-)',
+        'Secrétaire national de Génération.s (2018-2022)'
+      ],
+      justiceIncidents: []
+    }
+  },
+
+  // --- PCF ---
+  {
+    id: nextId++,
+    name: 'Sébastien Jumel',
+    party: 'pcf',
+    position: 'Député de Seine-Maritime',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1971-09-20',
+      birthPlace: 'Dieppe',
+      career: [
+        'Député de Seine-Maritime (2017-)',
+        'Maire de Dieppe (2008-2017)'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Nicolas Sansu',
+    party: 'pcf',
+    position: 'Député du Cher',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1971-03-05',
+      birthPlace: 'Bourges',
+      career: [
+        'Député du Cher (2012-2017, 2022-)',
+        'Maire de Vierzon (2008-2020)'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Soumya Bourouaha',
+    party: 'pcf',
+    position: 'Députée de Seine-Saint-Denis',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1974-08-15',
+      birthPlace: 'Saint-Denis',
+      career: [
+        'Députée de Seine-Saint-Denis (2022-)'
+      ],
+      justiceIncidents: []
+    }
+  },
+
+  // --- MoDem ---
+  {
+    id: nextId++,
+    name: 'Erwan Balanant',
+    party: 'modem',
+    position: 'Député du Finistère',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1970-04-25',
+      birthPlace: 'Quimperlé',
+      career: [
+        'Député du Finistère (2017-)',
+        'Rapporteur de la loi contre le harcèlement scolaire'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Philippe Vigier',
+    party: 'modem',
+    position: 'Député d\'Eure-et-Loir',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1958-11-14',
+      birthPlace: 'Châteaudun',
+      career: [
+        'Député d\'Eure-et-Loir (2002-)',
+        'Secrétaire d\'État aux Outre-mer (2023-2024)'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Bruno Millienne',
+    party: 'modem',
+    position: 'Député des Yvelines',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1959-07-20',
+      birthPlace: 'Mantes-la-Jolie',
+      career: [
+        'Député des Yvelines (2017-)'
       ],
       justiceIncidents: []
     }
