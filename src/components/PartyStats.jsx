@@ -72,6 +72,7 @@ export default function PartyStats({ politicians, selectedParty, onPartySelect }
         })
         return entry
       })
+      .sort((a, b) => a.name.localeCompare(b.name, 'fr'))
   }, [partyStats, activeFilters])
 
   const activeTypes = INCIDENT_TYPES.filter(t => activeFilters[t.key])
@@ -112,18 +113,17 @@ export default function PartyStats({ politicians, selectedParty, onPartySelect }
 
         {/* Chart */}
         {chartData.length > 0 ? (
-          <ResponsiveContainer width="100%" height={550}>
-            <BarChart data={chartData} margin={{ bottom: 150, left: 0, right: 0, top: 20 }}>
+          <ResponsiveContainer width="100%" height={Math.max(400, chartData.length * 50)}>
+            <BarChart layout="vertical" data={chartData} margin={{ bottom: 20, left: 20, right: 30, top: 20 }}>
               <CartesianGrid strokeDasharray="3 3" />
-              <XAxis
+              <YAxis
                 dataKey="name"
-                angle={-45}
-                textAnchor="end"
-                height={150}
+                type="category"
+                width={220}
                 interval={0}
-                tick={{ fontSize: 12, fill: '#374151' }}
+                tick={{ fontSize: 13, fill: '#374151' }}
               />
-              <YAxis allowDecimals={false} />
+              <XAxis type="number" allowDecimals={false} />
               <Tooltip
                 labelFormatter={(label) => {
                   const item = chartData.find(d => d.name === label)
@@ -161,7 +161,7 @@ export default function PartyStats({ politicians, selectedParty, onPartySelect }
           >
             Tous les partis
           </button>
-          {partyStats.map(stat => (
+          {[...partyStats].sort((a, b) => a.partyName.localeCompare(b.partyName, 'fr')).map(stat => (
             <button
               key={stat.partyId}
               onClick={() => onPartySelect(stat.partyId)}

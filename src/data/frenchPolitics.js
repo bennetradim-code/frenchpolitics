@@ -467,8 +467,8 @@ export const politicians = [
   {
     id: nextId++,
     name: 'Éric Ciotti',
-    party: 'lr',
-    position: 'Président des Républicains',
+    party: 'rn',
+    position: 'Député des Alpes-Maritimes (alliance RN depuis 2024)',
     convictions: 0,
     ongoingCases: 0,
     details: {
@@ -939,7 +939,7 @@ export const politicians = [
     id: nextId++,
     name: 'François Ruffin',
     party: 'lfi',
-    position: 'Député de la Somme',
+    position: 'Député de la Somme (a quitté LFI en 2024)',
     convictions: 0,
     ongoingCases: 0,
     details: {
@@ -957,7 +957,7 @@ export const politicians = [
     id: nextId++,
     name: 'Clémentine Autain',
     party: 'lfi',
-    position: 'Ancienne députée de Seine-Saint-Denis',
+    position: 'Ancienne députée de Seine-Saint-Denis (a quitté LFI en 2023)',
     convictions: 0,
     ongoingCases: 0,
     details: {
@@ -974,7 +974,7 @@ export const politicians = [
     id: nextId++,
     name: 'Alexis Corbière',
     party: 'lfi',
-    position: 'Député de Seine-Saint-Denis',
+    position: 'Député de Seine-Saint-Denis (a quitté LFI en 2023)',
     convictions: 0,
     ongoingCases: 0,
     details: {
@@ -1008,7 +1008,7 @@ export const politicians = [
   {
     id: nextId++,
     name: 'Sandrine Rousseau',
-    party: 'lfi',
+    party: 'ecolo',
     position: 'Députée de Paris',
     convictions: 0,
     ongoingCases: 0,
@@ -1027,7 +1027,7 @@ export const politicians = [
     id: nextId++,
     name: 'Raquel Garrido',
     party: 'lfi',
-    position: 'Députée de Seine-Saint-Denis',
+    position: 'Ancienne députée de Seine-Saint-Denis (a quitté LFI en 2023)',
     convictions: 0,
     ongoingCases: 0,
     details: {
@@ -3391,6 +3391,601 @@ export const politicians = [
           ]
         }
       ]
+    }
+  },
+
+  // ===== DÉPUTÉS ACTUELS DE L'ASSEMBLÉE NATIONALE =====
+
+  // Ensemble / Renaissance
+  {
+    id: nextId++,
+    name: 'Yaël Braun-Pivet',
+    party: 'ensemble',
+    position: 'Présidente de l\'Assemblée nationale',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1970-10-07',
+      birthPlace: 'Paris',
+      career: [
+        'Présidente de l\'Assemblée nationale (2022-)',
+        'Députée des Yvelines (2017-)',
+        'Présidente de la commission des Lois (2017-2022)',
+        'Avocate'
+      ],
+      justiceIncidents: []
+    }
+  },
+
+  {
+    id: nextId++,
+    name: 'Sylvain Maillard',
+    party: 'ensemble',
+    position: 'Député de Paris, président du groupe Renaissance',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1977-01-13',
+      birthPlace: 'Montbéliard',
+      career: [
+        'Député de Paris (2017-)',
+        'Président du groupe Renaissance à l\'Assemblée nationale (2024-)'
+      ],
+      justiceIncidents: []
+    }
+  },
+
+  {
+    id: nextId++,
+    name: 'Prisca Thevenot',
+    party: 'ensemble',
+    position: 'Députée des Hauts-de-Seine',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1985-06-21',
+      birthPlace: 'Clamart',
+      career: [
+        'Porte-parole du gouvernement (2024)',
+        'Députée des Hauts-de-Seine (2022-)',
+        'Porte-parole de Renaissance'
+      ],
+      justiceIncidents: []
+    }
+  },
+
+  {
+    id: nextId++,
+    name: 'Clément Beaune',
+    party: 'ensemble',
+    position: 'Député de Paris',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1981-08-14',
+      birthPlace: 'Paris',
+      career: [
+        'Secrétaire d\'État aux Affaires européennes (2020-2022)',
+        'Ministre des Transports (2022-2024)',
+        'Député de Paris (2024-)'
+      ],
+      justiceIncidents: []
+    }
+  },
+
+  {
+    id: nextId++,
+    name: 'Sacha Houlié',
+    party: 'ensemble',
+    position: 'Ancien député de la Vienne',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1989-01-24',
+      birthPlace: 'Poitiers',
+      career: [
+        'Député de la Vienne (2017-2024)',
+        'Président de la commission des Lois (2022-2024)'
+      ],
+      justiceIncidents: []
+    }
+  },
+
+  // RN
+  {
+    id: nextId++,
+    name: 'Jean-Philippe Tanguy',
+    party: 'rn',
+    position: 'Député de la Somme',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1978-01-15',
+      birthPlace: 'Arras',
+      career: [
+        'Député de la Somme (2022-)',
+        'Responsable du programme économique du RN'
+      ],
+      justiceIncidents: []
+    }
+  },
+
+  {
+    id: nextId++,
+    name: 'Hélène Laporte',
+    party: 'rn',
+    position: 'Députée du Lot-et-Garonne',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1973-05-30',
+      birthPlace: 'Agen',
+      career: [
+        'Députée européenne (2019-2022)',
+        'Députée du Lot-et-Garonne (2022-)',
+        'Vice-présidente de l\'Assemblée nationale (2022-)'
+      ],
+      justiceIncidents: []
+    }
+  },
+
+  {
+    id: nextId++,
+    name: 'Laurent Jacobelli',
+    party: 'rn',
+    position: 'Député de la Moselle',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1978-04-12',
+      birthPlace: 'Metz',
+      career: [
+        'Député de la Moselle (2022-)',
+        'Porte-parole du Rassemblement national'
+      ],
+      justiceIncidents: []
+    }
+  },
+
+  // LR
+  {
+    id: nextId++,
+    name: 'Annie Genevard',
+    party: 'lr',
+    position: 'Députée du Doubs',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1956-07-07',
+      birthPlace: 'Pontarlier',
+      career: [
+        'Ministre de l\'Éducation nationale (2024)',
+        'Députée du Doubs (2012-)',
+        'Secrétaire générale de LR (2019-2022)',
+        'Vice-présidente de l\'Assemblée nationale (2017-2022)'
+      ],
+      justiceIncidents: []
+    }
+  },
+
+  {
+    id: nextId++,
+    name: 'Olivier Marleix',
+    party: 'lr',
+    position: 'Député d\'Eure-et-Loir, président du groupe LR',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1970-01-04',
+      birthPlace: 'Chartres',
+      career: [
+        'Député d\'Eure-et-Loir (2012-)',
+        'Président du groupe LR à l\'Assemblée nationale (2022-)'
+      ],
+      justiceIncidents: []
+    }
+  },
+
+  {
+    id: nextId++,
+    name: 'Aurélien Pradié',
+    party: 'lr',
+    position: 'Député du Lot',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1986-12-22',
+      birthPlace: 'Cahors',
+      career: [
+        'Député du Lot (2017-)',
+        'Vice-président de l\'Assemblée nationale',
+        'Secrétaire général adjoint de LR (2019-2022)'
+      ],
+      justiceIncidents: []
+    }
+  },
+
+  // PS
+  {
+    id: nextId++,
+    name: 'Boris Vallaud',
+    party: 'ps',
+    position: 'Député des Landes, président du groupe PS',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1976-12-16',
+      birthPlace: 'Bayonne',
+      career: [
+        'Député des Landes (2017-)',
+        'Président du groupe Socialistes à l\'Assemblée nationale (2022-)',
+        'Secrétaire général adjoint de l\'Élysée (2014-2017)'
+      ],
+      justiceIncidents: []
+    }
+  },
+
+  {
+    id: nextId++,
+    name: 'Valérie Rabault',
+    party: 'ps',
+    position: 'Députée de Tarn-et-Garonne',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1971-05-05',
+      birthPlace: 'Castelsarrasin',
+      career: [
+        'Députée de Tarn-et-Garonne (2012-)',
+        'Présidente du groupe PS à l\'Assemblée nationale (2018-2022)',
+        'Rapporteure générale du budget (2014-2017)'
+      ],
+      justiceIncidents: []
+    }
+  },
+
+  // LFI
+  {
+    id: nextId++,
+    name: 'Adrien Quatennens',
+    party: 'lfi',
+    position: 'Député du Nord',
+    convictions: 1,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1990-03-23',
+      birthPlace: 'Lille',
+      career: [
+        'Député du Nord (2017-)',
+        'Coordinateur de La France Insoumise (2019-2022)'
+      ],
+      justiceIncidents: [
+        {
+          type: 'Condamnation',
+          date: '2022',
+          description: 'Condamné pour violences conjugales envers son épouse. Reconnu coupable de violences sans incapacité de travail par le tribunal correctionnel de Lille.',
+          penalty: '4 mois de prison avec sursis',
+          status: 'Définitif',
+          sources: [
+            { title: 'Adrien Quatennens - Wikipedia', url: 'https://fr.wikipedia.org/wiki/Adrien_Quatennens' }
+          ]
+        }
+      ]
+    }
+  },
+
+  {
+    id: nextId++,
+    name: 'Antoine Léaument',
+    party: 'lfi',
+    position: 'Député de l\'Essonne',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1993-04-30',
+      birthPlace: 'Corbeil-Essonnes',
+      career: [
+        'Député de l\'Essonne (2022-)',
+        'Responsable de la communication numérique de LFI'
+      ],
+      justiceIncidents: []
+    }
+  },
+
+  {
+    id: nextId++,
+    name: 'Clémence Guetté',
+    party: 'lfi',
+    position: 'Députée du Val-de-Marne',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1991-09-17',
+      birthPlace: 'Créteil',
+      career: [
+        'Députée du Val-de-Marne (2022-)',
+        'Coordinatrice du programme de LFI'
+      ],
+      justiceIncidents: []
+    }
+  },
+
+  // MoDem
+  {
+    id: nextId++,
+    name: 'Jean-Paul Mattei',
+    party: 'modem',
+    position: 'Député des Pyrénées-Atlantiques, président du groupe MoDem',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1963-06-15',
+      birthPlace: 'Pau',
+      career: [
+        'Député des Pyrénées-Atlantiques (2017-)',
+        'Président du groupe Démocrate (MoDem) à l\'Assemblée nationale (2022-)',
+        'Avocat fiscaliste'
+      ],
+      justiceIncidents: []
+    }
+  },
+
+  // EELV / Écologiste
+  {
+    id: nextId++,
+    name: 'Cyrielle Chatelain',
+    party: 'ecolo',
+    position: 'Députée de l\'Isère, présidente du groupe Écologiste',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1987-08-21',
+      birthPlace: 'Grenoble',
+      career: [
+        'Députée de l\'Isère (2022-)',
+        'Présidente du groupe Écologiste et Social à l\'Assemblée nationale (2022-)'
+      ],
+      justiceIncidents: []
+    }
+  },
+
+  {
+    id: nextId++,
+    name: 'Julien Bayou',
+    party: 'ecolo',
+    position: 'Ancien député de Paris (a quitté EELV en 2023)',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1980-08-12',
+      birthPlace: 'Valence',
+      career: [
+        'Député de Paris (2022-2024)',
+        'Secrétaire national d\'EELV (2019-2022)',
+        'Conseiller régional d\'Île-de-France (2015-2022)'
+      ],
+      justiceIncidents: []
+    }
+  },
+
+  // PCF / Gauche Démocrate et Républicaine
+  {
+    id: nextId++,
+    name: 'Stéphane Peu',
+    party: 'pcf',
+    position: 'Député de Seine-Saint-Denis',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1963-06-05',
+      birthPlace: 'Saint-Denis',
+      career: [
+        'Député de Seine-Saint-Denis (2017-)',
+        'Adjoint au maire de Saint-Denis (2001-2017)'
+      ],
+      justiceIncidents: []
+    }
+  },
+
+  // Horizons / Centre
+  {
+    id: nextId++,
+    name: 'Laurent Marcangeli',
+    party: 'ensemble',
+    position: 'Député de Corse-du-Sud, président du groupe Horizons',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1980-01-25',
+      birthPlace: 'Ajaccio',
+      career: [
+        'Ministre de la Fonction publique (2024-2025)',
+        'Député de Corse-du-Sud (2017-)',
+        'Président du groupe Horizons à l\'Assemblée nationale (2022-2024)',
+        'Maire d\'Ajaccio (2014-2022)'
+      ],
+      justiceIncidents: []
+    }
+  },
+
+  // Divers - Députés notables avec affaires judiciaires
+  {
+    id: nextId++,
+    name: 'Nicolas Dupont-Aignan',
+    party: 'lr',
+    position: 'Député de l\'Essonne (Debout la France)',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1961-03-07',
+      birthPlace: 'Paris',
+      career: [
+        'Député de l\'Essonne (1997-)',
+        'Maire d\'Yerres (1995-2017)',
+        'Président de Debout la France (2008-)',
+        'Candidat à l\'élection présidentielle (2012, 2017, 2022)'
+      ],
+      justiceIncidents: []
+    }
+  },
+
+  {
+    id: nextId++,
+    name: 'Thierry Solère',
+    party: 'ensemble',
+    position: 'Ancien député des Hauts-de-Seine',
+    convictions: 0,
+    ongoingCases: 1,
+    details: {
+      birthDate: '1971-06-17',
+      birthPlace: 'Boulogne-Billancourt',
+      career: [
+        'Député des Hauts-de-Seine (2012-2022)',
+        'Conseiller politique d\'Emmanuel Macron'
+      ],
+      justiceIncidents: [
+        {
+          type: 'Mise en examen',
+          date: '2019',
+          description: 'Mis en examen pour fraude fiscale, détournement de fonds publics, abus de confiance, trafic d\'influence et recel de violation du secret professionnel.',
+          status: 'En cours',
+          sources: [
+            { title: 'Thierry Solère - Wikipedia', url: 'https://fr.wikipedia.org/wiki/Thierry_Sol%C3%A8re' }
+          ]
+        }
+      ]
+    }
+  },
+
+  {
+    id: nextId++,
+    name: 'Mustapha Laabid',
+    party: 'ensemble',
+    position: 'Ancien député d\'Ille-et-Vilaine',
+    convictions: 1,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1971-07-12',
+      birthPlace: 'Rennes',
+      career: [
+        'Député d\'Ille-et-Vilaine (2017-2020)'
+      ],
+      justiceIncidents: [
+        {
+          type: 'Condamnation',
+          date: '2020',
+          description: 'Condamné pour abus de confiance dans la gestion d\'une association. Détournement de fonds associatifs à des fins personnelles.',
+          penalty: '1 an de prison avec sursis et 3 ans d\'inéligibilité',
+          status: 'Définitif',
+          sources: [
+            { title: 'Mustapha Laabid - Wikipedia', url: 'https://fr.wikipedia.org/wiki/Mustapha_Laabid' }
+          ]
+        }
+      ]
+    }
+  },
+
+  {
+    id: nextId++,
+    name: 'M\'jid El Guerrab',
+    party: 'ensemble',
+    position: 'Ancien député des Français de l\'étranger',
+    convictions: 1,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1980-08-10',
+      birthPlace: 'Meknès (Maroc)',
+      career: [
+        'Député des Français de l\'étranger (2017-2022)'
+      ],
+      justiceIncidents: [
+        {
+          type: 'Condamnation',
+          date: '2022',
+          description: 'Condamné pour violences volontaires avec arme (coup de casque) sur Boris Faure, cadre du PS, en 2017.',
+          penalty: '1 an de prison avec sursis',
+          status: 'Définitif',
+          sources: [
+            { title: 'M\'jid El Guerrab - Wikipedia', url: 'https://fr.wikipedia.org/wiki/M%27jid_El_Guerrab' }
+          ]
+        }
+      ]
+    }
+  },
+
+  {
+    id: nextId++,
+    name: 'Joël Giraud',
+    party: 'ensemble',
+    position: 'Ancien député des Hautes-Alpes',
+    convictions: 0,
+    ongoingCases: 1,
+    details: {
+      birthDate: '1961-10-10',
+      birthPlace: 'L\'Argentière-la-Bessée',
+      career: [
+        'Député des Hautes-Alpes (2002-2022)',
+        'Secrétaire d\'État à la Ruralité (2020-2022)',
+        'Rapporteur général du budget (2017-2020)'
+      ],
+      justiceIncidents: [
+        {
+          type: 'Mise en examen',
+          date: '2023',
+          description: 'Mis en examen pour prise illégale d\'intérêts dans le cadre de marchés publics passés lorsqu\'il était maire de L\'Argentière-la-Bessée.',
+          status: 'En cours',
+          sources: [
+            { title: 'Joël Giraud - Wikipedia', url: 'https://fr.wikipedia.org/wiki/Jo%C3%ABl_Giraud' }
+          ]
+        }
+      ]
+    }
+  },
+
+  {
+    id: nextId++,
+    name: 'Stéphane Claireaux',
+    party: 'ensemble',
+    position: 'Ancien député de Saint-Pierre-et-Miquelon',
+    convictions: 1,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1968-12-15',
+      birthPlace: 'Saint-Pierre-et-Miquelon',
+      career: [
+        'Député de Saint-Pierre-et-Miquelon (2017-2022)',
+        'Maire de Saint-Pierre (2014-2020)'
+      ],
+      justiceIncidents: [
+        {
+          type: 'Condamnation',
+          date: '2023',
+          description: 'Condamné pour avoir tiré sur des pêcheurs avec un fusil à plombs lors d\'une manifestation devant son domicile.',
+          penalty: '3 mois de prison avec sursis et interdiction de port d\'armes',
+          status: 'Définitif',
+          sources: [
+            { title: 'Stéphane Claireaux - Wikipedia', url: 'https://fr.wikipedia.org/wiki/St%C3%A9phane_Claireaux' }
+          ]
+        }
+      ]
+    }
+  },
+
+  {
+    id: nextId++,
+    name: 'Moetai Brotherson',
+    party: 'ensemble',
+    position: 'Président de la Polynésie française',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1969-04-20',
+      birthPlace: 'Papeete, Polynésie française',
+      career: [
+        'Président de la Polynésie française (2023-)',
+        'Député de la Polynésie française (2017-2023)'
+      ],
+      justiceIncidents: []
     }
   },
 ]
