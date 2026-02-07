@@ -15,17 +15,17 @@ export const parties = [
     ideology: 'Nationalisme, Euroscepticisme',
     founded: 2018,
     members: 100000,
-    seats: 88
+    seats: 122
   },
   {
     id: 'lr',
     name: 'Les Républicains (LR)',
-    leader: 'Éric Ciotti',
+    leader: 'Laurent Wauquiez',
     color: '#0066CC',
     ideology: 'Conservatisme, Libéralisme économique',
     founded: 2015,
     members: 100000,
-    seats: 61
+    seats: 49
   },
   {
     id: 'ps',
@@ -35,7 +35,7 @@ export const parties = [
     ideology: 'Socialisme démocratique',
     founded: 1969,
     members: 80000,
-    seats: 66
+    seats: 69
   },
   {
     id: 'lfi',
@@ -45,7 +45,7 @@ export const parties = [
     ideology: 'Gauche radicale, Écologie',
     founded: 2016,
     members: 500000,
-    seats: 99
+    seats: 71
   },
   {
     id: 'ensemble',
@@ -55,7 +55,7 @@ export const parties = [
     ideology: 'Centrisme, Libéralisme',
     founded: 2022,
     members: 250000,
-    seats: 250
+    seats: 92
   },
   {
     id: 'modem',
@@ -65,7 +65,7 @@ export const parties = [
     ideology: 'Centrisme, Réformisme',
     founded: 2007,
     members: 70000,
-    seats: 101
+    seats: 36
   },
   {
     id: 'ecolo',
@@ -75,7 +75,7 @@ export const parties = [
     ideology: 'Écologisme, Gauche progressiste',
     founded: 2010,
     members: 40000,
-    seats: 1
+    seats: 38
   },
   // Partis mineurs mais notables
   {
@@ -96,7 +96,7 @@ export const parties = [
     ideology: 'Communisme',
     founded: 1920,
     members: 50000,
-    seats: 6
+    seats: 17
   },
   {
     id: 'agir',
@@ -117,6 +117,46 @@ export const parties = [
     founded: 2012,
     members: 30000,
     seats: 0
+  },
+  {
+    id: 'horizons',
+    name: 'Horizons (HOR)',
+    leader: 'Édouard Philippe',
+    color: '#4A90D9',
+    ideology: 'Centre-droit, Progressisme',
+    founded: 2021,
+    members: 30000,
+    seats: 34
+  },
+  {
+    id: 'liot',
+    name: 'LIOT (Libertés, Indépendants, Outre-mer et Territoires)',
+    leader: 'Stéphane Lenormand',
+    color: '#8B6914',
+    ideology: 'Centrisme, Régionalisme',
+    founded: 2022,
+    members: 0,
+    seats: 22
+  },
+  {
+    id: 'udr',
+    name: 'Union des droites pour la République (UDR)',
+    leader: 'Éric Ciotti',
+    color: '#1B3A5C',
+    ideology: 'Droite conservatrice, Souverainisme',
+    founded: 2024,
+    members: 0,
+    seats: 17
+  },
+  {
+    id: 'ni',
+    name: 'Non-inscrits (NI)',
+    leader: '-',
+    color: '#808080',
+    ideology: 'Divers',
+    founded: 0,
+    members: 0,
+    seats: 10
   }
 ]
 
@@ -467,7 +507,7 @@ export const politicians = [
   {
     id: nextId++,
     name: 'Éric Ciotti',
-    party: 'rn',
+    party: 'udr',
     position: 'Député des Alpes-Maritimes (alliance RN depuis 2024)',
     convictions: 0,
     ongoingCases: 0,
@@ -938,7 +978,7 @@ export const politicians = [
   {
     id: nextId++,
     name: 'François Ruffin',
-    party: 'lfi',
+    party: 'ecolo',
     position: 'Député de la Somme (a quitté LFI en 2024)',
     convictions: 0,
     ongoingCases: 0,
@@ -956,7 +996,7 @@ export const politicians = [
   {
     id: nextId++,
     name: 'Clémentine Autain',
-    party: 'lfi',
+    party: 'ecolo',
     position: 'Ancienne députée de Seine-Saint-Denis (a quitté LFI en 2023)',
     convictions: 0,
     ongoingCases: 0,
@@ -973,7 +1013,7 @@ export const politicians = [
   {
     id: nextId++,
     name: 'Alexis Corbière',
-    party: 'lfi',
+    party: 'ecolo',
     position: 'Député de Seine-Saint-Denis (a quitté LFI en 2023)',
     convictions: 0,
     ongoingCases: 0,
@@ -1594,7 +1634,7 @@ export const politicians = [
   {
     id: nextId++,
     name: 'Franck Riester',
-    party: 'agir',
+    party: 'ensemble',
     position: 'Ancien ministre de la Culture',
     convictions: 0,
     ongoingCases: 0,
@@ -3484,7 +3524,7 @@ export const politicians = [
   {
     id: nextId++,
     name: 'Sacha Houlié',
-    party: 'ensemble',
+    party: 'ps',
     position: 'Ancien député de la Vienne',
     convictions: 0,
     ongoingCases: 0,
@@ -3597,7 +3637,7 @@ export const politicians = [
   {
     id: nextId++,
     name: 'Aurélien Pradié',
-    party: 'lr',
+    party: 'ni',
     position: 'Député du Lot',
     convictions: 0,
     ongoingCases: 0,
@@ -3799,7 +3839,7 @@ export const politicians = [
   {
     id: nextId++,
     name: 'Laurent Marcangeli',
-    party: 'ensemble',
+    party: 'horizons',
     position: 'Député de Corse-du-Sud, président du groupe Horizons',
     convictions: 0,
     ongoingCases: 0,
@@ -4052,7 +4092,7 @@ export const politicians = [
   {
     id: nextId++,
     name: 'Christine Engrand',
-    party: 'rn',
+    party: 'ni',
     position: 'Députée du Pas-de-Calais',
     convictions: 0,
     ongoingCases: 0,
@@ -4342,7 +4382,7 @@ export const politicians = [
   {
     id: nextId++,
     name: 'Raphaël Schellenberger',
-    party: 'lr',
+    party: 'ni',
     position: 'Député du Haut-Rhin',
     convictions: 0,
     ongoingCases: 0,
@@ -4945,6 +4985,5886 @@ export const politicians = [
       career: [
         'Député des Yvelines (2017-)'
       ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Alexandre Dufosset',
+    party: 'rn',
+    position: 'Député - Rassemblement National',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Alexandre Loubet',
+    party: 'rn',
+    position: 'Député - Rassemblement National',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Anthony Boulogne',
+    party: 'rn',
+    position: 'Député - Rassemblement National',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Antoine Golliot',
+    party: 'rn',
+    position: 'Député - Rassemblement National',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Antoine Villedieu',
+    party: 'rn',
+    position: 'Député - Rassemblement National',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Auguste Evrard',
+    party: 'rn',
+    position: 'Député - Rassemblement National',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Aurélien Dutremble',
+    party: 'rn',
+    position: 'Député - Rassemblement National',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Aurélien Lopez-Liguori',
+    party: 'rn',
+    position: 'Député - Rassemblement National',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Bruno Clavet',
+    party: 'rn',
+    position: 'Député - Rassemblement National',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Bryan Masson',
+    party: 'rn',
+    position: 'Député - Rassemblement National',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Christian Girard',
+    party: 'rn',
+    position: 'Député - Rassemblement National',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Christophe Barthès',
+    party: 'rn',
+    position: 'Député - Rassemblement National',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'David Magnier',
+    party: 'rn',
+    position: 'Député - Rassemblement National',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Eddy Casterman',
+    party: 'rn',
+    position: 'Député - Rassemblement National',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Emmanuel Blairy',
+    party: 'rn',
+    position: 'Député - Rassemblement National',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Emmanuel Fouquart',
+    party: 'rn',
+    position: 'Député - Rassemblement National',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Emmanuel Taché',
+    party: 'rn',
+    position: 'Député - Rassemblement National',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Frank Giletti',
+    party: 'rn',
+    position: 'Député - Rassemblement National',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Frédéric Falcon',
+    party: 'rn',
+    position: 'Député - Rassemblement National',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Frédéric Weber',
+    party: 'rn',
+    position: 'Député - Rassemblement National',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Frédéric-Pierre Vos',
+    party: 'rn',
+    position: 'Député - Rassemblement National',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Gaëtan Dussausaye',
+    party: 'rn',
+    position: 'Député - Rassemblement National',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Guillaume Bigot',
+    party: 'rn',
+    position: 'Député - Rassemblement National',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Guillaume Florquin',
+    party: 'rn',
+    position: 'Député - Rassemblement National',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Hervé de Lépinau',
+    party: 'rn',
+    position: 'Député - Rassemblement National',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Jocelyn Dessigny',
+    party: 'rn',
+    position: 'Député - Rassemblement National',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Jonathan Géry',
+    party: 'rn',
+    position: 'Député - Rassemblement National',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Jordan Guitton',
+    party: 'rn',
+    position: 'Député - Rassemblement National',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Jorys Bovet',
+    party: 'rn',
+    position: 'Député - Rassemblement National',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Joseph Rivière',
+    party: 'rn',
+    position: 'Député - Rassemblement National',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'José Beaurain',
+    party: 'rn',
+    position: 'Député - Rassemblement National',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'José Gonzalez',
+    party: 'rn',
+    position: 'Député - Rassemblement National',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Julien Gabarron',
+    party: 'rn',
+    position: 'Député - Rassemblement National',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Julien Guibert',
+    party: 'rn',
+    position: 'Député - Rassemblement National',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Julien Limongi',
+    party: 'rn',
+    position: 'Député - Rassemblement National',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Julien Rancoule',
+    party: 'rn',
+    position: 'Député - Rassemblement National',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Jérôme Buisson',
+    party: 'rn',
+    position: 'Député - Rassemblement National',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Kévin Mauvieux',
+    party: 'rn',
+    position: 'Député - Rassemblement National',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Lionel Tivoli',
+    party: 'rn',
+    position: 'Député - Rassemblement National',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Marc de Fleurian',
+    party: 'rn',
+    position: 'Député - Rassemblement National',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Matthias Renault',
+    party: 'rn',
+    position: 'Député - Rassemblement National',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Matthieu Marchio',
+    party: 'rn',
+    position: 'Député - Rassemblement National',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Maxime Amblard',
+    party: 'rn',
+    position: 'Député - Rassemblement National',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Michaël Taverne',
+    party: 'rn',
+    position: 'Député - Rassemblement National',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Michel Guiniot',
+    party: 'rn',
+    position: 'Député - Rassemblement National',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Nicolas Dragon',
+    party: 'rn',
+    position: 'Député - Rassemblement National',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Nicolas Meizonnet',
+    party: 'rn',
+    position: 'Député - Rassemblement National',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Pascal Jenft',
+    party: 'rn',
+    position: 'Député - Rassemblement National',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Pascal Markowsky',
+    party: 'rn',
+    position: 'Député - Rassemblement National',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Patrice Martin',
+    party: 'rn',
+    position: 'Député - Rassemblement National',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Philippe Ballard',
+    party: 'rn',
+    position: 'Député - Rassemblement National',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Philippe Schreck',
+    party: 'rn',
+    position: 'Député - Rassemblement National',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Pierre Meurin',
+    party: 'rn',
+    position: 'Député - Rassemblement National',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'René Lioret',
+    party: 'rn',
+    position: 'Député - Rassemblement National',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Robert Le Bourgeois',
+    party: 'rn',
+    position: 'Député - Rassemblement National',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Roger Chudeau',
+    party: 'rn',
+    position: 'Député - Rassemblement National',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Romain Baubry',
+    party: 'rn',
+    position: 'Député - Rassemblement National',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Romain Tonussi',
+    party: 'rn',
+    position: 'Député - Rassemblement National',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Serge Muller',
+    party: 'rn',
+    position: 'Député - Rassemblement National',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Stéphane Rambaud',
+    party: 'rn',
+    position: 'Député - Rassemblement National',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Sébastien Humbert',
+    party: 'rn',
+    position: 'Député - Rassemblement National',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Thibaut Monnier',
+    party: 'rn',
+    position: 'Député - Rassemblement National',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Thierry Frappé',
+    party: 'rn',
+    position: 'Député - Rassemblement National',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Thierry Perez',
+    party: 'rn',
+    position: 'Député - Rassemblement National',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Thierry Tesson',
+    party: 'rn',
+    position: 'Député - Rassemblement National',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Théo Bernhardt',
+    party: 'rn',
+    position: 'Député - Rassemblement National',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Timothée Houssin',
+    party: 'rn',
+    position: 'Député - Rassemblement National',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Yoann Gillet',
+    party: 'rn',
+    position: 'Député - Rassemblement National',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Alexandra Masson',
+    party: 'rn',
+    position: 'Députée - Rassemblement National',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Anaïs Sabatini',
+    party: 'rn',
+    position: 'Députée - Rassemblement National',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Anchya Bamana',
+    party: 'rn',
+    position: 'Députée - Rassemblement National',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Angélique Ranc',
+    party: 'rn',
+    position: 'Députée - Rassemblement National',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Anne Sicard',
+    party: 'rn',
+    position: 'Députée - Rassemblement National',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Béatrice Roullaud',
+    party: 'rn',
+    position: 'Députée - Rassemblement National',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Bénédicte Auzanot',
+    party: 'rn',
+    position: 'Députée - Rassemblement National',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Caroline Colombier',
+    party: 'rn',
+    position: 'Députée - Rassemblement National',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Caroline Parmentier',
+    party: 'rn',
+    position: 'Députée - Rassemblement National',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Catherine Rimbert',
+    party: 'rn',
+    position: 'Députée - Rassemblement National',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Christine Loir',
+    party: 'rn',
+    position: 'Députée - Rassemblement National',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Claire Marais-Beuil',
+    party: 'rn',
+    position: 'Députée - Rassemblement National',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Florence Joubert',
+    party: 'rn',
+    position: 'Députée - Rassemblement National',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Gisèle Lelouis',
+    party: 'rn',
+    position: 'Députée - Rassemblement National',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Géraldine Grangier',
+    party: 'rn',
+    position: 'Députée - Rassemblement National',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Joëlle Mélin',
+    party: 'rn',
+    position: 'Députée - Rassemblement National',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Julie Lechanteux',
+    party: 'rn',
+    position: 'Députée - Rassemblement National',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Katiana Levavasseur',
+    party: 'rn',
+    position: 'Députée - Rassemblement National',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Laurence Robert-Dehault',
+    party: 'rn',
+    position: 'Députée - Rassemblement National',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Lisette Pollet',
+    party: 'rn',
+    position: 'Députée - Rassemblement National',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Manon Bouquin',
+    party: 'rn',
+    position: 'Députée - Rassemblement National',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Marie-France Lorho',
+    party: 'rn',
+    position: 'Députée - Rassemblement National',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Marine Hamelet',
+    party: 'rn',
+    position: 'Députée - Rassemblement National',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Michèle Martinez',
+    party: 'rn',
+    position: 'Députée - Rassemblement National',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Monique Griseti',
+    party: 'rn',
+    position: 'Députée - Rassemblement National',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Nadine Lechon',
+    party: 'rn',
+    position: 'Députée - Rassemblement National',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Nathalie Da Conceição Carvalho',
+    party: 'rn',
+    position: 'Députée - Rassemblement National',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Pascale Bordes',
+    party: 'rn',
+    position: 'Députée - Rassemblement National',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Sandrine Dogor-Such',
+    party: 'rn',
+    position: 'Députée - Rassemblement National',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Sophie Blanc',
+    party: 'rn',
+    position: 'Députée - Rassemblement National',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Sophie-Laurence Roy',
+    party: 'rn',
+    position: 'Députée - Rassemblement National',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Stéphanie Galzy',
+    party: 'rn',
+    position: 'Députée - Rassemblement National',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Sylvie Josserand',
+    party: 'rn',
+    position: 'Députée - Rassemblement National',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Tiffany Joncour',
+    party: 'rn',
+    position: 'Députée - Rassemblement National',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Yaël Ménache',
+    party: 'rn',
+    position: 'Députée - Rassemblement National',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Anthony Brosse',
+    party: 'ensemble',
+    position: 'Député - Ensemble pour la République',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Antoine Armand',
+    party: 'ensemble',
+    position: 'Député - Ensemble pour la République',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Bastien Marchive',
+    party: 'ensemble',
+    position: 'Député - Ensemble pour la République',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Benjamin Dirx',
+    party: 'ensemble',
+    position: 'Député - Ensemble pour la République',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Benoît Larrouquis',
+    party: 'ensemble',
+    position: 'Député - Ensemble pour la République',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Bertrand Sorre',
+    party: 'ensemble',
+    position: 'Député - Ensemble pour la République',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Charles Rodwell',
+    party: 'ensemble',
+    position: 'Député - Ensemble pour la République',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Charles Sitzenstuhl',
+    party: 'ensemble',
+    position: 'Député - Ensemble pour la République',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Christophe Marion',
+    party: 'ensemble',
+    position: 'Député - Ensemble pour la République',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Christophe Mongardien',
+    party: 'ensemble',
+    position: 'Député - Ensemble pour la République',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Christopher Weissberg',
+    party: 'ensemble',
+    position: 'Député - Ensemble pour la République',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Daniel Labaronne',
+    party: 'ensemble',
+    position: 'Député - Ensemble pour la République',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Denis Masseglia',
+    party: 'ensemble',
+    position: 'Député - Ensemble pour la République',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Didier Le Gac',
+    party: 'ensemble',
+    position: 'Député - Ensemble pour la République',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Florent Boudié',
+    party: 'ensemble',
+    position: 'Député - Ensemble pour la République',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'François Cormier-Bouligeon',
+    party: 'ensemble',
+    position: 'Député - Ensemble pour la République',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Guillaume Gouffier Valente',
+    party: 'ensemble',
+    position: 'Député - Ensemble pour la République',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Hervé Berville',
+    party: 'ensemble',
+    position: 'Député - Ensemble pour la République',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Jean Terlier',
+    party: 'ensemble',
+    position: 'Député - Ensemble pour la République',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Jean-François Rousset',
+    party: 'ensemble',
+    position: 'Député - Ensemble pour la République',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Jean-Luc Fugit',
+    party: 'ensemble',
+    position: 'Député - Ensemble pour la République',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Jean-Marie Fiévet',
+    party: 'ensemble',
+    position: 'Député - Ensemble pour la République',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Jean-Michel Jacques',
+    party: 'ensemble',
+    position: 'Député - Ensemble pour la République',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Jean-René Cazeneuve',
+    party: 'ensemble',
+    position: 'Député - Ensemble pour la République',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Lionel Causse',
+    party: 'ensemble',
+    position: 'Député - Ensemble pour la République',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Ludovic Mendes',
+    party: 'ensemble',
+    position: 'Député - Ensemble pour la République',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Marc Ferracci',
+    party: 'ensemble',
+    position: 'Député - Ensemble pour la République',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Michel Lauzzana',
+    party: 'ensemble',
+    position: 'Député - Ensemble pour la République',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Mikaele Seo',
+    party: 'ensemble',
+    position: 'Député - Ensemble pour la République',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Moerani Frébault',
+    party: 'ensemble',
+    position: 'Député - Ensemble pour la République',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Nicolas Metzdorf',
+    party: 'ensemble',
+    position: 'Député - Ensemble pour la République',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Olivier Becht',
+    party: 'ensemble',
+    position: 'Député - Ensemble pour la République',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Paul Midy',
+    party: 'ensemble',
+    position: 'Député - Ensemble pour la République',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Pierre Cazeneuve',
+    party: 'ensemble',
+    position: 'Député - Ensemble pour la République',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Stéphane Buchou',
+    party: 'ensemble',
+    position: 'Député - Ensemble pour la République',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Stéphane Mazars',
+    party: 'ensemble',
+    position: 'Député - Ensemble pour la République',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Stéphane Travert',
+    party: 'ensemble',
+    position: 'Député - Ensemble pour la République',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Sébastien Huyghe',
+    party: 'ensemble',
+    position: 'Député - Ensemble pour la République',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Thomas Cazenave',
+    party: 'ensemble',
+    position: 'Député - Ensemble pour la République',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Thomas Gassilloud',
+    party: 'ensemble',
+    position: 'Député - Ensemble pour la République',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Vincent Cauré',
+    party: 'ensemble',
+    position: 'Député - Ensemble pour la République',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Vincent Ledoux',
+    party: 'ensemble',
+    position: 'Député - Ensemble pour la République',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Yannick Chenevard',
+    party: 'ensemble',
+    position: 'Député - Ensemble pour la République',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Éric Bothorel',
+    party: 'ensemble',
+    position: 'Député - Ensemble pour la République',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Agnès Pannier-Runacher',
+    party: 'ensemble',
+    position: 'Députée - Ensemble pour la République',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Amélia Lakrafi',
+    party: 'ensemble',
+    position: 'Députée - Ensemble pour la République',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Annaïg Le Meur',
+    party: 'ensemble',
+    position: 'Députée - Ensemble pour la République',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Anne Genetet',
+    party: 'ensemble',
+    position: 'Députée - Ensemble pour la République',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Anne-Sophie Ronceret',
+    party: 'ensemble',
+    position: 'Députée - Ensemble pour la République',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Annie Vidal',
+    party: 'ensemble',
+    position: 'Députée - Ensemble pour la République',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Brigitte Klinkert',
+    party: 'ensemble',
+    position: 'Députée - Ensemble pour la République',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Brigitte Liso',
+    party: 'ensemble',
+    position: 'Députée - Ensemble pour la République',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Camille Galliard-Minier',
+    party: 'ensemble',
+    position: 'Députée - Ensemble pour la République',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Caroline Yadan',
+    party: 'ensemble',
+    position: 'Députée - Ensemble pour la République',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Catherine Ibled',
+    party: 'ensemble',
+    position: 'Députée - Ensemble pour la République',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Christine Le Nabour',
+    party: 'ensemble',
+    position: 'Députée - Ensemble pour la République',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Constance Le Grip',
+    party: 'ensemble',
+    position: 'Députée - Ensemble pour la République',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Corinne Vignon',
+    party: 'ensemble',
+    position: 'Députée - Ensemble pour la République',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Céline Calvez',
+    party: 'ensemble',
+    position: 'Députée - Ensemble pour la République',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Danielle Brulebois',
+    party: 'ensemble',
+    position: 'Députée - Ensemble pour la République',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Françoise Buffet',
+    party: 'ensemble',
+    position: 'Députée - Ensemble pour la République',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Graziella Melchior',
+    party: 'ensemble',
+    position: 'Députée - Ensemble pour la République',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Joséphine Missoffe',
+    party: 'ensemble',
+    position: 'Députée - Ensemble pour la République',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Julie Delpech',
+    party: 'ensemble',
+    position: 'Députée - Ensemble pour la République',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Laure Miller',
+    party: 'ensemble',
+    position: 'Députée - Ensemble pour la République',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Liliana Tanguy',
+    party: 'ensemble',
+    position: 'Députée - Ensemble pour la République',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Marie-Pierre Rixain',
+    party: 'ensemble',
+    position: 'Députée - Ensemble pour la République',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Natalia Pouzyreff',
+    party: 'ensemble',
+    position: 'Députée - Ensemble pour la République',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Nathalie Coggia',
+    party: 'ensemble',
+    position: 'Députée - Ensemble pour la République',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Nicole Dubré-Chirat',
+    party: 'ensemble',
+    position: 'Députée - Ensemble pour la République',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Nicole Le Peih',
+    party: 'ensemble',
+    position: 'Députée - Ensemble pour la République',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Olga Givernet',
+    party: 'ensemble',
+    position: 'Députée - Ensemble pour la République',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Olivia Grégoire',
+    party: 'ensemble',
+    position: 'Députée - Ensemble pour la République',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Sandra Marsaud',
+    party: 'ensemble',
+    position: 'Députée - Ensemble pour la République',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Sandrine Lalanne',
+    party: 'ensemble',
+    position: 'Députée - Ensemble pour la République',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Sandrine Le Feur',
+    party: 'ensemble',
+    position: 'Députée - Ensemble pour la République',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Sophie Panonacle',
+    party: 'ensemble',
+    position: 'Députée - Ensemble pour la République',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Stéphanie Rist',
+    party: 'ensemble',
+    position: 'Députée - Ensemble pour la République',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Violette Spillebout',
+    party: 'ensemble',
+    position: 'Députée - Ensemble pour la République',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Véronique Riotton',
+    party: 'ensemble',
+    position: 'Députée - Ensemble pour la République',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Abdelkader Lahmar',
+    party: 'lfi',
+    position: 'Député - La France Insoumise',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Aly Diouara',
+    party: 'lfi',
+    position: 'Député - La France Insoumise',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Andy Kerbrat',
+    party: 'lfi',
+    position: 'Député - La France Insoumise',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Arnaud Saint-Martin',
+    party: 'lfi',
+    position: 'Député - La France Insoumise',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Aurélien Le Coq',
+    party: 'lfi',
+    position: 'Député - La France Insoumise',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Aurélien Taché',
+    party: 'lfi',
+    position: 'Député - La France Insoumise',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Aymeric Caron',
+    party: 'lfi',
+    position: 'Député - La France Insoumise',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Bastien Lachaud',
+    party: 'lfi',
+    position: 'Député - La France Insoumise',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Bérenger Cernon',
+    party: 'lfi',
+    position: 'Député - La France Insoumise',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Christophe Bex',
+    party: 'lfi',
+    position: 'Député - La France Insoumise',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Damien Maudet',
+    party: 'lfi',
+    position: 'Député - La France Insoumise',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'David Guiraud',
+    party: 'lfi',
+    position: 'Député - La France Insoumise',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Emmanuel Fernandes',
+    party: 'lfi',
+    position: 'Député - La France Insoumise',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'François Piquemal',
+    party: 'lfi',
+    position: 'Député - La France Insoumise',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Gabriel Amard',
+    party: 'lfi',
+    position: 'Député - La France Insoumise',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Idir Boumertit',
+    party: 'lfi',
+    position: 'Député - La France Insoumise',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Jean-François Coulomme',
+    party: 'lfi',
+    position: 'Député - La France Insoumise',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Jean-Hugues Ratenon',
+    party: 'lfi',
+    position: 'Député - La France Insoumise',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Jean-Philippe Nilor',
+    party: 'lfi',
+    position: 'Député - La France Insoumise',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Jérôme Legavre',
+    party: 'lfi',
+    position: 'Député - La France Insoumise',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Laurent Alexandre',
+    party: 'lfi',
+    position: 'Député - La France Insoumise',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Loïc Prud\'homme',
+    party: 'lfi',
+    position: 'Député - La France Insoumise',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Matthias Tavel',
+    party: 'lfi',
+    position: 'Député - La France Insoumise',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Maxime Laisney',
+    party: 'lfi',
+    position: 'Député - La France Insoumise',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Paul Vannier',
+    party: 'lfi',
+    position: 'Député - La France Insoumise',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Perceval Gaillard',
+    party: 'lfi',
+    position: 'Député - La France Insoumise',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Pierre-Yves Cadalen',
+    party: 'lfi',
+    position: 'Député - La France Insoumise',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Raphaël Arnault',
+    party: 'lfi',
+    position: 'Député - La France Insoumise',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'René Pilato',
+    party: 'lfi',
+    position: 'Député - La France Insoumise',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Rodrigo Arenas',
+    party: 'lfi',
+    position: 'Député - La France Insoumise',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Sylvain Carrière',
+    party: 'lfi',
+    position: 'Député - La France Insoumise',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Ugo Bernalicis',
+    party: 'lfi',
+    position: 'Député - La France Insoumise',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Éric Coquerel',
+    party: 'lfi',
+    position: 'Député - La France Insoumise',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Alma Dufour',
+    party: 'lfi',
+    position: 'Députée - La France Insoumise',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Anaïs Belouassa-Cherifi',
+    party: 'lfi',
+    position: 'Députée - La France Insoumise',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Andrée Taurinya',
+    party: 'lfi',
+    position: 'Députée - La France Insoumise',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Anne Stambach-Terrenoir',
+    party: 'lfi',
+    position: 'Députée - La France Insoumise',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Aurélie Trouvé',
+    party: 'lfi',
+    position: 'Députée - La France Insoumise',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Claire Lejeune',
+    party: 'lfi',
+    position: 'Députée - La France Insoumise',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Farida Amrani',
+    party: 'lfi',
+    position: 'Députée - La France Insoumise',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Gabrielle Cathala',
+    party: 'lfi',
+    position: 'Députée - La France Insoumise',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Karen Erodi',
+    party: 'lfi',
+    position: 'Députée - La France Insoumise',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Manon Meunier',
+    party: 'lfi',
+    position: 'Députée - La France Insoumise',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Marianne Maximi',
+    party: 'lfi',
+    position: 'Députée - La France Insoumise',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Marie Mesmeur',
+    party: 'lfi',
+    position: 'Députée - La France Insoumise',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Mathilde Feld',
+    party: 'lfi',
+    position: 'Députée - La France Insoumise',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Mathilde Hignet',
+    party: 'lfi',
+    position: 'Députée - La France Insoumise',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Murielle Lepvraud',
+    party: 'lfi',
+    position: 'Députée - La France Insoumise',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Nadège Abomangoli',
+    party: 'lfi',
+    position: 'Députée - La France Insoumise',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Nathalie Oziol',
+    party: 'lfi',
+    position: 'Députée - La France Insoumise',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Sandrine Nosbé',
+    party: 'lfi',
+    position: 'Députée - La France Insoumise',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Sarah Legrain',
+    party: 'lfi',
+    position: 'Députée - La France Insoumise',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Sylvie Ferrer',
+    party: 'lfi',
+    position: 'Députée - La France Insoumise',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Ségolène Amiot',
+    party: 'lfi',
+    position: 'Députée - La France Insoumise',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Zahia Hamdane',
+    party: 'lfi',
+    position: 'Députée - La France Insoumise',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Élisa Martin',
+    party: 'lfi',
+    position: 'Députée - La France Insoumise',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Élise Leboucher',
+    party: 'lfi',
+    position: 'Députée - La France Insoumise',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Alain David',
+    party: 'ps',
+    position: 'Député - Parti Socialiste',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Arnaud Simion',
+    party: 'ps',
+    position: 'Député - Parti Socialiste',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Aurélien Rousseau',
+    party: 'ps',
+    position: 'Député - Parti Socialiste',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Belkhir Belhaddad',
+    party: 'ps',
+    position: 'Député - Parti Socialiste',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Christian Baptiste',
+    party: 'ps',
+    position: 'Député - Parti Socialiste',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Christophe Proença',
+    party: 'ps',
+    position: 'Député - Parti Socialiste',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Denis Fègne',
+    party: 'ps',
+    position: 'Député - Parti Socialiste',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Élie Califer',
+    party: 'ps',
+    position: 'Député - Parti Socialiste',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Emmanuel Grégoire',
+    party: 'ps',
+    position: 'Député - Parti Socialiste',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Fabrice Barusseau',
+    party: 'ps',
+    position: 'Député - Parti Socialiste',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Fabrice Roussel',
+    party: 'ps',
+    position: 'Député - Parti Socialiste',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Guillaume Garot',
+    party: 'ps',
+    position: 'Député - Parti Socialiste',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Gérard Leseul',
+    party: 'ps',
+    position: 'Député - Parti Socialiste',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Hervé Saulignac',
+    party: 'ps',
+    position: 'Député - Parti Socialiste',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Jacques Oberti',
+    party: 'ps',
+    position: 'Député - Parti Socialiste',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Jiovanny William',
+    party: 'ps',
+    position: 'Député - Parti Socialiste',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Joël Aviragnet',
+    party: 'ps',
+    position: 'Député - Parti Socialiste',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Julien Gokel',
+    party: 'ps',
+    position: 'Député - Parti Socialiste',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Karim Benbrahim',
+    party: 'ps',
+    position: 'Député - Parti Socialiste',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Laurent Baumel',
+    party: 'ps',
+    position: 'Député - Parti Socialiste',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Laurent Lhardit',
+    party: 'ps',
+    position: 'Député - Parti Socialiste',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Marc Pena',
+    party: 'ps',
+    position: 'Député - Parti Socialiste',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Mickaël Bouloux',
+    party: 'ps',
+    position: 'Député - Parti Socialiste',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Paul Christophle',
+    party: 'ps',
+    position: 'Député - Parti Socialiste',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Peio Dufau',
+    party: 'ps',
+    position: 'Député - Parti Socialiste',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Philippe Naillet',
+    party: 'ps',
+    position: 'Député - Parti Socialiste',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Pierre Pribetich',
+    party: 'ps',
+    position: 'Député - Parti Socialiste',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Pierrick Courbon',
+    party: 'ps',
+    position: 'Député - Parti Socialiste',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Roger Vicot',
+    party: 'ps',
+    position: 'Député - Parti Socialiste',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Romain Eskenazi',
+    party: 'ps',
+    position: 'Député - Parti Socialiste',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Stéphane Delautrette',
+    party: 'ps',
+    position: 'Député - Parti Socialiste',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Stéphane Hablot',
+    party: 'ps',
+    position: 'Député - Parti Socialiste',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Sébastien Saint-Pasteur',
+    party: 'ps',
+    position: 'Député - Parti Socialiste',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Thierry Sother',
+    party: 'ps',
+    position: 'Député - Parti Socialiste',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Anna Pic',
+    party: 'ps',
+    position: 'Députée - Parti Socialiste',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Ayda Hadizadeh',
+    party: 'ps',
+    position: 'Députée - Parti Socialiste',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Béatrice Bellay',
+    party: 'ps',
+    position: 'Députée - Parti Socialiste',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Chantal Jourdan',
+    party: 'ps',
+    position: 'Députée - Parti Socialiste',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Christine Pirès Beaune',
+    party: 'ps',
+    position: 'Députée - Parti Socialiste',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Claudia Rouaux',
+    party: 'ps',
+    position: 'Députée - Parti Socialiste',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Colette Capdevielle',
+    party: 'ps',
+    position: 'Députée - Parti Socialiste',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Céline Hervieu',
+    party: 'ps',
+    position: 'Députée - Parti Socialiste',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Céline Thiébault-Martinez',
+    party: 'ps',
+    position: 'Députée - Parti Socialiste',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Dieynaba Diop',
+    party: 'ps',
+    position: 'Députée - Parti Socialiste',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Estelle Mercier',
+    party: 'ps',
+    position: 'Députée - Parti Socialiste',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Fanny Dombre Coste',
+    party: 'ps',
+    position: 'Députée - Parti Socialiste',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Florence Herouin-Léautey',
+    party: 'ps',
+    position: 'Députée - Parti Socialiste',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Isabelle Santiago',
+    party: 'ps',
+    position: 'Députée - Parti Socialiste',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Marie Récalde',
+    party: 'ps',
+    position: 'Députée - Parti Socialiste',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Marie-José Allemand',
+    party: 'ps',
+    position: 'Députée - Parti Socialiste',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Marie-Noëlle Battistel',
+    party: 'ps',
+    position: 'Députée - Parti Socialiste',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Marietta Karamanli',
+    party: 'ps',
+    position: 'Députée - Parti Socialiste',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Martine Froger',
+    party: 'ps',
+    position: 'Députée - Parti Socialiste',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Mélanie Thomin',
+    party: 'ps',
+    position: 'Députée - Parti Socialiste',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Océane Godard',
+    party: 'ps',
+    position: 'Députée - Parti Socialiste',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Pascale Got',
+    party: 'ps',
+    position: 'Députée - Parti Socialiste',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Sandrine Runel',
+    party: 'ps',
+    position: 'Députée - Parti Socialiste',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Sophie Pantel',
+    party: 'ps',
+    position: 'Députée - Parti Socialiste',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Valérie Rossi',
+    party: 'ps',
+    position: 'Députée - Parti Socialiste',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Alexandre Portier',
+    party: 'lr',
+    position: 'Député - Les Républicains',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Antoine Vermorel-Marques',
+    party: 'lr',
+    position: 'Député - Les Républicains',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Corentin Le Fur',
+    party: 'lr',
+    position: 'Député - Les Républicains',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Éric Liégeon',
+    party: 'lr',
+    position: 'Député - Les Républicains',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Fabien Di Filippo',
+    party: 'lr',
+    position: 'Député - Les Républicains',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Fabrice Brun',
+    party: 'lr',
+    position: 'Député - Les Républicains',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'François-Xavier Ceccoli',
+    party: 'lr',
+    position: 'Député - Les Républicains',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Guillaume Lepers',
+    party: 'lr',
+    position: 'Député - Les Républicains',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Hubert Brigand',
+    party: 'lr',
+    position: 'Député - Les Républicains',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Jean-Didier Berger',
+    party: 'lr',
+    position: 'Député - Les Républicains',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Jean-Louis Thiériot',
+    party: 'lr',
+    position: 'Député - Les Républicains',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Jean-Luc Bourgeaux',
+    party: 'lr',
+    position: 'Député - Les Républicains',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Jean-Pierre Taité',
+    party: 'lr',
+    position: 'Député - Les Républicains',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Jean-Pierre Vigier',
+    party: 'lr',
+    position: 'Député - Les Républicains',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Jean-Yves Bony',
+    party: 'lr',
+    position: 'Député - Les Républicains',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Jérôme Nury',
+    party: 'lr',
+    position: 'Député - Les Républicains',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Lionel Duparay',
+    party: 'lr',
+    position: 'Député - Les Républicains',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Michel Herbillon',
+    party: 'lr',
+    position: 'Député - Les Républicains',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Nicolas Ray',
+    party: 'lr',
+    position: 'Député - Les Républicains',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Nicolas Tryzna',
+    party: 'lr',
+    position: 'Député - Les Républicains',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Patrick Hetzel',
+    party: 'lr',
+    position: 'Député - Les Républicains',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Philippe Gosselin',
+    party: 'lr',
+    position: 'Député - Les Républicains',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Pierre Cordier',
+    party: 'lr',
+    position: 'Député - Les Républicains',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Vincent Rolland',
+    party: 'lr',
+    position: 'Député - Les Républicains',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Xavier Breton',
+    party: 'lr',
+    position: 'Député - Les Républicains',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Éric Pauget',
+    party: 'lr',
+    position: 'Député - Les Républicains',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Alexandra Martin',
+    party: 'lr',
+    position: 'Députée - Les Républicains',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Alix Fruchon',
+    party: 'lr',
+    position: 'Députée - Les Républicains',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Anne-Laure Blin',
+    party: 'lr',
+    position: 'Députée - Les Républicains',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Christelle Minard',
+    party: 'lr',
+    position: 'Députée - Les Républicains',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Frédérique Meunier',
+    party: 'lr',
+    position: 'Députée - Les Républicains',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Josiane Corneloup',
+    party: 'lr',
+    position: 'Députée - Les Républicains',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Justine Gruet',
+    party: 'lr',
+    position: 'Députée - Les Républicains',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Marie-Christine Dalloz',
+    party: 'lr',
+    position: 'Députée - Les Républicains',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Michèle Tabarot',
+    party: 'lr',
+    position: 'Députée - Les Républicains',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Sylvie Bonnet',
+    party: 'lr',
+    position: 'Députée - Les Républicains',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Valérie Bazin-Malgras',
+    party: 'lr',
+    position: 'Députée - Les Républicains',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Véronique Louwagie',
+    party: 'lr',
+    position: 'Députée - Les Républicains',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Élisabeth de Maistre',
+    party: 'lr',
+    position: 'Députée - Les Républicains',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Émilie Bonnivard',
+    party: 'lr',
+    position: 'Députée - Les Républicains',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Arnaud Bonnet',
+    party: 'ecolo',
+    position: 'Député - Écologiste et Social',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Benoît Biteau',
+    party: 'ecolo',
+    position: 'Député - Écologiste et Social',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Boris Tavernier',
+    party: 'ecolo',
+    position: 'Député - Écologiste et Social',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Charles Fournier',
+    party: 'ecolo',
+    position: 'Député - Écologiste et Social',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Damien Girard',
+    party: 'ecolo',
+    position: 'Député - Écologiste et Social',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Emmanuel Duplessy',
+    party: 'ecolo',
+    position: 'Député - Écologiste et Social',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Hendrik Davi',
+    party: 'ecolo',
+    position: 'Député - Écologiste et Social',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Jean-Claude Raux',
+    party: 'ecolo',
+    position: 'Député - Écologiste et Social',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Jean-Louis Roumégas',
+    party: 'ecolo',
+    position: 'Député - Écologiste et Social',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Jérémie Iordanoff',
+    party: 'ecolo',
+    position: 'Député - Écologiste et Social',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Karim Ben Cheikh',
+    party: 'ecolo',
+    position: 'Député - Écologiste et Social',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Nicolas Bonnet',
+    party: 'ecolo',
+    position: 'Député - Écologiste et Social',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Pouria Amirshahi',
+    party: 'ecolo',
+    position: 'Député - Écologiste et Social',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Steevy Gustave',
+    party: 'ecolo',
+    position: 'Député - Écologiste et Social',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Sébastien Peytavie',
+    party: 'ecolo',
+    position: 'Député - Écologiste et Social',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Tristan Lahais',
+    party: 'ecolo',
+    position: 'Député - Écologiste et Social',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Catherine Hervieu',
+    party: 'ecolo',
+    position: 'Députée - Écologiste et Social',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Christine Arrighi',
+    party: 'ecolo',
+    position: 'Députée - Écologiste et Social',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Danielle Simonnet',
+    party: 'ecolo',
+    position: 'Députée - Écologiste et Social',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Delphine Batho',
+    party: 'ecolo',
+    position: 'Députée - Écologiste et Social',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Dominique Voynet',
+    party: 'ecolo',
+    position: 'Députée - Écologiste et Social',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Julie Laernoes',
+    party: 'ecolo',
+    position: 'Députée - Écologiste et Social',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Julie Ozenne',
+    party: 'ecolo',
+    position: 'Députée - Écologiste et Social',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Léa Balage El Mariky',
+    party: 'ecolo',
+    position: 'Députée - Écologiste et Social',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Marie Pochon',
+    party: 'ecolo',
+    position: 'Députée - Écologiste et Social',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Sabrina Sebaihi',
+    party: 'ecolo',
+    position: 'Députée - Écologiste et Social',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Sandra Régol',
+    party: 'ecolo',
+    position: 'Députée - Écologiste et Social',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Sophie Taillé-Polian',
+    party: 'ecolo',
+    position: 'Députée - Écologiste et Social',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Bruno Fuchs',
+    party: 'modem',
+    position: 'Député - MoDem',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Christophe Blanchet',
+    party: 'modem',
+    position: 'Député - MoDem',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Cyrille Isaac-Sibille',
+    party: 'modem',
+    position: 'Député - MoDem',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Didier Padey',
+    party: 'modem',
+    position: 'Député - MoDem',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Emmanuel Mandon',
+    party: 'modem',
+    position: 'Député - MoDem',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Frantz Gumbs',
+    party: 'modem',
+    position: 'Député - MoDem',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Frédéric Petit',
+    party: 'modem',
+    position: 'Député - MoDem',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Hubert Ott',
+    party: 'modem',
+    position: 'Député - MoDem',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Jean-Carles Grelier',
+    party: 'modem',
+    position: 'Député - MoDem',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Jimmy Pahun',
+    party: 'modem',
+    position: 'Député - MoDem',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Laurent Croizier',
+    party: 'modem',
+    position: 'Député - MoDem',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Mickaël Cosson',
+    party: 'modem',
+    position: 'Député - MoDem',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Nicolas Turquois',
+    party: 'modem',
+    position: 'Député - MoDem',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Olivier Falorni',
+    party: 'modem',
+    position: 'Député - MoDem',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Pascal Lecamp',
+    party: 'modem',
+    position: 'Député - MoDem',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Philippe Bolo',
+    party: 'modem',
+    position: 'Député - MoDem',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Philippe Latombe',
+    party: 'modem',
+    position: 'Député - MoDem',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Richard Ramos',
+    party: 'modem',
+    position: 'Député - MoDem',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Romain Daubié',
+    party: 'modem',
+    position: 'Député - MoDem',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Éric Martineau',
+    party: 'modem',
+    position: 'Député - MoDem',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Anne Bergantz',
+    party: 'modem',
+    position: 'Députée - MoDem',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Blandine Brocard',
+    party: 'modem',
+    position: 'Députée - MoDem',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Delphine Lingemann',
+    party: 'modem',
+    position: 'Députée - MoDem',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Geneviève Darrieussecq',
+    party: 'modem',
+    position: 'Députée - MoDem',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Géraldine Bannier',
+    party: 'modem',
+    position: 'Députée - MoDem',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Josy Poueyto',
+    party: 'modem',
+    position: 'Députée - MoDem',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Louise Morel',
+    party: 'modem',
+    position: 'Députée - MoDem',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Maud Petit',
+    party: 'modem',
+    position: 'Députée - MoDem',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Perrine Goulet',
+    party: 'modem',
+    position: 'Députée - MoDem',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Sabine Thillaye',
+    party: 'modem',
+    position: 'Députée - MoDem',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Sandrine Josso',
+    party: 'modem',
+    position: 'Députée - MoDem',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Sophie Mette',
+    party: 'modem',
+    position: 'Députée - MoDem',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Benoît Blanchard',
+    party: 'horizons',
+    position: 'Député - Horizons',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Bertrand Bouyx',
+    party: 'horizons',
+    position: 'Député - Horizons',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Christophe Plassard',
+    party: 'horizons',
+    position: 'Député - Horizons',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Didier Lemaire',
+    party: 'horizons',
+    position: 'Député - Horizons',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'François Gernigon',
+    party: 'horizons',
+    position: 'Député - Horizons',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'François Jolivet',
+    party: 'horizons',
+    position: 'Député - Horizons',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Frédéric Valletoux',
+    party: 'horizons',
+    position: 'Député - Horizons',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Henri Alfandari',
+    party: 'horizons',
+    position: 'Député - Horizons',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Jean Moullière',
+    party: 'horizons',
+    position: 'Député - Horizons',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Jean-François Portarrieu',
+    party: 'horizons',
+    position: 'Député - Horizons',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Jean-Michel Brard',
+    party: 'horizons',
+    position: 'Député - Horizons',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Jérémie Patrier-Leitus',
+    party: 'horizons',
+    position: 'Député - Horizons',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Loïc Kervran',
+    party: 'horizons',
+    position: 'Député - Horizons',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Michel Criaud',
+    party: 'horizons',
+    position: 'Député - Horizons',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Paul Christophe',
+    party: 'horizons',
+    position: 'Député - Horizons',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Philippe Fait',
+    party: 'horizons',
+    position: 'Député - Horizons',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Pierre Henriet',
+    party: 'horizons',
+    position: 'Député - Horizons',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Sylvain Berrios',
+    party: 'horizons',
+    position: 'Député - Horizons',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Thierry Benoit',
+    party: 'horizons',
+    position: 'Député - Horizons',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Thomas Lam',
+    party: 'horizons',
+    position: 'Député - Horizons',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Vincent Thiébaut',
+    party: 'horizons',
+    position: 'Député - Horizons',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Xavier Albertini',
+    party: 'horizons',
+    position: 'Député - Horizons',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Xavier Roseren',
+    party: 'horizons',
+    position: 'Député - Horizons',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Agnès Firmin Le Bodo',
+    party: 'horizons',
+    position: 'Députée - Horizons',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Anne-Cécile Violland',
+    party: 'horizons',
+    position: 'Députée - Horizons',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Béatrice Bellamy',
+    party: 'horizons',
+    position: 'Députée - Horizons',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Béatrice Piron',
+    party: 'horizons',
+    position: 'Députée - Horizons',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Félicie Gérard',
+    party: 'horizons',
+    position: 'Députée - Horizons',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Isabelle Rauch',
+    party: 'horizons',
+    position: 'Députée - Horizons',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Laetitia Saint-Paul',
+    party: 'horizons',
+    position: 'Députée - Horizons',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Lise Magnier',
+    party: 'horizons',
+    position: 'Députée - Horizons',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Marie-Agnès Poussier-Winsback',
+    party: 'horizons',
+    position: 'Députée - Horizons',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Nathalie Colin-Oesterlé',
+    party: 'horizons',
+    position: 'Députée - Horizons',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Charles de Courson',
+    party: 'liot',
+    position: 'Député - LIOT',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Christophe Naegelen',
+    party: 'liot',
+    position: 'Député - LIOT',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'David Habib',
+    party: 'liot',
+    position: 'Député - LIOT',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'David Taupiac',
+    party: 'liot',
+    position: 'Député - LIOT',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Harold Huwart',
+    party: 'liot',
+    position: 'Député - LIOT',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Jean-Luc Warsmann',
+    party: 'liot',
+    position: 'Député - LIOT',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Jean-Pierre Bataille',
+    party: 'liot',
+    position: 'Député - LIOT',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Joël Bruneau',
+    party: 'liot',
+    position: 'Député - LIOT',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Laurent Mazaury',
+    party: 'liot',
+    position: 'Député - LIOT',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Max Mathiasin',
+    party: 'liot',
+    position: 'Député - LIOT',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Michel Castellani',
+    party: 'liot',
+    position: 'Député - LIOT',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Olivier Serva',
+    party: 'liot',
+    position: 'Député - LIOT',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Paul Molac',
+    party: 'liot',
+    position: 'Député - LIOT',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Paul-André Colombani',
+    party: 'liot',
+    position: 'Député - LIOT',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Stéphane Lenormand',
+    party: 'liot',
+    position: 'Député - LIOT',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Stéphane Viry',
+    party: 'liot',
+    position: 'Député - LIOT',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Yannick Favennec-Bécot',
+    party: 'liot',
+    position: 'Député - LIOT',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Audrey Abadie-Amiel',
+    party: 'liot',
+    position: 'Députée - LIOT',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Constance de Pélichy',
+    party: 'liot',
+    position: 'Députée - LIOT',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Estelle Youssouffa',
+    party: 'liot',
+    position: 'Députée - LIOT',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Nicole Sanquer',
+    party: 'liot',
+    position: 'Députée - LIOT',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Valérie Létard',
+    party: 'liot',
+    position: 'Députée - LIOT',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Davy Rimane',
+    party: 'pcf',
+    position: 'Député - Gauche démocrate et républicaine',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Emmanuel Maurel',
+    party: 'pcf',
+    position: 'Député - Gauche démocrate et républicaine',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Emmanuel Tjibaou',
+    party: 'pcf',
+    position: 'Député - Gauche démocrate et républicaine',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Frédéric Maillot',
+    party: 'pcf',
+    position: 'Député - Gauche démocrate et républicaine',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Jean-Paul Lecoq',
+    party: 'pcf',
+    position: 'Député - Gauche démocrate et républicaine',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Jean-Victor Castor',
+    party: 'pcf',
+    position: 'Député - Gauche démocrate et républicaine',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Julien Brugerolles',
+    party: 'pcf',
+    position: 'Député - Gauche démocrate et républicaine',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Marcellin Nadeau',
+    party: 'pcf',
+    position: 'Député - Gauche démocrate et républicaine',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Yannick Monnet',
+    party: 'pcf',
+    position: 'Député - Gauche démocrate et républicaine',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Édouard Bénard',
+    party: 'pcf',
+    position: 'Député - Gauche démocrate et républicaine',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Karine Lebon',
+    party: 'pcf',
+    position: 'Députée - Gauche démocrate et républicaine',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Mereana Reid Arbelot',
+    party: 'pcf',
+    position: 'Députée - Gauche démocrate et républicaine',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Emeline K/Bidi',
+    party: 'pcf',
+    position: 'Députée - Gauche démocrate et républicaine',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Alexandre Allegret-Pilot',
+    party: 'udr',
+    position: 'Député - Union des droites pour la République',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Antoine Valentin',
+    party: 'udr',
+    position: 'Député - Union des droites pour la République',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Bartholomé Lenoir',
+    party: 'udr',
+    position: 'Député - Union des droites pour la République',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Bernard Chaix',
+    party: 'udr',
+    position: 'Député - Union des droites pour la République',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Charles Alloncle',
+    party: 'udr',
+    position: 'Député - Union des droites pour la République',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Gérault Verny',
+    party: 'udr',
+    position: 'Député - Union des droites pour la République',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Marc Chavent',
+    party: 'udr',
+    position: 'Député - Union des droites pour la République',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Matthieu Bloch',
+    party: 'udr',
+    position: 'Député - Union des droites pour la République',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Maxime Michelet',
+    party: 'udr',
+    position: 'Député - Union des droites pour la République',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Olivier Fayssat',
+    party: 'udr',
+    position: 'Député - Union des droites pour la République',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Pierre-Henri Carbonnel',
+    party: 'udr',
+    position: 'Député - Union des droites pour la République',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Vincent Trébuchet',
+    party: 'udr',
+    position: 'Député - Union des droites pour la République',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Éric Michoux',
+    party: 'udr',
+    position: 'Député - Union des droites pour la République',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Christelle D\'Intorni',
+    party: 'udr',
+    position: 'Députée - Union des droites pour la République',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Hanane Mansouri',
+    party: 'udr',
+    position: 'Députée - Union des droites pour la République',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Sophie Ricourt Vaginay',
+    party: 'udr',
+    position: 'Députée - Union des droites pour la République',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Daniel Grenon',
+    party: 'ni',
+    position: 'Député - Non-inscrit(e)',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Lionel Vuibert',
+    party: 'ni',
+    position: 'Député - Non-inscrit(e)',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Philippe Bonnecarrère',
+    party: 'ni',
+    position: 'Député - Non-inscrit(e)',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Député de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Sandra Delannoy',
+    party: 'ni',
+    position: 'Députée - Non-inscrit(e)',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Sophie Errante',
+    party: 'ni',
+    position: 'Députée - Non-inscrit(e)',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Stella Dupont',
+    party: 'ni',
+    position: 'Députée - Non-inscrit(e)',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Véronique Besse',
+    party: 'ni',
+    position: 'Députée - Non-inscrit(e)',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Députée de la XVIIe législature'],
       justiceIncidents: []
     }
   },
