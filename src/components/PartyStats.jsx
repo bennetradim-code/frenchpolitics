@@ -61,8 +61,9 @@ export default function PartyStats({ politicians, selectedParty, onPartySelect }
       })
       .map(s => {
         const shortName = s.partyName.split('(')[0].trim()
+        const abbr = s.partyName.match(/\(([^)]+)\)/)?.[1]
         const entry = {
-          name: shortName,
+          name: abbr || shortName,
           fullName: shortName
         }
         INCIDENT_TYPES.forEach(t => {
@@ -113,13 +114,13 @@ export default function PartyStats({ politicians, selectedParty, onPartySelect }
 
         {/* Chart */}
         {chartData.length > 0 ? (
-          <ResponsiveContainer width="100%" height={Math.max(400, chartData.length * 50)}>
-            <BarChart layout="vertical" data={chartData} margin={{ bottom: 20, left: 20, right: 30, top: 20 }}>
+          <ResponsiveContainer width="100%" height={Math.max(350, chartData.length * 45)}>
+            <BarChart layout="vertical" data={chartData} margin={{ bottom: 5, left: 0, right: 20, top: 5 }}>
               <CartesianGrid strokeDasharray="3 3" />
               <YAxis
                 dataKey="name"
                 type="category"
-                width={220}
+                width={90}
                 interval={0}
                 tick={{ fontSize: 13, fill: '#374151' }}
               />
@@ -130,7 +131,6 @@ export default function PartyStats({ politicians, selectedParty, onPartySelect }
                   return item?.fullName || label
                 }}
               />
-              <Legend />
               {activeTypes.map(type => (
                 <Bar
                   key={type.key}
