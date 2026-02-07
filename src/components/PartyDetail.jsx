@@ -94,6 +94,82 @@ export default function PartyDetail() {
               <p className="text-2xl font-bold text-orange-600">{stats.totalOngoingCases}</p>
             </div>
           </div>
+
+          {/* Indicateur ratio condamnations */}
+          {livingPoliticians.length > 0 && (() => {
+            const convicted = livingPoliticians.filter(p => p.convictions > 0).length
+            const ongoingOnly = livingPoliticians.filter(p => p.convictions === 0 && p.ongoingCases > 0).length
+            const clean = livingPoliticians.length - convicted - ongoingOnly
+            const pctConvicted = (convicted / livingPoliticians.length * 100).toFixed(1)
+            const pctOngoing = (ongoingOnly / livingPoliticians.length * 100).toFixed(1)
+            const pctClean = (clean / livingPoliticians.length * 100).toFixed(1)
+
+            return (
+              <div className="mt-6 bg-gray-50 rounded-lg p-4">
+                <h3 className="text-sm font-bold text-gray-700 mb-3">
+                  Ratio des membres impliqués (membres actuels)
+                </h3>
+                {/* Barre de ratio */}
+                <div className="flex rounded-full overflow-hidden h-6 bg-gray-200">
+                  {convicted > 0 && (
+                    <div
+                      className="flex items-center justify-center text-xs font-bold text-white transition-all"
+                      style={{
+                        width: `${Math.max(convicted / livingPoliticians.length * 100, 2)}%`,
+                        backgroundColor: '#dc2626'
+                      }}
+                      title={`${convicted} condamné${convicted > 1 ? 's' : ''} (${pctConvicted}%)`}
+                    >
+                      {convicted / livingPoliticians.length >= 0.06 && `${pctConvicted}%`}
+                    </div>
+                  )}
+                  {ongoingOnly > 0 && (
+                    <div
+                      className="flex items-center justify-center text-xs font-bold text-white transition-all"
+                      style={{
+                        width: `${Math.max(ongoingOnly / livingPoliticians.length * 100, 2)}%`,
+                        backgroundColor: '#f97316'
+                      }}
+                      title={`${ongoingOnly} en cours (${pctOngoing}%)`}
+                    >
+                      {ongoingOnly / livingPoliticians.length >= 0.06 && `${pctOngoing}%`}
+                    </div>
+                  )}
+                  <div
+                    className="flex items-center justify-center text-xs font-bold text-gray-700 transition-all"
+                    style={{
+                      width: `${clean / livingPoliticians.length * 100}%`,
+                      backgroundColor: '#bbf7d0'
+                    }}
+                    title={`${clean} sans incident (${pctClean}%)`}
+                  >
+                    {clean / livingPoliticians.length >= 0.06 && `${pctClean}%`}
+                  </div>
+                </div>
+                {/* Légende */}
+                <div className="flex flex-wrap gap-4 mt-3 text-xs">
+                  <div className="flex items-center gap-1.5">
+                    <span className="inline-block w-3 h-3 rounded-full" style={{ backgroundColor: '#dc2626' }} />
+                    <span className="text-gray-600">
+                      Condamnés : <strong>{convicted}</strong> ({pctConvicted}%)
+                    </span>
+                  </div>
+                  <div className="flex items-center gap-1.5">
+                    <span className="inline-block w-3 h-3 rounded-full" style={{ backgroundColor: '#f97316' }} />
+                    <span className="text-gray-600">
+                      Affaires en cours : <strong>{ongoingOnly}</strong> ({pctOngoing}%)
+                    </span>
+                  </div>
+                  <div className="flex items-center gap-1.5">
+                    <span className="inline-block w-3 h-3 rounded-full" style={{ backgroundColor: '#bbf7d0' }} />
+                    <span className="text-gray-600">
+                      Sans incident : <strong>{clean}</strong> ({pctClean}%)
+                    </span>
+                  </div>
+                </div>
+              </div>
+            )
+          })()}
         </div>
 
         {/* Liste des membres */}
