@@ -265,7 +265,9 @@ export const politicians = [
           description: 'Condamné pour contestation de crimes contre l\'humanité et apologie du nazisme. Jugement annulé en appel et en cassation.',
           penalty: 'Amende (cassé)',
           status: 'Cassation - Relaxé',
-          source: 'Cour d\'Assises'
+          sources: [
+            { title: 'Bruno Gollnisch - Wikipedia', url: 'https://fr.wikipedia.org/wiki/Bruno_Gollnisch' }
+          ]
         },
         {
           type: 'Condamnation (première instance)',
@@ -502,7 +504,10 @@ export const politicians = [
           description: 'Condamné dans l\'affaire des emplois fictifs du RPR à Bordeaux. Avait bénéficié d\'emplois fictifs utilisés pour financer des campagnes électorales.',
           penalty: '14 mois de prison avec sursis, 1 an d\'inéligibilité',
           status: 'Condamné',
-          source: 'Tribunal correctionnel'
+          sources: [
+            { title: 'Alain Juppé - Wikipedia', url: 'https://fr.wikipedia.org/wiki/Alain_Jupp%C3%A9' },
+            { title: 'Affaire des emplois fictifs de la mairie de Paris - Wikipedia', url: 'https://fr.wikipedia.org/wiki/Affaire_des_emplois_fictifs_de_la_mairie_de_Paris' }
+          ]
         }
       ]
     }
@@ -529,7 +534,7 @@ export const politicians = [
           penalty: '4 ans de prison ferme, 2,5 millions d\'euros d\'amende',
           status: 'Condamné',
           sources: [
-            { title: 'Patrick Balkany - Wikipedia', url: 'https://fr.wikipedia.org/wiki/Patrick_Balkany' }
+            { title: 'Patrick Balkany - Wikipedia', url: 'https://fr.wikipedia.org/wiki/Patrick_Balkany' },
             { title: 'Le Monde - Affaire Balkany', url: 'https://www.lemonde.fr' }
           ]
         },
@@ -540,7 +545,7 @@ export const politicians = [
           penalty: '5 ans de prison (en plus)',
           status: 'Condamné',
           sources: [
-            { title: 'Patrick Balkany - Wikipedia', url: 'https://fr.wikipedia.org/wiki/Patrick_Balkany' }
+            { title: 'Patrick Balkany - Wikipedia', url: 'https://fr.wikipedia.org/wiki/Patrick_Balkany' },
             { title: 'Le Monde - Affaire Balkany', url: 'https://www.lemonde.fr' }
           ]
         }
@@ -720,7 +725,10 @@ export const politicians = [
           description: 'Condamné à 2 ans de prison ferme pour fraude fiscale et blanchiment. Avait dissimulé un compte bancaire non déclaré en Suisse avec 600 000€.',
           penalty: '2 ans de prison ferme, 250 000€ d\'amende',
           status: 'Condamné',
-          source: 'Tribunal correctionnel'
+          sources: [
+            { title: 'Jérôme Cahuzac - Wikipedia', url: 'https://fr.wikipedia.org/wiki/J%C3%A9r%C3%B4me_Cahuzac' },
+            { title: 'Affaire Cahuzac - Wikipedia', url: 'https://fr.wikipedia.org/wiki/Affaire_Cahuzac' }
+          ]
         }
       ]
     }
@@ -837,7 +845,7 @@ export const politicians = [
     name: 'Éric Besson',
     party: 'ps',
     position: 'Ancien ministre de l\'Immigration',
-    convictions: 1,
+    convictions: 0,
     ongoingCases: 0,
     details: {
       birthDate: '1958-03-02',
@@ -847,9 +855,7 @@ export const politicians = [
         'Ministre de l\'Immigration (2009-2010)',
         'Ministre de l\'Industrie (2010-2012)'
       ],
-      justiceIncidents: [
-        { type: 'Condamnation', date: '2022', description: 'Condamné pour corruption dans un contrat d\'armement avec la Tunisie' }
-      ]
+      justiceIncidents: []
     }
   },
   {
@@ -1113,7 +1119,14 @@ export const politicians = [
         'Garde des Sceaux, ministre de la Justice (2020-2024)'
       ],
       justiceIncidents: [
-        { type: 'Mise en examen', date: '2021', description: 'Mise en examen pour prise illégale d\'intérêts (relaxé par la CJR en 2023, mais procédure en cours)' }
+        {
+          type: 'Mise en examen',
+          date: '2021',
+          description: 'Mise en examen pour prise illégale d\'intérêts (relaxé par la CJR en 2023, mais procédure en cours)',
+          sources: [
+            { title: 'Éric Dupond-Moretti - Wikipedia', url: 'https://fr.wikipedia.org/wiki/%C3%89ric_Dupond-Moretti' }
+          ]
+        }
       ]
     }
   },
@@ -1132,7 +1145,14 @@ export const politicians = [
         'Président de l\'Assemblée nationale (2018-2022)'
       ],
       justiceIncidents: [
-        { type: 'Mise en examen', date: '2019', description: 'Mise en examen pour prise illégale d\'intérêts dans une affaire immobilière des Mutuelles de Bretagne' }
+        {
+          type: 'Mise en examen',
+          date: '2019',
+          description: 'Mise en examen pour prise illégale d\'intérêts dans une affaire immobilière des Mutuelles de Bretagne',
+          sources: [
+            { title: 'Richard Ferrand - Wikipedia', url: 'https://fr.wikipedia.org/wiki/Richard_Ferrand' }
+          ]
+        }
       ]
     }
   },
@@ -1866,7 +1886,9 @@ export const politicians = [
           description: 'Condamné pour trafic d\'influence, corruption et abus de pouvoir. Affaire de Grenoble Isère Développement - accords sur des contrats immobiliers moyennant avantages financiers personnels.',
           penalty: '3 ans de prison dont 1 ferme',
           status: 'Condamné',
-          source: 'Affaire GID'
+          sources: [
+            { title: 'Alain Carignon - Wikipedia', url: 'https://fr.wikipedia.org/wiki/Alain_Carignon' }
+          ]
         },
         {
           type: 'Condamnation',
@@ -1874,7 +1896,9 @@ export const politicians = [
           description: 'Condamné à nouveau pour détournement de deniers publics et financement occulte de campagne électorale.',
           penalty: '2 ans de prison avec sursis',
           status: 'Condamné',
-          source: 'Justice'
+          sources: [
+            { title: 'Alain Carignon - Wikipedia', url: 'https://fr.wikipedia.org/wiki/Alain_Carignon' }
+          ]
         }
       ]
     }
@@ -1902,7 +1926,9 @@ export const politicians = [
           description: 'Condamné pour falsification d\'actes électoraux. Affaire des faux électeurs du 3e arrondissement - emplois fictifs et fraude électorale.',
           penalty: '2 ans de prison avec sursis + amende',
           status: 'Condamné',
-          source: 'Tribunal correctionnel'
+          sources: [
+            { title: 'Jean Tiberi - Wikipedia', url: 'https://fr.wikipedia.org/wiki/Jean_Tiberi' }
+          ]
         }
       ]
     }
@@ -1931,7 +1957,10 @@ export const politicians = [
           description: 'Condamné pour détournement de fonds publics lors de son mandat de maire de Paris. Financement occulte d\'emplois fictifs et de campagnes électorales par le RPR.',
           penalty: '2 ans de prison avec sursis + 500 000€ d\'amende',
           status: 'Condamné',
-          source: 'Cour d\'appel de Paris'
+          sources: [
+            { title: 'Jacques Chirac - Wikipedia', url: 'https://fr.wikipedia.org/wiki/Jacques_Chirac' },
+            { title: 'Affaire des emplois fictifs de la mairie de Paris - Wikipedia', url: 'https://fr.wikipedia.org/wiki/Affaire_des_emplois_fictifs_de_la_mairie_de_Paris' }
+          ]
         }
       ]
     }
@@ -1960,8 +1989,7 @@ export const politicians = [
           penalty: '3 ans de prison ferme',
           status: 'Condamné',
           sources: [
-            { title: 'Patrick Balkany - Wikipedia', url: 'https://fr.wikipedia.org/wiki/Patrick_Balkany' }
-            { title: 'Le Monde - Affaire Balkany', url: 'https://www.lemonde.fr' }
+            { title: 'Michel Mouillot - Wikipedia', url: 'https://fr.wikipedia.org/wiki/Michel_Mouillot' }
           ]
         }
       ]
@@ -2001,7 +2029,9 @@ export const politicians = [
           description: 'Condamnée pour détournement de deniers publics. Emplois fictifs d\'assistants parlementaires dans le cadre de sa fonction de députée.',
           penalty: '3 ans de prison avec sursis + 50 000€ amende',
           status: 'Condamnée',
-          source: 'Justice'
+          sources: [
+            { title: 'Sylvie Andrieux - Wikipedia', url: 'https://fr.wikipedia.org/wiki/Sylvie_Andrieux' }
+          ]
         }
       ]
     }
@@ -2028,7 +2058,9 @@ export const politicians = [
           description: 'Condamné pour fraude fiscale et blanchiment. Découverte d\'un compte bancaire non déclaré en Suisse avec environ 88 000€ dissimulés.',
           penalty: '2 ans de prison avec sursis + 375 000€ d\'amende',
           status: 'Condamné',
-          source: 'Justice'
+          sources: [
+            { title: 'Thomas Thévenoud - Wikipedia', url: 'https://fr.wikipedia.org/wiki/Thomas_Th%C3%A9venoud' }
+          ]
         }
       ]
     }
@@ -2056,7 +2088,9 @@ export const politicians = [
           description: 'Condamné pour détournement de deniers publics et faux en écriture publique. Emplois fictifs à la mairie de Lens.',
           penalty: '2 ans de prison avec sursis + amende',
           status: 'Condamné',
-          source: 'Justice'
+          sources: [
+            { title: 'Kader Arif - Wikipedia', url: 'https://fr.wikipedia.org/wiki/Kader_Arif' }
+          ]
         }
       ]
     }
@@ -2083,7 +2117,9 @@ export const politicians = [
           date: '2017-2018',
           description: 'Mis en examen pour détournement de fonds publics concernant l\'emploi fictif de collaborateurs parlementaires.',
           status: 'En cours',
-          source: 'Justice'
+          sources: [
+            { title: 'Bruno Le Roux - Wikipedia', url: 'https://fr.wikipedia.org/wiki/Bruno_Le_Roux' }
+          ]
         }
       ]
     }
@@ -2110,7 +2146,9 @@ export const politicians = [
           date: '2018',
           description: 'Enquête pour détournement de deniers publics concernant emplois fictifs d\'assistants parlementaires.',
           status: 'En cours',
-          source: 'Justice'
+          sources: [
+            { title: 'Yamina Benguigui - Wikipedia', url: 'https://fr.wikipedia.org/wiki/Yamina_Benguigui' }
+          ]
         }
       ]
     }
@@ -2138,7 +2176,9 @@ export const politicians = [
           description: 'Condamné pour détournement de deniers publics et usage de faux documents publics. Rémunérations non justifiées pour activités de conseiller.',
           penalty: '2 ans de prison avec sursis + 50 000€ d\'amende',
           status: 'Condamné',
-          source: 'Justice'
+          sources: [
+            { title: 'Aquilino Morelle - Wikipedia', url: 'https://fr.wikipedia.org/wiki/Aquilino_Morelle' }
+          ]
         }
       ]
     }

@@ -21,7 +21,9 @@ export default function PoliticianDetail() {
   const party = getPartyById(politician.party)
   const partyColor = party?.color || '#999'
   const placeholderImage = generatePoliticianImagePlaceholder(politician.name, partyColor)
-  const incidents = politician.details.justiceIncidents || []
+  const incidents = (politician.details.justiceIncidents || []).filter(
+    inc => inc.sources && inc.sources.length > 0
+  )
 
   function getIncidentColor(type) {
     if (type === 'Condamnation') return '#dc2626'
