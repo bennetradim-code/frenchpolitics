@@ -4688,7 +4688,7 @@ export const politicians = [
     party: 'lfi',
     position: 'Députée de Paris',
     convictions: 0,
-    ongoingCases: 0,
+    ongoingCases: 2,
     details: {
       birthDate: '1977-01-12',
       birthPlace: 'Paris',
@@ -4697,7 +4697,28 @@ export const politicians = [
         'Directrice de campagne de Jean-Luc Mélenchon (2012, 2017)',
         'Fondatrice de Mediascop'
       ],
-      justiceIncidents: []
+      justiceIncidents: [
+        {
+          type: 'Mise en examen',
+          date: '2024-09',
+          description: 'Mise en examen pour escroquerie aggravée dans l\'affaire des comptes de campagne de LFI en 2017. Sa société Mediascop est soupçonnée d\'avoir surfacturé des prestations pour obtenir des remboursements publics plus élevés.',
+          status: 'En cours',
+          sources: [
+            { title: 'France Bleu', url: 'https://www.francebleu.fr/infos/faits-divers-justice/comptes-de-campagne-de-lfi-en-2017-sophia-chikirou-mise-en-examen-pour-escroquerie-aggravee-6147820' },
+            { title: 'Europe 1', url: 'https://www.europe1.fr/Police-Justice/comptes-de-campagne-lfi-2017-sophia-chikirou-mise-en-examen-pour-escroquerie-aggravee-4269260' }
+          ]
+        },
+        {
+          type: 'Mise en examen',
+          date: '2025',
+          description: 'Renvoyée en procès pour escroquerie dans l\'affaire Le Média. Soupçonnée d\'avoir tenté de transférer plus de 67 000 euros vers sa société Mediascop au détriment du site d\'information qu\'elle avait cofondé.',
+          status: 'En cours - Procès prévu mai 2025',
+          sources: [
+            { title: 'France Bleu', url: 'https://www.francebleu.fr/infos/faits-divers-justice/la-deputee-lfi-sophia-chikirou-jugee-en-mai-pour-escroquerie-2367700' },
+            { title: 'Europe 1', url: 'https://www.europe1.fr/politique/candidate-lfi-a-la-mairie-de-paris-sophia-chikirou-sera-jugee-pour-escroquerie-877414' }
+          ]
+        }
+      ]
     }
   },
   {
@@ -7213,11 +7234,33 @@ export const politicians = [
     name: 'Andy Kerbrat',
     party: 'lfi',
     position: 'Député - La France Insoumise',
-    convictions: 0,
-    ongoingCases: 0,
+    convictions: 1,
+    ongoingCases: 1,
     details: {
       career: ['Député de la XVIIe législature'],
-      justiceIncidents: []
+      justiceIncidents: [
+        {
+          type: 'Condamnation',
+          date: '2024-10',
+          description: 'Condamné à 1 000 euros d\'amende pour usage de stupéfiants. Interpellé le 17 octobre 2024 en flagrant délit d\'achat de 3-MMC (drogue de synthèse) auprès d\'un revendeur dans une station de métro parisienne.',
+          status: 'Condamné',
+          penalty: '1 000 euros d\'amende',
+          sources: [
+            { title: 'Frontières Media', url: 'https://www.frontieresmedia.fr/societe/info-frontieres-andy-kerbrat-le-depute-lfi-condamne-a-1000-euros-damende-pour-usage-de-stupefia' },
+            { title: 'France Info', url: 'https://www.franceinfo.fr/sante/drogue-addictions/le-depute-lfi-andy-kerbrat-interpelle-en-possession-de-drogue-reconnait-avoir-fait-n-importe-quoi-avec-ses-frais-de-mandat_6899522.html' }
+          ]
+        },
+        {
+          type: 'Enquête',
+          date: '2025',
+          description: 'Enquête sur l\'utilisation de son avance de frais de mandat (retraits en espèces de plus de 13 000 euros, virements personnels). Soupçonné d\'avoir utilisé environ 25 000 euros de frais parlementaires à des fins personnelles. Exclu 15 jours de l\'Assemblée nationale.',
+          status: 'En cours',
+          sources: [
+            { title: 'France Bleu', url: 'https://www.francebleu.fr/infos/faits-divers-justice/le-depute-lfi-de-nantes-andy-kerbrat-a-utilise-son-argent-de-depute-pour-s-acheter-de-la-drogue-2501486' },
+            { title: 'CNews', url: 'https://www.cnews.fr/france/2025-05-07/assemblee-nationale-le-depute-lfi-andy-kerbrat-et-une-elue-rn-exclus-15-jours-du' }
+          ]
+        }
+      ]
     }
   },
   {
