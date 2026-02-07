@@ -2208,6 +2208,1191 @@ export const politicians = [
       justiceIncidents: []
     }
   },
+
+  // ===== RN =====
+
+  {
+    id: nextId++,
+    name: 'Jean-Marie Le Pen',
+    party: 'rn',
+    position: 'Fondateur du Front National',
+    convictions: 4,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1928-06-20',
+      birthPlace: 'La Trinité-sur-Mer',
+      career: [
+        'Fondateur du Front national (1972)',
+        'Président du Front national (1972-2011)',
+        'Député européen (1984-2019)',
+        'Candidat à l\'élection présidentielle (1974, 1988, 1995, 2002, 2007)'
+      ],
+      justiceIncidents: [
+        {
+          type: 'Condamnation',
+          date: '1991',
+          description: 'Condamné pour contestation de crimes contre l\'humanité. Avait qualifié les chambres à gaz de « détail de l\'histoire de la Seconde Guerre mondiale » en 1987.',
+          penalty: '1,2 million de francs d\'amende',
+          status: 'Définitif',
+          sources: [
+            { title: 'Jean-Marie Le Pen - Wikipedia', url: 'https://fr.wikipedia.org/wiki/Jean-Marie_Le_Pen' }
+          ]
+        },
+        {
+          type: 'Condamnation',
+          date: '1998',
+          description: 'Condamné pour violences volontaires envers une élue socialiste, Annette Peulvast-Bergeal, lors de la campagne des législatives de 1997.',
+          penalty: 'Amende et dommages et intérêts',
+          status: 'Définitif',
+          sources: [
+            { title: 'Jean-Marie Le Pen - Wikipedia', url: 'https://fr.wikipedia.org/wiki/Jean-Marie_Le_Pen' }
+          ]
+        },
+        {
+          type: 'Condamnation',
+          date: '2008',
+          description: 'Condamné pour provocation à la discrimination et à la haine raciale. Propos tenus dans le journal Rivarol en 2005 sur l\'occupation allemande en France.',
+          penalty: '3 mois de prison avec sursis et 10 000€ d\'amende',
+          status: 'Définitif',
+          sources: [
+            { title: 'Jean-Marie Le Pen - Wikipedia', url: 'https://fr.wikipedia.org/wiki/Jean-Marie_Le_Pen' }
+          ]
+        },
+        {
+          type: 'Condamnation',
+          date: '2015',
+          description: 'Condamné pour contestation de crimes contre l\'humanité. Réitération du qualificatif de « détail » concernant les chambres à gaz.',
+          penalty: 'Amende',
+          status: 'Définitif',
+          sources: [
+            { title: 'Jean-Marie Le Pen - Wikipedia', url: 'https://fr.wikipedia.org/wiki/Jean-Marie_Le_Pen' }
+          ]
+        }
+      ]
+    }
+  },
+
+  // ===== LR =====
+
+  {
+    id: nextId++,
+    name: 'Charles Pasqua',
+    party: 'lr',
+    position: 'Ancien Ministre de l\'Intérieur',
+    convictions: 2,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1927-04-18',
+      birthPlace: 'Grasse',
+      career: [
+        'Ministre de l\'Intérieur (1986-1988, 1993-1995)',
+        'Sénateur des Hauts-de-Seine (1977-2011)',
+        'Président du Conseil général des Hauts-de-Seine (1988-2004)'
+      ],
+      justiceIncidents: [
+        {
+          type: 'Condamnation',
+          date: '2010',
+          description: 'Condamné dans l\'affaire de la Sofremi pour complicité d\'abus de biens sociaux. Ventes d\'armes à l\'Angola via la société Sofremi.',
+          penalty: '18 mois de prison avec sursis et 100 000€ d\'amende',
+          status: 'Définitif',
+          sources: [
+            { title: 'Charles Pasqua - Wikipedia', url: 'https://fr.wikipedia.org/wiki/Charles_Pasqua' },
+            { title: 'Affaire de la Sofremi - Wikipedia', url: 'https://fr.wikipedia.org/wiki/Affaire_de_la_Sofremi' }
+          ]
+        },
+        {
+          type: 'Condamnation',
+          date: '2010',
+          description: 'Condamné pour financement illicite dans l\'affaire du casino d\'Annemasse.',
+          penalty: '18 mois de prison avec sursis',
+          status: 'Définitif',
+          sources: [
+            { title: 'Charles Pasqua - Wikipedia', url: 'https://fr.wikipedia.org/wiki/Charles_Pasqua' }
+          ]
+        }
+      ]
+    }
+  },
+
+  {
+    id: nextId++,
+    name: 'Claude Guéant',
+    party: 'lr',
+    position: 'Ancien Ministre de l\'Intérieur',
+    convictions: 2,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1945-05-09',
+      birthPlace: 'Vimy',
+      career: [
+        'Secrétaire général de l\'Élysée (2007-2011)',
+        'Ministre de l\'Intérieur (2011-2012)',
+        'Préfet'
+      ],
+      justiceIncidents: [
+        {
+          type: 'Condamnation',
+          date: '2017',
+          description: 'Condamné pour détournement de fonds publics. Primes en espèces versées irrégulièrement au cabinet du ministère de l\'Intérieur.',
+          penalty: '2 ans de prison dont 1 ferme et 75 000€ d\'amende',
+          status: 'Définitif',
+          sources: [
+            { title: 'Claude Guéant - Wikipedia', url: 'https://fr.wikipedia.org/wiki/Claude_Gu%C3%A9ant' }
+          ]
+        },
+        {
+          type: 'Condamnation',
+          date: '2021',
+          description: 'Condamné pour blanchiment de fraude fiscale dans l\'affaire des tableaux flamands. Vente de deux tableaux attribués à Andries van Eertvelt pour 500 000€.',
+          penalty: '3 ans de prison dont 1 ferme',
+          status: 'Définitif',
+          sources: [
+            { title: 'Claude Guéant - Wikipedia', url: 'https://fr.wikipedia.org/wiki/Claude_Gu%C3%A9ant' }
+          ]
+        }
+      ]
+    }
+  },
+
+  {
+    id: nextId++,
+    name: 'Georges Tron',
+    party: 'lr',
+    position: 'Ancien Secrétaire d\'État à la Fonction publique',
+    convictions: 1,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1957-09-01',
+      birthPlace: 'Boulogne-Billancourt',
+      career: [
+        'Député de l\'Essonne (1993-2017)',
+        'Maire de Draveil (1995-2018)',
+        'Secrétaire d\'État à la Fonction publique (2010-2011)'
+      ],
+      justiceIncidents: [
+        {
+          type: 'Condamnation',
+          date: '2021',
+          description: 'Condamné en appel pour viols et agressions sexuelles sur deux anciennes employées de la mairie de Draveil. Acquitté en première instance en 2018, condamné par la cour d\'assises d\'appel de Paris en février 2021.',
+          penalty: '5 ans de prison dont 3 ferme',
+          status: 'Définitif',
+          sources: [
+            { title: 'Georges Tron - Wikipedia', url: 'https://fr.wikipedia.org/wiki/Georges_Tron' },
+            { title: 'Affaire Georges Tron - Wikipedia', url: 'https://fr.wikipedia.org/wiki/Affaire_Georges_Tron' }
+          ]
+        }
+      ]
+    }
+  },
+
+  {
+    id: nextId++,
+    name: 'Brice Hortefeux',
+    party: 'lr',
+    position: 'Ancien Ministre de l\'Intérieur',
+    convictions: 1,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1958-05-11',
+      birthPlace: 'Neuilly-sur-Seine',
+      career: [
+        'Ministre de l\'Immigration (2007-2009)',
+        'Ministre de l\'Intérieur (2009-2011)',
+        'Député européen (2014-2019)'
+      ],
+      justiceIncidents: [
+        {
+          type: 'Condamnation',
+          date: '2010',
+          description: 'Condamné pour injure raciale lors de l\'université d\'été de l\'UMP en 2009. Propos tenus à l\'encontre d\'un jeune militant d\'origine arabe.',
+          penalty: '750€ d\'amende',
+          status: 'Définitif',
+          sources: [
+            { title: 'Brice Hortefeux - Wikipedia', url: 'https://fr.wikipedia.org/wiki/Brice_Hortefeux' }
+          ]
+        }
+      ]
+    }
+  },
+
+  {
+    id: nextId++,
+    name: 'Isabelle Balkany',
+    party: 'lr',
+    position: 'Ancienne Première adjointe au maire de Levallois-Perret',
+    convictions: 2,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1947-05-10',
+      birthPlace: 'Paris',
+      career: [
+        'Première adjointe au maire de Levallois-Perret (1983-2020)',
+        'Conseillère régionale d\'Île-de-France'
+      ],
+      justiceIncidents: [
+        {
+          type: 'Condamnation',
+          date: '2019',
+          description: 'Condamnée pour fraude fiscale. Dissimulation de patrimoine immobilier au Maroc et à Saint-Martin avec son époux Patrick Balkany.',
+          penalty: '3 ans de prison dont 1 ferme',
+          status: 'Définitif',
+          sources: [
+            { title: 'Isabelle Balkany - Wikipedia', url: 'https://fr.wikipedia.org/wiki/Isabelle_Balkany' },
+            { title: 'Affaire Balkany - Wikipedia', url: 'https://fr.wikipedia.org/wiki/Affaire_Balkany' }
+          ]
+        },
+        {
+          type: 'Condamnation',
+          date: '2020',
+          description: 'Condamnée pour blanchiment de fraude fiscale aggravé. Montage financier via des sociétés offshore pour dissimuler la propriété de biens immobiliers.',
+          penalty: '4 ans de prison dont 1 ferme',
+          status: 'Définitif',
+          sources: [
+            { title: 'Isabelle Balkany - Wikipedia', url: 'https://fr.wikipedia.org/wiki/Isabelle_Balkany' }
+          ]
+        }
+      ]
+    }
+  },
+
+  {
+    id: nextId++,
+    name: 'Jérôme Lavrilleux',
+    party: 'lr',
+    position: 'Ancien député européen',
+    convictions: 1,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1965-06-13',
+      birthPlace: 'Reims',
+      career: [
+        'Directeur adjoint de la campagne présidentielle de Nicolas Sarkozy (2012)',
+        'Député européen (2014-2019)'
+      ],
+      justiceIncidents: [
+        {
+          type: 'Condamnation',
+          date: '2021',
+          description: 'Condamné dans l\'affaire Bygmalion pour complicité de financement illégal de la campagne présidentielle de Nicolas Sarkozy en 2012. Système de fausses factures pour dissimuler le dépassement du plafond des dépenses de campagne.',
+          penalty: '3 ans de prison dont 2 avec sursis et 50 000€ d\'amende',
+          status: 'Définitif',
+          sources: [
+            { title: 'Jérôme Lavrilleux - Wikipedia', url: 'https://fr.wikipedia.org/wiki/J%C3%A9r%C3%B4me_Lavrilleux' },
+            { title: 'Affaire Bygmalion - Wikipedia', url: 'https://fr.wikipedia.org/wiki/Affaire_Bygmalion' }
+          ]
+        }
+      ]
+    }
+  },
+
+  {
+    id: nextId++,
+    name: 'Renaud Donnedieu de Vabres',
+    party: 'lr',
+    position: 'Ancien Ministre de la Culture',
+    convictions: 1,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1954-12-19',
+      birthPlace: 'Neuilly-sur-Seine',
+      career: [
+        'Député d\'Indre-et-Loire (1997-2007)',
+        'Ministre de la Culture et de la Communication (2004-2007)'
+      ],
+      justiceIncidents: [
+        {
+          type: 'Condamnation',
+          date: '2004',
+          description: 'Condamné pour recel d\'abus de biens sociaux dans l\'affaire du financement occulte du Parti républicain.',
+          penalty: '2 mois de prison avec sursis',
+          status: 'Définitif',
+          sources: [
+            { title: 'Renaud Donnedieu de Vabres - Wikipedia', url: 'https://fr.wikipedia.org/wiki/Renaud_Donnedieu_de_Vabres' }
+          ]
+        }
+      ]
+    }
+  },
+
+  {
+    id: nextId++,
+    name: 'Pierre Bédier',
+    party: 'lr',
+    position: 'Président du Conseil départemental des Yvelines',
+    convictions: 1,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1957-08-14',
+      birthPlace: 'Marseille',
+      career: [
+        'Député des Yvelines (1993-2006)',
+        'Président du Conseil départemental des Yvelines (2014-)',
+        'Secrétaire d\'État aux Programmes immobiliers de la Justice (2002-2004)'
+      ],
+      justiceIncidents: [
+        {
+          type: 'Condamnation',
+          date: '2009',
+          description: 'Condamné pour corruption passive et recel d\'abus de biens sociaux. Perception de pots-de-vin dans le cadre de marchés publics liés aux prisons.',
+          penalty: '18 mois de prison avec sursis et 30 000€ d\'amende',
+          status: 'Définitif',
+          sources: [
+            { title: 'Pierre Bédier - Wikipedia', url: 'https://fr.wikipedia.org/wiki/Pierre_B%C3%A9dier' }
+          ]
+        }
+      ]
+    }
+  },
+
+  {
+    id: nextId++,
+    name: 'Henri Guaino',
+    party: 'lr',
+    position: 'Ancien conseiller spécial du Président Sarkozy',
+    convictions: 1,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1957-04-28',
+      birthPlace: 'Arles',
+      career: [
+        'Conseiller spécial du Président Nicolas Sarkozy (2007-2012)',
+        'Député des Yvelines (2012-2017)',
+        'Commissaire au Plan (1995-1997)'
+      ],
+      justiceIncidents: [
+        {
+          type: 'Condamnation',
+          date: '2019',
+          description: 'Condamné pour outrage à magistrat. Propos publics contre le juge Jean-Michel Gentil dans le cadre de l\'affaire Bettencourt.',
+          penalty: '2 000€ d\'amende',
+          status: 'Définitif',
+          sources: [
+            { title: 'Henri Guaino - Wikipedia', url: 'https://fr.wikipedia.org/wiki/Henri_Guaino' }
+          ]
+        }
+      ]
+    }
+  },
+
+  {
+    id: nextId++,
+    name: 'Christine Lagarde',
+    party: 'lr',
+    position: 'Présidente de la BCE, ancienne Ministre de l\'Économie',
+    convictions: 1,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1956-01-01',
+      birthPlace: 'Paris',
+      career: [
+        'Ministre de l\'Économie (2007-2011)',
+        'Directrice générale du FMI (2011-2019)',
+        'Présidente de la Banque centrale européenne (2019-)'
+      ],
+      justiceIncidents: [
+        {
+          type: 'Condamnation',
+          date: '2016',
+          description: 'Reconnue coupable de négligence par la Cour de justice de la République dans l\'affaire de l\'arbitrage Tapie. Décision de recourir à un arbitrage privé ayant abouti à un versement de 404 millions d\'euros à Bernard Tapie.',
+          penalty: 'Dispensée de peine',
+          status: 'Définitif',
+          sources: [
+            { title: 'Christine Lagarde - Wikipedia', url: 'https://fr.wikipedia.org/wiki/Christine_Lagarde' },
+            { title: 'Affaire de l\'arbitrage Tapie - Wikipedia', url: 'https://fr.wikipedia.org/wiki/Affaire_de_l%27arbitrage_entre_Bernard_Tapie_et_le_Cr%C3%A9dit_lyonnais' }
+          ]
+        }
+      ]
+    }
+  },
+
+  {
+    id: nextId++,
+    name: 'Dominique de Villepin',
+    party: 'lr',
+    position: 'Ancien Premier ministre',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1953-11-14',
+      birthPlace: 'Rabat (Maroc)',
+      career: [
+        'Premier ministre (2005-2007)',
+        'Ministre des Affaires étrangères (2002-2004)',
+        'Ministre de l\'Intérieur (2004-2005)',
+        'Secrétaire général de l\'Élysée (1995-2002)'
+      ],
+      justiceIncidents: [
+        {
+          type: 'Relaxe',
+          date: '2010',
+          description: 'Relaxé dans l\'affaire Clearstream 2. Accusé de dénonciation calomnieuse et complicité pour avoir utilisé de faux listings bancaires visant Nicolas Sarkozy. Relaxé en première instance (2010) et confirmé en appel (2011).',
+          status: 'Relaxé définitivement',
+          sources: [
+            { title: 'Dominique de Villepin - Wikipedia', url: 'https://fr.wikipedia.org/wiki/Dominique_de_Villepin' },
+            { title: 'Affaire Clearstream 2 - Wikipedia', url: 'https://fr.wikipedia.org/wiki/Affaire_Clearstream_2' }
+          ]
+        }
+      ]
+    }
+  },
+
+  {
+    id: nextId++,
+    name: 'Michel Noir',
+    party: 'lr',
+    position: 'Ancien Maire de Lyon',
+    convictions: 1,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1944-05-11',
+      birthPlace: 'Lyon',
+      career: [
+        'Maire de Lyon (1989-1995)',
+        'Ministre du Commerce extérieur (1988-1990)',
+        'Député du Rhône (1983-1995)'
+      ],
+      justiceIncidents: [
+        {
+          type: 'Condamnation',
+          date: '1999',
+          description: 'Condamné pour recel d\'abus de biens sociaux dans l\'affaire Botton. Son gendre Pierre Botton avait financé indirectement son activité politique via des entreprises.',
+          penalty: '15 mois de prison avec sursis et 30 000€ d\'amende',
+          status: 'Définitif',
+          sources: [
+            { title: 'Michel Noir - Wikipedia', url: 'https://fr.wikipedia.org/wiki/Michel_Noir' }
+          ]
+        }
+      ]
+    }
+  },
+
+  {
+    id: nextId++,
+    name: 'Jacques Médecin',
+    party: 'lr',
+    position: 'Ancien Maire de Nice',
+    convictions: 2,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1928-05-05',
+      birthPlace: 'Nice',
+      career: [
+        'Maire de Nice (1966-1990)',
+        'Député des Alpes-Maritimes (1962-1973)',
+        'Secrétaire d\'État au Tourisme (1976-1978)'
+      ],
+      justiceIncidents: [
+        {
+          type: 'Condamnation',
+          date: '1995',
+          description: 'Condamné pour détournement de fonds publics et corruption. S\'était enfui en Uruguay en 1990 pour échapper à la justice. Extradé en 1994.',
+          penalty: '3 ans et demi de prison ferme',
+          status: 'Définitif',
+          sources: [
+            { title: 'Jacques Médecin - Wikipedia', url: 'https://fr.wikipedia.org/wiki/Jacques_M%C3%A9decin' }
+          ]
+        },
+        {
+          type: 'Condamnation',
+          date: '1998',
+          description: 'Condamné pour fraude fiscale. Dissimulation de revenus et de patrimoine à l\'étranger.',
+          penalty: 'Amende et prison',
+          status: 'Définitif',
+          sources: [
+            { title: 'Jacques Médecin - Wikipedia', url: 'https://fr.wikipedia.org/wiki/Jacques_M%C3%A9decin' }
+          ]
+        }
+      ]
+    }
+  },
+
+  {
+    id: nextId++,
+    name: 'Gaston Flosse',
+    party: 'lr',
+    position: 'Ancien Président de la Polynésie française',
+    convictions: 2,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1931-06-24',
+      birthPlace: 'Rikitea, Polynésie française',
+      career: [
+        'Président de la Polynésie française (1984-1987, 1991-2004, 2013-2014)',
+        'Sénateur de la Polynésie française (1998-2008, 2014-2016)',
+        'Secrétaire d\'État chargé du Pacifique Sud (1986-1988)'
+      ],
+      justiceIncidents: [
+        {
+          type: 'Condamnation',
+          date: '2014',
+          description: 'Condamné pour détournement de fonds publics. Emplois fictifs de personnels rémunérés sur fonds publics de la Polynésie française.',
+          penalty: '5 ans de prison avec sursis et inéligibilité',
+          status: 'Définitif',
+          sources: [
+            { title: 'Gaston Flosse - Wikipedia', url: 'https://fr.wikipedia.org/wiki/Gaston_Flosse' }
+          ]
+        },
+        {
+          type: 'Condamnation',
+          date: '2013',
+          description: 'Condamné pour prise illégale d\'intérêts dans l\'attribution de marchés publics en Polynésie française.',
+          penalty: 'Prison avec sursis et inéligibilité',
+          status: 'Définitif',
+          sources: [
+            { title: 'Gaston Flosse - Wikipedia', url: 'https://fr.wikipedia.org/wiki/Gaston_Flosse' }
+          ]
+        }
+      ]
+    }
+  },
+
+  {
+    id: nextId++,
+    name: 'Guy Drut',
+    party: 'lr',
+    position: 'Ancien Ministre de la Jeunesse et des Sports',
+    convictions: 1,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1950-12-06',
+      birthPlace: 'Oignies',
+      career: [
+        'Champion olympique du 110m haies (1976)',
+        'Député de Seine-et-Marne (1988-2002)',
+        'Ministre de la Jeunesse et des Sports (1995-1997)',
+        'Membre du Comité international olympique'
+      ],
+      justiceIncidents: [
+        {
+          type: 'Condamnation',
+          date: '2004',
+          description: 'Condamné dans l\'affaire des marchés publics d\'Île-de-France pour financement illicite de parti politique. Gracié par le président Jacques Chirac en 2005.',
+          penalty: '15 mois de prison avec sursis et 50 000€ d\'amende',
+          status: 'Gracié par le Président Chirac',
+          sources: [
+            { title: 'Guy Drut - Wikipedia', url: 'https://fr.wikipedia.org/wiki/Guy_Drut' }
+          ]
+        }
+      ]
+    }
+  },
+
+  {
+    id: nextId++,
+    name: 'Valérie Pécresse',
+    party: 'lr',
+    position: 'Présidente de la Région Île-de-France',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1967-07-14',
+      birthPlace: 'Neuilly-sur-Seine',
+      career: [
+        'Ministre de l\'Enseignement supérieur et de la Recherche (2007-2011)',
+        'Ministre du Budget (2011-2012)',
+        'Présidente de la Région Île-de-France (2015-)',
+        'Candidate à l\'élection présidentielle (2022)'
+      ],
+      justiceIncidents: []
+    }
+  },
+
+  {
+    id: nextId++,
+    name: 'Christian Estrosi',
+    party: 'lr',
+    position: 'Maire de Nice',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1955-07-01',
+      birthPlace: 'Nice',
+      career: [
+        'Maire de Nice (2008-2017, 2020-)',
+        'Président de la Région PACA (2015-2017)',
+        'Ministre de l\'Industrie (2009-2010)',
+        'Député des Alpes-Maritimes (1988-2017)'
+      ],
+      justiceIncidents: []
+    }
+  },
+
+  {
+    id: nextId++,
+    name: 'Gérard Larcher',
+    party: 'lr',
+    position: 'Président du Sénat',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1949-09-14',
+      birthPlace: 'Flers',
+      career: [
+        'Président du Sénat (2014-)',
+        'Sénateur des Yvelines (1986-)',
+        'Maire de Rambouillet (1983-2004)',
+        'Ministre délégué au Travail (2004-2005)'
+      ],
+      justiceIncidents: []
+    }
+  },
+
+  {
+    id: nextId++,
+    name: 'Michel Barnier',
+    party: 'lr',
+    position: 'Ancien Premier ministre',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1951-01-09',
+      birthPlace: 'La Tronche',
+      career: [
+        'Premier ministre (2024)',
+        'Commissaire européen (1999-2004, 2010-2014)',
+        'Ministre des Affaires étrangères (2004-2005)',
+        'Négociateur en chef du Brexit pour l\'UE (2016-2021)'
+      ],
+      justiceIncidents: []
+    }
+  },
+
+  {
+    id: nextId++,
+    name: 'François Baroin',
+    party: 'lr',
+    position: 'Ancien Ministre de l\'Économie',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1965-06-21',
+      birthPlace: 'Paris',
+      career: [
+        'Ministre de l\'Économie et des Finances (2011-2012)',
+        'Ministre du Budget (2010-2011)',
+        'Maire de Troyes (1995-2022)',
+        'Président de l\'Association des maires de France (2014-2021)'
+      ],
+      justiceIncidents: []
+    }
+  },
+
+  {
+    id: nextId++,
+    name: 'Michèle Alliot-Marie',
+    party: 'lr',
+    position: 'Ancienne Ministre des Affaires étrangères',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1946-09-10',
+      birthPlace: 'Villeneuve-le-Roi',
+      career: [
+        'Ministre de la Défense (2002-2007)',
+        'Ministre de l\'Intérieur (2007-2009)',
+        'Ministre de la Justice (2009-2010)',
+        'Ministre des Affaires étrangères (2010-2011)',
+        'Députée des Pyrénées-Atlantiques (1986-2012)'
+      ],
+      justiceIncidents: []
+    }
+  },
+
+  // ===== PS =====
+
+  {
+    id: nextId++,
+    name: 'Dominique Strauss-Kahn',
+    party: 'ps',
+    position: 'Ancien Directeur général du FMI',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1949-04-25',
+      birthPlace: 'Neuilly-sur-Seine',
+      career: [
+        'Ministre de l\'Économie et des Finances (1997-1999)',
+        'Directeur général du FMI (2007-2011)',
+        'Député du Val-d\'Oise (1986-2007)'
+      ],
+      justiceIncidents: [
+        {
+          type: 'Classement',
+          date: '2012',
+          description: 'Affaire du Sofitel de New York (2011). Accusé d\'agression sexuelle par une femme de chambre. Poursuites pénales abandonnées aux États-Unis.',
+          status: 'Classé sans suite',
+          sources: [
+            { title: 'Dominique Strauss-Kahn - Wikipedia', url: 'https://fr.wikipedia.org/wiki/Dominique_Strauss-Kahn' },
+            { title: 'Affaire DSK - Wikipedia', url: 'https://fr.wikipedia.org/wiki/Affaire_Dominique_Strauss-Kahn' }
+          ]
+        },
+        {
+          type: 'Relaxe',
+          date: '2015',
+          description: 'Acquitté du chef de proxénétisme aggravé dans l\'affaire du Carlton de Lille.',
+          status: 'Relaxé',
+          sources: [
+            { title: 'Dominique Strauss-Kahn - Wikipedia', url: 'https://fr.wikipedia.org/wiki/Dominique_Strauss-Kahn' },
+            { title: 'Affaire du Carlton de Lille - Wikipedia', url: 'https://fr.wikipedia.org/wiki/Affaire_du_Carlton_de_Lille' }
+          ]
+        }
+      ]
+    }
+  },
+
+  {
+    id: nextId++,
+    name: 'Roland Dumas',
+    party: 'ps',
+    position: 'Ancien Président du Conseil constitutionnel',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1922-08-23',
+      birthPlace: 'Limoges',
+      career: [
+        'Ministre des Affaires étrangères (1984-1986, 1988-1993)',
+        'Président du Conseil constitutionnel (1995-2000)',
+        'Député de Haute-Vienne (1956-1958, 1967-1968, 1981-1993)',
+        'Avocat de François Mitterrand'
+      ],
+      justiceIncidents: [
+        {
+          type: 'Relaxe en appel',
+          date: '2003',
+          description: 'Condamné en première instance en 2001 pour complicité et recel d\'abus de biens sociaux dans l\'affaire Elf. Accusé d\'avoir reçu des avantages via sa compagne Christine Deviers-Joncour. Relaxé en appel en 2003.',
+          status: 'Relaxé en appel',
+          sources: [
+            { title: 'Roland Dumas - Wikipedia', url: 'https://fr.wikipedia.org/wiki/Roland_Dumas' },
+            { title: 'Affaire Elf - Wikipedia', url: 'https://fr.wikipedia.org/wiki/Affaire_Elf' }
+          ]
+        }
+      ]
+    }
+  },
+
+  {
+    id: nextId++,
+    name: 'Henri Emmanuelli',
+    party: 'ps',
+    position: 'Ancien Président de l\'Assemblée nationale',
+    convictions: 1,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1945-05-31',
+      birthPlace: 'Eaux-Bonnes',
+      career: [
+        'Président de l\'Assemblée nationale (1992-1993)',
+        'Député des Landes (1978-2017)',
+        'Président du Conseil général des Landes (1982-2001)',
+        'Premier secrétaire du PS (1994-1995)'
+      ],
+      justiceIncidents: [
+        {
+          type: 'Condamnation',
+          date: '1997',
+          description: 'Condamné pour recel d\'abus de biens sociaux dans l\'affaire Urba. Système de financement occulte du Parti socialiste via le bureau d\'études Urba.',
+          penalty: '18 mois de prison avec sursis et 30 000 francs d\'amende',
+          status: 'Définitif',
+          sources: [
+            { title: 'Henri Emmanuelli - Wikipedia', url: 'https://fr.wikipedia.org/wiki/Henri_Emmanuelli' },
+            { title: 'Affaire Urba - Wikipedia', url: 'https://fr.wikipedia.org/wiki/Affaire_Urba' }
+          ]
+        }
+      ]
+    }
+  },
+
+  {
+    id: nextId++,
+    name: 'Jean-Noël Guérini',
+    party: 'ps',
+    position: 'Ancien Président du Conseil général des Bouches-du-Rhône',
+    convictions: 1,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1951-05-28',
+      birthPlace: 'Marseille',
+      career: [
+        'Sénateur des Bouches-du-Rhône (2004-)',
+        'Président du Conseil général des Bouches-du-Rhône (1998-2015)'
+      ],
+      justiceIncidents: [
+        {
+          type: 'Condamnation',
+          date: '2022',
+          description: 'Condamné pour prise illégale d\'intérêts dans l\'affaire de la décharge de Septèmes-les-Vallons. Favoritisme dans l\'attribution de marchés de gestion des déchets.',
+          penalty: '3 ans de prison avec sursis et 60 000€ d\'amende',
+          status: 'Définitif',
+          sources: [
+            { title: 'Jean-Noël Guérini - Wikipedia', url: 'https://fr.wikipedia.org/wiki/Jean-No%C3%ABl_Gu%C3%A9rini' }
+          ]
+        }
+      ]
+    }
+  },
+
+  {
+    id: nextId++,
+    name: 'Harlem Désir',
+    party: 'ps',
+    position: 'Ancien Secrétaire d\'État aux Affaires européennes',
+    convictions: 1,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1959-11-25',
+      birthPlace: 'Paris',
+      career: [
+        'Fondateur de SOS Racisme (1984)',
+        'Premier secrétaire du PS (2012-2014)',
+        'Secrétaire d\'État aux Affaires européennes (2014-2017)',
+        'Député européen (1999-2014)'
+      ],
+      justiceIncidents: [
+        {
+          type: 'Condamnation',
+          date: '2021',
+          description: 'Condamné pour abus de confiance dans la gestion des comptes du Parti socialiste. Dépenses somptuaires injustifiées payées avec les fonds du parti.',
+          penalty: '8 000€ d\'amende',
+          status: 'Définitif',
+          sources: [
+            { title: 'Harlem Désir - Wikipedia', url: 'https://fr.wikipedia.org/wiki/Harlem_D%C3%A9sir' }
+          ]
+        }
+      ]
+    }
+  },
+
+  {
+    id: nextId++,
+    name: 'Jean-Marc Ayrault',
+    party: 'ps',
+    position: 'Ancien Premier ministre',
+    convictions: 1,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1950-01-25',
+      birthPlace: 'Maulévrier',
+      career: [
+        'Premier ministre (2012-2014)',
+        'Ministre des Affaires étrangères (2016-2017)',
+        'Maire de Nantes (1989-2012)',
+        'Député de Loire-Atlantique (1986-2012)'
+      ],
+      justiceIncidents: [
+        {
+          type: 'Condamnation',
+          date: '1997',
+          description: 'Condamné pour favoritisme dans l\'attribution de marchés publics de la ville de Nantes.',
+          penalty: '6 mois de prison avec sursis et 30 000 francs d\'amende',
+          status: 'Définitif',
+          sources: [
+            { title: 'Jean-Marc Ayrault - Wikipedia', url: 'https://fr.wikipedia.org/wiki/Jean-Marc_Ayrault' }
+          ]
+        }
+      ]
+    }
+  },
+
+  {
+    id: nextId++,
+    name: 'Bernard Tapie',
+    party: 'ps',
+    position: 'Ancien Ministre de la Ville',
+    convictions: 1,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1943-01-26',
+      birthPlace: 'Paris',
+      career: [
+        'Ministre de la Ville (1992-1993)',
+        'Député des Bouches-du-Rhône (1989-1996)',
+        'Député européen (1994-1997)',
+        'Président de l\'Olympique de Marseille (1986-1994)'
+      ],
+      justiceIncidents: [
+        {
+          type: 'Condamnation',
+          date: '1995',
+          description: 'Condamné dans l\'affaire OM-VA pour corruption dans le match Olympique de Marseille - Valenciennes (1993). Tentative de corruption de joueurs adverses.',
+          penalty: '2 ans de prison dont 1 ferme et interdiction de gérer une entreprise',
+          status: 'Définitif',
+          sources: [
+            { title: 'Bernard Tapie - Wikipedia', url: 'https://fr.wikipedia.org/wiki/Bernard_Tapie' },
+            { title: 'Affaire VA-OM - Wikipedia', url: 'https://fr.wikipedia.org/wiki/Affaire_VA-OM' }
+          ]
+        }
+      ]
+    }
+  },
+
+  {
+    id: nextId++,
+    name: 'Julien Dray',
+    party: 'ps',
+    position: 'Ancien député de l\'Essonne',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1955-08-02',
+      birthPlace: 'Oran (Algérie)',
+      career: [
+        'Cofondateur de SOS Racisme (1984)',
+        'Député de l\'Essonne (1988-2012)',
+        'Conseiller régional d\'Île-de-France'
+      ],
+      justiceIncidents: [
+        {
+          type: 'Non-lieu',
+          date: '2015',
+          description: 'Mis en examen pour abus de confiance et recel d\'abus de biens sociaux en lien avec SOS Racisme et la mutuelle MNEF. Non-lieu prononcé en 2015 après plusieurs années d\'instruction.',
+          status: 'Non-lieu',
+          sources: [
+            { title: 'Julien Dray - Wikipedia', url: 'https://fr.wikipedia.org/wiki/Julien_Dray' }
+          ]
+        }
+      ]
+    }
+  },
+
+  {
+    id: nextId++,
+    name: 'Ségolène Royal',
+    party: 'ps',
+    position: 'Ancienne Ministre de l\'Écologie',
+    convictions: 0,
+    ongoingCases: 1,
+    details: {
+      birthDate: '1953-09-22',
+      birthPlace: 'Dakar (Sénégal)',
+      career: [
+        'Candidate PS à l\'élection présidentielle (2007)',
+        'Présidente de la Région Poitou-Charentes (2004-2014)',
+        'Ministre de l\'Écologie (2014-2017)',
+        'Ambassadrice des pôles arctique et antarctique (2017-2020)'
+      ],
+      justiceIncidents: [
+        {
+          type: 'Mise en examen',
+          date: '2024',
+          description: 'Mise en examen pour détournement de fonds publics dans le cadre de ses fonctions d\'ambassadrice des pôles arctique et antarctique.',
+          status: 'En cours',
+          sources: [
+            { title: 'Ségolène Royal - Wikipedia', url: 'https://fr.wikipedia.org/wiki/S%C3%A9gol%C3%A8ne_Royal' }
+          ]
+        }
+      ]
+    }
+  },
+
+  {
+    id: nextId++,
+    name: 'Laurent Fabius',
+    party: 'ps',
+    position: 'Président du Conseil constitutionnel',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1946-08-20',
+      birthPlace: 'Paris',
+      career: [
+        'Premier ministre (1984-1986)',
+        'Président de l\'Assemblée nationale (1988-1992, 1997-2000)',
+        'Ministre des Affaires étrangères (2012-2016)',
+        'Président du Conseil constitutionnel (2016-)'
+      ],
+      justiceIncidents: [
+        {
+          type: 'Relaxe',
+          date: '1999',
+          description: 'Acquitté par la Cour de justice de la République dans l\'affaire du sang contaminé. Poursuivi pour homicide involontaire en tant que Premier ministre lors de la contamination de lots de sang par le virus du SIDA dans les années 1980.',
+          status: 'Acquitté',
+          sources: [
+            { title: 'Laurent Fabius - Wikipedia', url: 'https://fr.wikipedia.org/wiki/Laurent_Fabius' },
+            { title: 'Affaire du sang contaminé - Wikipedia', url: 'https://fr.wikipedia.org/wiki/Affaire_du_sang_contamin%C3%A9' }
+          ]
+        }
+      ]
+    }
+  },
+
+  // ===== MoDem =====
+
+  {
+    id: nextId++,
+    name: 'François Bayrou',
+    party: 'modem',
+    position: 'Premier ministre, Président du MoDem',
+    convictions: 0,
+    ongoingCases: 1,
+    details: {
+      birthDate: '1951-05-25',
+      birthPlace: 'Bordères',
+      career: [
+        'Premier ministre (2024-2025)',
+        'Président du MoDem (2007-)',
+        'Ministre de l\'Éducation nationale (1993-1997)',
+        'Député des Pyrénées-Atlantiques (1986-2012)',
+        'Maire de Pau (2014-)',
+        'Candidat à l\'élection présidentielle (2002, 2007, 2012)'
+      ],
+      justiceIncidents: [
+        {
+          type: 'Mise en examen',
+          date: '2019',
+          description: 'Mis en examen pour complicité de détournement de fonds publics dans l\'affaire des assistants parlementaires du MoDem au Parlement européen. Soupçons d\'emplois fictifs d\'assistants européens affectés à des tâches nationales.',
+          status: 'Renvoyé en procès',
+          sources: [
+            { title: 'François Bayrou - Wikipedia', url: 'https://fr.wikipedia.org/wiki/Fran%C3%A7ois_Bayrou' },
+            { title: 'Affaire des assistants parlementaires du MoDem - Wikipedia', url: 'https://fr.wikipedia.org/wiki/Affaire_des_assistants_parlementaires_du_MoDem' }
+          ]
+        }
+      ]
+    }
+  },
+
+  // ===== Ensemble =====
+
+  {
+    id: nextId++,
+    name: 'Gérald Darmanin',
+    party: 'ensemble',
+    position: 'Ancien Ministre de l\'Intérieur',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1982-10-11',
+      birthPlace: 'Valenciennes',
+      career: [
+        'Ministre de l\'Intérieur (2020-2024)',
+        'Ministre de l\'Action et des Comptes publics (2017-2020)',
+        'Député du Nord (2012-2017)',
+        'Maire de Tourcoing (2014-2017)'
+      ],
+      justiceIncidents: [
+        {
+          type: 'Non-lieu',
+          date: '2024',
+          description: 'Accusé de viol par une femme. Après plusieurs années d\'enquête, non-lieu prononcé.',
+          status: 'Non-lieu',
+          sources: [
+            { title: 'Gérald Darmanin - Wikipedia', url: 'https://fr.wikipedia.org/wiki/G%C3%A9rald_Darmanin' }
+          ]
+        }
+      ]
+    }
+  },
+
+  {
+    id: nextId++,
+    name: 'Damien Abad',
+    party: 'ensemble',
+    position: 'Ancien Ministre des Solidarités',
+    convictions: 0,
+    ongoingCases: 1,
+    details: {
+      birthDate: '1980-04-05',
+      birthPlace: 'Nîmes',
+      career: [
+        'Ministre des Solidarités (2022)',
+        'Président du groupe LR à l\'Assemblée nationale (2019-2022)',
+        'Député de l\'Ain (2012-2024)'
+      ],
+      justiceIncidents: [
+        {
+          type: 'Mise en examen',
+          date: '2023',
+          description: 'Mis en examen pour tentative de viol. Accusations de violences sexuelles ayant conduit à son éviction du gouvernement en 2022.',
+          status: 'En cours',
+          sources: [
+            { title: 'Damien Abad - Wikipedia', url: 'https://fr.wikipedia.org/wiki/Damien_Abad' }
+          ]
+        }
+      ]
+    }
+  },
+
+  {
+    id: nextId++,
+    name: 'Éric Woerth',
+    party: 'ensemble',
+    position: 'Ancien Ministre du Budget',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1956-01-29',
+      birthPlace: 'Creil',
+      career: [
+        'Ministre du Budget (2007-2010)',
+        'Ministre du Travail (2010)',
+        'Député de l\'Oise (2002-2024)',
+        'Trésorier de l\'UMP (2002-2010)'
+      ],
+      justiceIncidents: [
+        {
+          type: 'Non-lieu',
+          date: '2015',
+          description: 'Mis en examen dans l\'affaire Bettencourt pour trafic d\'influence et recel. Accusé d\'avoir facilité l\'obtention de la Légion d\'honneur pour le gestionnaire de fortune de Liliane Bettencourt. Non-lieu prononcé en 2015.',
+          status: 'Non-lieu',
+          sources: [
+            { title: 'Éric Woerth - Wikipedia', url: 'https://fr.wikipedia.org/wiki/%C3%89ric_Woerth' },
+            { title: 'Affaire Woerth-Bettencourt - Wikipedia', url: 'https://fr.wikipedia.org/wiki/Affaire_Woerth-Bettencourt' }
+          ]
+        }
+      ]
+    }
+  },
+
+  {
+    id: nextId++,
+    name: 'Jean Castex',
+    party: 'lr',
+    position: 'Ancien Premier ministre',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1965-06-25',
+      birthPlace: 'Vic-Fezensac',
+      career: [
+        'Premier ministre (2020-2022)',
+        'Maire de Prades (2008-2020)',
+        'PDG de la RATP (2022-)'
+      ],
+      justiceIncidents: []
+    }
+  },
+
+  // ===== UDI =====
+
+  {
+    id: nextId++,
+    name: 'Jean-Christophe Lagarde',
+    party: 'udi',
+    position: 'Président de l\'UDI, Maire de Drancy',
+    convictions: 0,
+    ongoingCases: 1,
+    details: {
+      birthDate: '1967-10-24',
+      birthPlace: 'Drancy',
+      career: [
+        'Président de l\'UDI (2014-)',
+        'Député de Seine-Saint-Denis (2002-2022)',
+        'Maire de Drancy (2001-)'
+      ],
+      justiceIncidents: [
+        {
+          type: 'Mise en examen',
+          date: '2020',
+          description: 'Mis en examen pour détention d\'armes de catégorie B et de munitions. Armes découvertes lors d\'une perquisition à son domicile.',
+          status: 'En cours',
+          sources: [
+            { title: 'Jean-Christophe Lagarde - Wikipedia', url: 'https://fr.wikipedia.org/wiki/Jean-Christophe_Lagarde' }
+          ]
+        }
+      ]
+    }
+  },
 ]
 
 /**
