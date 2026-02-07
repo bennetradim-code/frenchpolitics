@@ -76,9 +76,13 @@ export default function PoliticianDetail() {
           </div>
           <div className="md:w-2/3 p-6">
             <h1 className="text-3xl font-bold text-gray-900">{politician.name}</h1>
-            <p className="text-lg font-semibold mt-1" style={{ color: partyColor }}>
+            <Link
+              to={`/party/${politician.party}`}
+              className="text-lg font-semibold mt-1 inline-block hover:underline transition"
+              style={{ color: partyColor }}
+            >
               {party?.name || politician.party}
-            </p>
+            </Link>
             <p className="text-gray-600 mt-1">{politician.position}</p>
             <p className="text-sm text-gray-500 mt-2">
               Né(e) le {politician.details.birthDate} à {politician.details.birthPlace}

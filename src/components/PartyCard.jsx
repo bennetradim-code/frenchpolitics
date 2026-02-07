@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { getPartyStats } from '../data/frenchPolitics'
 
 /**
@@ -22,8 +23,9 @@ export default function PartyCard({ party }) {
   const partyLogoSVG = generatePartyLogoSVG(party.name, party.color)
 
   return (
-    <div 
-      className="bg-white rounded-lg shadow hover:shadow-lg transition overflow-hidden"
+    <Link
+      to={`/party/${party.id}`}
+      className="block bg-white rounded-lg shadow hover:shadow-lg transition overflow-hidden"
       style={{ borderTop: `4px solid ${party.color}` }}
     >
       <div className="p-6">
@@ -89,6 +91,6 @@ export default function PartyCard({ party }) {
           </div>
         )}
       </div>
-    </div>
+    </Link>
   )
 }

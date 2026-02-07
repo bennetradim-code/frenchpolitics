@@ -5,6 +5,7 @@ import PartyStats from './components/PartyStats'
 import PoliticiansList from './components/PoliticiansList'
 import PartyCard from './components/PartyCard'
 import PoliticianDetail from './components/PoliticianDetail'
+import PartyDetail from './components/PartyDetail'
 import { politicians as politiciansData, parties as partiesData } from './data/frenchPolitics'
 import './index.css'
 
@@ -137,6 +138,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/politician/:id" element={<PoliticianDetail />} />
+        <Route path="/party/:id" element={<PartyDetail />} />
       </Routes>
 
       <footer className="bg-gray-900 text-gray-300 mt-12">
