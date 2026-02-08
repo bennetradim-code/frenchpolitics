@@ -1,26 +1,9 @@
 import { Link } from 'react-router-dom'
 import { getPartyStats } from '../data/frenchPolitics'
-
-/**
- * Generate a placeholder SVG logo for a party
- */
-function generatePartyLogoSVG(name, color) {
-  const code = name.split('(')[0].trim().slice(0, 3).toUpperCase()
-  const bgColor = color || '#3B82F6'
-  
-  const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
-    <circle cx="100" cy="100" r="95" fill="${bgColor}" opacity="0.15"/>
-    <circle cx="100" cy="100" r="80" fill="none" stroke="${bgColor}" stroke-width="4"/>
-    <text x="100" y="115" font-size="28" font-weight="bold" fill="${bgColor}" text-anchor="middle" font-family="Arial, sans-serif">${code}</text>
-  </svg>`
-  
-  const encoded = encodeURIComponent(svg)
-  return `data:image/svg+xml;utf8,${encoded}`
-}
+import PartyAvatar from './PartyAvatar'
 
 export default function PartyCard({ party }) {
   const stats = getPartyStats(party.id)
-  const partyLogoSVG = generatePartyLogoSVG(party.name, party.color)
 
   return (
     <Link
@@ -31,10 +14,11 @@ export default function PartyCard({ party }) {
       <div className="p-6">
         {/* Logo/Color bar */}
         <div className="mb-4 flex items-center gap-3">
-          <img 
-            src={partyLogoSVG}
-            alt={party.name}
-            className="w-12 h-12 rounded flex-shrink-0"
+          <PartyAvatar
+            name={party.name}
+            color={party.color}
+            size="sm"
+            className="flex-shrink-0"
           />
           <div>
             <h3 className="text-lg font-bold text-gray-900">{party.name}</h3>

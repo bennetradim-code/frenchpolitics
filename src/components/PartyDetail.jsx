@@ -1,18 +1,7 @@
 import { useParams, Link } from 'react-router-dom'
 import { parties, getPoliticiansByParty, getPartyStats } from '../data/frenchPolitics'
-import { generatePoliticianImagePlaceholder } from '../utils/imageGenerator'
-
-function generatePartyLogoSVG(name, color) {
-  const code = name.split('(')[0].trim().slice(0, 3).toUpperCase()
-  const bgColor = color || '#3B82F6'
-  const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
-    <circle cx="100" cy="100" r="95" fill="${bgColor}" opacity="0.15"/>
-    <circle cx="100" cy="100" r="80" fill="none" stroke="${bgColor}" stroke-width="4"/>
-    <text x="100" y="115" font-size="28" font-weight="bold" fill="${bgColor}" text-anchor="middle" font-family="Arial, sans-serif">${code}</text>
-  </svg>`
-  const encoded = encodeURIComponent(svg)
-  return `data:image/svg+xml;utf8,${encoded}`
-}
+import PoliticianAvatar from './PoliticianAvatar'
+import PartyAvatar from './PartyAvatar'
 
 export default function PartyDetail() {
   const { id } = useParams()
@@ -31,7 +20,6 @@ export default function PartyDetail() {
 
   const politicians = getPoliticiansByParty(party.id)
   const stats = getPartyStats(party.id)
-  const logoSVG = generatePartyLogoSVG(party.name, party.color)
 
   const livingPoliticians = politicians.filter(p => !p.deceased)
 
@@ -55,10 +43,11 @@ export default function PartyDetail() {
           style={{ borderTop: `6px solid ${party.color}` }}
         >
           <div className="flex items-center gap-6">
-            <img
-              src={logoSVG}
-              alt={party.name}
-              className="w-24 h-24 rounded-full flex-shrink-0"
+            <PartyAvatar
+              name={party.name}
+              color={party.color}
+              size="lg"
+              className="flex-shrink-0"
             />
             <div>
               <h1 className="text-3xl font-bold text-gray-900">{party.name}</h1>
@@ -179,7 +168,6 @@ export default function PartyDetail() {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
             {sortedPoliticians.map(pol => {
-              const placeholderImage = generatePoliticianImagePlaceholder(pol.name, party.color)
               const hasIncidents = pol.convictions > 0 || pol.ongoingCases > 0
               return (
                 <Link
@@ -187,11 +175,11 @@ export default function PartyDetail() {
                   to={`/politician/${pol.id}`}
                   className="flex items-center gap-3 p-3 rounded-lg border border-gray-200 hover:border-blue-300 hover:shadow-md transition group"
                 >
-                  <img
-                    src={placeholderImage}
-                    alt={pol.name}
-                    className="w-12 h-12 rounded-full flex-shrink-0 border-2"
-                    style={{ borderColor: party.color }}
+                  <PoliticianAvatar
+                    name={pol.name}
+                    partyColor={party.color}
+                    size="md"
+                    className="flex-shrink-0"
                   />
                   <div className="flex-1 min-w-0">
                     <p className="font-semibold text-gray-900 group-hover:text-blue-600 transition truncate">

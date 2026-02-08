@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { getPartyById } from '../data/frenchPolitics'
+import PoliticianAvatar from './PoliticianAvatar'
 
 export default function SearchBar({ searchTerm, onSearchChange, politicians }) {
   const [isOpen, setIsOpen] = useState(false)
@@ -82,12 +83,12 @@ export default function SearchBar({ searchTerm, onSearchChange, politicians }) {
                   idx === highlightIndex ? 'bg-blue-50' : ''
                 }`}
               >
-                <div
-                  className="w-8 h-8 rounded-full flex items-center justify-center text-white text-xs font-bold flex-shrink-0"
-                  style={{ backgroundColor: party?.color || '#999' }}
-                >
-                  {p.name.split(' ').map(n => n[0]).join('').slice(0, 2)}
-                </div>
+                <PoliticianAvatar
+                  name={p.name}
+                  partyColor={party?.color || '#999'}
+                  size="sm"
+                  className="flex-shrink-0"
+                />
                 <div>
                   <p className="font-semibold text-gray-900">{p.name}</p>
                   <p className="text-xs text-gray-500">

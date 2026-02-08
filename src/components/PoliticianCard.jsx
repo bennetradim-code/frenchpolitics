@@ -1,26 +1,13 @@
-import { useState, useMemo } from 'react'
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { getPartyById } from '../data/frenchPolitics'
 import ConfidenceGauge from './ConfidenceGauge'
-
-function generatePlaceholderImage(name, color = '#3B82F6') {
-  const initials = name.split(' ').map(n => n[0]).join('').toUpperCase().slice(0, 2)
-  const bgColor = color || '#3B82F6'
-
-  const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
-    <rect width="200" height="200" fill="${bgColor}"/>
-    <text x="100" y="120" font-size="60" font-weight="bold" fill="white" text-anchor="middle" font-family="Arial, sans-serif">${initials}</text>
-  </svg>`
-
-  const encoded = encodeURIComponent(svg)
-  return `data:image/svg+xml;utf8,${encoded}`
-}
+import PoliticianAvatar from './PoliticianAvatar'
 
 export default function PoliticianCard({ politician }) {
   const [showDetails, setShowDetails] = useState(false)
   const party = getPartyById(politician.party)
   const partyColor = party?.color || '#999'
-  const placeholderImage = useMemo(() => generatePlaceholderImage(politician.name, partyColor), [politician.name, partyColor])
 
   return (
     <div className="bg-white rounded-lg shadow hover:shadow-lg transition overflow-hidden">
@@ -28,10 +15,12 @@ export default function PoliticianCard({ politician }) {
         className="aspect-square bg-gray-200 overflow-hidden flex items-center justify-center"
         style={{ borderBottom: `3px solid ${partyColor}` }}
       >
-        <img
-          src={placeholderImage}
-          alt={politician.name}
-          className="w-full h-full object-cover"
+        <PoliticianAvatar
+          name={politician.name}
+          partyColor={partyColor}
+          size="card"
+          shape="square"
+          borderWidth="0px"
         />
       </div>
 

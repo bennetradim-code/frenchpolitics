@@ -1,7 +1,7 @@
 import { useParams, Link } from 'react-router-dom'
 import { politicians, getPartyById } from '../data/frenchPolitics'
-import { generatePoliticianImagePlaceholder } from '../utils/imageGenerator'
 import ConfidenceGauge from './ConfidenceGauge'
+import PoliticianAvatar from './PoliticianAvatar'
 
 export default function PoliticianDetail() {
   const { id } = useParams()
@@ -20,7 +20,6 @@ export default function PoliticianDetail() {
 
   const party = getPartyById(politician.party)
   const partyColor = party?.color || '#999'
-  const placeholderImage = generatePoliticianImagePlaceholder(politician.name, partyColor)
   const incidents = (politician.details.justiceIncidents || []).filter(
     inc => inc.sources && inc.sources.length > 0
   )
@@ -67,11 +66,11 @@ export default function PoliticianDetail() {
             className="md:w-1/3 p-8 flex items-center justify-center"
             style={{ backgroundColor: partyColor + '18' }}
           >
-            <img
-              src={placeholderImage}
-              alt={politician.name}
-              className="w-48 h-48 rounded-full border-4"
-              style={{ borderColor: partyColor }}
+            <PoliticianAvatar
+              name={politician.name}
+              partyColor={partyColor}
+              size="lg"
+              shape="circle"
             />
           </div>
           <div className="md:w-2/3 p-6">
