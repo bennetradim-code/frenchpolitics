@@ -6,6 +6,7 @@ import PoliticiansList from './components/PoliticiansList'
 import PartyCard from './components/PartyCard'
 import PoliticianDetail from './components/PoliticianDetail'
 import PartyDetail from './components/PartyDetail'
+import MentionsLegales from './components/MentionsLegales'
 import { politicians as politiciansData, parties as partiesData } from './data/frenchPolitics'
 import './index.css'
 
@@ -139,16 +140,34 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/politician/:id" element={<PoliticianDetail />} />
         <Route path="/party/:id" element={<PartyDetail />} />
+        <Route path="/mentions-legales" element={<MentionsLegales />} />
       </Routes>
 
       <footer className="bg-gray-900 text-gray-300 mt-12">
         <div className="max-w-6xl mx-auto px-4 py-8">
-          <p className="text-sm">
-            <strong>French Politics Tracker</strong> - Données compilées depuis Wikipedia, Wikimedia Commons, et sources gouvernementales officielles.
-          </p>
-          <p className="text-xs mt-2 text-gray-500">
-            Dernière mise à jour: {new Date().toLocaleDateString('fr-FR')} | Source des images: Wikimedia Commons (domaine public)
-          </p>
+          <div className="bg-gray-800 rounded p-4 mb-4 text-xs text-gray-400 leading-relaxed">
+            <p>
+              <strong className="text-gray-300">Avertissement :</strong> Ce site est un projet informatif généré et maintenu de manière automatisée
+              à l'aide d'outils d'intelligence artificielle. Toute personne mentionnée est <strong className="text-gray-300">présumée
+              innocente</strong> tant qu'elle n'a pas été déclarée coupable par une décision de justice définitive
+              (art. 9-1 du Code civil). Malgré les vérifications effectuées, des erreurs peuvent subsister.
+              Toute personne concernée peut exercer son <strong className="text-gray-300">droit de rectification</strong> en
+              nous contactant.
+            </p>
+          </div>
+          <div className="flex flex-wrap items-center justify-between gap-4">
+            <div>
+              <p className="text-sm">
+                <strong>French Politics Tracker</strong> - Données compilées depuis des sources publiques vérifiables.
+              </p>
+              <p className="text-xs mt-1 text-gray-500">
+                Dernière mise à jour : {new Date().toLocaleDateString('fr-FR')}
+              </p>
+            </div>
+            <Link to="/mentions-legales" className="text-sm text-blue-400 hover:text-blue-300 underline transition">
+              Mentions légales
+            </Link>
+          </div>
         </div>
       </footer>
     </div>

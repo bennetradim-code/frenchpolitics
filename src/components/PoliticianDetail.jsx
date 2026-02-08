@@ -123,6 +123,14 @@ export default function PoliticianDetail() {
         {/* Incidents de justice */}
         <div className="p-6 border-t">
           <h2 className="text-xl font-bold text-gray-900 mb-4">Incidents de justice</h2>
+          {incidents.length > 0 && (
+            <div className="bg-amber-50 border border-amber-200 rounded-lg p-3 mb-4 text-xs text-amber-800 leading-relaxed">
+              <strong>Présomption d'innocence :</strong> Toute personne est présumée innocente tant qu'elle n'a pas été
+              déclarée coupable par une décision de justice définitive (art. 9-1 du Code civil). Les informations
+              ci-dessous proviennent de sources publiques et sont présentées à titre informatif.
+              {' '}<Link to="/mentions-legales" className="underline hover:text-amber-900">En savoir plus</Link>
+            </div>
+          )}
           {incidents.length > 0 ? (
             <div className="space-y-4">
               {incidents.map((incident, idx) => (
