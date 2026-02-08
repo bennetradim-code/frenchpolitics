@@ -147,6 +147,78 @@ export default function PartyStats({ politicians, selectedParty, onPartySelect }
         )}
       </div>
 
+      {/* Ratio chart */}
+      <div className="bg-white rounded-lg shadow p-6 mb-8">
+        <h3 className="text-lg font-semibold text-gray-800 mb-2">Ratio des membres impliqués par parti</h3>
+        <p className="text-xs text-gray-500 mb-4">Pourcentage de membres condamnés, avec affaires en cours, ou sans incident par parti (membres actuels uniquement)</p>
+
+        {(() => {
+          const ratioData = partyStats
+            .filter(s => s.count > 0)
+            .map(s => {
+              const partyPols = politicians.filter(p => p.party === s.partyId)
+              const convicted = partyPols.filter(p => p.convictions > 0).length
+              const ongoingOnly = partyPols.filter(p => p.convictions === 0 && p.ongoingCases > 0).length
+              const clean = partyPols.length - convicted - ongoingOnly
+              const abbr = s.partyName.match(/\(([^)]+)\)/)?.[1] || s.partyName.split('(')[0].trim()
+              return {
+                name: abbr,
+                fullName: s.partyName.split('(')[0].trim(),
+                total: partyPols.length,
+                pctConvicted: +(convicted / partyPols.length * 100).toFixed(1),
+                pctOngoing: +(ongoingOnly / partyPols.length * 100).toFixed(1),
+                pctClean: +(clean / partyPols.length * 100).toFixed(1),
+                convicted,
+                ongoingOnly,
+                clean
+              }
+            })
+            .sort((a, b) => (b.pctConvicted + b.pctOngoing) - (a.pctConvicted + a.pctOngoing))
+
+          return (
+            <>
+              <ResponsiveContainer width="100%" height={Math.max(350, ratioData.length * 45)}>
+                <BarChart layout="vertical" data={ratioData} margin={{ bottom: 5, left: 0, right: 20, top: 5 }}>
+                  <CartesianGrid strokeDasharray="3 3" />
+                  <YAxis
+                    dataKey="name"
+                    type="category"
+                    width={90}
+                    interval={0}
+                    tick={{ fontSize: 13, fill: '#374151' }}
+                  />
+                  <XAxis type="number" domain={[0, 100]} unit="%" allowDecimals={false} />
+                  <Tooltip
+                    formatter={(value, name) => [`${value}%`, name]}
+                    labelFormatter={(label) => {
+                      const item = ratioData.find(d => d.name === label)
+                      return item ? `${item.fullName} (${item.total} membres)` : label
+                    }}
+                  />
+                  <Bar dataKey="pctConvicted" name="Condamnés" fill="#dc2626" stackId="ratio" />
+                  <Bar dataKey="pctOngoing" name="Affaires en cours" fill="#f97316" stackId="ratio" />
+                  <Bar dataKey="pctClean" name="Sans incident" fill="#86efac" stackId="ratio" />
+                </BarChart>
+              </ResponsiveContainer>
+              <div className="flex flex-wrap gap-4 mt-3 text-xs justify-center">
+                <div className="flex items-center gap-1.5">
+                  <span className="inline-block w-3 h-3 rounded-full" style={{ backgroundColor: '#dc2626' }} />
+                  <span className="text-gray-600">Condamnés</span>
+                </div>
+                <div className="flex items-center gap-1.5">
+                  <span className="inline-block w-3 h-3 rounded-full" style={{ backgroundColor: '#f97316' }} />
+                  <span className="text-gray-600">Affaires en cours (sans condamnation)</span>
+                </div>
+                <div className="flex items-center gap-1.5">
+                  <span className="inline-block w-3 h-3 rounded-full" style={{ backgroundColor: '#86efac' }} />
+                  <span className="text-gray-600">Sans incident</span>
+                </div>
+              </div>
+            </>
+          )
+        })()}
+      </div>
+
       {/* Party Selection */}
       <div className="bg-white rounded-lg shadow p-6">
         <h3 className="text-lg font-semibold text-gray-800 mb-4">Filtrer par parti</h3>

@@ -64,6 +64,16 @@ function HomePage() {
           </Link>
           <p className="text-gray-600 mt-2">Suivi complet des partis politiques français et des affaires judiciaires des personnalités politiques</p>
 
+          <div className="bg-amber-50 border border-amber-200 rounded-lg p-3 mt-4 text-xs text-amber-800 leading-relaxed">
+            <strong>Avertissement :</strong> Ce site est un projet informatif généré et maintenu de manière automatisée
+            à l'aide d'outils d'intelligence artificielle. Toute personne mentionnée est <strong>présumée
+            innocente</strong> tant qu'elle n'a pas été déclarée coupable par une décision de justice définitive
+            (art. 9-1 du Code civil). Malgré les vérifications effectuées, des erreurs peuvent subsister.
+            Toute personne concernée peut exercer son <strong>droit de rectification</strong> en
+            nous contactant.{' '}
+            <Link to="/mentions-legales" className="underline hover:text-amber-900 font-semibold">Mentions légales</Link>
+          </div>
+
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-6">
             <div className="bg-blue-50 p-4 rounded">
               <p className="text-xs text-gray-600 uppercase tracking-wide">Personnalités</p>
@@ -145,16 +155,6 @@ function App() {
 
       <footer className="bg-gray-900 text-gray-300 mt-12">
         <div className="max-w-6xl mx-auto px-4 py-8">
-          <div className="bg-gray-800 rounded p-4 mb-4 text-xs text-gray-400 leading-relaxed">
-            <p>
-              <strong className="text-gray-300">Avertissement :</strong> Ce site est un projet informatif généré et maintenu de manière automatisée
-              à l'aide d'outils d'intelligence artificielle. Toute personne mentionnée est <strong className="text-gray-300">présumée
-              innocente</strong> tant qu'elle n'a pas été déclarée coupable par une décision de justice définitive
-              (art. 9-1 du Code civil). Malgré les vérifications effectuées, des erreurs peuvent subsister.
-              Toute personne concernée peut exercer son <strong className="text-gray-300">droit de rectification</strong> en
-              nous contactant.
-            </p>
-          </div>
           <div className="flex flex-wrap items-center justify-between gap-4">
             <div>
               <p className="text-sm">
