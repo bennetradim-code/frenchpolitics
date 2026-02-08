@@ -7555,12 +7555,27 @@ export const politicians = [
     id: nextId++,
     name: 'Raphaël Arnault',
     party: 'lfi',
-    position: 'Député - La France Insoumise',
-    convictions: 0,
+    position: 'Député du Vaucluse',
+    convictions: 1,
     ongoingCases: 0,
     details: {
-      career: ['Député de la XVIIe législature'],
-      justiceIncidents: []
+      career: [
+        'Député du Vaucluse (2024-)',
+        'Cofondateur de la Jeune Garde Antifasciste (2018)'
+      ],
+      justiceIncidents: [
+        {
+          type: 'Condamnation',
+          date: '2022-02-18',
+          description: 'Condamné à 4 mois de prison avec sursis pour violences volontaires en réunion. En 2021, accompagné d\'un groupe, il avait agressé un jeune homme de 18 ans lors d\'une manifestation identitaire à Lyon (Croix-Rousse). Condamnation devenue définitive après retrait de son appel en 2025.',
+          status: 'Définitif',
+          penalty: '4 mois de prison avec sursis, 1 600 € de dommages et intérêts',
+          sources: [
+            { title: 'Le JDD', url: 'https://www.lejdd.fr/Societe/violences-en-reunion-le-depute-lfi-raphael-arnault-definitivement-condamne-164653' },
+            { title: 'Lyon Capitale', url: 'https://www.lyoncapitale.fr/actualite/lyon-la-condamnation-pour-violences-du-depute-lfi-raphael-arnault-confirmee' }
+          ]
+        }
+      ]
     }
   },
   {
