@@ -1,5 +1,5 @@
-import { useState, useMemo } from 'react'
-import { Routes, Route, Link } from 'react-router-dom'
+import { useState, useMemo, useEffect } from 'react'
+import { Routes, Route, Link, useLocation } from 'react-router-dom'
 import SearchBar from './components/SearchBar'
 import PartyStats from './components/PartyStats'
 import PoliticiansList from './components/PoliticiansList'
@@ -143,9 +143,16 @@ function HomePage() {
   )
 }
 
+function ScrollToTop() {
+  const { pathname } = useLocation()
+  useEffect(() => { window.scrollTo(0, 0) }, [pathname])
+  return null
+}
+
 function App() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/politician/:id" element={<PoliticianDetail />} />
