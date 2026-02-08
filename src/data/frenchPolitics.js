@@ -510,7 +510,7 @@ export const politicians = [
     party: 'udr',
     position: 'Député des Alpes-Maritimes (alliance RN depuis 2024)',
     convictions: 0,
-    ongoingCases: 0,
+    ongoingCases: 3,
     details: {
       birthDate: '1965-09-28',
       birthPlace: 'Nice',
@@ -519,7 +519,35 @@ export const politicians = [
         'Président du conseil départemental des Alpes-Maritimes (2008-2013)',
         'Président de LR (2022-)'
       ],
-      justiceIncidents: []
+      justiceIncidents: [
+        {
+          type: 'Enquête',
+          date: '2024',
+          description: 'Enquête pour détournement de fonds publics concernant l\'utilisation de cartes de stationnement gratuites au port de Nice, fournies par la CCI Nice Côte d\'Azur, lors de la campagne des législatives 2022. Perquisition effectuée au port de Nice en novembre 2024.',
+          status: 'En cours',
+          sources: [
+            { title: 'Éric Ciotti - Enquête détournement de fonds', url: 'https://www.franceinfo.fr/alpes-maritimes/nice-la-permanence-du-depute-eric-ciotti-a-ete-perquisitionnee-dans-le-cadre-d-une-enquete-pour-detournement-de-fonds-publics_6909293.html' }
+          ]
+        },
+        {
+          type: 'Enquête',
+          date: '2024',
+          description: 'Enquête préliminaire sur des soupçons de cumuls d\'emplois au conseil départemental des Alpes-Maritimes bénéficiant à des proches d\'Éric Ciotti.',
+          status: 'En cours',
+          sources: [
+            { title: 'Éric Ciotti - Wikipedia', url: 'https://fr.wikipedia.org/wiki/%C3%89ric_Ciotti' }
+          ]
+        },
+        {
+          type: 'Enquête',
+          date: '2022',
+          description: 'Enquête du Parquet National Financier (PNF) sur les emplois occupés par Caroline Magne, ex-épouse d\'Éric Ciotti.',
+          status: 'En cours',
+          sources: [
+            { title: 'Éric Ciotti - Wikipedia', url: 'https://fr.wikipedia.org/wiki/%C3%89ric_Ciotti' }
+          ]
+        }
+      ]
     }
   },
   {
@@ -943,8 +971,8 @@ export const politicians = [
     name: 'Jean-Luc Mélenchon',
     party: 'lfi',
     position: 'Chef de La France Insoumise',
-    convictions: 0,
-    ongoingCases: 0,
+    convictions: 1,
+    ongoingCases: 2,
     details: {
       birthDate: '1951-08-19',
       birthPlace: 'Tanger (Maroc)',
@@ -954,7 +982,42 @@ export const politicians = [
         'Fondateur de LFI (2016)',
         'Candidat présidentiel (2012, 2017, 2022)'
       ],
-      justiceIncidents: []
+      justiceIncidents: [
+        {
+          type: 'Condamnation',
+          date: '2019-12-09',
+          description: 'Condamné pour actes d\'intimidation envers un magistrat et un dépositaire de l\'autorité publique, rébellion et provocation. Incident lors de la perquisition au siège de LFI le 16 octobre 2018.',
+          charges: ['Intimidation envers magistrat', 'Intimidation envers autorité publique', 'Rébellion', 'Provocation'],
+          penalty: '3 mois de prison avec sursis et 8 000 euros d\'amende',
+          status: 'Condamnation définitive',
+          sources: [
+            { title: 'France Info', url: 'https://www.franceinfo.fr/politique/melenchon/perquisition-mouvementee-a-la-france-insoumise-jean-luc-melenchon-condamne-a-trois-mois-de-prison-avec-sursis-et-8000-euros-d-amende_3737089.html' },
+            { title: 'France 24', url: 'https://www.france24.com/fr/20191209-france-melenchon-condamne-trois-mois-prison-sursis-perquisition-lfi' }
+          ]
+        },
+        {
+          type: 'Enquête préliminaire',
+          date: '2018-04',
+          description: 'Enquête ouverte par le parquet de Paris sur les comptes de campagne présidentielle 2017. Soupçons de surfacturations et d\'abus de confiance. Mise en examen de ses proches (Bastien Lachaud, Marie-Pierre Oprandi, association L\'Ère du peuple en 2021).',
+          charges: ['Surfacturations présumées', 'Abus de confiance', 'Escroquerie aggravée (associés)'],
+          status: 'En cours - Mélenchon lui-même pas mise en examen',
+          sources: [
+            { title: 'Wikipédia', url: 'https://fr.wikipedia.org/wiki/Affaire_des_comptes_de_campagne_de_Jean-Luc_M%C3%A9lenchon_en_2017' },
+            { title: 'Europe 1', url: 'https://www.europe1.fr/politique/comptes-de-campagne-2017-une-association-proche-de-melenchon-et-sa-mandataire-financiere-mis-en-examen-4058975' }
+          ]
+        },
+        {
+          type: 'Enquête (Mise en examen pour injure)',
+          date: '2012',
+          description: 'Mise en examen pour injure publique suite à la plainte de Marine Le Pen en mars 2012. Mélenchon avait qualifié Marine Le Pen de "fasciste" en décembre 2011. Affaire quasi automatique en droit français.',
+          charges: ['Injure publique'],
+          status: 'Procès prévu',
+          sources: [
+            { title: 'Le JDD', url: 'https://www.lejdd.fr/Societe/Jean-Luc-Melenchon-mis-en-examen-pour-injure-publique-apres-une-plainte-de-Marine-Le-Pen-contre-attaque-521248-3212393' },
+            { title: 'France Info', url: 'https://www.franceinfo.fr/politique/jean-luc-melenchon-a-t-il-injurie-marine-le-pen-en-la-traitant-de-fasciste_267787.html' }
+          ]
+        }
+      ]
     }
   },
 
@@ -1150,7 +1213,7 @@ export const politicians = [
     party: 'ensemble',
     position: 'Ancien ministre de la Justice',
     convictions: 0,
-    ongoingCases: 1,
+    ongoingCases: 0,
     details: {
       birthDate: '1961-04-20',
       birthPlace: 'Maubeuge',
@@ -1160,9 +1223,10 @@ export const politicians = [
       ],
       justiceIncidents: [
         {
-          type: 'Mise en examen',
-          date: '2021',
-          description: 'Mise en examen pour prise illégale d\'intérêts (relaxé par la CJR en 2023, mais procédure en cours)',
+          type: 'Relaxe',
+          date: '2023',
+          description: 'Mis en examen en juillet 2021 pour prise illégale d\'intérêts. Accusé d\'avoir utilisé sa fonction de Garde des Sceaux pour régler des comptes avec des magistrats ayant enquêté sur lui comme avocat. Acquitté par la Cour de Justice de la République le 29 novembre 2023.',
+          status: 'Relaxé',
           sources: [
             { title: 'Éric Dupond-Moretti - Wikipedia', url: 'https://fr.wikipedia.org/wiki/%C3%89ric_Dupond-Moretti' }
           ]
@@ -1176,7 +1240,7 @@ export const politicians = [
     party: 'ensemble',
     position: 'Ancien président de l\'Assemblée nationale',
     convictions: 0,
-    ongoingCases: 1,
+    ongoingCases: 0,
     details: {
       birthDate: '1962-10-06',
       birthPlace: 'Rodez',
@@ -1186,11 +1250,42 @@ export const politicians = [
       ],
       justiceIncidents: [
         {
-          type: 'Mise en examen',
-          date: '2019',
-          description: 'Mise en examen pour prise illégale d\'intérêts dans une affaire immobilière des Mutuelles de Bretagne',
+          type: 'Prescription',
+          date: '2022',
+          description: 'Mis en examen en 2019 pour prise illégale d\'intérêts dans une affaire immobilière des Mutuelles de Bretagne. Soupçonné d\'avoir favorisé sa compagne dans une transaction immobilière à Brest. La Cour de cassation a confirmé la prescription le 5 octobre 2022, mettant fin aux poursuites.',
+          status: 'Prescription',
           sources: [
-            { title: 'Richard Ferrand - Wikipedia', url: 'https://fr.wikipedia.org/wiki/Richard_Ferrand' }
+            { title: 'Richard Ferrand - Wikipedia', url: 'https://fr.wikipedia.org/wiki/Richard_Ferrand' },
+            { title: 'Affaire Richard Ferrand - France Info', url: 'https://www.franceinfo.fr/politique/affaire/affaire-richard-ferrand/affaire-richard-ferrand-la-cour-de-cassation-confirme-la-prescription-dans-le-dossier-des-mutuelles-de-bretagne_5399044.html' }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Alexis Kohler',
+    party: 'ensemble',
+    position: 'Ancien Secrétaire général de l\'Élysée',
+    convictions: 0,
+    ongoingCases: 1,
+    details: {
+      birthDate: '1973-02-14',
+      birthPlace: 'Strasbourg',
+      career: [
+        'Secrétaire général de la présidence de la République (2017-2024)',
+        'Directeur de cabinet d\'Emmanuel Macron au ministère de l\'Économie (2014-2016)',
+        'Haut fonctionnaire au ministère des Finances'
+      ],
+      justiceIncidents: [
+        {
+          type: 'Mise en examen',
+          date: '2022',
+          description: 'Mis en examen le 23 septembre 2022 pour prise illégale d\'intérêts et trafic d\'influence. Soupçonné de conflit d\'intérêts avec la compagnie maritime MSC (Mediterranean Shipping Company), détenue par les cousins de sa mère (famille Aponte). Accusé d\'avoir participé à 8 réunions concernant MSC sans déclarer ses liens familiaux. Renvoyé en procès par la cour d\'appel de Paris en novembre 2024.',
+          status: 'Renvoyé en procès',
+          sources: [
+            { title: 'Alexis Kohler - Wikipedia', url: 'https://fr.wikipedia.org/wiki/Alexis_Kohler' },
+            { title: 'Alexis Kohler mis en examen - France 24', url: 'https://www.france24.com/en/france/20221003-macron-s-top-adviser-placed-under-formal-investigation-for-conflict-of-interest' }
           ]
         }
       ]
@@ -2952,7 +3047,7 @@ export const politicians = [
     party: 'ps',
     position: 'Ancien Directeur général du FMI',
     convictions: 0,
-    ongoingCases: 0,
+    ongoingCases: 1,
     details: {
       birthDate: '1949-04-25',
       birthPlace: 'Neuilly-sur-Seine',
@@ -2973,6 +3068,15 @@ export const politicians = [
           ]
         },
         {
+          type: 'Classement',
+          date: '2011',
+          description: 'Plainte de Tristane Banon pour tentative de viol en 2002. Enquête ouverte en juillet 2011, classée sans suite pour prescription et insuffisance de preuves.',
+          status: 'Classé sans suite',
+          sources: [
+            { title: 'Tristane Banon - Wikipedia', url: 'https://fr.wikipedia.org/wiki/Tristane_Banon' }
+          ]
+        },
+        {
           type: 'Relaxe',
           date: '2015',
           description: 'Acquitté du chef de proxénétisme aggravé dans l\'affaire du Carlton de Lille.',
@@ -2980,6 +3084,24 @@ export const politicians = [
           sources: [
             { title: 'Dominique Strauss-Kahn - Wikipedia', url: 'https://fr.wikipedia.org/wiki/Dominique_Strauss-Kahn' },
             { title: 'Affaire du Carlton de Lille - Wikipedia', url: 'https://fr.wikipedia.org/wiki/Affaire_du_Carlton_de_Lille' }
+          ]
+        },
+        {
+          type: 'Relaxe',
+          date: '2001',
+          description: 'Mis en examen dans l\'affaire Elf Aquitaine pour complicité et recel d\'abus de biens sociaux. Acquitté en novembre 2001.',
+          status: 'Relaxé',
+          sources: [
+            { title: 'Affaire Elf - Wikipedia', url: 'https://fr.wikipedia.org/wiki/Affaire_Elf' }
+          ]
+        },
+        {
+          type: 'Enquête',
+          date: '2021',
+          description: 'Enquête préliminaire du Parquet National Financier (PNF) pour blanchiment de fraude fiscale aggravée, dans le cadre des révélations des Pandora Papers. Soupçons de montages financiers via des sociétés au Maroc et aux Émirats arabes unis.',
+          status: 'En cours',
+          sources: [
+            { title: 'Pandora Papers - DSK - ICIJ', url: 'https://www.icij.org/investigations/pandora-papers/former-imf-boss-strauss-kahn-mired-in-french-investigation-sparked-by-pandora-papers-revelations/' }
           ]
         }
       ]
@@ -3273,7 +3395,7 @@ export const politicians = [
     party: 'modem',
     position: 'Premier ministre, Président du MoDem',
     convictions: 0,
-    ongoingCases: 1,
+    ongoingCases: 0,
     details: {
       birthDate: '1951-05-25',
       birthPlace: 'Bordères',
@@ -3287,10 +3409,10 @@ export const politicians = [
       ],
       justiceIncidents: [
         {
-          type: 'Mise en examen',
-          date: '2019',
-          description: 'Mis en examen pour complicité de détournement de fonds publics dans l\'affaire des assistants parlementaires du MoDem au Parlement européen. Soupçons d\'emplois fictifs d\'assistants européens affectés à des tâches nationales.',
-          status: 'Renvoyé en procès',
+          type: 'Relaxe',
+          date: '2024',
+          description: 'Poursuivi pour complicité de détournement de fonds publics dans l\'affaire des assistants parlementaires du MoDem au Parlement européen. Soupçons d\'emplois fictifs d\'assistants européens affectés à des tâches nationales. Relaxé « au bénéfice du doute » par le tribunal correctionnel de Paris le 5 février 2024.',
+          status: 'Relaxé',
           sources: [
             { title: 'François Bayrou - Wikipedia', url: 'https://fr.wikipedia.org/wiki/Fran%C3%A7ois_Bayrou' },
             { title: 'Affaire des assistants parlementaires du MoDem - Wikipedia', url: 'https://fr.wikipedia.org/wiki/Affaire_des_assistants_parlementaires_du_MoDem' }
@@ -3386,6 +3508,15 @@ export const politicians = [
           sources: [
             { title: 'Éric Woerth - Wikipedia', url: 'https://fr.wikipedia.org/wiki/%C3%89ric_Woerth' },
             { title: 'Affaire Woerth-Bettencourt - Wikipedia', url: 'https://fr.wikipedia.org/wiki/Affaire_Woerth-Bettencourt' }
+          ]
+        },
+        {
+          type: 'Relaxe',
+          date: '2025',
+          description: 'Poursuivi pour complicité de financement illégal de campagne électorale dans l\'affaire du financement libyen de la campagne présidentielle de Nicolas Sarkozy en 2007. Relaxé par le tribunal correctionnel de Paris en septembre 2025.',
+          status: 'Relaxé',
+          sources: [
+            { title: 'Affaire du financement libyen - France 3', url: 'https://france3-regions.franceinfo.fr/hauts-de-france/oise/soupcons-de-financement-libyen-eric-woerth-depute-de-l-oise-et-ancien-ministre-du-budget-relaxe-3222758.html' }
           ]
         }
       ]
