@@ -205,6 +205,37 @@ export const politicians = [
   },
   {
     id: nextId++,
+    name: 'Nicolas Bay',
+    party: 'rn',
+    position: 'Ancien eurodéputé RN puis Reconquête',
+    convictions: 1,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1977-05-14',
+      birthPlace: 'Chambray-lès-Tours',
+      career: [
+        'Député européen (2014-2024)',
+        'Vice-président du FN/RN (2014-2022)',
+        'Conseiller régional de Normandie (2021-2025)',
+        'Secrétaire général de Reconquête (2022-)'
+      ],
+      justiceIncidents: [
+        {
+          type: 'Condamnation (première instance)',
+          date: '2025-03',
+          description: 'Condamné pour détournement de fonds publics dans l\'affaire des assistants parlementaires du Front national au Parlement européen. Accusé d\'avoir employé fictivement Timothée Houssin comme assistant parlementaire européen alors que celui-ci travaillait pour le parti en France.',
+          penalty: '12 mois de prison dont 6 mois ferme sous bracelet électronique, 8 000 € d\'amende, 3 ans d\'inéligibilité avec exécution provisoire',
+          status: 'Appel en cours - verdict attendu été 2026',
+          sources: [
+            { title: 'Affaire des assistants parlementaires du FN - Wikipedia', url: 'https://fr.wikipedia.org/wiki/Affaire_des_assistants_parlementaires_du_Front_national_au_Parlement_europ%C3%A9en' },
+            { title: 'Nicolas Bay condamné - France Bleu', url: 'https://www.francebleu.fr/infos/faits-divers-justice/proces-des-assistants-d-eurodeputes-rn-les-normands-timothee-houssin-nicolas-bay-et-thierry-legier-condamnes-1943856' }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    id: nextId++,
     name: 'Jordan Bardella',
     party: 'rn',
     position: 'Président du RN',
