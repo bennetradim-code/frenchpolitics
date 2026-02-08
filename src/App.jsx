@@ -2,7 +2,6 @@ import { useState, useMemo, useEffect } from 'react'
 import { Routes, Route, Link, useLocation } from 'react-router-dom'
 import SearchBar from './components/SearchBar'
 import PartyStats from './components/PartyStats'
-import PoliticiansList from './components/PoliticiansList'
 import PartyCard from './components/PartyCard'
 import PoliticianDetail from './components/PoliticianDetail'
 import PartyDetail from './components/PartyDetail'
@@ -13,32 +12,7 @@ import './index.css'
 function HomePage() {
   const [searchTerm, setSearchTerm] = useState('')
   const [selectedParty, setSelectedParty] = useState(null)
-  const [showParties, setShowParties] = useState(false)
   const [politicians] = useState(() => politiciansData.filter(p => !p.deceased))
-
-  const isSearching = searchTerm.length > 0 || selectedParty !== null
-
-  const filteredPoliticians = useMemo(() => {
-    let result = politicians.filter(p => {
-      const matchesSearch = p.name.toLowerCase().includes(searchTerm.toLowerCase())
-      const matchesParty = !selectedParty || p.party === selectedParty
-      return matchesSearch && matchesParty
-    })
-
-    // Sort by most implicated (convictions + ongoing cases)
-    result = [...result].sort((a, b) => {
-      const scoreA = a.convictions * 2 + a.ongoingCases
-      const scoreB = b.convictions * 2 + b.ongoingCases
-      return scoreB - scoreA
-    })
-
-    // Show only top 20 unless user is searching/filtering
-    if (!isSearching) {
-      result = result.slice(0, 20)
-    }
-
-    return result
-  }, [searchTerm, selectedParty, politicians, isSearching])
 
   const visibleParties = useMemo(() => {
     return partiesData.filter(party =>
@@ -98,46 +72,20 @@ function HomePage() {
       <main className="max-w-6xl mx-auto px-4 py-8">
         <SearchBar searchTerm={searchTerm} onSearchChange={setSearchTerm} politicians={politicians} />
 
-        <div className="mb-8">
-          <button
-            onClick={() => setShowParties(!showParties)}
-            style={{
-              backgroundColor: '#2563eb',
-              color: '#ffffff',
-              padding: '12px 24px',
-              borderRadius: '8px',
-              border: 'none',
-              fontWeight: 'bold',
-              fontSize: '16px',
-              cursor: 'pointer',
-              boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
-              transition: 'background-color 0.2s'
-            }}
-            onMouseEnter={(e) => e.target.style.backgroundColor = '#1d4ed8'}
-            onMouseLeave={(e) => e.target.style.backgroundColor = '#2563eb'}
-          >
-            {showParties ? 'Masquer les partis politiques' : 'Afficher les partis politiques'}
-          </button>
-        </div>
-
-        {showParties && (
-          <div className="mb-12">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">Partis Politiques Français</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {visibleParties.map(party => (
-                <PartyCard key={party.id} party={party} />
-              ))}
-            </div>
-          </div>
-        )}
-
         <PartyStats
           politicians={politicians}
           selectedParty={selectedParty}
           onPartySelect={setSelectedParty}
         />
 
-        <PoliticiansList politicians={filteredPoliticians} isSearching={isSearching} totalCount={politicians.length} />
+        <div className="mb-12">
+          <h2 className="text-2xl font-bold text-gray-900 mb-6">Partis Politiques Français</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {visibleParties.map(party => (
+              <PartyCard key={party.id} party={party} />
+            ))}
+          </div>
+        </div>
       </main>
     </>
   )
