@@ -11,7 +11,6 @@ import './index.css'
 
 function HomePage() {
   const [searchTerm, setSearchTerm] = useState('')
-  const [selectedParty, setSelectedParty] = useState(null)
   const [politicians] = useState(() => politiciansData.filter(p => !p.deceased))
 
   const visibleParties = useMemo(() => {
@@ -72,11 +71,7 @@ function HomePage() {
       <main className="max-w-6xl mx-auto px-4 py-8">
         <SearchBar searchTerm={searchTerm} onSearchChange={setSearchTerm} politicians={politicians} />
 
-        <PartyStats
-          politicians={politicians}
-          selectedParty={selectedParty}
-          onPartySelect={setSelectedParty}
-        />
+        <PartyStats politicians={politicians} />
 
         <div className="mb-12">
           <h2 className="text-2xl font-bold text-gray-900 mb-6">Partis Politiques Français</h2>

@@ -9,7 +9,7 @@ const INCIDENT_TYPES = [
   { key: 'misesEnExamen', label: 'Mises en examen', color: '#7C3AED' }
 ]
 
-export default function PartyStats({ politicians, selectedParty, onPartySelect }) {
+export default function PartyStats({ politicians }) {
   const [activeFilters, setActiveFilters] = useState(
     INCIDENT_TYPES.reduce((acc, t) => ({ ...acc, [t.key]: true }), {})
   )
@@ -219,35 +219,6 @@ export default function PartyStats({ politicians, selectedParty, onPartySelect }
         })()}
       </div>
 
-      {/* Party Selection */}
-      <div className="bg-white rounded-lg shadow p-6">
-        <h3 className="text-lg font-semibold text-gray-800 mb-4">Filtrer par parti</h3>
-        <div className="flex flex-wrap gap-3">
-          <button
-            onClick={() => onPartySelect(null)}
-            className={`px-4 py-2 rounded font-medium transition ${
-              !selectedParty
-                ? 'bg-blue-500 text-white'
-                : 'bg-gray-200 text-gray-800 hover:bg-gray-300'
-            }`}
-          >
-            Tous les partis
-          </button>
-          {[...partyStats].sort((a, b) => a.partyName.localeCompare(b.partyName, 'fr')).map(stat => (
-            <button
-              key={stat.partyId}
-              onClick={() => onPartySelect(stat.partyId)}
-              style={{
-                backgroundColor: selectedParty === stat.partyId ? stat.color : '#e5e7eb',
-                color: selectedParty === stat.partyId ? 'white' : '#1f2937'
-              }}
-              className="px-4 py-2 rounded font-medium transition hover:opacity-80"
-            >
-              {stat.partyName.split('(')[0].trim()} ({stat.count})
-            </button>
-          ))}
-        </div>
-      </div>
     </div>
   )
 }
