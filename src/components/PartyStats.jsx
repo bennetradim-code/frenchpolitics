@@ -5,9 +5,8 @@ import { computeSeverityScore } from '../utils/severityScore'
 
 const INCIDENT_TYPES = [
   { key: 'convictions', label: 'Condamnations', color: '#DC2626' },
-  { key: 'ongoingCases', label: 'Affaires en cours', color: '#EA580C' },
-  { key: 'enquetes', label: 'Enquêtes', color: '#0284C7' },
-  { key: 'misesEnExamen', label: 'Mises en examen', color: '#7C3AED' }
+  { key: 'misesEnExamen', label: 'Mises en examen', color: '#7C3AED' },
+  { key: 'enquetes', label: 'Enquêtes', color: '#0284C7' }
 ]
 
 export default function PartyStats({ politicians }) {
@@ -47,7 +46,6 @@ export default function PartyStats({ politicians }) {
         color: partyObj?.color || '#999',
         count: partyPols.length,
         convictions: partyPols.reduce((sum, p) => sum + p.convictions, 0),
-        ongoingCases: partyPols.reduce((sum, p) => sum + p.ongoingCases, 0),
         enquetes,
         misesEnExamen
       }
@@ -155,7 +153,6 @@ export default function PartyStats({ politicians }) {
 
         {(() => {
           const showConvictions = activeFilters.convictions
-          const showOngoing = activeFilters.ongoingCases
           const showEnquetes = activeFilters.enquetes
           const showMEX = activeFilters.misesEnExamen
 
@@ -174,15 +171,10 @@ export default function PartyStats({ politicians }) {
                 if (incidents.some(inc => (inc.type || '').includes('Enquête') || (inc.type || '').includes('Accusation'))) { counts.enquete++; return }
               })
 
-              // "Affaires en cours" subsumes MEX + Enquêtes to avoid double counting
               let involved = 0
               if (showConvictions) involved += counts.convicted
-              if (showOngoing) {
-                involved += counts.mex + counts.enquete
-              } else {
-                if (showMEX) involved += counts.mex
-                if (showEnquetes) involved += counts.enquete
-              }
+              if (showMEX) involved += counts.mex
+              if (showEnquetes) involved += counts.enquete
               const clean = total - involved
               const abbr = s.partyName.match(/\(([^)]+)\)/)?.[1] || s.partyName.split('(')[0].trim()
 
@@ -194,23 +186,18 @@ export default function PartyStats({ politicians }) {
                 pctClean: +(clean / total * 100).toFixed(1)
               }
               if (showConvictions) entry.pctConvictions = +(counts.convicted / total * 100).toFixed(1)
-              if (showOngoing) {
-                entry.pctOngoing = +((counts.mex + counts.enquete) / total * 100).toFixed(1)
-              } else {
-                if (showMEX) entry.pctMEX = +(counts.mex / total * 100).toFixed(1)
-                if (showEnquetes) entry.pctEnquetes = +(counts.enquete / total * 100).toFixed(1)
-              }
+              if (showMEX) entry.pctMEX = +(counts.mex / total * 100).toFixed(1)
+              if (showEnquetes) entry.pctEnquetes = +(counts.enquete / total * 100).toFixed(1)
               return entry
             })
             .sort((a, b) => b.convictions - a.convictions)
 
-          const hasAnyFilter = showConvictions || showOngoing || showEnquetes || showMEX
+          const hasAnyFilter = showConvictions || showEnquetes || showMEX
 
           const ratioBars = [
             { key: 'pctConvictions', label: 'Condamnés', color: '#DC2626', show: showConvictions },
-            { key: 'pctOngoing', label: 'Affaires en cours', color: '#EA580C', show: showOngoing },
-            { key: 'pctEnquetes', label: 'Enquêtes', color: '#0284C7', show: showEnquetes && !showOngoing },
-            { key: 'pctMEX', label: 'Mises en examen', color: '#7C3AED', show: showMEX && !showOngoing }
+            { key: 'pctMEX', label: 'Mises en examen', color: '#7C3AED', show: showMEX },
+            { key: 'pctEnquetes', label: 'Enquêtes', color: '#0284C7', show: showEnquetes }
           ].filter(b => b.show)
 
           return hasAnyFilter ? (
