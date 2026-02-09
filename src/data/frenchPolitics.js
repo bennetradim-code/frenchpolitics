@@ -168,8 +168,8 @@ export const politicians = [
     name: 'Marine Le Pen',
     party: 'rn',
     position: 'Présidente du RN',
-    convictions: 0,
-    ongoingCases: 2,
+    convictions: 1,
+    ongoingCases: 1,
     details: {
       birthDate: '1968-12-05',
       birthPlace: 'Neuilly-sur-Seine',
@@ -180,18 +180,25 @@ export const politicians = [
         'Présidente du RN (2018-)'
       ],
       justiceIncidents: [
-        { 
-          type: 'Enquête', 
-          date: '2022', 
+        {
+          type: 'Condamnation',
+          date: '2018',
+          description: 'Condamnée pour diffusion d\'images violentes. En décembre 2015, elle publie sur Twitter des photos d\'exécutions de Daech. Relaxée en première instance, condamnée en appel à 300€ d\'amende, confirmé en cassation.',
+          penalty: '300€ d\'amende',
+          status: 'Condamnation définitive'
+        },
+        {
+          type: 'Enquête',
+          date: '2022',
           description: 'Enquête sur le détournement de fonds de campagne européenne (13,4 M€)',
           sources: [
             { title: 'Marine Le Pen - Wikipedia', url: 'https://fr.wikipedia.org/wiki/Marine_Le_Pen' },
             { title: 'Affaire financement RN - Le Monde', url: 'https://www.lemonde.fr' }
           ]
         },
-        { 
-          type: 'Condamnation (première instance)', 
-          date: '2025-03', 
+        {
+          type: 'Condamnation (première instance)',
+          date: '2025-03',
           description: 'Condamnée pour détournement de deniers publics et emplois fictifs au Parlement européen. Affaire des assistants parlementaires du Front national.',
           penalty: '4 ans de prison (2 ferme), 5 ans d\'inéligibilité avec exécution provisoire',
           status: 'Procès en appel en cours depuis janvier 2026',
@@ -208,7 +215,7 @@ export const politicians = [
     name: 'Nicolas Bay',
     party: 'rn',
     position: 'Ancien eurodéputé RN puis Reconquête',
-    convictions: 1,
+    convictions: 0,
     ongoingCases: 0,
     details: {
       birthDate: '1977-05-14',
@@ -256,8 +263,8 @@ export const politicians = [
     name: 'Louis Aliot',
     party: 'rn',
     position: 'Maire de Perpignan',
-    convictions: 1,
-    ongoingCases: 1,
+    convictions: 0,
+    ongoingCases: 0,
     details: {
       birthDate: '1969-09-04',
       birthPlace: 'Toulouse',
@@ -294,7 +301,15 @@ export const politicians = [
         'Député du Nord (2017-)',
         'Vice-président de l\'Assemblée nationale (2022-)'
       ],
-      justiceIncidents: []
+      justiceIncidents: [
+        {
+          type: 'Condamnation (première instance)',
+          date: '2025-03-31',
+          description: 'Condamné dans l\'affaire des assistants parlementaires du FN au Parlement européen pour détournement de fonds publics.',
+          penalty: '1 an de prison avec sursis, 2 ans d\'inéligibilité',
+          status: 'Appel en cours'
+        }
+      ]
     }
   },
   {
@@ -311,7 +326,15 @@ export const politicians = [
         'Porte-parole du RN',
         'Députée du Var (2022-)'
       ],
-      justiceIncidents: []
+      justiceIncidents: [
+        {
+          type: 'Condamnation (première instance)',
+          date: '2025-03-31',
+          description: 'Condamnée dans l\'affaire des assistants parlementaires du FN au Parlement européen. Employée fictivement comme assistante parlementaire.',
+          penalty: 'Peine avec sursis',
+          status: 'Appel en cours'
+        }
+      ]
     }
   },
   {
@@ -319,8 +342,8 @@ export const politicians = [
     name: 'Bruno Gollnisch',
     party: 'rn',
     position: 'Ancien député européen',
-    convictions: 2,
-    ongoingCases: 1,
+    convictions: 0,
+    ongoingCases: 0,
     details: {
       birthDate: '1950-01-14',
       birthPlace: 'Neuilly-sur-Seine',
@@ -331,11 +354,11 @@ export const politicians = [
       ],
       justiceIncidents: [
         {
-          type: 'Condamnation',
-          date: '2007',
-          description: 'Condamné pour contestation de crimes contre l\'humanité et apologie du nazisme. Jugement annulé en appel et en cassation.',
-          penalty: 'Amende (cassé)',
-          status: 'Cassation - Relaxé',
+          type: 'Relaxe',
+          date: '2010',
+          description: 'Condamné en première instance en 2007 pour contestation de crimes contre l\'humanité. Relaxé en appel en 2009, confirmé en cassation en 2010.',
+          penalty: 'Néant (relaxé)',
+          status: 'Relaxé définitivement',
           sources: [
             { title: 'Bruno Gollnisch - Wikipedia', url: 'https://fr.wikipedia.org/wiki/Bruno_Gollnisch' }
           ]
@@ -359,7 +382,7 @@ export const politicians = [
     name: 'Steeve Briois',
     party: 'rn',
     position: 'Maire d\'Hénin-Beaumont',
-    convictions: 0,
+    convictions: 1,
     ongoingCases: 0,
     details: {
       birthDate: '1972-01-28',
@@ -369,7 +392,15 @@ export const politicians = [
         'Secrétaire général du RN',
         'Député européen (2014-2019)'
       ],
-      justiceIncidents: []
+      justiceIncidents: [
+        {
+          type: 'Condamnation',
+          date: '2014',
+          description: 'Condamné définitivement pour injure publique envers un élu socialiste d\'Hénin-Beaumont.',
+          penalty: '3 000€ d\'amende',
+          status: 'Condamnation définitive'
+        }
+      ]
     }
   },
   {
@@ -394,8 +425,8 @@ export const politicians = [
     name: 'Julien Odoul',
     party: 'rn',
     position: 'Député de l\'Yonne',
-    convictions: 1,
-    ongoingCases: 1,
+    convictions: 0,
+    ongoingCases: 0,
     details: {
       birthDate: '1985-08-12',
       birthPlace: 'Auxerre',
@@ -494,11 +525,11 @@ export const politicians = [
       ],
       justiceIncidents: [
         {
-          type: 'Condamnation (appel)',
-          date: '2025-06',
-          description: 'Condamné en appel pour détournement de fonds publics. Affaire des emplois fictifs: son épouse Penelope Fillon a perçu plus de 900 000€ pour un travail inexistant en tant qu\'assistante parlementaire. Son épouse également condamnée.',
-          penalty: '5 ans d\'inéligibilité, 375 000€ d\'amende, remboursement de 800 000€ à l\'Assemblée nationale',
-          status: 'Condamné en appel (exécutoire)',
+          type: 'Condamnation',
+          date: '2024-04',
+          description: 'Condamné définitivement pour détournement de fonds publics. Affaire des emplois fictifs : son épouse Penelope Fillon a perçu plus de 900 000€ pour un travail inexistant en tant qu\'assistante parlementaire. Condamné en première instance (2020), confirmé en appel (2021), pourvoi en cassation rejeté (2024).',
+          penalty: '4 ans de prison (1 an ferme sous bracelet électronique), 375 000€ d\'amende, 10 ans d\'inéligibilité',
+          status: 'Condamnation définitive',
           sources: [
             { title: 'François Fillon - Wikipedia', url: 'https://fr.wikipedia.org/wiki/Fran%C3%A7ois_Fillon' },
             { title: 'Affaire Fillon - Wikipedia', url: 'https://fr.wikipedia.org/wiki/Affaire_Fillon' }
@@ -659,7 +690,7 @@ export const politicians = [
     party: 'lr',
     position: 'Maire de Meaux',
     convictions: 0,
-    ongoingCases: 0,
+    ongoingCases: 1,
     details: {
       birthDate: '1964-05-05',
       birthPlace: 'Boulogne-Billancourt',
@@ -668,7 +699,21 @@ export const politicians = [
         'Président de l\'UMP (2012-2014)',
         'Maire de Meaux (1995-)'
       ],
-      justiceIncidents: []
+      justiceIncidents: [
+        {
+          type: 'Mise en examen',
+          date: '2015',
+          description: 'Mis en examen dans l\'affaire Bygmalion pour abus de confiance et financement illégal de la campagne présidentielle de Nicolas Sarkozy en 2012.',
+          status: 'En cours'
+        },
+        {
+          type: 'Condamnation (première instance)',
+          date: '2024',
+          description: 'Condamné en première instance dans l\'affaire Bygmalion.',
+          penalty: '1 an de prison avec sursis',
+          status: 'Appel probable'
+        }
+      ]
     }
   },
   {
@@ -1003,7 +1048,7 @@ export const politicians = [
     party: 'lfi',
     position: 'Chef de La France Insoumise',
     convictions: 1,
-    ongoingCases: 1,
+    ongoingCases: 0,
     details: {
       birthDate: '1951-08-19',
       birthPlace: 'Tanger (Maroc)',
@@ -1027,11 +1072,11 @@ export const politicians = [
           ]
         },
         {
-          type: 'Enquête (Mise en examen pour injure)',
-          date: '2012',
-          description: 'Mise en examen pour injure publique suite à la plainte de Marine Le Pen en mars 2012. Mélenchon avait qualifié Marine Le Pen de "fasciste" en décembre 2011. Affaire quasi automatique en droit français.',
+          type: 'Relaxe',
+          date: '2014',
+          description: 'Poursuivi pour injure publique suite à la plainte de Marine Le Pen en 2012 (il l\'avait qualifiée de "fasciste"). Relaxé par le tribunal correctionnel de Paris en 2014.',
           charges: ['Injure publique'],
-          status: 'Procès prévu',
+          status: 'Relaxé',
           sources: [
             { title: 'Le JDD', url: 'https://www.lejdd.fr/Societe/Jean-Luc-Melenchon-mis-en-examen-pour-injure-publique-apres-une-plainte-de-Marine-Le-Pen-contre-attaque-521248-3212393' },
             { title: 'France Info', url: 'https://www.franceinfo.fr/politique/jean-luc-melenchon-a-t-il-injurie-marine-le-pen-en-la-traitant-de-fasciste_267787.html' }
@@ -1318,7 +1363,7 @@ export const politicians = [
     party: 'ensemble',
     position: 'Ancien Premier ministre',
     convictions: 0,
-    ongoingCases: 0,
+    ongoingCases: 1,
     details: {
       birthDate: '1970-11-28',
       birthPlace: 'Rouen',
@@ -1327,7 +1372,14 @@ export const politicians = [
         'Premier ministre (2017-2020)',
         'Fondateur d\'Horizons (2021)'
       ],
-      justiceIncidents: []
+      justiceIncidents: [
+        {
+          type: 'Mise en examen',
+          date: '2023',
+          description: 'Mis en examen par la CJR pour abstention de combattre un sinistre dans la gestion de la crise Covid-19 (stocks de masques, retard des mesures).',
+          status: 'En cours'
+        }
+      ]
     }
   },
   {
@@ -1536,6 +1588,67 @@ export const politicians = [
       justiceIncidents: []
     }
   },
+  {
+    id: nextId++,
+    name: 'Jean-Vincent Place',
+    party: 'ecolo',
+    position: 'Ancien sénateur, ancien secrétaire d\'État à la Réforme de l\'État (2016-2017)',
+    convictions: 1,
+    ongoingCases: 0,
+    details: {
+      career: [
+        'Sénateur de l\'Essonne (2011-2017)',
+        'Secrétaire d\'État à la Réforme de l\'État (2016-2017)'
+      ],
+      justiceIncidents: [
+        {
+          type: 'Condamnation',
+          date: '2020',
+          description: 'Condamné définitivement pour conduite en état d\'ivresse (interpellé en 2018 avec 1,54 g/l d\'alcool).',
+          penalty: 'Amende',
+          status: 'Condamnation définitive',
+          sources: [
+            { title: 'Jean-Vincent Placé - Wikipedia', url: 'https://fr.wikipedia.org/wiki/Jean-Vincent_Plac%C3%A9' }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Denis Baupin',
+    party: 'ecolo',
+    position: 'Ancien vice-président de l\'Assemblée nationale, ancien adjoint au maire de Paris',
+    convictions: 1,
+    ongoingCases: 0,
+    details: {
+      career: [
+        'Adjoint au maire de Paris chargé du développement durable (2001-2014)',
+        'Vice-président de l\'Assemblée nationale (2012-2016)'
+      ],
+      justiceIncidents: [
+        {
+          type: 'Classement',
+          date: '2017',
+          description: 'Accusé de harcèlement et agression sexuelle par plusieurs femmes. Classé sans suite pour prescription.',
+          status: 'Classé sans suite',
+          sources: [
+            { title: 'Denis Baupin - Wikipedia', url: 'https://fr.wikipedia.org/wiki/Denis_Baupin' }
+          ]
+        },
+        {
+          type: 'Condamnation',
+          date: '2019',
+          description: 'Condamné pour procédure abusive après avoir attaqué en diffamation les femmes qui l\'avaient accusé.',
+          penalty: 'Amende',
+          status: 'Condamnation définitive',
+          sources: [
+            { title: 'Denis Baupin - Wikipedia', url: 'https://fr.wikipedia.org/wiki/Denis_Baupin' }
+          ]
+        }
+      ]
+    }
+  },
 
   {
     id: nextId++,
@@ -1623,6 +1736,31 @@ export const politicians = [
         'Sénateur de Paris (2023-)'
       ],
       justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Maxime Gremetz',
+    party: 'pcf',
+    position: 'Ancien député PCF de la Somme (1978-2012)',
+    convictions: 1,
+    ongoingCases: 0,
+    details: {
+      career: [
+        'Député de la Somme (1978-2012)'
+      ],
+      justiceIncidents: [
+        {
+          type: 'Condamnation',
+          date: '2014',
+          description: 'Condamné définitivement pour violences sur un huissier de justice.',
+          penalty: 'Amende',
+          status: 'Condamnation définitive',
+          sources: [
+            { title: 'Maxime Gremetz - Wikipedia', url: 'https://fr.wikipedia.org/wiki/Maxime_Gremetz' }
+          ]
+        }
+      ]
     }
   },
 
@@ -1830,7 +1968,7 @@ export const politicians = [
     name: 'Frédéric Péchenard',
     party: 'lr',
     position: 'Vice-président des Républicains',
-    convictions: 1,
+    convictions: 0,
     ongoingCases: 0,
     details: {
       birthDate: '1960-03-22',
@@ -1843,7 +1981,7 @@ export const politicians = [
       ],
       justiceIncidents: [
         {
-          type: 'Mise en examen/Classement',
+          type: 'Prescription',
           date: '2019-2021',
           description: 'Enquêtes pour abus de bien social et blanchiment de fraude. Procédures judiciaires relatives à des dépenses de campagne électorale contestées.',
           status: 'Classée pour prescription',
@@ -2248,7 +2386,7 @@ export const politicians = [
     party: 'ps',
     position: 'Ancien président du groupe PS',
     convictions: 0,
-    ongoingCases: 1,
+    ongoingCases: 0,
     details: {
       birthDate: '1960-05-21',
       birthPlace: 'Rennes',
@@ -2935,7 +3073,7 @@ export const politicians = [
     party: 'lr',
     position: 'Présidente de la Région Île-de-France',
     convictions: 0,
-    ongoingCases: 0,
+    ongoingCases: 1,
     details: {
       birthDate: '1967-07-14',
       birthPlace: 'Neuilly-sur-Seine',
@@ -2945,7 +3083,14 @@ export const politicians = [
         'Présidente de la Région Île-de-France (2015-)',
         'Candidate à l\'élection présidentielle (2022)'
       ],
-      justiceIncidents: []
+      justiceIncidents: [
+        {
+          type: 'Mise en examen',
+          date: '2024',
+          description: 'Mise en examen par le PNF pour financement illégal de sa campagne présidentielle 2022 (dépassement du plafond de dépenses).',
+          status: 'En cours'
+        }
+      ]
     }
   },
 
@@ -3392,6 +3537,115 @@ export const politicians = [
           sources: [
             { title: 'Laurent Fabius - Wikipedia', url: 'https://fr.wikipedia.org/wiki/Laurent_Fabius' },
             { title: 'Affaire du sang contaminé - Wikipedia', url: 'https://fr.wikipedia.org/wiki/Affaire_du_sang_contamin%C3%A9' }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Jean-Christophe Cambadélis',
+    party: 'ps',
+    position: 'Ancien premier secrétaire du PS, ancien député de Paris',
+    convictions: 1,
+    ongoingCases: 0,
+    details: {
+      career: [
+        'Député de Paris (1988-2017)',
+        'Premier secrétaire du Parti socialiste (2014-2017)'
+      ],
+      justiceIncidents: [
+        {
+          type: 'Condamnation',
+          date: '2006',
+          description: 'Condamné définitivement pour recel d\'abus de biens sociaux dans l\'affaire de la MNEF. Avait bénéficié d\'un emploi fictif à la mutuelle étudiante entre 1991 et 1995.',
+          penalty: '6 mois de prison avec sursis',
+          status: 'Condamnation définitive',
+          sources: [
+            { title: 'Jean-Christophe Cambadélis - Wikipedia', url: 'https://fr.wikipedia.org/wiki/Jean-Christophe_Cambad%C3%A9lis' }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Jean-Pierre Kucheida',
+    party: 'ps',
+    position: 'Ancien député du Pas-de-Calais (1988-2012), ancien maire de Liévin',
+    convictions: 1,
+    ongoingCases: 0,
+    details: {
+      career: [
+        'Député du Pas-de-Calais (1988-2012)',
+        'Maire de Liévin (1992-2014)',
+        'Président de la communauté d\'agglomération de Lens-Liévin'
+      ],
+      justiceIncidents: [
+        {
+          type: 'Condamnation',
+          date: '2014',
+          description: 'Condamné pour détournement de fonds publics. Avait utilisé les fonds de la communauté d\'agglomération de Lens-Liévin pour des voyages personnels.',
+          penalty: '3 ans de prison dont 18 mois ferme, 100 000€ d\'amende',
+          status: 'Condamnation définitive',
+          sources: [
+            { title: 'Jean-Pierre Kucheida - Wikipedia', url: 'https://fr.wikipedia.org/wiki/Jean-Pierre_Kucheida' }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Michel Delebarre',
+    party: 'ps',
+    position: 'Ancien ministre (Travail, Transports, Ville sous Mitterrand), ancien maire de Dunkerque, ancien sénateur',
+    convictions: 1,
+    ongoingCases: 0,
+    deceased: true,
+    details: {
+      career: [
+        'Ministre du Travail (1988-1990)',
+        'Ministre des Transports (1990-1991)',
+        'Ministre de la Ville (1991-1992)',
+        'Maire de Dunkerque (1989-2014)',
+        'Sénateur du Nord (2014-2017)'
+      ],
+      justiceIncidents: [
+        {
+          type: 'Condamnation',
+          date: '2017',
+          description: 'Condamné pour non-déclaration de patrimoine auprès de la HATVP.',
+          penalty: '2 500€ d\'amende',
+          status: 'Condamnation définitive',
+          sources: [
+            { title: 'Michel Delebarre - Wikipedia', url: 'https://fr.wikipedia.org/wiki/Michel_Delebarre' }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Patrick Mennucci',
+    party: 'ps',
+    position: 'Ancien député des Bouches-du-Rhône',
+    convictions: 1,
+    ongoingCases: 0,
+    details: {
+      career: [
+        'Député des Bouches-du-Rhône (2012-2017)',
+        'Conseiller municipal de Marseille'
+      ],
+      justiceIncidents: [
+        {
+          type: 'Condamnation',
+          date: '2017',
+          description: 'Condamné pour favoritisme dans l\'attribution de marchés publics.',
+          penalty: 'Peine avec sursis',
+          status: 'Condamnation définitive',
+          sources: [
+            { title: 'Patrick Mennucci - Wikipedia', url: 'https://fr.wikipedia.org/wiki/Patrick_Mennucci' }
           ]
         }
       ]
@@ -3947,6 +4201,105 @@ export const politicians = [
     }
   },
 
+  {
+    id: nextId++,
+    name: 'Alain Griset',
+    party: 'ensemble',
+    position: 'Ancien ministre délégué aux PME',
+    convictions: 1,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1955-08-07',
+      birthPlace: 'Roubaix',
+      career: [
+        'Président de l\'Union des entreprises de proximité (U2P)',
+        'Ministre délégué aux Petites et Moyennes Entreprises (2020-2021)'
+      ],
+      justiceIncidents: [
+        {
+          type: 'Condamnation',
+          date: '2022',
+          description: 'Condamné pour omission substantielle de déclaration de patrimoine auprès de la HATVP. A démissionné du gouvernement.',
+          penalty: '3 mois de prison avec sursis, 5 ans d\'inéligibilité',
+          status: 'Condamnation définitive'
+        }
+      ]
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Laetitia Avia',
+    party: 'ensemble',
+    position: 'Ancienne députée LREM de Paris',
+    convictions: 1,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1985-05-23',
+      birthPlace: 'Livry-Gargan',
+      career: [
+        'Avocate',
+        'Députée de Paris (2017-2022)'
+      ],
+      justiceIncidents: [
+        {
+          type: 'Condamnation',
+          date: '2023',
+          description: 'Condamnée pour harcèlement moral envers ses anciens assistants parlementaires.',
+          penalty: '5 mois de prison avec sursis',
+          status: 'Condamnation définitive'
+        }
+      ]
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Benoît Simian',
+    party: 'ensemble',
+    position: 'Ancien député LREM de la Gironde',
+    convictions: 1,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1977-09-30',
+      birthPlace: 'Bordeaux',
+      career: [
+        'Député de la Gironde (2017-2022)'
+      ],
+      justiceIncidents: [
+        {
+          type: 'Condamnation',
+          date: '2022',
+          description: 'Condamné pour harcèlement par ex-conjoint.',
+          penalty: '4 mois de prison avec sursis',
+          status: 'Condamnation définitive'
+        }
+      ]
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Coralie Dubost',
+    party: 'ensemble',
+    position: 'Ancienne députée LREM de l\'Hérault',
+    convictions: 0,
+    ongoingCases: 1,
+    details: {
+      birthDate: '1983-03-10',
+      birthPlace: 'Montpellier',
+      career: [
+        'Avocate',
+        'Députée de l\'Hérault (2017-2022)'
+      ],
+      justiceIncidents: [
+        {
+          type: 'Enquête',
+          date: '2022',
+          description: 'Enquête pour soupçons de frais de taxis excessifs et usage abusif des indemnités de frais de mandat.',
+          status: 'En cours'
+        }
+      ]
+    }
+  },
+
   // ===== UDI =====
 
   {
@@ -4172,6 +4525,159 @@ export const politicians = [
 
   {
     id: nextId++,
+    name: 'Serge Dassault',
+    party: 'lr',
+    position: 'Sénateur de l\'Essonne, industriel',
+    convictions: 1,
+    ongoingCases: 0,
+    deceased: true,
+    details: {
+      career: [
+        'Sénateur de l\'Essonne (2004-2018)',
+        'PDG du Groupe Dassault',
+        'Maire de Corbeil-Essonnes (1995-2009)'
+      ],
+      justiceIncidents: [
+        {
+          type: 'Condamnation',
+          date: '2015',
+          description: 'Condamné en appel pour achat de votes aux élections municipales de 2009-2010 à Corbeil-Essonnes.',
+          penalty: '2 ans de prison avec sursis, 150 000€ d\'amende, 5 ans d\'inéligibilité',
+          status: 'Condamnation définitive'
+        }
+      ]
+    }
+  },
+
+  {
+    id: nextId++,
+    name: 'André Santini',
+    party: 'lr',
+    position: 'Maire d\'Issy-les-Moulineaux, ancien secrétaire d\'État',
+    convictions: 1,
+    ongoingCases: 0,
+    details: {
+      career: [
+        'Maire d\'Issy-les-Moulineaux (1980-)',
+        'Secrétaire d\'État à la Fonction publique (2007-2009)',
+        'Député des Hauts-de-Seine (1988-2007)'
+      ],
+      justiceIncidents: [
+        {
+          type: 'Condamnation',
+          date: '2014',
+          description: 'Condamné pour emploi fictif de son épouse comme assistante parlementaire.',
+          penalty: '2 ans de prison avec sursis',
+          status: 'Condamnation définitive'
+        }
+      ]
+    }
+  },
+
+  {
+    id: nextId++,
+    name: 'Pierre Lellouche',
+    party: 'lr',
+    position: 'Ancien secrétaire d\'État aux Affaires européennes, ancien député de Paris',
+    convictions: 1,
+    ongoingCases: 0,
+    details: {
+      career: [
+        'Secrétaire d\'État aux Affaires européennes (2009-2010)',
+        'Secrétaire d\'État au Commerce extérieur (2010-2012)',
+        'Député de Paris (1993-2017)'
+      ],
+      justiceIncidents: [
+        {
+          type: 'Condamnation',
+          date: '2019',
+          description: 'Condamné pour fraude fiscale.',
+          penalty: '2 ans de prison avec sursis',
+          status: 'Condamnation définitive'
+        }
+      ]
+    }
+  },
+
+  {
+    id: nextId++,
+    name: 'François Léotard',
+    party: 'lr',
+    position: 'Ancien ministre de la Défense',
+    convictions: 1,
+    ongoingCases: 0,
+    details: {
+      career: [
+        'Ministre de la Défense (1993-1995)',
+        'Ministre de la Culture (1986-1988)',
+        'Président du Parti républicain (1982-1997)',
+        'Député du Var (1978-2002)'
+      ],
+      justiceIncidents: [
+        {
+          type: 'Condamnation',
+          date: '2004',
+          description: 'Condamné dans l\'affaire des frégates de Taïwan (affaire La Fayette) pour abus de confiance.',
+          penalty: '10 mois de prison avec sursis',
+          status: 'Condamnation définitive'
+        }
+      ]
+    }
+  },
+
+  {
+    id: nextId++,
+    name: 'André Rossinot',
+    party: 'lr',
+    position: 'Ancien ministre, maire de Nancy',
+    convictions: 1,
+    ongoingCases: 0,
+    details: {
+      career: [
+        'Ministre de la Fonction publique (1993-1995)',
+        'Maire de Nancy (1983-2014)',
+        'Président de la Communauté urbaine du Grand Nancy (1996-2014)'
+      ],
+      justiceIncidents: [
+        {
+          type: 'Condamnation',
+          date: '2005',
+          description: 'Condamné pour recel d\'abus de biens sociaux dans l\'affaire des Mutuelles de Lorraine.',
+          penalty: '6 mois de prison avec sursis',
+          status: 'Condamnation définitive'
+        }
+      ]
+    }
+  },
+
+  {
+    id: nextId++,
+    name: 'Dominique Perben',
+    party: 'lr',
+    position: 'Ancien garde des Sceaux',
+    convictions: 1,
+    ongoingCases: 0,
+    details: {
+      career: [
+        'Garde des Sceaux, ministre de la Justice (2002-2005)',
+        'Ministre des Transports (2005-2007)',
+        'Député du Rhône (1986-2002)',
+        'Maire de Chalon-sur-Saône (1983-2001)'
+      ],
+      justiceIncidents: [
+        {
+          type: 'Condamnation',
+          date: '2019',
+          description: 'Condamné pour manquement aux obligations déclaratives auprès de la HATVP.',
+          penalty: '1 an d\'inéligibilité',
+          status: 'Condamnation définitive'
+        }
+      ]
+    }
+  },
+
+  {
+    id: nextId++,
     name: 'Aurélien Pradié',
     party: 'ni',
     position: 'Député du Lot',
@@ -4391,6 +4897,31 @@ export const politicians = [
       justiceIncidents: []
     }
   },
+  {
+    id: nextId++,
+    name: 'Joël Guerriau',
+    party: 'horizons',
+    position: 'Sénateur de Loire-Atlantique (exclu d\'Horizons)',
+    convictions: 0,
+    ongoingCases: 1,
+    details: {
+      birthDate: '1954-08-17',
+      birthPlace: 'Nantes',
+      career: [
+        'Sénateur de Loire-Atlantique (2011-)',
+        'Maire de Saint-Herblain (2001-2014)'
+      ],
+      justiceIncidents: [
+        {
+          type: 'Mise en examen',
+          date: '2023-11',
+          description: 'Mis en examen pour avoir administré de l\'ecstasy à sa collègue sénatrice Sandrine Josso dans une coupe de champagne.',
+          charges: ['Administration de substance à l\'insu d\'une personne'],
+          status: 'En cours'
+        }
+      ]
+    }
+  },
 
   // Divers - Députés notables avec affaires judiciaires
   {
@@ -4585,7 +5116,15 @@ export const politicians = [
         'Député du Pas-de-Calais (2017-)',
         'Député européen (2019-2022)'
       ],
-      justiceIncidents: []
+      justiceIncidents: [
+        {
+          type: 'Condamnation (première instance)',
+          date: '2025-03-31',
+          description: 'Condamné dans l\'affaire des assistants parlementaires du FN au Parlement européen pour détournement de fonds publics.',
+          penalty: 'Peine avec sursis',
+          status: 'Appel en cours'
+        }
+      ]
     }
   },
   {
@@ -6326,7 +6865,15 @@ export const politicians = [
     ongoingCases: 0,
     details: {
       career: ['Député de la XVIIe législature'],
-      justiceIncidents: []
+      justiceIncidents: [
+        {
+          type: 'Condamnation (première instance)',
+          date: '2025-03-31',
+          description: 'Condamné dans l\'affaire des assistants parlementaires du FN au Parlement européen. Employé fictivement comme assistant de Nicolas Bay.',
+          penalty: '8 mois de prison avec sursis, 1 an d\'inéligibilité',
+          status: 'Appel en cours'
+        }
+      ]
     }
   },
   {
@@ -6759,6 +7306,125 @@ export const politicians = [
     details: {
       career: ['Députée de la XVIIe législature'],
       justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Gilbert Collard',
+    party: 'rn',
+    position: 'Ex-député RN (2017-2022), eurodéputé RN puis Reconquête (2022-2024)',
+    convictions: 1,
+    ongoingCases: 0,
+    details: {
+      career: ['Député du Gard (2017-2022)', 'Eurodéputé RN puis Reconquête (2022-2024)'],
+      justiceIncidents: [
+        {
+          type: 'Condamnation',
+          date: '2017',
+          description: 'Condamné définitivement pour injure publique.',
+          penalty: '5 000€ d\'amende',
+          status: 'Condamnation définitive'
+        }
+      ]
+    }
+  },
+  {
+    id: nextId++,
+    name: 'David Rachline',
+    party: 'rn',
+    position: 'Sénateur du Var, maire de Fréjus',
+    convictions: 0,
+    ongoingCases: 1,
+    details: {
+      career: ['Sénateur du Var', 'Maire de Fréjus'],
+      justiceIncidents: [
+        {
+          type: 'Mise en examen',
+          date: '2021',
+          description: 'Mis en examen pour prise illégale d\'intérêts dans une affaire de marchés publics à Fréjus.',
+          status: 'En cours'
+        }
+      ]
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Mylène Troszczynski',
+    party: 'rn',
+    position: 'Ex-eurodéputée FN (2014-2019)',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Eurodéputée FN (2014-2019)'],
+      justiceIncidents: [
+        {
+          type: 'Condamnation (première instance)',
+          date: '2025-03-31',
+          description: 'Condamnée dans l\'affaire des assistants parlementaires du FN au Parlement européen.',
+          penalty: '18 mois de prison dont 8 mois ferme, 3 ans d\'inéligibilité',
+          status: 'Appel en cours'
+        }
+      ]
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Christelle Lechevalier',
+    party: 'rn',
+    position: 'Ex-eurodéputée FN (2014-2019)',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Eurodéputée FN (2014-2019)'],
+      justiceIncidents: [
+        {
+          type: 'Condamnation (première instance)',
+          date: '2025-03-31',
+          description: 'Condamnée dans l\'affaire des assistants parlementaires du FN au Parlement européen.',
+          penalty: '18 mois de prison dont 6 mois ferme, 3 ans d\'inéligibilité',
+          status: 'Appel en cours'
+        }
+      ]
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Sophie Montel',
+    party: 'rn',
+    position: 'Ex-eurodéputée FN (2014-2019)',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Eurodéputée FN (2014-2019)'],
+      justiceIncidents: [
+        {
+          type: 'Condamnation (première instance)',
+          date: '2025-03-31',
+          description: 'Condamnée dans l\'affaire des assistants parlementaires du FN au Parlement européen.',
+          penalty: 'Peine avec sursis',
+          status: 'Appel en cours'
+        }
+      ]
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Dominique Martin',
+    party: 'rn',
+    position: 'Ex-eurodéputé FN',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: ['Eurodéputé FN'],
+      justiceIncidents: [
+        {
+          type: 'Condamnation (première instance)',
+          date: '2025-03-31',
+          description: 'Condamné dans l\'affaire des assistants parlementaires du FN au Parlement européen.',
+          penalty: 'Peine avec sursis',
+          status: 'Appel en cours'
+        }
+      ]
     }
   },
   {
