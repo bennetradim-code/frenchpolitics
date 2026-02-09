@@ -1,6 +1,6 @@
 import { useParams, Link } from 'react-router-dom'
 import { parties, getPoliticiansByParty, getPartyStats } from '../data/frenchPolitics'
-import { computeSeverityScore } from '../utils/severityScore'
+import { computeSeverityScore, computePartySeverity, getSeverityColor } from '../utils/severityScore'
 import PoliticianAvatar from './PoliticianAvatar'
 import PartyAvatar from './PartyAvatar'
 
@@ -23,6 +23,8 @@ export default function PartyDetail() {
   const stats = getPartyStats(party.id)
 
   const livingPoliticians = politicians.filter(p => !p.deceased)
+
+  const severity = computePartySeverity(livingPoliticians)
 
   const sortedPoliticians = [...livingPoliticians].sort((a, b) => {
     const scoreA = computeSeverityScore(a).total + a.ongoingCases * 10
@@ -62,7 +64,7 @@ export default function PartyDetail() {
         {/* Statistiques */}
         <div className="p-6 border-t">
           <h2 className="text-xl font-bold text-gray-900 mb-4">Statistiques</h2>
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
             <div className="bg-blue-50 p-4 rounded text-center">
               <p className="text-xs text-gray-600 uppercase tracking-wide">Membres</p>
               <p className="text-2xl font-bold text-blue-600">{(party.members / 1000).toFixed(0)}K</p>
@@ -82,6 +84,11 @@ export default function PartyDetail() {
             <div className="bg-orange-50 p-4 rounded text-center">
               <p className="text-xs text-gray-600 uppercase tracking-wide">Affaires en cours</p>
               <p className="text-2xl font-bold text-orange-600">{stats.totalOngoingCases}</p>
+            </div>
+            <div className="bg-gray-50 p-4 rounded text-center" title={`Score total : ${severity.total} pts / ${severity.count} personnalités`}>
+              <p className="text-xs text-gray-600 uppercase tracking-wide">Sévérité moy.</p>
+              <p className="text-2xl font-bold" style={{ color: getSeverityColor(severity.average) }}>{severity.average}</p>
+              <p className="text-[10px] text-gray-400">pts / personnalité</p>
             </div>
           </div>
 

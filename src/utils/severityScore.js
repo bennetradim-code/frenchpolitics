@@ -40,6 +40,33 @@ export function computeSeverityScore(politician) {
 }
 
 /**
+ * Compute severity stats for a group of politicians (e.g. a party).
+ * Returns total score, average per politician, and number of convicted members.
+ *
+ * @param {object[]} politicians
+ * @returns {{ total: number, average: number, convicted: number, count: number }}
+ */
+export function computePartySeverity(politicians) {
+  const count = politicians.length
+  if (count === 0) return { total: 0, average: 0, convicted: 0, count: 0 }
+
+  let total = 0
+  let convicted = 0
+  for (const pol of politicians) {
+    const { total: score } = computeSeverityScore(pol)
+    if (score > 0) convicted++
+    total += score
+  }
+
+  return {
+    total,
+    average: Math.round((total / count) * 10) / 10,
+    convicted,
+    count,
+  }
+}
+
+/**
  * Return a color for a severity score.
  * Higher = more severe = redder.
  *

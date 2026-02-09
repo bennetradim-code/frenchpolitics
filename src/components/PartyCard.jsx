@@ -1,9 +1,11 @@
 import { Link } from 'react-router-dom'
-import { getPartyStats } from '../data/frenchPolitics'
+import { getPartyStats, getPoliticiansByParty } from '../data/frenchPolitics'
+import { computePartySeverity, getSeverityColor } from '../utils/severityScore'
 import PartyAvatar from './PartyAvatar'
 
 export default function PartyCard({ party }) {
   const stats = getPartyStats(party.id)
+  const severity = computePartySeverity(getPoliticiansByParty(party.id).filter(p => !p.deceased))
 
   return (
     <Link
@@ -55,7 +57,14 @@ export default function PartyCard({ party }) {
         {/* Justice incidents */}
         {stats.totalConvictions > 0 || stats.totalOngoingCases > 0 ? (
           <div className="border-t pt-4">
-            <p className="text-sm font-semibold text-gray-700 mb-2">Incidents de justice:</p>
+            <div className="flex items-center justify-between mb-2">
+              <p className="text-sm font-semibold text-gray-700">Incidents de justice:</p>
+              {severity.average > 0 && (
+                <span className="text-xs font-bold" style={{ color: getSeverityColor(severity.average) }} title={`Score total : ${severity.total} pts / ${severity.count} personnalités`}>
+                  Sévérité moy. : {severity.average} pts
+                </span>
+              )}
+            </div>
             <div className="flex flex-wrap gap-2">
               {stats.totalConvictions > 0 && (
                 <span className="inline-flex items-center px-2 py-1 rounded text-xs font-bold text-white bg-red-600">
@@ -71,7 +80,7 @@ export default function PartyCard({ party }) {
           </div>
         ) : (
           <div className="border-t pt-4">
-            <p className="text-xs text-green-600 font-semibold">✓ Aucun incident de justice</p>
+            <p className="text-xs text-green-600 font-semibold">Aucun incident de justice</p>
           </div>
         )}
       </div>
