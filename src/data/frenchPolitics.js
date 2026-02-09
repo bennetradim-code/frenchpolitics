@@ -3573,6 +3573,400 @@ export const politicians = [
     }
   },
 
+  // --- Ministres récurrents (gouvernements 2017-2025) ---
+
+  {
+    id: nextId++,
+    name: 'Bruno Le Maire',
+    party: 'ensemble',
+    position: 'Ancien ministre de l\'Économie',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1969-04-15',
+      birthPlace: 'Neuilly-sur-Seine',
+      career: [
+        'Ministre de l\'Économie, des Finances et de la Souveraineté industrielle et numérique (2017-2024)',
+        'Ministre de l\'Agriculture (2009-2012)',
+        'Député de l\'Eure (2007-2017)',
+        'Secrétaire d\'État aux Affaires européennes (2008-2009)'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Sébastien Lecornu',
+    party: 'ensemble',
+    position: 'Ministre des Armées',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1986-11-11',
+      birthPlace: 'Rouen',
+      career: [
+        'Ministre des Armées (2022-)',
+        'Ministre des Outre-mer (2020-2022)',
+        'Secrétaire d\'État à la Transition écologique (2017-2018)',
+        'Ministre délégué aux Collectivités territoriales (2018-2020)',
+        'Président du conseil départemental de l\'Eure (2015-2017)'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Jean-Noël Barrot',
+    party: 'modem',
+    position: 'Ministre de l\'Europe et des Affaires étrangères',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1983-05-15',
+      birthPlace: 'Paris',
+      career: [
+        'Ministre de l\'Europe et des Affaires étrangères (2024-)',
+        'Ministre délégué à l\'Europe (2024)',
+        'Ministre délégué à la Transition numérique (2022-2024)',
+        'Député des Yvelines (2017-2022)'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Catherine Vautrin',
+    party: 'ensemble',
+    position: 'Ministre du Travail, de la Santé et des Solidarités',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1960-04-22',
+      birthPlace: 'Reims',
+      career: [
+        'Ministre du Travail, de la Santé et des Solidarités (2024)',
+        'Ministre du Partenariat avec les Territoires (2024)',
+        'Présidente du Grand Reims (2014-)',
+        'Députée de la Marne (2002-2017)',
+        'Secrétaire d\'État à l\'Intégration (2004-2007)'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Olivier Dussopt',
+    party: 'ensemble',
+    position: 'Ancien ministre du Travail',
+    convictions: 1,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1978-08-16',
+      birthPlace: 'Annonay',
+      career: [
+        'Ministre du Travail, du Plein emploi et de l\'Insertion (2022-2024)',
+        'Ministre délégué aux Comptes publics (2020-2022)',
+        'Secrétaire d\'État à la Fonction publique (2017-2020)',
+        'Député de l\'Ardèche (2007-2020)',
+        'Maire d\'Annonay (2008-2017)'
+      ],
+      justiceIncidents: [
+        {
+          type: 'Condamnation',
+          date: '2024',
+          description: 'Condamné en appel pour favoritisme dans l\'attribution d\'un contrat de gestion de l\'eau à la société Saur à Annonay (5,6 M€) lorsqu\'il était maire.',
+          penalty: 'Peine de prison avec sursis',
+          status: 'Condamnation définitive',
+          sources: [
+            { title: 'Olivier Dussopt - Wikipedia', url: 'https://fr.wikipedia.org/wiki/Olivier_Dussopt' }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Olivier Véran',
+    party: 'ensemble',
+    position: 'Ancien ministre de la Santé et Porte-parole du Gouvernement',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1980-04-22',
+      birthPlace: 'Saint-Martin-d\'Hères',
+      career: [
+        'Porte-parole du Gouvernement (2022-2024)',
+        'Ministre de la Santé et des Solidarités (2020-2022)',
+        'Député de l\'Isère (2017-2020)'
+      ],
+      justiceIncidents: [
+        {
+          type: 'Non-lieu',
+          date: '2025',
+          description: 'Visé par des plaintes pour mise en danger de la vie d\'autrui dans le cadre de la gestion de la crise du Covid-19 (pénurie de masques, mesures tardives). Non-lieu prononcé en juillet 2025.',
+          status: 'Non-lieu',
+          sources: [
+            { title: 'Olivier Véran - Wikipedia', url: 'https://fr.wikipedia.org/wiki/Olivier_V%C3%A9ran' }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Agnès Buzyn',
+    party: 'ensemble',
+    position: 'Ancienne ministre de la Santé',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1962-11-01',
+      birthPlace: 'Paris',
+      career: [
+        'Ministre des Solidarités et de la Santé (2017-2020)',
+        'Présidente de la Haute Autorité de santé (2016-2017)',
+        'Présidente de l\'Institut national du cancer (2011-2016)'
+      ],
+      justiceIncidents: [
+        {
+          type: 'Non-lieu',
+          date: '2025',
+          description: 'Mise en examen pour mise en danger de la vie d\'autrui dans le cadre de la gestion de la pandémie de Covid-19. Non-lieu prononcé par la Cour de Justice de la République en avril 2025.',
+          status: 'Non-lieu',
+          sources: [
+            { title: 'Agnès Buzyn - Wikipedia', url: 'https://fr.wikipedia.org/wiki/Agn%C3%A8s_Buzyn' }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Jean-Michel Blanquer',
+    party: 'ensemble',
+    position: 'Ancien ministre de l\'Éducation nationale',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1964-12-04',
+      birthPlace: 'Paris',
+      career: [
+        'Ministre de l\'Éducation nationale et de la Jeunesse (2017-2022)',
+        'Directeur général de l\'enseignement scolaire (2009-2012)',
+        'Recteur de l\'académie de Guyane (2004-2006)',
+        'Recteur de l\'académie de Créteil (2007-2009)'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Nicole Belloubet',
+    party: 'ensemble',
+    position: 'Ancienne ministre de la Justice et de l\'Éducation nationale',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1955-05-15',
+      birthPlace: 'Paris',
+      career: [
+        'Ministre de l\'Éducation nationale et de la Jeunesse (2024)',
+        'Garde des Sceaux, ministre de la Justice (2017-2020)',
+        'Membre du Conseil constitutionnel (2013-2017)',
+        'Rectrice de l\'académie de Limoges (2005-2007)',
+        'Rectrice de l\'académie de Toulouse (2007-2013)'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Barbara Pompili',
+    party: 'ensemble',
+    position: 'Ancienne ministre de la Transition écologique',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1975-06-13',
+      birthPlace: 'Bois-Bernard',
+      career: [
+        'Ministre de la Transition écologique (2020-2022)',
+        'Secrétaire d\'État à la Biodiversité (2016-2017)',
+        'Députée de la Somme (2012-2020)',
+        'Présidente de la commission du développement durable de l\'AN (2017-2020)'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Florence Parly',
+    party: 'ensemble',
+    position: 'Ancienne ministre des Armées',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1963-05-08',
+      birthPlace: 'Boulogne-Billancourt',
+      career: [
+        'Ministre des Armées (2017-2022)',
+        'Secrétaire d\'État au Budget (2000-2002)',
+        'Directrice générale de la SNCF Voyageurs (2014-2017)'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Jean-Yves Le Drian',
+    party: 'ps',
+    position: 'Ancien ministre des Affaires étrangères',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1947-06-30',
+      birthPlace: 'Lorient',
+      career: [
+        'Ministre de l\'Europe et des Affaires étrangères (2017-2022)',
+        'Ministre de la Défense (2012-2017)',
+        'Président du conseil régional de Bretagne (2004-2012)',
+        'Député du Morbihan (1978-2012)'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Najat Vallaud-Belkacem',
+    party: 'ps',
+    position: 'Ancienne ministre de l\'Éducation nationale',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1977-10-04',
+      birthPlace: 'Beni Chiker (Maroc)',
+      career: [
+        'Ministre de l\'Éducation nationale (2014-2017)',
+        'Ministre des Droits des femmes (2012-2014)',
+        'Porte-parole du Gouvernement (2012-2014)',
+        'Conseillère régionale Rhône-Alpes (2004-2012)'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Roselyne Bachelot',
+    party: 'ensemble',
+    position: 'Ancienne ministre de la Culture',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1946-12-24',
+      birthPlace: 'Nevers',
+      career: [
+        'Ministre de la Culture (2020-2022)',
+        'Ministre des Solidarités et de la Cohésion sociale (2010-2012)',
+        'Ministre de la Santé (2007-2010)',
+        'Ministre de l\'Écologie (2002-2004)',
+        'Députée de Maine-et-Loire (1988-2002, 2007-2012)'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Amélie de Montchalin',
+    party: 'ensemble',
+    position: 'Ancienne ministre de la Transition écologique',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1985-06-19',
+      birthPlace: 'Lyon',
+      career: [
+        'Ministre de la Transition écologique (2022)',
+        'Ministre de la Transformation et de la Fonction publiques (2020-2022)',
+        'Secrétaire d\'État aux Affaires européennes (2019-2020)',
+        'Députée de l\'Essonne (2017-2020)',
+        'Ministre déléguée aux Comptes publics (2024-)'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'François Rebsamen',
+    party: 'ps',
+    position: 'Ministre de l\'Aménagement du territoire',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1951-06-05',
+      birthPlace: 'Dijon',
+      career: [
+        'Ministre de l\'Aménagement du territoire et de la Décentralisation (2024-)',
+        'Ministre du Travail (2014-2015)',
+        'Sénateur de la Côte-d\'Or (2008-2014)',
+        'Maire de Dijon (2001-)'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Sophie Primas',
+    party: 'lr',
+    position: 'Porte-parole du Gouvernement Bayrou',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1958-07-06',
+      birthPlace: 'Boulogne-Billancourt',
+      career: [
+        'Porte-parole du Gouvernement (2024-2025)',
+        'Sénatrice des Yvelines (2011-2024)',
+        'Présidente de la commission des affaires économiques du Sénat (2020-2024)'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Charlotte Parmentier-Lecocq',
+    party: 'ensemble',
+    position: 'Ministre déléguée aux Personnes handicapées',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1976-05-27',
+      birthPlace: 'Lille',
+      career: [
+        'Ministre déléguée aux Personnes handicapées (2024-)',
+        'Députée du Nord (2017-2024)'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Stanislas Guerini',
+    party: 'ensemble',
+    position: 'Ancien ministre de la Transformation et de la Fonction publiques',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1982-05-14',
+      birthPlace: 'Paris',
+      career: [
+        'Ministre de la Transformation et de la Fonction publiques (2022-2024)',
+        'Délégué général de La République en Marche (2018-2022)',
+        'Député de Paris (2017-2022)'
+      ],
+      justiceIncidents: []
+    }
+  },
+
   // ===== UDI =====
 
   {
