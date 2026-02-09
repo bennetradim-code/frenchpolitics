@@ -1,6 +1,7 @@
 import { useParams, Link } from 'react-router-dom'
 import { politicians, getPartyById } from '../data/frenchPolitics'
-import ConfidenceGauge from './ConfidenceGauge'
+import SeverityGauge from './SeverityGauge'
+import { parsePenalty } from '../utils/penaltyParser'
 import PoliticianAvatar from './PoliticianAvatar'
 
 export default function PoliticianDetail() {
@@ -90,7 +91,7 @@ export default function PoliticianDetail() {
             )}
 
             <div className="mt-4">
-              <ConfidenceGauge politician={politician} />
+              <SeverityGauge politician={politician} />
             </div>
 
             <div className="grid grid-cols-2 gap-4 mt-4">
@@ -172,9 +173,25 @@ export default function PoliticianDetail() {
                   {(incident.penalty || incident.source || incident.sources) && (
                     <div className="pt-3 border-t border-gray-200 space-y-3">
                       {incident.penalty && (
-                        <div className="flex items-center gap-2">
-                          <span className="text-xs font-semibold text-gray-600">Peine:</span>
-                          <span className="text-sm text-gray-700">{incident.penalty}</span>
+                        <div>
+                          <div className="flex items-center gap-2">
+                            <span className="text-xs font-semibold text-gray-600">Peine:</span>
+                            <span className="text-sm text-gray-700">{incident.penalty}</span>
+                          </div>
+                          {incident.type === 'Condamnation' && (() => {
+                            const parsed = parsePenalty(incident.penalty)
+                            const hasParsedData = parsed.prisonFerme > 0 || parsed.prisonSursis > 0 || parsed.amende > 0 || parsed.ineligibilite > 0 || parsed.dispenseDePeine
+                            if (!hasParsedData) return null
+                            return (
+                              <div className="flex flex-wrap gap-1.5 mt-1.5">
+                                {parsed.prisonFerme > 0 && <span className="px-2 py-0.5 bg-red-100 text-red-700 rounded text-xs font-medium">Prison ferme : {parsed.prisonFerme} mois</span>}
+                                {parsed.prisonSursis > 0 && <span className="px-2 py-0.5 bg-orange-100 text-orange-700 rounded text-xs font-medium">Sursis : {parsed.prisonSursis} mois</span>}
+                                {parsed.amende > 0 && <span className="px-2 py-0.5 bg-yellow-100 text-yellow-700 rounded text-xs font-medium">Amende : {parsed.amende.toLocaleString('fr-FR')}€</span>}
+                                {parsed.ineligibilite > 0 && <span className="px-2 py-0.5 bg-purple-100 text-purple-700 rounded text-xs font-medium">Inéligibilité : {parsed.ineligibilite} mois</span>}
+                                {parsed.dispenseDePeine && <span className="px-2 py-0.5 bg-green-100 text-green-700 rounded text-xs font-medium">Dispensée de peine</span>}
+                              </div>
+                            )
+                          })()}
                         </div>
                       )}
                       

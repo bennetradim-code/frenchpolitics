@@ -1,5 +1,6 @@
 import { useParams, Link } from 'react-router-dom'
 import { parties, getPoliticiansByParty, getPartyStats } from '../data/frenchPolitics'
+import { computeSeverityScore } from '../utils/severityScore'
 import PoliticianAvatar from './PoliticianAvatar'
 import PartyAvatar from './PartyAvatar'
 
@@ -24,8 +25,8 @@ export default function PartyDetail() {
   const livingPoliticians = politicians.filter(p => !p.deceased)
 
   const sortedPoliticians = [...livingPoliticians].sort((a, b) => {
-    const scoreA = a.convictions * 2 + a.ongoingCases
-    const scoreB = b.convictions * 2 + b.ongoingCases
+    const scoreA = computeSeverityScore(a).total + a.ongoingCases * 10
+    const scoreB = computeSeverityScore(b).total + b.ongoingCases * 10
     if (scoreB !== scoreA) return scoreB - scoreA
     return a.name.localeCompare(b.name, 'fr')
   })

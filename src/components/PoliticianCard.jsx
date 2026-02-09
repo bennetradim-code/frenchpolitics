@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { getPartyById } from '../data/frenchPolitics'
-import ConfidenceGauge from './ConfidenceGauge'
+import SeverityGauge from './SeverityGauge'
 import PoliticianAvatar from './PoliticianAvatar'
 
 export default function PoliticianCard({ politician }) {
@@ -41,7 +41,7 @@ export default function PoliticianCard({ politician }) {
         </div>
 
         <div className="mb-4">
-          <ConfidenceGauge politician={politician} />
+          <SeverityGauge politician={politician} />
         </div>
 
         <button
