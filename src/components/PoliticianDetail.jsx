@@ -1,6 +1,6 @@
 import { useParams, Link } from 'react-router-dom'
 import { politicians, getPartyById } from '../data/frenchPolitics'
-import SeverityGauge from './SeverityGauge'
+import SeverityStamp from './SeverityStamp'
 import { parsePenalty } from '../utils/penaltyParser'
 import PoliticianAvatar from './PoliticianAvatar'
 
@@ -88,18 +88,7 @@ export default function PoliticianDetail() {
             )}
 
             <div className="mt-4">
-              <SeverityGauge politician={politician} />
-            </div>
-
-            <div className="grid grid-cols-2 gap-4 mt-4">
-              <div className="bg-red-50 p-3 rounded">
-                <p className="text-xs text-gray-600">Condamnations</p>
-                <p className="text-2xl font-bold text-red-600">{politician.convictions}</p>
-              </div>
-              <div className="bg-orange-50 p-3 rounded">
-                <p className="text-xs text-gray-600">Affaires en cours</p>
-                <p className="text-2xl font-bold text-orange-600">{politician.ongoingCases}</p>
-              </div>
+              <SeverityStamp politician={politician} size="lg" />
             </div>
           </div>
         </div>

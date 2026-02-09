@@ -2,6 +2,7 @@ import { useState, useRef, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { getPartyById } from '../data/frenchPolitics'
 import PoliticianAvatar from './PoliticianAvatar'
+import SeverityStamp from './SeverityStamp'
 
 export default function SearchBar({ searchTerm, onSearchChange, politicians }) {
   const [isOpen, setIsOpen] = useState(false)
@@ -89,12 +90,13 @@ export default function SearchBar({ searchTerm, onSearchChange, politicians }) {
                   size="sm"
                   className="flex-shrink-0"
                 />
-                <div>
+                <div className="flex-1 min-w-0">
                   <p className="font-semibold text-gray-900">{p.name}</p>
-                  <p className="text-xs text-gray-500">
+                  <p className="text-xs text-gray-500 truncate">
                     {party?.name || p.party} — {p.position}
                   </p>
                 </div>
+                <SeverityStamp politician={p} size="sm" />
               </button>
             )
           })}

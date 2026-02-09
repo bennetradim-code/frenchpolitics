@@ -3,6 +3,7 @@ import { parties, getPoliticiansByParty, getPartyStats } from '../data/frenchPol
 import { computeSeverityScore, computePartySeverity, getSeverityColor } from '../utils/severityScore'
 import PoliticianAvatar from './PoliticianAvatar'
 import PartyAvatar from './PartyAvatar'
+import SeverityStamp from './SeverityStamp'
 
 export default function PartyDetail() {
   const { id } = useParams()
@@ -179,9 +180,7 @@ export default function PartyDetail() {
             Membres ({livingPoliticians.length})
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-            {sortedPoliticians.map(pol => {
-              const hasIncidents = pol.convictions > 0 || pol.ongoingCases > 0
-              return (
+            {sortedPoliticians.map(pol => (
                 <Link
                   key={pol.id}
                   to={`/politician/${pol.id}`}
@@ -199,24 +198,9 @@ export default function PartyDetail() {
                     </p>
                     <p className="text-sm text-gray-500 truncate">{pol.position}</p>
                   </div>
-                  <div className="flex-shrink-0 flex gap-1">
-                    {pol.convictions > 0 && (
-                      <span className="inline-flex items-center px-2 py-0.5 rounded text-xs font-bold text-white bg-red-600">
-                        {pol.convictions}
-                      </span>
-                    )}
-                    {pol.ongoingCases > 0 && (
-                      <span className="inline-flex items-center px-2 py-0.5 rounded text-xs font-bold text-white bg-orange-500">
-                        {pol.ongoingCases}
-                      </span>
-                    )}
-                    {!hasIncidents && (
-                      <span className="text-xs text-green-600 font-medium">OK</span>
-                    )}
-                  </div>
+                  <SeverityStamp politician={pol} size="sm" />
                 </Link>
-              )
-            })}
+              ))}
           </div>
         </div>
       </div>
