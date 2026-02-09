@@ -822,7 +822,7 @@ export const politicians = [
           type: 'Condamnation',
           date: '2018',
           description: 'Condamné à 2 ans de prison ferme pour fraude fiscale et blanchiment. Avait dissimulé un compte bancaire non déclaré en Suisse avec 600 000€.',
-          penalty: '2 ans de prison ferme, 250 000€ d\'amende',
+          penalty: '2 ans de prison ferme, 300 000€ d\'amende',
           status: 'Condamné',
           sources: [
             { title: 'Jérôme Cahuzac - Wikipedia', url: 'https://fr.wikipedia.org/wiki/J%C3%A9r%C3%B4me_Cahuzac' },
@@ -1790,7 +1790,7 @@ export const politicians = [
       ],
       justiceIncidents: [
         {
-          type: 'Information judiciaire',
+          type: 'Enquête',
           date: '2025',
           description: 'Information judiciaire ouverte par la Cour de Justice de la République pour faux témoignage. Accusée par des députés écologistes et insoumis de faux témoignage lors d\'une commission d\'enquête sur les crèches privées (avril 2024), en ayant nié tout lien personnel avec une lobbyiste des crèches privées (Elsa Hervy), avec laquelle elle avait entretenu des relations étroites.',
           status: 'En cours',
@@ -1810,28 +1810,18 @@ export const politicians = [
     id: nextId++,
     name: 'Yannick Neuder',
     party: 'lr',
-    position: 'Député du Pas-de-Calais, Vice-président LR',
+    position: 'Ministre de la Santé',
     convictions: 0,
-    ongoingCases: 1,
+    ongoingCases: 0,
     details: {
-      birthDate: '1980-05-15',
-      birthPlace: 'Arras',
+      birthDate: '1969-03-15',
+      birthPlace: 'Tullins (Isère)',
       career: [
-        'Député du Pas-de-Calais (2017-)',
-        'Vice-président des Républicains (2023-)'
+        'Cardiologue au CHU de Grenoble',
+        'Député de l\'Isère (2022-2024)',
+        'Ministre de la Santé et de l\'Accès aux soins (2024-)'
       ],
-      justiceIncidents: [
-        {
-          type: 'Mise en examen',
-          date: '2024',
-          description: 'Mise en examen pour prise illégale d\'intérêts liée à son activité de consultant avant d\'être élu.',
-          status: 'En cours',
-          sources: [
-            { title: 'Le Figaro - Neuder prise illégale d\'intérêts', url: 'https://www.lefigaro.fr' },
-            { title: 'France Info - Enquête Neuder', url: 'https://www.franceinfo.fr' }
-          ]
-        }
-      ]
+      justiceIncidents: []
     }
   },
 
@@ -2172,18 +2162,18 @@ export const politicians = [
     convictions: 1,
     ongoingCases: 0,
     details: {
-      birthDate: '1977-02-15',
+      birthDate: '1961-02-15',
       birthPlace: 'Marseille',
       career: [
         'Conseillère municipale de Marseille',
-        'Députée des Bouches-du-Rhône (2012-2015)',
+        'Députée des Bouches-du-Rhône (2002-2012)',
         'Conseillère régionale PACA'
       ],
       justiceIncidents: [
         {
           type: 'Condamnation',
           date: '2016',
-          description: 'Condamnée pour détournement de deniers publics. Emplois fictifs d\'assistants parlementaires dans le cadre de sa fonction de députée.',
+          description: 'Condamnée pour détournement de subventions régionales PACA au profit d\'associations fictives.',
           penalty: '3 ans de prison avec sursis + 50 000€ amende',
           status: 'Condamnée',
           sources: [
@@ -2198,22 +2188,22 @@ export const politicians = [
     id: nextId++,
     name: 'Thomas Thévenoud',
     party: 'ps',
-    position: 'Ancien secrétaire d\'État au Budget',
+    position: 'Ancien secrétaire d\'État au Commerce extérieur',
     convictions: 1,
     ongoingCases: 0,
     details: {
-      birthDate: '1984-10-18',
-      birthPlace: 'Montreuil-les-Mines',
+      birthDate: '1973-10-18',
+      birthPlace: 'Chalon-sur-Saône',
       career: [
-        'Secrétaire d\'État chargé du Budget (2014-2015)',
-        'Député de Saône-et-Loire (2012-2015)'
+        'Secrétaire d\'État au Commerce extérieur (septembre 2014, 9 jours)',
+        'Député de Saône-et-Loire (2012-2017)'
       ],
       justiceIncidents: [
         {
           type: 'Condamnation',
-          date: '2016',
-          description: 'Condamné pour fraude fiscale et blanchiment. Découverte d\'un compte bancaire non déclaré en Suisse avec environ 88 000€ dissimulés.',
-          penalty: '2 ans de prison avec sursis + 375 000€ d\'amende',
+          date: '2017',
+          description: 'Condamné pour fraude fiscale par non-déclaration de revenus et non-paiement d\'impôts. Affaire révélée sous le nom de \u00ab phobie administrative \u00bb.',
+          penalty: '3 mois de prison avec sursis + 5 000\u20ac d\'amende',
           status: 'Condamné',
           sources: [
             { title: 'Thomas Thévenoud - Wikipedia', url: 'https://fr.wikipedia.org/wiki/Thomas_Th%C3%A9venoud' }
@@ -2227,24 +2217,23 @@ export const politicians = [
     id: nextId++,
     name: 'Kader Arif',
     party: 'ps',
-    position: 'Ancien ministre PS',
-    convictions: 1,
-    ongoingCases: 0,
+    position: 'Ancien secrétaire d\'État aux Anciens combattants',
+    convictions: 0,
+    ongoingCases: 1,
     details: {
-      birthDate: '1955-04-03',
-      birthPlace: 'Sétif (Algérie)',
+      birthDate: '1959-08-26',
+      birthPlace: 'Toulouse',
       career: [
-        'Maire de Lens (2001-2012)',
-        'Ministre délégué à la Gestion de la crise (2012)',
-        'Député du Pas-de-Calais'
+        'Député européen (2004-2012)',
+        'Secrétaire d\'État aux Anciens combattants et à la Mémoire (2012-2014)',
+        'Député de Haute-Garonne (2014-2017)'
       ],
       justiceIncidents: [
         {
-          type: 'Condamnation',
-          date: '2016',
-          description: 'Condamné pour détournement de deniers publics et faux en écriture publique. Emplois fictifs à la mairie de Lens.',
-          penalty: '2 ans de prison avec sursis + amende',
-          status: 'Condamné',
+          type: 'Mise en examen',
+          date: '2015',
+          description: 'Mis en examen pour favoritisme dans l\'attribution de marchés publics liés aux commémorations du centenaire de la Première Guerre mondiale.',
+          status: 'En cours',
           sources: [
             { title: 'Kader Arif - Wikipedia', url: 'https://fr.wikipedia.org/wiki/Kader_Arif' }
           ]
@@ -2270,10 +2259,11 @@ export const politicians = [
       ],
       justiceIncidents: [
         {
-          type: 'Mise en examen',
-          date: '2017-2018',
-          description: 'Mis en examen pour détournement de fonds publics concernant l\'emploi fictif de collaborateurs parlementaires.',
-          status: 'En cours',
+          type: 'Condamnation (première instance)',
+          date: '2024-10',
+          description: 'Condamné en première instance pour détournement de fonds publics concernant l\'emploi fictif de collaborateurs parlementaires.',
+          penalty: '2 ans de sursis, 50 000€ d\'amende',
+          status: 'Condamné en première instance',
           sources: [
             { title: 'Bruno Le Roux - Wikipedia', url: 'https://fr.wikipedia.org/wiki/Bruno_Le_Roux' }
           ]
@@ -2286,23 +2276,24 @@ export const politicians = [
     id: nextId++,
     name: 'Yamina Benguigui',
     party: 'ps',
-    position: 'Ancienne ministre PS',
-    convictions: 0,
-    ongoingCases: 1,
+    position: 'Ancienne ministre déléguée à la Francophonie',
+    convictions: 1,
+    ongoingCases: 0,
     details: {
-      birthDate: '1957-08-07',
-      birthPlace: 'Sefrou (Maroc)',
+      birthDate: '1957-04-09',
+      birthPlace: 'Lille',
       career: [
         'Réalisatrice et productrice',
-        'Ministre de la Culture (2012-2014)',
-        'Députée des Hauts-de-Seine (2012-2017)'
+        'Adjointe au maire de Paris (2008-2012)',
+        'Ministre déléguée à la Francophonie (2012-2014)'
       ],
       justiceIncidents: [
         {
-          type: 'Enquête',
-          date: '2018',
-          description: 'Enquête pour détournement de deniers publics concernant emplois fictifs d\'assistants parlementaires.',
-          status: 'En cours',
+          type: 'Condamnation',
+          date: '2016',
+          description: 'Condamnée pour non-déclaration de patrimoine à la Haute Autorité pour la transparence de la vie publique (HATVP).',
+          penalty: 'Amende',
+          status: 'Condamné',
           sources: [
             { title: 'Yamina Benguigui - Wikipedia', url: 'https://fr.wikipedia.org/wiki/Yamina_Benguigui' }
           ]
@@ -3107,10 +3098,10 @@ export const politicians = [
           ]
         },
         {
-          type: 'Relaxe',
+          type: 'Non-lieu',
           date: '2001',
-          description: 'Mis en examen dans l\'affaire Elf Aquitaine pour complicité et recel d\'abus de biens sociaux. Acquitté en novembre 2001.',
-          status: 'Relaxé',
+          description: 'Mis en examen dans l\'affaire Elf Aquitaine pour complicité et recel d\'abus de biens sociaux. Non-lieu prononcé en novembre 2001.',
+          status: 'Non-lieu',
           sources: [
             { title: 'Affaire Elf - Wikipedia', url: 'https://fr.wikipedia.org/wiki/Affaire_Elf' }
           ]
@@ -3147,7 +3138,7 @@ export const politicians = [
       ],
       justiceIncidents: [
         {
-          type: 'Relaxe en appel',
+          type: 'Relaxe',
           date: '2003',
           description: 'Condamné en première instance en 2001 pour complicité et recel d\'abus de biens sociaux dans l\'affaire Elf. Accusé d\'avoir reçu des avantages via sa compagne Christine Deviers-Joncour. Relaxé en appel en 2003.',
           status: 'Relaxé en appel',
@@ -3212,7 +3203,7 @@ export const politicians = [
           type: 'Condamnation',
           date: '2022',
           description: 'Condamné pour prise illégale d\'intérêts dans l\'affaire de la décharge de Septèmes-les-Vallons. Favoritisme dans l\'attribution de marchés de gestion des déchets.',
-          penalty: '3 ans de prison avec sursis et 60 000€ d\'amende',
+          penalty: '2 ans de prison avec sursis et 40 000€ d\'amende',
           status: 'Définitif',
           sources: [
             { title: 'Jean-Noël Guérini - Wikipedia', url: 'https://fr.wikipedia.org/wiki/Jean-No%C3%ABl_Gu%C3%A9rini' }
@@ -3492,7 +3483,7 @@ export const politicians = [
       justiceIncidents: [
         {
           type: 'Mise en examen',
-          date: '2023',
+          date: '2024',
           description: 'Mis en examen pour tentative de viol. Accusations de violences sexuelles ayant conduit à son éviction du gouvernement en 2022.',
           status: 'En cours',
           sources: [
@@ -3521,10 +3512,10 @@ export const politicians = [
       ],
       justiceIncidents: [
         {
-          type: 'Non-lieu',
+          type: 'Relaxe',
           date: '2015',
-          description: 'Mis en examen dans l\'affaire Bettencourt pour trafic d\'influence et recel. Accusé d\'avoir facilité l\'obtention de la Légion d\'honneur pour le gestionnaire de fortune de Liliane Bettencourt. Non-lieu prononcé en 2015.',
-          status: 'Non-lieu',
+          description: 'Poursuivi dans l\'affaire Bettencourt pour trafic d\'influence et recel. Accusé d\'avoir facilité l\'obtention de la Légion d\'honneur pour le gestionnaire de fortune de Liliane Bettencourt. Relaxé par le tribunal correctionnel de Bordeaux en 2015.',
+          status: 'Relaxé',
           sources: [
             { title: 'Éric Woerth - Wikipedia', url: 'https://fr.wikipedia.org/wiki/%C3%89ric_Woerth' },
             { title: 'Affaire Woerth-Bettencourt - Wikipedia', url: 'https://fr.wikipedia.org/wiki/Affaire_Woerth-Bettencourt' }
@@ -3662,9 +3653,9 @@ export const politicians = [
       justiceIncidents: [
         {
           type: 'Condamnation',
-          date: '2024',
-          description: 'Condamné en appel pour favoritisme dans l\'attribution d\'un contrat de gestion de l\'eau à la société Saur à Annonay (5,6 M€) lorsqu\'il était maire.',
-          penalty: 'Peine de prison avec sursis',
+          date: '2025',
+          description: 'Relaxé en première instance en janvier 2024, puis condamné en appel en février 2025 pour favoritisme dans l\'attribution d\'un contrat de gestion de l\'eau à la société Saur à Annonay (5,6 M€) lorsqu\'il était maire.',
+          penalty: '15 000€ d\'amende dont 10 000€ avec sursis',
           status: 'Condamnation définitive',
           sources: [
             { title: 'Olivier Dussopt - Wikipedia', url: 'https://fr.wikipedia.org/wiki/Olivier_Dussopt' }
@@ -3719,8 +3710,8 @@ export const politicians = [
       justiceIncidents: [
         {
           type: 'Non-lieu',
-          date: '2025',
-          description: 'Mise en examen pour mise en danger de la vie d\'autrui dans le cadre de la gestion de la pandémie de Covid-19. Non-lieu prononcé par la Cour de Justice de la République en avril 2025.',
+          date: '2023',
+          description: 'Mise en examen pour mise en danger de la vie d\'autrui dans le cadre de la gestion de la pandémie de Covid-19. La Cour de cassation a annulé la mise en examen le 20 janvier 2023.',
           status: 'Non-lieu',
           sources: [
             { title: 'Agnès Buzyn - Wikipedia', url: 'https://fr.wikipedia.org/wiki/Agn%C3%A8s_Buzyn' }
@@ -4466,9 +4457,9 @@ export const politicians = [
       justiceIncidents: [
         {
           type: 'Condamnation',
-          date: '2020',
+          date: '2021',
           description: 'Condamné pour abus de confiance dans la gestion d\'une association. Détournement de fonds associatifs à des fins personnelles.',
-          penalty: '1 an de prison avec sursis et 3 ans d\'inéligibilité',
+          penalty: '8 mois de prison avec sursis et 3 ans d\'inéligibilité',
           status: 'Définitif',
           sources: [
             { title: 'Mustapha Laabid - Wikipedia', url: 'https://fr.wikipedia.org/wiki/Mustapha_Laabid' }
@@ -4512,26 +4503,16 @@ export const politicians = [
     party: 'ensemble',
     position: 'Ancien député des Hautes-Alpes',
     convictions: 0,
-    ongoingCases: 1,
+    ongoingCases: 0,
     details: {
-      birthDate: '1961-10-10',
-      birthPlace: 'L\'Argentière-la-Bessée',
+      birthDate: '1959-10-14',
+      birthPlace: 'Gap',
       career: [
         'Député des Hautes-Alpes (2002-2022)',
-        'Secrétaire d\'État à la Ruralité (2020-2022)',
-        'Rapporteur général du budget (2017-2020)'
+        'Rapporteur général du budget (2017-2020)',
+        'Secrétaire d\'État à la Ruralité (2020-2022)'
       ],
-      justiceIncidents: [
-        {
-          type: 'Mise en examen',
-          date: '2023',
-          description: 'Mis en examen pour prise illégale d\'intérêts dans le cadre de marchés publics passés lorsqu\'il était maire de L\'Argentière-la-Bessée.',
-          status: 'En cours',
-          sources: [
-            { title: 'Joël Giraud - Wikipedia', url: 'https://fr.wikipedia.org/wiki/Jo%C3%ABl_Giraud' }
-          ]
-        }
-      ]
+      justiceIncidents: []
     }
   },
 
@@ -4540,27 +4521,16 @@ export const politicians = [
     name: 'Stéphane Claireaux',
     party: 'ensemble',
     position: 'Ancien député de Saint-Pierre-et-Miquelon',
-    convictions: 1,
+    convictions: 0,
     ongoingCases: 0,
     details: {
-      birthDate: '1968-12-15',
+      birthDate: '1964-06-23',
       birthPlace: 'Saint-Pierre-et-Miquelon',
       career: [
         'Député de Saint-Pierre-et-Miquelon (2017-2022)',
         'Maire de Saint-Pierre (2014-2020)'
       ],
-      justiceIncidents: [
-        {
-          type: 'Condamnation',
-          date: '2023',
-          description: 'Condamné pour avoir tiré sur des pêcheurs avec un fusil à plombs lors d\'une manifestation devant son domicile.',
-          penalty: '3 mois de prison avec sursis et interdiction de port d\'armes',
-          status: 'Définitif',
-          sources: [
-            { title: 'Stéphane Claireaux - Wikipedia', url: 'https://fr.wikipedia.org/wiki/St%C3%A9phane_Claireaux' }
-          ]
-        }
-      ]
+      justiceIncidents: []
     }
   },
 
@@ -5246,6 +5216,7 @@ export const politicians = [
         {
           type: 'Mise en examen',
           date: '2024-09',
+          charges: ['Escroquerie aggravée', 'Abus de biens sociaux'],
           description: 'Mise en examen pour escroquerie aggravée dans l\'affaire des comptes de campagne de LFI en 2017. Sa société Mediascop est soupçonnée d\'avoir surfacturé des prestations pour obtenir des remboursements publics plus élevés.',
           status: 'En cours',
           sources: [
@@ -5257,7 +5228,7 @@ export const politicians = [
           type: 'Mise en examen',
           date: '2025',
           description: 'Renvoyée en procès pour escroquerie dans l\'affaire Le Média. Soupçonnée d\'avoir tenté de transférer plus de 67 000 euros vers sa société Mediascop au détriment du site d\'information qu\'elle avait cofondé.',
-          status: 'En cours - Procès prévu mai 2025',
+          status: 'En cours - Procès prévu mai 2026',
           sources: [
             { title: 'France Bleu', url: 'https://www.francebleu.fr/infos/faits-divers-justice/la-deputee-lfi-sophia-chikirou-jugee-en-mai-pour-escroquerie-2367700' },
             { title: 'Europe 1', url: 'https://www.europe1.fr/politique/candidate-lfi-a-la-mairie-de-paris-sophia-chikirou-sera-jugee-pour-escroquerie-877414' }
@@ -7780,7 +7751,7 @@ export const politicians = [
     party: 'lfi',
     position: 'Député - La France Insoumise',
     convictions: 1,
-    ongoingCases: 1,
+    ongoingCases: 0,
     details: {
       career: ['Député de la XVIIe législature'],
       justiceIncidents: [
@@ -7793,16 +7764,6 @@ export const politicians = [
           sources: [
             { title: 'Frontières Media', url: 'https://www.frontieresmedia.fr/societe/info-frontieres-andy-kerbrat-le-depute-lfi-condamne-a-1000-euros-damende-pour-usage-de-stupefia' },
             { title: 'France Info', url: 'https://www.franceinfo.fr/sante/drogue-addictions/le-depute-lfi-andy-kerbrat-interpelle-en-possession-de-drogue-reconnait-avoir-fait-n-importe-quoi-avec-ses-frais-de-mandat_6899522.html' }
-          ]
-        },
-        {
-          type: 'Enquête',
-          date: '2025',
-          description: 'Enquête sur l\'utilisation de son avance de frais de mandat (retraits en espèces de plus de 13 000 euros, virements personnels). Soupçonné d\'avoir utilisé environ 25 000 euros de frais parlementaires à des fins personnelles. Exclu 15 jours de l\'Assemblée nationale.',
-          status: 'En cours',
-          sources: [
-            { title: 'France Bleu', url: 'https://www.francebleu.fr/infos/faits-divers-justice/le-depute-lfi-de-nantes-andy-kerbrat-a-utilise-son-argent-de-depute-pour-s-acheter-de-la-drogue-2501486' },
-            { title: 'CNews', url: 'https://www.cnews.fr/france/2025-05-07/assemblee-nationale-le-depute-lfi-andy-kerbrat-et-une-elue-rn-exclus-15-jours-du' }
           ]
         }
       ]
