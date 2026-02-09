@@ -1003,7 +1003,7 @@ export const politicians = [
     party: 'lfi',
     position: 'Chef de La France Insoumise',
     convictions: 1,
-    ongoingCases: 2,
+    ongoingCases: 1,
     details: {
       birthDate: '1951-08-19',
       birthPlace: 'Tanger (Maroc)',
@@ -1024,17 +1024,6 @@ export const politicians = [
           sources: [
             { title: 'France Info', url: 'https://www.franceinfo.fr/politique/melenchon/perquisition-mouvementee-a-la-france-insoumise-jean-luc-melenchon-condamne-a-trois-mois-de-prison-avec-sursis-et-8000-euros-d-amende_3737089.html' },
             { title: 'France 24', url: 'https://www.france24.com/fr/20191209-france-melenchon-condamne-trois-mois-prison-sursis-perquisition-lfi' }
-          ]
-        },
-        {
-          type: 'Enquête préliminaire',
-          date: '2018-04',
-          description: 'Enquête ouverte par le parquet de Paris sur les comptes de campagne présidentielle 2017. Soupçons de surfacturations et d\'abus de confiance. Mise en examen de ses proches (Bastien Lachaud, Marie-Pierre Oprandi, association L\'Ère du peuple en 2021).',
-          charges: ['Surfacturations présumées', 'Abus de confiance', 'Escroquerie aggravée (associés)'],
-          status: 'En cours - Mélenchon lui-même pas mise en examen',
-          sources: [
-            { title: 'Wikipédia', url: 'https://fr.wikipedia.org/wiki/Affaire_des_comptes_de_campagne_de_Jean-Luc_M%C3%A9lenchon_en_2017' },
-            { title: 'Europe 1', url: 'https://www.europe1.fr/politique/comptes-de-campagne-2017-une-association-proche-de-melenchon-et-sa-mandataire-financiere-mis-en-examen-4058975' }
           ]
         },
         {
@@ -7873,10 +7862,22 @@ export const politicians = [
     party: 'lfi',
     position: 'Député - La France Insoumise',
     convictions: 0,
-    ongoingCases: 0,
+    ongoingCases: 1,
     details: {
       career: ['Député de la XVIIe législature'],
-      justiceIncidents: []
+      justiceIncidents: [
+        {
+          type: 'Mise en examen',
+          date: '2021',
+          description: 'Mis en examen dans le cadre de l\'enquête sur les comptes de campagne présidentielle 2017 de Jean-Luc Mélenchon. Soupçons de surfacturations et d\'abus de confiance.',
+          charges: ['Abus de confiance', 'Escroquerie aggravée'],
+          status: 'En cours',
+          sources: [
+            { title: 'Wikipédia', url: 'https://fr.wikipedia.org/wiki/Affaire_des_comptes_de_campagne_de_Jean-Luc_M%C3%A9lenchon_en_2017' },
+            { title: 'Europe 1', url: 'https://www.europe1.fr/politique/comptes-de-campagne-2017-une-association-proche-de-melenchon-et-sa-mandataire-financiere-mis-en-examen-4058975' }
+          ]
+        }
+      ]
     }
   },
   {
