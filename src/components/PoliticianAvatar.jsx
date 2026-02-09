@@ -25,7 +25,7 @@ export default function PoliticianAvatar({
     [name, partyColor]
   )
 
-  const roundedClass = shape === 'circle' ? 'rounded-full' : ''
+  const roundedClass = shape === 'circle' ? 'rounded-full' : 'rounded-lg'
   const actualBorder = borderWidth ?? defaultBorders[size]
 
   return (
