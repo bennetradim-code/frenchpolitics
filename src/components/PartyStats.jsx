@@ -162,34 +162,46 @@ export default function PartyStats({ politicians }) {
             .filter(s => s.count > 0)
             .map(s => {
               const partyPols = politicians.filter(p => p.party === s.partyId)
+              const total = partyPols.length
               const convicted = partyPols.filter(p => p.convictions > 0).length
               const ongoingOnly = partyPols.filter(p => p.convictions === 0 && p.ongoingCases > 0).length
-              const hasEnqueteOrMEX = partyPols.filter(p => {
+              const enqueteOnly = partyPols.filter(p => {
                 if (p.convictions > 0 || p.ongoingCases > 0) return false
                 const incidents = p.details?.justiceIncidents || []
-                return incidents.some(inc => {
-                  const type = inc.type || ''
-                  return (showEnquetes && (type.includes('Enquête') || type.includes('Accusation'))) ||
-                         (showMEX && type.includes('Mise en examen'))
-                })
+                return incidents.some(inc => (inc.type || '').includes('Enquête') || (inc.type || '').includes('Accusation'))
               }).length
-              const involved = (showConvictions ? convicted : 0) + (showOngoing ? ongoingOnly : 0) + hasEnqueteOrMEX
-              const clean = partyPols.length - involved
+              const mexOnly = partyPols.filter(p => {
+                if (p.convictions > 0 || p.ongoingCases > 0) return false
+                const incidents = p.details?.justiceIncidents || []
+                const hasEnquete = incidents.some(inc => (inc.type || '').includes('Enquête') || (inc.type || '').includes('Accusation'))
+                if (hasEnquete) return false
+                return incidents.some(inc => (inc.type || '').includes('Mise en examen'))
+              }).length
+              const involved = (showConvictions ? convicted : 0) + (showOngoing ? ongoingOnly : 0) + (showEnquetes ? enqueteOnly : 0) + (showMEX ? mexOnly : 0)
+              const clean = total - involved
               const abbr = s.partyName.match(/\(([^)]+)\)/)?.[1] || s.partyName.split('(')[0].trim()
               return {
                 name: abbr,
                 fullName: s.partyName.split('(')[0].trim(),
-                total: partyPols.length,
+                total,
                 convictions: s.convictions,
-                pctInvolved: +(involved / partyPols.length * 100).toFixed(1),
-                pctClean: +(clean / partyPols.length * 100).toFixed(1),
-                involved,
-                clean
+                ...(showConvictions && { pctConvictions: +(convicted / total * 100).toFixed(1) }),
+                ...(showOngoing && { pctOngoing: +(ongoingOnly / total * 100).toFixed(1) }),
+                ...(showEnquetes && { pctEnquetes: +(enqueteOnly / total * 100).toFixed(1) }),
+                ...(showMEX && { pctMEX: +(mexOnly / total * 100).toFixed(1) }),
+                pctClean: +(clean / total * 100).toFixed(1)
               }
             })
             .sort((a, b) => b.convictions - a.convictions)
 
           const hasAnyFilter = showConvictions || showOngoing || showEnquetes || showMEX
+
+          const ratioBars = [
+            { key: 'pctConvictions', label: 'Condamnés', color: '#DC2626', show: showConvictions },
+            { key: 'pctOngoing', label: 'Affaires en cours', color: '#EA580C', show: showOngoing },
+            { key: 'pctEnquetes', label: 'Enquêtes', color: '#0284C7', show: showEnquetes },
+            { key: 'pctMEX', label: 'Mises en examen', color: '#7C3AED', show: showMEX }
+          ].filter(b => b.show)
 
           return hasAnyFilter ? (
             <>
@@ -211,15 +223,19 @@ export default function PartyStats({ politicians }) {
                       return item ? `${item.fullName} (${item.total} membres)` : label
                     }}
                   />
-                  <Bar dataKey="pctInvolved" name="Impliqués" fill="#dc2626" stackId="ratio" />
+                  {ratioBars.map(b => (
+                    <Bar key={b.key} dataKey={b.key} name={b.label} fill={b.color} stackId="ratio" />
+                  ))}
                   <Bar dataKey="pctClean" name="Sans incident" fill="#86efac" stackId="ratio" />
                 </BarChart>
               </ResponsiveContainer>
               <div className="flex flex-wrap gap-4 mt-3 text-xs justify-center">
-                <div className="flex items-center gap-1.5">
-                  <span className="inline-block w-3 h-3 rounded-full" style={{ backgroundColor: '#dc2626' }} />
-                  <span className="text-gray-600">Impliqués (selon filtres)</span>
-                </div>
+                {ratioBars.map(b => (
+                  <div key={b.key} className="flex items-center gap-1.5">
+                    <span className="inline-block w-3 h-3 rounded-full" style={{ backgroundColor: b.color }} />
+                    <span className="text-gray-600">{b.label}</span>
+                  </div>
+                ))}
                 <div className="flex items-center gap-1.5">
                   <span className="inline-block w-3 h-3 rounded-full" style={{ backgroundColor: '#86efac' }} />
                   <span className="text-gray-600">Sans incident</span>
