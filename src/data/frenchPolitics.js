@@ -1441,25 +1441,6 @@ export const politicians = [
 
   {
     id: nextId++,
-    name: 'Marielle de Sarnez',
-    party: 'modem',
-    position: 'Ancienne députée européenne',
-    convictions: 0,
-    ongoingCases: 0,
-    deceased: true,
-    details: {
-      birthDate: '1951-03-27',
-      birthPlace: 'Paris',
-      career: [
-        'Députée européenne (1999-2017)',
-        'Ministre des Affaires européennes (2017)',
-        'Députée de Paris (2017-2021)'
-      ],
-      justiceIncidents: []
-    }
-  },
-  {
-    id: nextId++,
     name: 'Marc Fesneau',
     party: 'modem',
     position: 'Ancien ministre de l\'Agriculture',
@@ -2220,39 +2201,6 @@ export const politicians = [
 
   {
     id: nextId++,
-    name: 'Jacques Chirac',
-    party: 'lr',
-    position: 'Ancien Président de la République',
-    convictions: 1,
-    ongoingCases: 0,
-    deceased: true,
-    details: {
-      birthDate: '1932-11-29',
-      birthPlace: 'Paris',
-      career: [
-        'Maire de Paris (1977-1995)',
-        'Premier ministre (1974-1976, 1986-1988)',
-        'Président de la République (1995-2007)',
-        'Chef du RPR/Rassemblement pour la République'
-      ],
-      justiceIncidents: [
-        {
-          type: 'Condamnation',
-          date: '2011',
-          description: 'Condamné pour détournement de fonds publics lors de son mandat de maire de Paris. Financement occulte d\'emplois fictifs et de campagnes électorales par le RPR.',
-          penalty: '2 ans de prison avec sursis + 500 000€ d\'amende',
-          status: 'Condamné',
-          sources: [
-            { title: 'Jacques Chirac - Wikipedia', url: 'https://fr.wikipedia.org/wiki/Jacques_Chirac' },
-            { title: 'Affaire des emplois fictifs de la mairie de Paris - Wikipedia', url: 'https://fr.wikipedia.org/wiki/Affaire_des_emplois_fictifs_de_la_mairie_de_Paris' }
-          ]
-        }
-      ]
-    }
-  },
-
-  {
-    id: nextId++,
     name: 'Michel Mouillot',
     party: 'lr',
     position: 'Ancien maire de Cannes',
@@ -2497,111 +2445,7 @@ export const politicians = [
 
   // ===== RN =====
 
-  {
-    id: nextId++,
-    name: 'Jean-Marie Le Pen',
-    party: 'rn',
-    position: 'Fondateur du Front National',
-    convictions: 4,
-    ongoingCases: 0,
-    deceased: true,
-    details: {
-      birthDate: '1928-06-20',
-      birthPlace: 'La Trinité-sur-Mer',
-      career: [
-        'Fondateur du Front national (1972)',
-        'Président du Front national (1972-2011)',
-        'Député européen (1984-2019)',
-        'Candidat à l\'élection présidentielle (1974, 1988, 1995, 2002, 2007)'
-      ],
-      justiceIncidents: [
-        {
-          type: 'Condamnation',
-          date: '1991',
-          description: 'Condamné pour contestation de crimes contre l\'humanité. Avait qualifié les chambres à gaz de « détail de l\'histoire de la Seconde Guerre mondiale » en 1987.',
-          penalty: '1,2 million de francs d\'amende',
-          status: 'Définitif',
-          sources: [
-            { title: 'Jean-Marie Le Pen - Wikipedia', url: 'https://fr.wikipedia.org/wiki/Jean-Marie_Le_Pen' }
-          ]
-        },
-        {
-          type: 'Condamnation',
-          date: '1998',
-          description: 'Condamné pour violences volontaires envers une élue socialiste, Annette Peulvast-Bergeal, lors de la campagne des législatives de 1997.',
-          penalty: 'Amende et dommages et intérêts',
-          status: 'Définitif',
-          sources: [
-            { title: 'Jean-Marie Le Pen - Wikipedia', url: 'https://fr.wikipedia.org/wiki/Jean-Marie_Le_Pen' }
-          ]
-        },
-        {
-          type: 'Condamnation',
-          date: '2008',
-          description: 'Condamné pour provocation à la discrimination et à la haine raciale. Propos tenus dans le journal Rivarol en 2005 sur l\'occupation allemande en France.',
-          penalty: '3 mois de prison avec sursis et 10 000€ d\'amende',
-          status: 'Définitif',
-          sources: [
-            { title: 'Jean-Marie Le Pen - Wikipedia', url: 'https://fr.wikipedia.org/wiki/Jean-Marie_Le_Pen' }
-          ]
-        },
-        {
-          type: 'Condamnation',
-          date: '2015',
-          description: 'Condamné pour contestation de crimes contre l\'humanité. Réitération du qualificatif de « détail » concernant les chambres à gaz.',
-          penalty: 'Amende',
-          status: 'Définitif',
-          sources: [
-            { title: 'Jean-Marie Le Pen - Wikipedia', url: 'https://fr.wikipedia.org/wiki/Jean-Marie_Le_Pen' }
-          ]
-        }
-      ]
-    }
-  },
-
   // ===== LR =====
-
-  {
-    id: nextId++,
-    name: 'Charles Pasqua',
-    party: 'lr',
-    position: 'Ancien Ministre de l\'Intérieur',
-    convictions: 2,
-    ongoingCases: 0,
-    deceased: true,
-    details: {
-      birthDate: '1927-04-18',
-      birthPlace: 'Grasse',
-      career: [
-        'Ministre de l\'Intérieur (1986-1988, 1993-1995)',
-        'Sénateur des Hauts-de-Seine (1977-2011)',
-        'Président du Conseil général des Hauts-de-Seine (1988-2004)'
-      ],
-      justiceIncidents: [
-        {
-          type: 'Condamnation',
-          date: '2010',
-          description: 'Condamné dans l\'affaire de la Sofremi pour complicité d\'abus de biens sociaux. Ventes d\'armes à l\'Angola via la société Sofremi.',
-          penalty: '18 mois de prison avec sursis et 100 000€ d\'amende',
-          status: 'Définitif',
-          sources: [
-            { title: 'Charles Pasqua - Wikipedia', url: 'https://fr.wikipedia.org/wiki/Charles_Pasqua' },
-            { title: 'Affaire de la Sofremi - Wikipedia', url: 'https://fr.wikipedia.org/wiki/Affaire_de_la_Sofremi' }
-          ]
-        },
-        {
-          type: 'Condamnation',
-          date: '2010',
-          description: 'Condamné pour financement illicite dans l\'affaire du casino d\'Annemasse.',
-          penalty: '18 mois de prison avec sursis',
-          status: 'Définitif',
-          sources: [
-            { title: 'Charles Pasqua - Wikipedia', url: 'https://fr.wikipedia.org/wiki/Charles_Pasqua' }
-          ]
-        }
-      ]
-    }
-  },
 
   {
     id: nextId++,
@@ -2957,47 +2801,6 @@ export const politicians = [
 
   {
     id: nextId++,
-    name: 'Jacques Médecin',
-    party: 'lr',
-    position: 'Ancien Maire de Nice',
-    convictions: 2,
-    ongoingCases: 0,
-    deceased: true,
-    details: {
-      birthDate: '1928-05-05',
-      birthPlace: 'Nice',
-      career: [
-        'Maire de Nice (1966-1990)',
-        'Député des Alpes-Maritimes (1962-1973)',
-        'Secrétaire d\'État au Tourisme (1976-1978)'
-      ],
-      justiceIncidents: [
-        {
-          type: 'Condamnation',
-          date: '1995',
-          description: 'Condamné pour détournement de fonds publics et corruption. S\'était enfui en Uruguay en 1990 pour échapper à la justice. Extradé en 1994.',
-          penalty: '3 ans et demi de prison ferme',
-          status: 'Définitif',
-          sources: [
-            { title: 'Jacques Médecin - Wikipedia', url: 'https://fr.wikipedia.org/wiki/Jacques_M%C3%A9decin' }
-          ]
-        },
-        {
-          type: 'Condamnation',
-          date: '1998',
-          description: 'Condamné pour fraude fiscale. Dissimulation de revenus et de patrimoine à l\'étranger.',
-          penalty: 'Amende et prison',
-          status: 'Définitif',
-          sources: [
-            { title: 'Jacques Médecin - Wikipedia', url: 'https://fr.wikipedia.org/wiki/Jacques_M%C3%A9decin' }
-          ]
-        }
-      ]
-    }
-  },
-
-  {
-    id: nextId++,
     name: 'Gaston Flosse',
     party: 'lr',
     position: 'Ancien Président de la Polynésie française',
@@ -3266,71 +3069,6 @@ export const politicians = [
 
   {
     id: nextId++,
-    name: 'Roland Dumas',
-    party: 'ps',
-    position: 'Ancien Président du Conseil constitutionnel',
-    convictions: 0,
-    ongoingCases: 0,
-    deceased: true,
-    details: {
-      birthDate: '1922-08-23',
-      birthPlace: 'Limoges',
-      career: [
-        'Ministre des Affaires étrangères (1984-1986, 1988-1993)',
-        'Président du Conseil constitutionnel (1995-2000)',
-        'Député de Haute-Vienne (1956-1958, 1967-1968, 1981-1993)',
-        'Avocat de François Mitterrand'
-      ],
-      justiceIncidents: [
-        {
-          type: 'Relaxe',
-          date: '2003',
-          description: 'Condamné en première instance en 2001 pour complicité et recel d\'abus de biens sociaux dans l\'affaire Elf. Accusé d\'avoir reçu des avantages via sa compagne Christine Deviers-Joncour. Relaxé en appel en 2003.',
-          status: 'Relaxé en appel',
-          sources: [
-            { title: 'Roland Dumas - Wikipedia', url: 'https://fr.wikipedia.org/wiki/Roland_Dumas' },
-            { title: 'Affaire Elf - Wikipedia', url: 'https://fr.wikipedia.org/wiki/Affaire_Elf' }
-          ]
-        }
-      ]
-    }
-  },
-
-  {
-    id: nextId++,
-    name: 'Henri Emmanuelli',
-    party: 'ps',
-    position: 'Ancien Président de l\'Assemblée nationale',
-    convictions: 1,
-    ongoingCases: 0,
-    deceased: true,
-    details: {
-      birthDate: '1945-05-31',
-      birthPlace: 'Eaux-Bonnes',
-      career: [
-        'Président de l\'Assemblée nationale (1992-1993)',
-        'Député des Landes (1978-2017)',
-        'Président du Conseil général des Landes (1982-2001)',
-        'Premier secrétaire du PS (1994-1995)'
-      ],
-      justiceIncidents: [
-        {
-          type: 'Condamnation',
-          date: '1997',
-          description: 'Condamné pour recel d\'abus de biens sociaux dans l\'affaire Urba. Système de financement occulte du Parti socialiste via le bureau d\'études Urba.',
-          penalty: '18 mois de prison avec sursis et 30 000 francs d\'amende',
-          status: 'Définitif',
-          sources: [
-            { title: 'Henri Emmanuelli - Wikipedia', url: 'https://fr.wikipedia.org/wiki/Henri_Emmanuelli' },
-            { title: 'Affaire Urba - Wikipedia', url: 'https://fr.wikipedia.org/wiki/Affaire_Urba' }
-          ]
-        }
-      ]
-    }
-  },
-
-  {
-    id: nextId++,
     name: 'Jean-Noël Guérini',
     party: 'ps',
     position: 'Ancien Président du Conseil général des Bouches-du-Rhône',
@@ -3414,39 +3152,6 @@ export const politicians = [
           status: 'Définitif',
           sources: [
             { title: 'Jean-Marc Ayrault - Wikipedia', url: 'https://fr.wikipedia.org/wiki/Jean-Marc_Ayrault' }
-          ]
-        }
-      ]
-    }
-  },
-
-  {
-    id: nextId++,
-    name: 'Bernard Tapie',
-    party: 'ps',
-    position: 'Ancien Ministre de la Ville',
-    convictions: 1,
-    ongoingCases: 0,
-    deceased: true,
-    details: {
-      birthDate: '1943-01-26',
-      birthPlace: 'Paris',
-      career: [
-        'Ministre de la Ville (1992-1993)',
-        'Député des Bouches-du-Rhône (1989-1996)',
-        'Député européen (1994-1997)',
-        'Président de l\'Olympique de Marseille (1986-1994)'
-      ],
-      justiceIncidents: [
-        {
-          type: 'Condamnation',
-          date: '1995',
-          description: 'Condamné dans l\'affaire OM-VA pour corruption dans le match Olympique de Marseille - Valenciennes (1993). Tentative de corruption de joueurs adverses.',
-          penalty: '2 ans de prison dont 1 ferme et interdiction de gérer une entreprise',
-          status: 'Définitif',
-          sources: [
-            { title: 'Bernard Tapie - Wikipedia', url: 'https://fr.wikipedia.org/wiki/Bernard_Tapie' },
-            { title: 'Affaire VA-OM - Wikipedia', url: 'https://fr.wikipedia.org/wiki/Affaire_VA-OM' }
           ]
         }
       ]
@@ -3590,36 +3295,6 @@ export const politicians = [
           status: 'Condamnation définitive',
           sources: [
             { title: 'Jean-Pierre Kucheida - Wikipedia', url: 'https://fr.wikipedia.org/wiki/Jean-Pierre_Kucheida' }
-          ]
-        }
-      ]
-    }
-  },
-  {
-    id: nextId++,
-    name: 'Michel Delebarre',
-    party: 'ps',
-    position: 'Ancien ministre (Travail, Transports, Ville sous Mitterrand), ancien maire de Dunkerque, ancien sénateur',
-    convictions: 1,
-    ongoingCases: 0,
-    deceased: true,
-    details: {
-      career: [
-        'Ministre du Travail (1988-1990)',
-        'Ministre des Transports (1990-1991)',
-        'Ministre de la Ville (1991-1992)',
-        'Maire de Dunkerque (1989-2014)',
-        'Sénateur du Nord (2014-2017)'
-      ],
-      justiceIncidents: [
-        {
-          type: 'Condamnation',
-          date: '2017',
-          description: 'Condamné pour non-déclaration de patrimoine auprès de la HATVP.',
-          penalty: '2 500€ d\'amende',
-          status: 'Condamnation définitive',
-          sources: [
-            { title: 'Michel Delebarre - Wikipedia', url: 'https://fr.wikipedia.org/wiki/Michel_Delebarre' }
           ]
         }
       ]
@@ -4520,32 +4195,6 @@ export const politicians = [
         'Président du groupe LR à l\'Assemblée nationale (2022-)'
       ],
       justiceIncidents: []
-    }
-  },
-
-  {
-    id: nextId++,
-    name: 'Serge Dassault',
-    party: 'lr',
-    position: 'Sénateur de l\'Essonne, industriel',
-    convictions: 1,
-    ongoingCases: 0,
-    deceased: true,
-    details: {
-      career: [
-        'Sénateur de l\'Essonne (2004-2018)',
-        'PDG du Groupe Dassault',
-        'Maire de Corbeil-Essonnes (1995-2009)'
-      ],
-      justiceIncidents: [
-        {
-          type: 'Condamnation',
-          date: '2015',
-          description: 'Condamné en appel pour achat de votes aux élections municipales de 2009-2010 à Corbeil-Essonnes.',
-          penalty: '2 ans de prison avec sursis, 150 000€ d\'amende, 5 ans d\'inéligibilité',
-          status: 'Condamnation définitive'
-        }
-      ]
     }
   },
 
