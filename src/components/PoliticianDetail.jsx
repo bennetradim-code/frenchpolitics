@@ -69,6 +69,7 @@ export default function PoliticianDetail() {
               name={politician.name}
               partyColor={partyColor}
               size="lg"
+              shape="square"
             />
           </div>
           <div className="md:w-2/3 p-6">

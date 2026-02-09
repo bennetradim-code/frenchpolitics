@@ -39,57 +39,48 @@ export default function PartyCard({ party }) {
         </div>
 
         {/* Statistics */}
-        <div className="grid grid-cols-3 gap-2 mb-4">
-          <div className="bg-blue-50 p-3 rounded text-center">
-            <p className="text-xs text-gray-600">Membres</p>
-            <p className="text-lg font-bold text-blue-600">{(party.members / 1000).toFixed(0)}K</p>
-          </div>
+        <div className="grid grid-cols-2 gap-2 mb-4">
           <div className="bg-green-50 p-3 rounded text-center">
             <p className="text-xs text-gray-600">Sièges</p>
             <p className="text-lg font-bold text-green-600">{party.seats}</p>
           </div>
-          <div className="bg-orange-50 p-3 rounded text-center">
+          <div className="bg-indigo-50 p-3 rounded text-center">
             <p className="text-xs text-gray-600">Personnalités</p>
-            <p className="text-lg font-bold text-orange-600">{stats.count}</p>
+            <p className="text-lg font-bold text-indigo-600">{stats.count}</p>
           </div>
         </div>
 
-        {/* Justice incidents + severity gauge */}
+        {/* Justice stamp */}
         <div className="border-t pt-4">
           {stats.totalConvictions > 0 || stats.totalOngoingCases > 0 ? (
-            <>
-              <div className="flex flex-wrap gap-2 mb-3">
+            <div className="flex items-center gap-3">
+              {severity.average > 0 && (
+                <span
+                  className="inline-flex items-center gap-1 px-2.5 py-1 rounded font-bold flex-shrink-0"
+                  style={{
+                    border: `2.5px solid ${getSeverityColor(severity.average)}`,
+                    color: getSeverityColor(severity.average),
+                    backgroundColor: getSeverityColor(severity.average) + '15',
+                    fontSize: '14px',
+                    lineHeight: 1.2,
+                    transform: 'rotate(-2deg)',
+                  }}
+                  title={`Score total : ${severity.total} pts / ${severity.count} personnalités`}
+                >
+                  {severity.average}
+                  <span style={{ fontSize: '10px', fontWeight: 600 }}>pts/pers.</span>
+                </span>
+              )}
+              <div className="flex flex-wrap gap-1.5 text-xs text-gray-600">
                 {stats.totalConvictions > 0 && (
-                  <span className="inline-flex items-center px-2 py-1 rounded text-xs font-bold text-white bg-red-600">
-                    {stats.totalConvictions} condamnation{stats.totalConvictions > 1 ? 's' : ''}
-                  </span>
+                  <span>{stats.totalConvictions} condamnation{stats.totalConvictions > 1 ? 's' : ''}</span>
                 )}
+                {stats.totalConvictions > 0 && stats.totalOngoingCases > 0 && <span>·</span>}
                 {stats.totalOngoingCases > 0 && (
-                  <span className="inline-flex items-center px-2 py-1 rounded text-xs font-bold text-white bg-orange-500">
-                    {stats.totalOngoingCases} affaire{stats.totalOngoingCases > 1 ? 's' : ''} en cours
-                  </span>
+                  <span>{stats.totalOngoingCases} affaire{stats.totalOngoingCases > 1 ? 's' : ''} en cours</span>
                 )}
               </div>
-              {severity.average > 0 && (
-                <div title={`Score total : ${severity.total} pts / ${severity.count} personnalités`}>
-                  <div className="flex justify-between items-center mb-1">
-                    <span className="text-xs font-semibold text-gray-600">Sévérité moyenne</span>
-                    <span className="text-xs font-bold" style={{ color: getSeverityColor(severity.average) }}>
-                      {severity.average} pts/pers.
-                    </span>
-                  </div>
-                  <div className="w-full bg-green-100 rounded-full h-2 overflow-hidden">
-                    <div
-                      className="h-2 rounded-full transition-all duration-500"
-                      style={{
-                        width: `${Math.min((severity.average / 50) * 100, 100)}%`,
-                        backgroundColor: getSeverityColor(severity.average)
-                      }}
-                    />
-                  </div>
-                </div>
-              )}
-            </>
+            </div>
           ) : (
             <p className="text-xs text-green-600 font-semibold">Aucun incident de justice</p>
           )}
