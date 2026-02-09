@@ -169,7 +169,7 @@ export const politicians = [
     party: 'rn',
     position: 'Présidente du RN',
     convictions: 1,
-    ongoingCases: 1,
+    ongoingCases: 0,
     details: {
       birthDate: '1968-12-05',
       birthPlace: 'Neuilly-sur-Seine',
@@ -181,19 +181,24 @@ export const politicians = [
       ],
       justiceIncidents: [
         {
-          type: 'Condamnation',
-          date: '2018',
-          description: 'Condamnée pour diffusion d\'images violentes. En décembre 2015, elle publie sur Twitter des photos d\'exécutions de Daech. Relaxée en première instance, condamnée en appel à 300€ d\'amende, confirmé en cassation.',
-          penalty: '300€ d\'amende',
-          status: 'Condamnation définitive'
+          type: 'Relaxe',
+          date: '2021-05',
+          description: 'Poursuivie pour diffusion d\'images violentes accessibles aux mineurs. En décembre 2015, elle publie sur Twitter des photos d\'exécutions de Daech avec le commentaire "Daech, c\'est ça !". Relaxée par le tribunal de Nanterre en mai 2021, la justice reconnaissant une "vocation informative" et une "démarche de protestation politique".',
+          status: 'Relaxe définitive',
+          sources: [
+            { title: 'France Bleu - Relaxe photos Daech', url: 'https://www.francebleu.fr/infos/faits-divers-justice/marine-le-pen-et-gilbert-collard-relaxes-dans-l-affaire-des-photos-d-exactions-de-daech-1620131450' },
+            { title: 'CNEWS - Photos Daesh relaxés', url: 'https://www.cnews.fr/france/2021-05-04/photos-dexaction-de-daesh-sur-twitter-marine-le-pen-et-gilbert-collard-relaxes' }
+          ]
         },
         {
-          type: 'Enquête',
-          date: '2022',
-          description: 'Enquête sur le détournement de fonds de campagne européenne (13,4 M€)',
+          type: 'Condamnation',
+          date: '2025-12',
+          description: 'Condamnée définitivement pour diffamation envers l\'association La Cimade. En janvier 2022, sur BFM-TV, elle accuse la Cimade d\'organiser "la filière d\'immigration clandestine en provenance des Comores" à Mayotte. Condamnée en appel (Paris, 11 septembre 2024), cassation rejetée le 16 décembre 2025.',
+          penalty: '500€ d\'amende avec sursis',
+          status: 'Condamnation définitive',
           sources: [
-            { title: 'Marine Le Pen - Wikipedia', url: 'https://fr.wikipedia.org/wiki/Marine_Le_Pen' },
-            { title: 'Affaire financement RN - Le Monde', url: 'https://www.lemonde.fr' }
+            { title: 'La Cimade - Condamnation définitive', url: 'https://www.lacimade.org/diffamation-a-lencontre-de-la-cimade-marine-le-pen-definitivement-condamnee/' },
+            { title: 'Le Club des Juristes', url: 'https://www.leclubdesjuristes.com/en-bref/marine-le-pen-definitivement-condamnee-pour-diffamation-envers-la-cimade-13397/' }
           ]
         },
         {
@@ -203,8 +208,8 @@ export const politicians = [
           penalty: '4 ans de prison (2 ferme), 5 ans d\'inéligibilité avec exécution provisoire',
           status: 'Procès en appel en cours depuis janvier 2026',
           sources: [
-            { title: 'Marine Le Pen - Wikipedia', url: 'https://fr.wikipedia.org/wiki/Marine_Le_Pen' },
-            { title: 'Affaire des assistants parlementaires - Wikipedia', url: 'https://fr.wikipedia.org/wiki/Affaire_des_assistants_parlementaires_du_Front_national_au_Parlement_europ%C3%A9en' }
+            { title: 'Affaire des assistants parlementaires - Wikipedia', url: 'https://fr.wikipedia.org/wiki/Affaire_des_assistants_parlementaires_du_Front_national_au_Parlement_europ%C3%A9en' },
+            { title: 'France Info - Procès en appel', url: 'https://www.franceinfo.fr/politique/front-national/affaire-des-assistants-fn-au-parlement-europeen/direct-proces-en-appel-de-marine-le-pen-suivez-les-plaidoiries-des-avocats-du-parlement-europeen-mardi-matin-avant-les-requisitions-dans-l-apres-midi_7779869.html' }
           ]
         }
       ]
