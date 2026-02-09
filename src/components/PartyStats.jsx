@@ -1,6 +1,7 @@
 import { useState, useMemo } from 'react'
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts'
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts'
 import { parties } from '../data/frenchPolitics'
+import { computeSeverityScore } from '../utils/severityScore'
 
 const INCIDENT_TYPES = [
   { key: 'convictions', label: 'Condamnations', color: '#DC2626' },
@@ -244,6 +245,79 @@ export default function PartyStats({ politicians }) {
             </>
           ) : (
             <p className="text-gray-500 text-center py-8">Sélectionnez au moins un type d'incident pour afficher le graphique.</p>
+          )
+        })()}
+      </div>
+
+      {/* Severity chart */}
+      <div className="bg-white rounded-lg shadow p-6 mb-8">
+        <h3 className="text-lg font-semibold text-gray-800 mb-2">Score de sévérité moyen par parti</h3>
+        <p className="text-xs text-gray-500 mb-4">
+          Basé sur les peines prononcées : (prison ferme × 10) + (sursis × 3) + (inéligibilité × 5) + (log₁₀(amende) × 2).
+          Seules les condamnations définitives sont comptées. Score divisé par le nombre de personnalités référencées.
+        </p>
+
+        {(() => {
+          const severityData = partyStats
+            .filter(s => s.count > 0)
+            .map(s => {
+              const partyPols = politicians.filter(p => p.party === s.partyId)
+              let total = 0
+              let convicted = 0
+              partyPols.forEach(pol => {
+                const score = computeSeverityScore(pol).total
+                if (score > 0) convicted++
+                total += score
+              })
+              const average = Math.round((total / partyPols.length) * 10) / 10
+              const abbr = s.partyName.match(/\(([^)]+)\)/)?.[1] || s.partyName.split('(')[0].trim()
+              return {
+                name: abbr,
+                fullName: s.partyName.split('(')[0].trim(),
+                average,
+                total,
+                count: partyPols.length,
+                convicted,
+                color: s.color
+              }
+            })
+            .filter(s => s.average > 0)
+            .sort((a, b) => b.average - a.average)
+
+          if (severityData.length === 0) {
+            return <p className="text-gray-500 text-center py-8">Aucune condamnation définitive enregistrée.</p>
+          }
+
+          return (
+            <ResponsiveContainer width="100%" height={Math.max(300, severityData.length * 50)}>
+              <BarChart layout="vertical" data={severityData} margin={{ bottom: 5, left: 0, right: 20, top: 5 }}>
+                <CartesianGrid strokeDasharray="3 3" />
+                <YAxis
+                  dataKey="name"
+                  type="category"
+                  width={90}
+                  interval={0}
+                  tick={{ fontSize: 13, fill: '#374151' }}
+                />
+                <XAxis type="number" allowDecimals={false} />
+                <Tooltip
+                  formatter={(value, name, props) => {
+                    const d = props.payload
+                    return [`${value} pts/pers. (total: ${d.total} pts, ${d.convicted} condamné${d.convicted > 1 ? 's' : ''} / ${d.count} pers.)`, 'Sévérité moyenne']
+                  }}
+                  labelFormatter={(label) => {
+                    const item = severityData.find(d => d.name === label)
+                    return item?.fullName || label
+                  }}
+                />
+                <Bar
+                  dataKey="average"
+                  name="Sévérité moyenne"
+                  fill="#dc2626"
+                  radius={[0, 4, 4, 0]}
+                />
+              </BarChart>
+            </ResponsiveContainer>
           )
         })()}
       </div>

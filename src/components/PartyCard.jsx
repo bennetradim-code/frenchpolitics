@@ -54,35 +54,46 @@ export default function PartyCard({ party }) {
           </div>
         </div>
 
-        {/* Justice incidents */}
-        {stats.totalConvictions > 0 || stats.totalOngoingCases > 0 ? (
-          <div className="border-t pt-4">
-            <div className="flex items-center justify-between mb-2">
-              <p className="text-sm font-semibold text-gray-700">Incidents de justice:</p>
+        {/* Justice incidents + severity gauge */}
+        <div className="border-t pt-4">
+          {stats.totalConvictions > 0 || stats.totalOngoingCases > 0 ? (
+            <>
+              <div className="flex flex-wrap gap-2 mb-3">
+                {stats.totalConvictions > 0 && (
+                  <span className="inline-flex items-center px-2 py-1 rounded text-xs font-bold text-white bg-red-600">
+                    {stats.totalConvictions} condamnation{stats.totalConvictions > 1 ? 's' : ''}
+                  </span>
+                )}
+                {stats.totalOngoingCases > 0 && (
+                  <span className="inline-flex items-center px-2 py-1 rounded text-xs font-bold text-white bg-orange-500">
+                    {stats.totalOngoingCases} affaire{stats.totalOngoingCases > 1 ? 's' : ''} en cours
+                  </span>
+                )}
+              </div>
               {severity.average > 0 && (
-                <span className="text-xs font-bold" style={{ color: getSeverityColor(severity.average) }} title={`Score total : ${severity.total} pts / ${severity.count} personnalités`}>
-                  Sévérité moy. : {severity.average} pts
-                </span>
+                <div title={`Score total : ${severity.total} pts / ${severity.count} personnalités`}>
+                  <div className="flex justify-between items-center mb-1">
+                    <span className="text-xs font-semibold text-gray-600">Sévérité moyenne</span>
+                    <span className="text-xs font-bold" style={{ color: getSeverityColor(severity.average) }}>
+                      {severity.average} pts/pers.
+                    </span>
+                  </div>
+                  <div className="w-full bg-green-100 rounded-full h-2 overflow-hidden">
+                    <div
+                      className="h-2 rounded-full transition-all duration-500"
+                      style={{
+                        width: `${Math.min((severity.average / 50) * 100, 100)}%`,
+                        backgroundColor: getSeverityColor(severity.average)
+                      }}
+                    />
+                  </div>
+                </div>
               )}
-            </div>
-            <div className="flex flex-wrap gap-2">
-              {stats.totalConvictions > 0 && (
-                <span className="inline-flex items-center px-2 py-1 rounded text-xs font-bold text-white bg-red-600">
-                  {stats.totalConvictions} condamnation{stats.totalConvictions > 1 ? 's' : ''}
-                </span>
-              )}
-              {stats.totalOngoingCases > 0 && (
-                <span className="inline-flex items-center px-2 py-1 rounded text-xs font-bold text-white bg-orange-500">
-                  {stats.totalOngoingCases} affaire{stats.totalOngoingCases > 1 ? 's' : ''} en cours
-                </span>
-              )}
-            </div>
-          </div>
-        ) : (
-          <div className="border-t pt-4">
+            </>
+          ) : (
             <p className="text-xs text-green-600 font-semibold">Aucun incident de justice</p>
-          </div>
-        )}
+          )}
+        </div>
       </div>
     </Link>
   )

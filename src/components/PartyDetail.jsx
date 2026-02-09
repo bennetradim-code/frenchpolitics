@@ -85,10 +85,19 @@ export default function PartyDetail() {
               <p className="text-xs text-gray-600 uppercase tracking-wide">Affaires en cours</p>
               <p className="text-2xl font-bold text-orange-600">{stats.totalOngoingCases}</p>
             </div>
-            <div className="bg-gray-50 p-4 rounded text-center" title={`Score total : ${severity.total} pts / ${severity.count} personnalités`}>
-              <p className="text-xs text-gray-600 uppercase tracking-wide">Sévérité moy.</p>
-              <p className="text-2xl font-bold" style={{ color: getSeverityColor(severity.average) }}>{severity.average}</p>
-              <p className="text-[10px] text-gray-400">pts / personnalité</p>
+            <div className="bg-gray-50 p-4 rounded" title={`Score total : ${severity.total} pts / ${severity.count} personnalités`}>
+              <p className="text-xs text-gray-600 uppercase tracking-wide text-center">Sévérité moy.</p>
+              <p className="text-2xl font-bold text-center" style={{ color: getSeverityColor(severity.average) }}>{severity.average}</p>
+              <div className="w-full bg-green-100 rounded-full h-2 mt-2 overflow-hidden">
+                <div
+                  className="h-2 rounded-full transition-all duration-500"
+                  style={{
+                    width: `${Math.min((severity.average / 50) * 100, 100)}%`,
+                    backgroundColor: getSeverityColor(severity.average)
+                  }}
+                />
+              </div>
+              <p className="text-[10px] text-gray-400 text-center mt-1">pts / personnalité ({severity.convicted} condamné{severity.convicted > 1 ? 's' : ''})</p>
             </div>
           </div>
 
