@@ -25,19 +25,13 @@ export default function PartyStats({ politicians }) {
       const partyObj = parties.find(p => p.id === partyId)
       const partyPols = politicians.filter(p => p.party === partyId)
 
-      let enquetes = 0
-      let misesEnExamen = 0
+      // Count persons per exclusive category (same as ratio chart)
+      const counts = { convictions: 0, misesEnExamen: 0, enquetes: 0 }
       partyPols.forEach(pol => {
+        if (pol.convictions > 0) { counts.convictions++; return }
         const incidents = pol.details?.justiceIncidents || []
-        incidents.forEach(inc => {
-          const type = inc.type || ''
-          if (type.includes('Enquête') || type.includes('Accusation')) {
-            enquetes++
-          }
-          if (type.includes('Mise en examen')) {
-            misesEnExamen++
-          }
-        })
+        if (incidents.some(inc => (inc.type || '').includes('Mise en examen'))) { counts.misesEnExamen++; return }
+        if (incidents.some(inc => (inc.type || '').includes('Enquête') || (inc.type || '').includes('Accusation'))) { counts.enquetes++; return }
       })
 
       return {
@@ -45,9 +39,7 @@ export default function PartyStats({ politicians }) {
         partyName: partyObj?.name || partyId,
         color: partyObj?.color || '#999',
         count: partyPols.length,
-        convictions: partyPols.reduce((sum, p) => sum + p.convictions, 0),
-        enquetes,
-        misesEnExamen
+        ...counts
       }
     })
   }, [politicians, partyIds])
@@ -109,7 +101,7 @@ export default function PartyStats({ politicians }) {
       </div>
 
       <div className="bg-white rounded-lg shadow p-6 mb-8">
-        <h3 className="text-lg font-semibold text-gray-800 mb-4">Incidents de justice par parti</h3>
+        <h3 className="text-lg font-semibold text-gray-800 mb-4">Personnalités impliquées par parti</h3>
 
         {/* Chart */}
         {chartData.length > 0 ? (
