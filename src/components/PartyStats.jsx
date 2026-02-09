@@ -11,7 +11,7 @@ const INCIDENT_TYPES = [
 
 export default function PartyStats({ politicians }) {
   const [activeFilters, setActiveFilters] = useState(
-    INCIDENT_TYPES.reduce((acc, t) => ({ ...acc, [t.key]: true }), {})
+    INCIDENT_TYPES.reduce((acc, t) => ({ ...acc, [t.key]: t.key === 'convictions' }), {})
   )
 
   const toggleFilter = (key) => {
@@ -73,7 +73,7 @@ export default function PartyStats({ politicians }) {
         })
         return entry
       })
-      .sort((a, b) => a.name.localeCompare(b.name, 'fr'))
+      .sort((a, b) => (b.convictions || 0) - (a.convictions || 0))
   }, [partyStats, activeFilters])
 
   const activeTypes = INCIDENT_TYPES.filter(t => activeFilters[t.key])
@@ -82,35 +82,35 @@ export default function PartyStats({ politicians }) {
     <div className="mb-12">
       <h2 className="text-2xl font-bold text-gray-900 mb-6">Statistiques par parti</h2>
 
+      {/* Shared filters */}
+      <div className="flex flex-wrap gap-3 mb-6">
+        {INCIDENT_TYPES.map(type => (
+          <label
+            key={type.key}
+            className="flex items-center gap-2 cursor-pointer select-none"
+          >
+            <input
+              type="checkbox"
+              checked={activeFilters[type.key]}
+              onChange={() => toggleFilter(type.key)}
+              className="w-4 h-4 rounded"
+              style={{ accentColor: type.color }}
+            />
+            <span
+              className="text-sm font-medium px-2 py-1 rounded"
+              style={{
+                backgroundColor: activeFilters[type.key] ? type.color + '20' : '#f3f4f6',
+                color: activeFilters[type.key] ? type.color : '#6b7280'
+              }}
+            >
+              {type.label}
+            </span>
+          </label>
+        ))}
+      </div>
+
       <div className="bg-white rounded-lg shadow p-6 mb-8">
         <h3 className="text-lg font-semibold text-gray-800 mb-4">Incidents de justice par parti</h3>
-
-        {/* Filters */}
-        <div className="flex flex-wrap gap-3 mb-6">
-          {INCIDENT_TYPES.map(type => (
-            <label
-              key={type.key}
-              className="flex items-center gap-2 cursor-pointer select-none"
-            >
-              <input
-                type="checkbox"
-                checked={activeFilters[type.key]}
-                onChange={() => toggleFilter(type.key)}
-                className="w-4 h-4 rounded"
-                style={{ accentColor: type.color }}
-              />
-              <span
-                className="text-sm font-medium px-2 py-1 rounded"
-                style={{
-                  backgroundColor: activeFilters[type.key] ? type.color + '20' : '#f3f4f6',
-                  color: activeFilters[type.key] ? type.color : '#6b7280'
-                }}
-              >
-                {type.label}
-              </span>
-            </label>
-          ))}
-        </div>
 
         {/* Chart */}
         {chartData.length > 0 ? (
@@ -150,32 +150,48 @@ export default function PartyStats({ politicians }) {
       {/* Ratio chart */}
       <div className="bg-white rounded-lg shadow p-6 mb-8">
         <h3 className="text-lg font-semibold text-gray-800 mb-2">Ratio des membres impliqués par parti</h3>
-        <p className="text-xs text-gray-500 mb-4">Pourcentage de membres condamnés, avec affaires en cours, ou sans incident par parti (membres actuels uniquement)</p>
+        <p className="text-xs text-gray-500 mb-4">Pourcentage de membres impliqués par parti selon les filtres sélectionnés (membres actuels uniquement)</p>
 
         {(() => {
+          const showConvictions = activeFilters.convictions
+          const showOngoing = activeFilters.ongoingCases
+          const showEnquetes = activeFilters.enquetes
+          const showMEX = activeFilters.misesEnExamen
+
           const ratioData = partyStats
             .filter(s => s.count > 0)
             .map(s => {
               const partyPols = politicians.filter(p => p.party === s.partyId)
               const convicted = partyPols.filter(p => p.convictions > 0).length
               const ongoingOnly = partyPols.filter(p => p.convictions === 0 && p.ongoingCases > 0).length
-              const clean = partyPols.length - convicted - ongoingOnly
+              const hasEnqueteOrMEX = partyPols.filter(p => {
+                if (p.convictions > 0 || p.ongoingCases > 0) return false
+                const incidents = p.details?.justiceIncidents || []
+                return incidents.some(inc => {
+                  const type = inc.type || ''
+                  return (showEnquetes && (type.includes('Enquête') || type.includes('Accusation'))) ||
+                         (showMEX && type.includes('Mise en examen'))
+                })
+              }).length
+              const involved = (showConvictions ? convicted : 0) + (showOngoing ? ongoingOnly : 0) + hasEnqueteOrMEX
+              const clean = partyPols.length - involved
               const abbr = s.partyName.match(/\(([^)]+)\)/)?.[1] || s.partyName.split('(')[0].trim()
               return {
                 name: abbr,
                 fullName: s.partyName.split('(')[0].trim(),
                 total: partyPols.length,
-                pctConvicted: +(convicted / partyPols.length * 100).toFixed(1),
-                pctOngoing: +(ongoingOnly / partyPols.length * 100).toFixed(1),
+                convictions: s.convictions,
+                pctInvolved: +(involved / partyPols.length * 100).toFixed(1),
                 pctClean: +(clean / partyPols.length * 100).toFixed(1),
-                convicted,
-                ongoingOnly,
+                involved,
                 clean
               }
             })
-            .sort((a, b) => (b.pctConvicted + b.pctOngoing) - (a.pctConvicted + a.pctOngoing))
+            .sort((a, b) => b.convictions - a.convictions)
 
-          return (
+          const hasAnyFilter = showConvictions || showOngoing || showEnquetes || showMEX
+
+          return hasAnyFilter ? (
             <>
               <ResponsiveContainer width="100%" height={Math.max(350, ratioData.length * 45)}>
                 <BarChart layout="vertical" data={ratioData} margin={{ bottom: 5, left: 0, right: 20, top: 5 }}>
@@ -195,19 +211,14 @@ export default function PartyStats({ politicians }) {
                       return item ? `${item.fullName} (${item.total} membres)` : label
                     }}
                   />
-                  <Bar dataKey="pctConvicted" name="Condamnés" fill="#dc2626" stackId="ratio" />
-                  <Bar dataKey="pctOngoing" name="Affaires en cours" fill="#f97316" stackId="ratio" />
+                  <Bar dataKey="pctInvolved" name="Impliqués" fill="#dc2626" stackId="ratio" />
                   <Bar dataKey="pctClean" name="Sans incident" fill="#86efac" stackId="ratio" />
                 </BarChart>
               </ResponsiveContainer>
               <div className="flex flex-wrap gap-4 mt-3 text-xs justify-center">
                 <div className="flex items-center gap-1.5">
                   <span className="inline-block w-3 h-3 rounded-full" style={{ backgroundColor: '#dc2626' }} />
-                  <span className="text-gray-600">Condamnés</span>
-                </div>
-                <div className="flex items-center gap-1.5">
-                  <span className="inline-block w-3 h-3 rounded-full" style={{ backgroundColor: '#f97316' }} />
-                  <span className="text-gray-600">Affaires en cours (sans condamnation)</span>
+                  <span className="text-gray-600">Impliqués (selon filtres)</span>
                 </div>
                 <div className="flex items-center gap-1.5">
                   <span className="inline-block w-3 h-3 rounded-full" style={{ backgroundColor: '#86efac' }} />
@@ -215,6 +226,8 @@ export default function PartyStats({ politicians }) {
                 </div>
               </div>
             </>
+          ) : (
+            <p className="text-gray-500 text-center py-8">Sélectionnez au moins un type d'incident pour afficher le graphique.</p>
           )
         })()}
       </div>

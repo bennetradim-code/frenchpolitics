@@ -2316,25 +2316,25 @@ export const politicians = [
     name: 'Aquilino Morelle',
     party: 'ps',
     position: 'Ancien conseiller du Président Hollande',
-    convictions: 1,
+    convictions: 0,
     ongoingCases: 0,
     details: {
-      birthDate: '1965-12-16',
-      birthPlace: 'Sainte-Foy-les-Lyon',
+      birthDate: '1962-06-05',
+      birthPlace: 'Paris',
       career: [
-        'Conseiller politique du Président François Hollande (2012-2016)',
-        'Expert en politique de santé',
-        'Énarque'
+        'Conseiller de Lionel Jospin (1997-2002)',
+        'Conseiller politique du Président François Hollande (2012-2014)',
+        'Énarque, médecin'
       ],
       justiceIncidents: [
         {
-          type: 'Condamnation',
-          date: '2019',
-          description: 'Condamné pour détournement de deniers publics et usage de faux documents publics. Rémunérations non justifiées pour activités de conseiller.',
-          penalty: '2 ans de prison avec sursis + 50 000€ d\'amende',
-          status: 'Condamné',
+          type: 'Classement',
+          date: '2015',
+          description: 'Enquête préliminaire pour prise illégale d\'intérêts liée à une mission rémunérée 12 500€ pour le laboratoire danois Lundbeck en 2007, alors qu\'il était membre de l\'IGAS. Enquête classée sans suite.',
+          status: 'Classé sans suite',
           sources: [
-            { title: 'Aquilino Morelle - Wikipedia', url: 'https://fr.wikipedia.org/wiki/Aquilino_Morelle' }
+            { title: 'Europe 1', url: 'https://www.europe1.fr/politique/Conflit-d-interets-je-suis-blanchi-assure-Aquilino-Morelle-779670' },
+            { title: 'Tendance Ouest (AFP)', url: 'https://www.tendanceouest.com/actualite-96964-paris-afp-conflit-d-interets-l-enquete-preliminaire-visant-aquilino-morelle-classee-sans-suite' }
           ]
         }
       ]
