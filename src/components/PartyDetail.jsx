@@ -65,10 +65,6 @@ export default function PartyDetail() {
         <div className="p-6 border-t">
           <h2 className="text-xl font-bold text-gray-900 mb-4">Statistiques</h2>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-            <div className="bg-blue-50 p-4 rounded text-center">
-              <p className="text-xs text-gray-600 uppercase tracking-wide">Membres</p>
-              <p className="text-2xl font-bold text-blue-600">{(party.members / 1000).toFixed(0)}K</p>
-            </div>
             <div className="bg-green-50 p-4 rounded text-center">
               <p className="text-xs text-gray-600 uppercase tracking-wide">Sièges AN</p>
               <p className="text-2xl font-bold text-green-600">{party.seats}</p>
@@ -103,69 +99,68 @@ export default function PartyDetail() {
 
           {/* Indicateur ratio condamnations */}
           {livingPoliticians.length > 0 && (() => {
-            const convicted = livingPoliticians.filter(p => p.convictions > 0).length
-            const ongoingOnly = livingPoliticians.filter(p => p.convictions === 0 && p.ongoingCases > 0).length
-            const clean = livingPoliticians.length - convicted - ongoingOnly
-            const pctConvicted = (convicted / livingPoliticians.length * 100).toFixed(1)
-            const pctOngoing = (ongoingOnly / livingPoliticians.length * 100).toFixed(1)
-            const pctClean = (clean / livingPoliticians.length * 100).toFixed(1)
+            const total = livingPoliticians.length
+            // Mutually exclusive buckets (priority: convicted > mex > enquête > clean)
+            let convicted = 0, mex = 0, enquete = 0
+            livingPoliticians.forEach(p => {
+              if (p.convictions > 0) { convicted++; return }
+              const incidents = p.details?.justiceIncidents || []
+              if (incidents.some(inc => (inc.type || '').includes('Mise en examen'))) { mex++; return }
+              if (incidents.some(inc => (inc.type || '').includes('Enquête') || (inc.type || '').includes('Accusation'))) { enquete++; return }
+            })
+            const clean = total - convicted - mex - enquete
+            const pctConvicted = (convicted / total * 100).toFixed(1)
+            const pctMEX = (mex / total * 100).toFixed(1)
+            const pctEnquete = (enquete / total * 100).toFixed(1)
+            const pctClean = (clean / total * 100).toFixed(1)
+
+            const segments = [
+              { count: convicted, pct: pctConvicted, color: '#dc2626', label: 'Condamnés' },
+              { count: mex, pct: pctMEX, color: '#7C3AED', label: 'Mises en examen' },
+              { count: enquete, pct: pctEnquete, color: '#0284C7', label: 'Enquêtes' }
+            ]
 
             return (
               <div className="mt-6 bg-gray-50 rounded-lg p-4">
                 <h3 className="text-sm font-bold text-gray-700 mb-3">
-                  Ratio des membres impliqués (membres actuels)
+                  Ratio des membres impliqués (personnalités référencées)
                 </h3>
                 {/* Barre de ratio */}
                 <div className="flex rounded-full overflow-hidden h-6 bg-gray-200">
-                  {convicted > 0 && (
+                  {segments.map(s => s.count > 0 && (
                     <div
+                      key={s.label}
                       className="flex items-center justify-center text-xs font-bold text-white transition-all"
                       style={{
-                        width: `${Math.max(convicted / livingPoliticians.length * 100, 2)}%`,
-                        backgroundColor: '#dc2626'
+                        width: `${Math.max(s.count / total * 100, 2)}%`,
+                        backgroundColor: s.color
                       }}
-                      title={`${convicted} condamné${convicted > 1 ? 's' : ''} (${pctConvicted}%)`}
+                      title={`${s.count} ${s.label.toLowerCase()} (${s.pct}%)`}
                     >
-                      {convicted / livingPoliticians.length >= 0.06 && `${pctConvicted}%`}
+                      {s.count / total >= 0.06 && `${s.pct}%`}
                     </div>
-                  )}
-                  {ongoingOnly > 0 && (
-                    <div
-                      className="flex items-center justify-center text-xs font-bold text-white transition-all"
-                      style={{
-                        width: `${Math.max(ongoingOnly / livingPoliticians.length * 100, 2)}%`,
-                        backgroundColor: '#f97316'
-                      }}
-                      title={`${ongoingOnly} en cours (${pctOngoing}%)`}
-                    >
-                      {ongoingOnly / livingPoliticians.length >= 0.06 && `${pctOngoing}%`}
-                    </div>
-                  )}
+                  ))}
                   <div
                     className="flex items-center justify-center text-xs font-bold text-gray-700 transition-all"
                     style={{
-                      width: `${clean / livingPoliticians.length * 100}%`,
+                      width: `${clean / total * 100}%`,
                       backgroundColor: '#bbf7d0'
                     }}
                     title={`${clean} sans incident (${pctClean}%)`}
                   >
-                    {clean / livingPoliticians.length >= 0.06 && `${pctClean}%`}
+                    {clean / total >= 0.06 && `${pctClean}%`}
                   </div>
                 </div>
                 {/* Légende */}
                 <div className="flex flex-wrap gap-4 mt-3 text-xs">
-                  <div className="flex items-center gap-1.5">
-                    <span className="inline-block w-3 h-3 rounded-full" style={{ backgroundColor: '#dc2626' }} />
-                    <span className="text-gray-600">
-                      Condamnés : <strong>{convicted}</strong> ({pctConvicted}%)
-                    </span>
-                  </div>
-                  <div className="flex items-center gap-1.5">
-                    <span className="inline-block w-3 h-3 rounded-full" style={{ backgroundColor: '#f97316' }} />
-                    <span className="text-gray-600">
-                      Affaires en cours : <strong>{ongoingOnly}</strong> ({pctOngoing}%)
-                    </span>
-                  </div>
+                  {segments.map(s => (
+                    <div key={s.label} className="flex items-center gap-1.5">
+                      <span className="inline-block w-3 h-3 rounded-full" style={{ backgroundColor: s.color }} />
+                      <span className="text-gray-600">
+                        {s.label} : <strong>{s.count}</strong> ({s.pct}%)
+                      </span>
+                    </div>
+                  ))}
                   <div className="flex items-center gap-1.5">
                     <span className="inline-block w-3 h-3 rounded-full" style={{ backgroundColor: '#bbf7d0' }} />
                     <span className="text-gray-600">
