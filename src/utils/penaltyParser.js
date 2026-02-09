@@ -174,13 +174,6 @@ function parseAmende(s, result) {
     return
   }
 
-  // Amende entirely with sursis: "N€ d'amende avec sursis" (no "dont") → effective fine = 0
-  m = s.match(new RegExp(`(\\d[\\d\\s.]*)\\s*(?:€|euros?)\\s*d${ap}amende\\s+avec\\s+sursis`, 'i'))
-  if (m && !/dont/i.test(s.slice(s.indexOf(m[0])))) {
-    result.amende = 0
-    return
-  }
-
   // Amende with sursis portion: "N€ d'amende dont M€ avec sursis"
   m = s.match(new RegExp(`(\\d[\\d\\s.]*)\\s*(?:€|euros?)\\s*d${ap}amende\\s*dont\\s*(\\d[\\d\\s.]*)\\s*(?:€|euros?)?\\s*avec\\s*sursis`, 'i'))
   if (m) {
