@@ -28,9 +28,18 @@ export default function PartyDetail() {
   const severity = computePartySeverity(livingPoliticians)
 
   const sortedPoliticians = [...livingPoliticians].sort((a, b) => {
-    const scoreA = computeSeverityScore(a).total + a.ongoingCases * 10
-    const scoreB = computeSeverityScore(b).total + b.ongoingCases * 10
-    if (scoreB !== scoreA) return scoreB - scoreA
+    const sevA = computeSeverityScore(a).total
+    const sevB = computeSeverityScore(b).total
+    if (sevA !== sevB) return sevB - sevA
+    // Same severity (both 0): MEX before enquêtes before clean
+    const tierOf = (p) => {
+      const incs = p.details?.justiceIncidents || []
+      if (incs.some(i => (i.type || '').includes('Mise en examen'))) return 2
+      if (incs.some(i => (i.type || '').includes('Enquête'))) return 1
+      return 0
+    }
+    const tierA = tierOf(a), tierB = tierOf(b)
+    if (tierA !== tierB) return tierB - tierA
     return a.name.localeCompare(b.name, 'fr')
   })
 
