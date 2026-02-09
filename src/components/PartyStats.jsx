@@ -170,19 +170,22 @@ export default function PartyStats({ politicians }) {
               const clean = total - involved
               const abbr = s.partyName.match(/\(([^)]+)\)/)?.[1] || s.partyName.split('(')[0].trim()
 
+              const pctInvolved = +(involved / total * 100).toFixed(1)
+              const abbr2 = abbr
               const entry = {
-                name: abbr,
+                name: abbr2,
                 fullName: s.partyName.split('(')[0].trim(),
                 total,
-                convictions: s.convictions,
-                pctClean: +(clean / total * 100).toFixed(1)
+                pctInvolved,
+                pctClean: +(100 - pctInvolved).toFixed(1)
               }
               if (showConvictions) entry.pctConvictions = +(counts.convicted / total * 100).toFixed(1)
               if (showMEX) entry.pctMEX = +(counts.mex / total * 100).toFixed(1)
               if (showEnquetes) entry.pctEnquetes = +(counts.enquete / total * 100).toFixed(1)
               return entry
             })
-            .sort((a, b) => b.convictions - a.convictions)
+            .filter(d => d.pctInvolved > 0)
+            .sort((a, b) => b.pctInvolved - a.pctInvolved)
 
           const hasAnyFilter = showConvictions || showEnquetes || showMEX
 
