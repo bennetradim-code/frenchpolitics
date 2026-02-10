@@ -1165,7 +1165,7 @@ export const politicians = [
     party: 'lfi',
     position: 'Chef de La France Insoumise',
     convictions: 1,
-    ongoingCases: 0,
+    ongoingCases: 1,
     details: {
       birthDate: '1951-08-19',
       birthPlace: 'Tanger (Maroc)',
@@ -1186,6 +1186,15 @@ export const politicians = [
           sources: [
             { title: 'France Info', url: 'https://www.franceinfo.fr/politique/melenchon/perquisition-mouvementee-a-la-france-insoumise-jean-luc-melenchon-condamne-a-trois-mois-de-prison-avec-sursis-et-8000-euros-d-amende_3737089.html' },
             { title: 'France 24', url: 'https://www.france24.com/fr/20191209-france-melenchon-condamne-trois-mois-prison-sursis-perquisition-lfi' }
+          ]
+        },
+        {
+          type: 'Enquête',
+          date: '2018',
+          description: 'Enquête pour détournement de fonds publics liée aux assistants parlementaires européens. Rapport OLAF (Office européen de lutte antifraude) finalisé en mars 2021 révélant des soupçons de détournement d\'environ 500 000€. Mélenchon entendu par un juge d\'instruction en mai 2022 mais non mis en examen.',
+          status: 'En cours',
+          sources: [
+            { title: 'Toute l\'Europe - Enquête assistants Mélenchon', url: 'https://www.touteleurope.eu/vie-politique-des-etats-membres/pourquoi-jean-luc-melenchon-est-lui-aussi-vise-par-une-enquete-concernant-ses-assistants-au-parlement-europeen/' }
           ]
         },
         {
@@ -1217,7 +1226,17 @@ export const politicians = [
         'Députée du Val-de-Marne (2017-)',
         'Présidente du groupe LFI à l\'Assemblée nationale (2022-)'
       ],
-      justiceIncidents: []
+      justiceIncidents: [
+        {
+          type: 'Classement',
+          date: '2025-01',
+          description: 'Convoquée par la police en avril 2024 pour "apologie du terrorisme" suite au communiqué de LFI du 7 octobre 2023 qualifiant l\'attaque du Hamas d\'"offensive armée des forces palestiniennes". Classée sans suite pour "infraction insuffisamment caractérisée".',
+          status: 'Classé sans suite',
+          sources: [
+            { title: 'FranceInfo - Panot classement sans suite', url: 'https://www.franceinfo.fr/politique/apologie-du-terrorisme-la-deputee-lfi-mathilde-panot-annonce-le-classement-sans-suite-de-la-procedure-la-visant_7045751.html' }
+          ]
+        }
+      ]
     }
   },
   {
@@ -1311,7 +1330,7 @@ export const politicians = [
   {
     id: nextId++,
     name: 'Raquel Garrido',
-    party: 'lfi',
+    party: 'ni',
     position: 'Ancienne députée de Seine-Saint-Denis (a quitté LFI en 2023)',
     convictions: 0,
     ongoingCases: 0,
@@ -5459,7 +5478,17 @@ export const politicians = [
         'Député du Val-de-Marne (2022-)',
         'Ancien chroniqueur de TPMP'
       ],
-      justiceIncidents: []
+      justiceIncidents: [
+        {
+          type: 'Relaxe',
+          date: '2026-01-21',
+          description: 'Poursuivi en diffamation par Cyril Hanouna suite à une altercation sur le plateau de TPMP (novembre 2022). Relaxé par le tribunal correctionnel de Paris, les propos relevant du "débat d\'idées".',
+          status: 'Relaxé (appel annoncé par Habib)',
+          sources: [
+            { title: 'FranceInfo - Boyard relaxé', url: 'https://www.franceinfo.fr/faits-divers/justice-proces/poursuivi-en-diffamation-par-cyril-hanouna-le-depute-lfi-louis-boyard-relaxe_7755983.html' }
+          ]
+        }
+      ]
     }
   },
   {
@@ -5557,14 +5586,34 @@ export const politicians = [
     party: 'lfi',
     position: 'Député des Bouches-du-Rhône',
     convictions: 0,
-    ongoingCases: 0,
+    ongoingCases: 1,
     details: {
       birthDate: '1987-04-20',
       birthPlace: 'Marseille',
       career: [
         'Député des Bouches-du-Rhône (2022-)'
       ],
-      justiceIncidents: []
+      justiceIncidents: [
+        {
+          type: 'Condamnation (première instance)',
+          date: '2025-02-14',
+          description: 'Condamné pour violences aggravées sur personnes dépositaires de l\'autorité publique. Lors d\'un blocus au lycée Saint-Exupéry de Marseille contre la réforme des retraites (10 mars 2023), donne trois coups de pied à un proviseur adjoint et un CPE. A fait appel.',
+          penalty: '5 000€ d\'amende',
+          status: 'Appel en cours',
+          sources: [
+            { title: 'FranceInfo - Delogu condamné violences', url: 'https://www.franceinfo.fr/faits-divers/justice-proces/le-depute-sebastien-delogu-condamne-a-5-000-euros-d-amende-pour-des-violences-lors-d-un-blocus-d-un-lycee-a-marseille_7074330.html' }
+          ]
+        },
+        {
+          type: 'Enquête',
+          date: '2024-09',
+          description: 'Poursuivi pour recel de vol et atteinte à l\'intimité de la vie privée. Publication sur Instagram de documents privés volés (emails) d\'un homme d\'affaires marseillais. Procès prévu en juin 2026.',
+          status: 'Renvoyé en correctionnelle',
+          sources: [
+            { title: 'France 24 - Delogu jugé pour diffusion documents', url: 'https://www.france24.com/fr/info-en-continu/20260109-s%C3%A9bastien-delogu-candidat-lfi-%C3%A0-marseille-jug%C3%A9-en-juin-pour-diffusion-de-documents-priv%C3%A9s-vol%C3%A9s' }
+          ]
+        }
+      ]
     }
   },
   {
@@ -8397,8 +8446,8 @@ export const politicians = [
         {
           type: 'Mise en examen',
           date: '2021',
-          description: 'Mis en examen dans le cadre de l\'enquête sur les comptes de campagne présidentielle 2017 de Jean-Luc Mélenchon. Soupçons de surfacturations et d\'abus de confiance.',
-          charges: ['Abus de confiance', 'Escroquerie aggravée'],
+          description: 'Mis en examen dans le cadre de l\'enquête sur les comptes de campagne présidentielle 2017 de Jean-Luc Mélenchon. Trésorier de l\'association L\'Ère du peuple.',
+          charges: ['Prêt illicite de main-d\'oeuvre', 'Faux', 'Escroquerie et tentative d\'escroquerie'],
           status: 'En cours',
           sources: [
             { title: 'Wikipédia', url: 'https://fr.wikipedia.org/wiki/Affaire_des_comptes_de_campagne_de_Jean-Luc_M%C3%A9lenchon_en_2017' },
@@ -8448,12 +8497,22 @@ export const politicians = [
     id: nextId++,
     name: 'David Guiraud',
     party: 'lfi',
-    position: 'Député - La France Insoumise',
+    position: 'Député du Nord',
     convictions: 0,
     ongoingCases: 0,
     details: {
-      career: ['Député de la XVIIe législature'],
-      justiceIncidents: []
+      career: ['Député du Nord (2022-)'],
+      justiceIncidents: [
+        {
+          type: 'Relaxe',
+          date: '2026-01-15',
+          description: 'Poursuivi pour injure publique à caractère antisémite par Meyer Habib après l\'avoir qualifié de "porc" lors d\'une altercation à l\'Assemblée (mai 2024). Relaxé, les propos étant "en réaction à une provocation" dans un "contexte d\'opposition ferme d\'idées".',
+          status: 'Relaxé (appel annoncé par Habib)',
+          sources: [
+            { title: 'FranceInfo - Guiraud relaxé', url: 'https://www.franceinfo.fr/politique/le-depute-lfi-david-guiraud-poursuivi-pour-injure-publique-a-caractere-antisemite-par-meyer-habib-a-ete-relaxe_7743910.html' }
+          ]
+        }
+      ]
     }
   },
   {
@@ -8715,12 +8774,25 @@ export const politicians = [
     id: nextId++,
     name: 'Éric Coquerel',
     party: 'lfi',
-    position: 'Député - La France Insoumise',
+    position: 'Député de Seine-Saint-Denis, président de la commission des finances',
     convictions: 0,
     ongoingCases: 0,
     details: {
-      career: ['Député de la XVIIe législature'],
-      justiceIncidents: []
+      career: [
+        'Député de Seine-Saint-Denis (2017-)',
+        'Président de la commission des finances (2022-)'
+      ],
+      justiceIncidents: [
+        {
+          type: 'Classement',
+          date: '2023-02',
+          description: 'Enquête pour harcèlement sexuel et agression sexuelle suite à la plainte d\'une militante (faits allégués en 2014). Classée sans suite pour "infraction insuffisamment caractérisée". La plaignante a déposé une plainte avec constitution de partie civile en juin 2024.',
+          status: 'Classé sans suite',
+          sources: [
+            { title: 'FranceInfo - Coquerel classé sans suite', url: 'https://www.franceinfo.fr/politique/la-france-insoumise/l-enquete-visant-le-depute-lfi-eric-coquerel-pour-harcelement-et-agression-sexuels-classee-sans-suite-annonce-le-parquet-de-paris_5669843.html' }
+          ]
+        }
+      ]
     }
   },
   {
@@ -8991,12 +9063,25 @@ export const politicians = [
     id: nextId++,
     name: 'Élisa Martin',
     party: 'lfi',
-    position: 'Députée - La France Insoumise',
+    position: 'Députée de l\'Isère',
     convictions: 0,
-    ongoingCases: 0,
+    ongoingCases: 1,
     details: {
-      career: ['Députée de la XVIIe législature'],
-      justiceIncidents: []
+      career: [
+        'Première adjointe au maire de Grenoble (2014-2022)',
+        'Députée de l\'Isère (2022-)'
+      ],
+      justiceIncidents: [
+        {
+          type: 'Enquête',
+          date: '2024-06',
+          description: 'Enquête pour concussion et recel de concussion. Un collaborateur du maire de Grenoble Éric Piolle lui aurait versé 400€/mois en espèces de son salaire pour compléter ses revenus (environ 16 800€ sur 3 ans). Enquête transférée au parquet de Valence.',
+          status: 'En cours',
+          sources: [
+            { title: 'Le JDD - Dessous de table Piolle et Martin', url: 'https://www.lejdd.fr/politique/grenoble-les-dessous-de-table-du-maire-eric-piolle-et-de-son-adjointe-lfi-145986' }
+          ]
+        }
+      ]
     }
   },
   {
