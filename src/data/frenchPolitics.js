@@ -230,7 +230,7 @@ export const politicians = [
     name: 'Éric Zemmour',
     party: 'reconquete',
     position: 'Président de Reconquête, candidat à la présidentielle 2022',
-    convictions: 3,
+    convictions: 5,
     ongoingCases: 0,
     details: {
       birthDate: '1958-08-31',
@@ -245,31 +245,80 @@ export const politicians = [
         {
           type: 'Condamnation',
           date: '2011-02',
-          description: 'Condamné définitivement pour provocation à la discrimination raciale. Sur Canal+ (émission "Salut les Terriens", mars 2010), il déclare que "la plupart des trafiquants sont noirs et arabes, c\'est comme ça, c\'est un fait".',
-          penalty: '10 000€ d\'amende',
-          status: 'Condamnation définitive',
+          description: 'Condamné pour provocation à la discrimination raciale. Sur Canal+ ("Salut les Terriens", mars 2010) : "la plupart des trafiquants sont noirs et arabes". Sur France O : les employeurs auraient "le droit" de refuser des Noirs et des Arabes. Pas d\'appel, définitive.',
+          penalty: '2 000€ d\'amende avec sursis',
+          status: 'Définitive',
           sources: [
             { title: 'Condamnation Zemmour 2011 - Le Monde', url: 'https://www.lemonde.fr/societe/article/2011/02/18/eric-zemmour-condamne-pour-provocation-a-la-discrimination-raciale_1481785_3224.html' }
           ]
         },
         {
           type: 'Condamnation',
-          date: '2020-09',
-          description: 'Condamné définitivement pour provocation à la haine religieuse envers les musulmans. Lors de la "Convention de la droite" (septembre 2019), il tient des propos jugés comme une incitation à la haine envers les musulmans.',
-          penalty: '10 000€ d\'amende',
-          status: 'Condamnation définitive',
+          date: '2019-09-17',
+          description: 'Condamné pour provocation à la haine religieuse. Sur France 5 ("C à vous", septembre 2016), déclare que la France vit "une invasion" et "une lutte pour islamiser" certains quartiers. Cassation rejetée le 17 septembre 2019. Condamnation validée par la CEDH en décembre 2022.',
+          penalty: '3 000€ d\'amende',
+          status: 'Définitive (cassation rejetée)',
           sources: [
-            { title: 'Condamnation Zemmour Convention de la droite - Le Figaro', url: 'https://www.lefigaro.fr/actualite-france/eric-zemmour-condamne-en-appel-pour-injure-et-provocation-a-la-haine-envers-les-musulmans-20200923' }
+            { title: 'Zemmour condamné provocation haine religieuse - Puremedias', url: 'https://www.ozap.com/actu/eric-zemmour-definitivement-condamne-a-3-000-euros-d-amende-pour-provocation-a-la-haine-religieuse/583655' }
           ]
         },
         {
           type: 'Condamnation',
-          date: '2022-01',
-          description: 'Condamné définitivement pour provocation à la haine raciale. Sur CNews (septembre 2020), il qualifie les mineurs isolés étrangers de "voleurs, assassins, violeurs".',
-          penalty: '10 000€ d\'amende',
-          status: 'Condamnation définitive',
+          date: '2025-09-17',
+          description: 'Condamné pour provocation à la haine raciale et injures racistes. Lors de la "Convention de la droite" (septembre 2019), qualifie les immigrés de "colonisateurs", le voile et la djellaba d\'"uniformes d\'une armée d\'occupation". Relaxé en appel (2021), cassation annule (2023), recondamné en appel (février 2024), cassation rejetée le 17 septembre 2025.',
+          penalty: '15 000€ d\'amende',
+          status: 'Définitive (cassation rejetée)',
           sources: [
-            { title: 'Condamnation Zemmour mineurs isolés - France Info', url: 'https://www.francetvinfo.fr/politique/eric-zemmour/eric-zemmour-condamne-a-10-000-euros-d-amende-pour-provocation-a-la-haine-raciale_4920487.html' }
+            { title: 'Zemmour définitivement condamné - France Bleu', url: 'https://www.francebleu.fr/infos/societe/eric-zemmour-a-ete-definitivement-condamne-pour-provocation-a-la-haine-raciale-et-injures-racistes-6052200' },
+            { title: 'Zemmour condamné propos racistes - FranceInfo', url: 'https://www.franceinfo.fr/politique/eric-zemmour/eric-zemmour-definitivement-condamne-pour-des-propos-racistes-en-2019_7497130.html' }
+          ]
+        },
+        {
+          type: 'Condamnation',
+          date: '2025-12-02',
+          description: 'Condamné pour complicité de provocation à la haine raciale et injure publique. Sur CNews (septembre 2020), à propos des mineurs isolés étrangers : "ils sont voleurs, ils sont assassins, ils sont violeurs". Cassation rejetée le 2 décembre 2025.',
+          penalty: '100 jours-amende à 100€',
+          status: 'Définitive (cassation rejetée)',
+          sources: [
+            { title: 'Zemmour condamné mineurs isolés - FranceInfo', url: 'https://www.franceinfo.fr/politique/eric-zemmour/eric-zemmour-a-ete-definitivement-condamne-pour-complicite-de-provocation-a-la-haine-apres-ses-propos-tenus-sur-des-mineurs-isoles_7653920.html' }
+          ]
+        },
+        {
+          type: 'Condamnation',
+          date: '2025-12-02',
+          description: 'Condamné pour diffamation envers l\'avocat Patrick Klugman. Durant la campagne présidentielle 2022, l\'accuse de vouloir "étouffer l\'affaire" de la mort de Jérémie Cohen. Cassation rejetée le 2 décembre 2025.',
+          penalty: '1 000€ d\'amende',
+          status: 'Définitive (cassation rejetée)',
+          sources: [
+            { title: 'Zemmour condamné diffamation Klugman - FranceInfo', url: 'https://www.franceinfo.fr/politique/eric-zemmour/mort-de-jeremie-cohen-en-2022-eric-zemmour-condamne-a-1-000-euros-d-amende-pour-diffamation_6312012.html' }
+          ]
+        },
+        {
+          type: 'Condamnation (première instance)',
+          date: '2025-04-02',
+          description: 'Condamné en appel pour contestation de crime contre l\'humanité. En 2019, affirme que le maréchal Pétain aurait "sauvé" les juifs français. Relaxé en première instance (2021) et en appel (2022), cassation annule, recondamné en appel le 2 avril 2025. Pourvoi en cassation annoncé.',
+          penalty: '10 000€ d\'amende',
+          status: 'Pourvoi en cassation',
+          sources: [
+            { title: 'Zemmour condamné Pétain - FranceInfo', url: 'https://www.franceinfo.fr/politique/eric-zemmour/eric-zemmour-condamne-a-10-000-euros-d-amende-pour-avoir-soutenu-que-le-marechal-petain-avait-sauve-des-juifs-francais_7166175.html' }
+          ]
+        },
+        {
+          type: 'Relaxe',
+          date: '2021-09-08',
+          description: 'Relaxé en appel pour des propos sur les musulmans tenus au Corriere della Sera (octobre 2014). Initialement condamné, cassation annule, relaxé en appel après renvoi.',
+          status: 'Relaxé définitivement',
+          sources: [
+            { title: 'Zemmour relaxé propos musulmans - Europe 1', url: 'https://www.europe1.fr/societe/eric-zemmour-relaxe-en-appel-apres-des-propos-polemiques-sur-les-musulmans-3810566' }
+          ]
+        },
+        {
+          type: 'Relaxe',
+          date: '2024-09-11',
+          description: 'Relaxé en appel pour injure homophobe. Sur CNews (octobre 2019), propos sur les homosexuels. Condamné en première instance (septembre 2023, 4 000€), relaxé en appel le 11 septembre 2024.',
+          status: 'Relaxé définitivement',
+          sources: [
+            { title: 'Zemmour relaxé injures homophobes - Boulevard Voltaire', url: 'https://www.bvoltaire.fr/affaire-des-injures-homophobes-eric-zemmour-relaxe/' }
           ]
         }
       ]
@@ -277,19 +326,39 @@ export const politicians = [
   },
   {
     id: nextId++,
-    name: 'Nicolas Bay',
+    name: 'Sarah Knafo',
     party: 'reconquete',
-    position: 'Ancien eurodéputé RN puis Reconquête',
+    position: 'Eurodéputée Reconquête',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1992-12-28',
+      birthPlace: 'Paris',
+      career: [
+        'Diplômée de l\'ENA',
+        'Auditrice à la Cour des comptes (2020-2024)',
+        'Eurodéputée Reconquête (2024-)',
+        'Candidate à la mairie de Paris (2026)'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Nicolas Bay',
+    party: 'ni',
+    position: 'Eurodéputé (La France fière, ex-Reconquête)',
     convictions: 0,
     ongoingCases: 0,
     details: {
       birthDate: '1977-05-14',
       birthPlace: 'Chambray-lès-Tours',
       career: [
-        'Député européen (2014-2024)',
+        'Député européen (2014-)',
         'Vice-président du FN/RN (2014-2022)',
-        'Conseiller régional de Normandie (2021-2025)',
-        'Secrétaire général de Reconquête (2022-)'
+        'Secrétaire général de Reconquête (2022-2024)',
+        'Exclu de Reconquête (juin 2024)',
+        'Co-fondateur de La France fière (2024)'
       ],
       justiceIncidents: [
         {
@@ -7000,12 +7069,12 @@ export const politicians = [
   {
     id: nextId++,
     name: 'Gilbert Collard',
-    party: 'reconquete',
-    position: 'Ex-député RN (2017-2022), eurodéputé RN puis Reconquête (2022-2024)',
+    party: 'ni',
+    position: 'Ancien député et eurodéputé (ex-RN, ex-Reconquête)',
     convictions: 1,
     ongoingCases: 0,
     details: {
-      career: ['Député du Gard (2017-2022)', 'Eurodéputé RN puis Reconquête (2022-2024)'],
+      career: ['Avocat', 'Député du Gard (2017-2022)', 'Eurodéputé RN puis Reconquête (2022-2024)'],
       justiceIncidents: [
         {
           type: 'Condamnation',
