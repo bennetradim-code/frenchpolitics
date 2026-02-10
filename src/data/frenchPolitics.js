@@ -366,15 +366,7 @@ export const politicians = [
         'Député du Nord (2017-)',
         'Vice-président de l\'Assemblée nationale (2022-)'
       ],
-      justiceIncidents: [
-        {
-          type: 'Condamnation (première instance)',
-          date: '2025-03-31',
-          description: 'Condamné dans l\'affaire des assistants parlementaires du FN au Parlement européen pour détournement de fonds publics.',
-          penalty: '1 an de prison avec sursis, 2 ans d\'inéligibilité',
-          status: 'Appel en cours'
-        }
-      ]
+      justiceIncidents: []
     }
   },
   {
@@ -391,15 +383,7 @@ export const politicians = [
         'Porte-parole du RN',
         'Députée du Var (2022-)'
       ],
-      justiceIncidents: [
-        {
-          type: 'Condamnation (première instance)',
-          date: '2025-03-31',
-          description: 'Condamnée dans l\'affaire des assistants parlementaires du FN au Parlement européen. Employée fictivement comme assistante parlementaire.',
-          penalty: 'Peine avec sursis',
-          status: 'Appel en cours'
-        }
-      ]
+      justiceIncidents: []
     }
   },
   {
@@ -506,10 +490,9 @@ export const politicians = [
           date: '2025',
           description: 'Condamné dans l\'affaire des assistants parlementaires du FN au Parlement européen. Aurait bénéficié d\'un emploi fictif d\'assistant parlementaire de l\'eurodéputée Mylène Troszczynski entre 2014-2015, alors qu\'il ne travaillait que pour le FN à des fonctions bien éloignées du travail parlementaire.',
           penalty: '8 mois de prison avec sursis, 1 an d\'inéligibilité',
-          status: 'Procès en appel en cours (février 2025)',
+          status: 'Procès en appel en cours depuis janvier 2026',
           sources: [
             { title: 'France Bleu - Julien Odoul condamné', url: 'https://www.francebleu.fr' },
-            { title: 'Le Figaro - Procès en appel', url: 'https://www.lefigaro.fr' },
             { title: 'Wikipedia - Affaire des assistants parlementaires', url: 'https://fr.wikipedia.org/wiki/Affaire_des_assistants_parlementaires_du_Front_national_au_Parlement_europ%C3%A9en' }
           ]
         }
@@ -4830,15 +4813,7 @@ export const politicians = [
         'Député du Pas-de-Calais (2017-)',
         'Député européen (2019-2022)'
       ],
-      justiceIncidents: [
-        {
-          type: 'Condamnation (première instance)',
-          date: '2025-03-31',
-          description: 'Condamné dans l\'affaire des assistants parlementaires du FN au Parlement européen pour détournement de fonds publics.',
-          penalty: 'Peine avec sursis',
-          status: 'Appel en cours'
-        }
-      ]
+      justiceIncidents: []
     }
   },
   {
@@ -7048,15 +7023,41 @@ export const politicians = [
     party: 'rn',
     position: 'Sénateur du Var, maire de Fréjus',
     convictions: 0,
-    ongoingCases: 1,
+    ongoingCases: 2,
     details: {
-      career: ['Sénateur du Var', 'Maire de Fréjus'],
+      career: [
+        'Sénateur du Var (2014-)',
+        'Maire de Fréjus (2014-)',
+        'Vice-président du RN (2022-2025, démission décembre 2025)'
+      ],
       justiceIncidents: [
         {
-          type: 'Mise en examen',
-          date: '2021',
-          description: 'Mis en examen pour prise illégale d\'intérêts dans une affaire de marchés publics à Fréjus.',
-          status: 'En cours'
+          type: 'Relaxe',
+          date: '2026-01-27',
+          description: 'Poursuivi pour prise illégale d\'intérêts en tant que maire de Fréjus. Relaxé par le tribunal correctionnel de Draguignan le 27 janvier 2026. Le parquet a fait appel le 3 février 2026.',
+          status: 'Relaxé (appel du parquet)',
+          sources: [
+            { title: 'France 3 - Rachline relaxé', url: 'https://france3-regions.franceinfo.fr/provence-alpes-cote-d-azur/var/frejus-et-saint-raphael/le-maire-rn-de-frejus-david-rachline-juge-pour-prise-illegale-d-interets-relaxe-3288783.html' },
+            { title: 'FranceInfo - Parquet fait appel', url: 'https://www.franceinfo.fr/politique/prise-illegale-d-interets-le-parquet-fait-appel-de-la-relaxe-du-maire-rn-de-frejus-david-rachline_7780205.html' }
+          ]
+        },
+        {
+          type: 'Enquête',
+          date: '2024-01',
+          description: 'Enquête du Parquet National Financier pour corruption active et passive d\'élu, favoritisme et recel de favoritisme. Perquisitions à la mairie de Fréjus le 4 mars 2025. Soupçons de marchés publics truqués au profit d\'un entrepreneur local.',
+          status: 'En cours',
+          sources: [
+            { title: 'FranceInfo - Perquisitions mairie Fréjus', url: 'https://www.franceinfo.fr/societe/justice/des-perquisitions-en-cours-a-la-mairie-rn-de-frejus-dans-le-cadre-d-une-enquete-pour-corruption-active-et-passive-d-elu_7109610.html' }
+          ]
+        },
+        {
+          type: 'Enquête',
+          date: '2025',
+          description: 'Renvoyé devant le tribunal correctionnel de Draguignan pour favoritisme. Accusé, avec 5 collaborateurs, d\'avoir favorisé une société de sécurité pour des marchés publics (mairie, office de tourisme, centre de vaccination COVID). Montant total : 263 000€. Procès prévu le 22 septembre 2026.',
+          status: 'Renvoyé en correctionnelle',
+          sources: [
+            { title: 'FranceInfo - Rachline jugé en septembre 2026', url: 'https://www.franceinfo.fr/politique/front-national/le-maire-rn-de-frejus-david-rachline-sera-juge-en-septembre-2026-pour-favoritisme-annonce-le-procureur-de-draguignan_7690123.html' }
+          ]
         }
       ]
     }
@@ -7066,17 +7067,20 @@ export const politicians = [
     name: 'Mylène Troszczynski',
     party: 'rn',
     position: 'Ex-eurodéputée FN (2014-2019)',
-    convictions: 0,
+    convictions: 1,
     ongoingCases: 0,
     details: {
       career: ['Eurodéputée FN (2014-2019)'],
       justiceIncidents: [
         {
-          type: 'Condamnation (première instance)',
+          type: 'Condamnation',
           date: '2025-03-31',
-          description: 'Condamnée dans l\'affaire des assistants parlementaires du FN au Parlement européen.',
-          penalty: '18 mois de prison dont 8 mois ferme, 3 ans d\'inéligibilité',
-          status: 'Appel en cours'
+          description: 'Condamnée dans l\'affaire des assistants parlementaires du FN au Parlement européen. N\'a pas fait appel, condamnation définitive.',
+          penalty: '800€ d\'amende',
+          status: 'Définitive (pas d\'appel)',
+          sources: [
+            { title: 'FranceInfo - 25 condamnations assistants FN', url: 'https://www.franceinfo.fr/politique/front-national/affaire-des-assistants-fn-au-parlement-europeen/marine-le-pen-louis-aliot-julien-odoul-on-a-liste-les-25-condamnations-a-l-issue-du-proces-des-assistants-parlementaires-du-fn_7162527.html' }
+          ]
         }
       ]
     }
@@ -7085,20 +7089,12 @@ export const politicians = [
     id: nextId++,
     name: 'Christelle Lechevalier',
     party: 'rn',
-    position: 'Ex-eurodéputée FN (2014-2019)',
+    position: 'Ex-eurodéputée FN (2017-2019)',
     convictions: 0,
     ongoingCases: 0,
     details: {
-      career: ['Eurodéputée FN (2014-2019)'],
-      justiceIncidents: [
-        {
-          type: 'Condamnation (première instance)',
-          date: '2025-03-31',
-          description: 'Condamnée dans l\'affaire des assistants parlementaires du FN au Parlement européen.',
-          penalty: '18 mois de prison dont 6 mois ferme, 3 ans d\'inéligibilité',
-          status: 'Appel en cours'
-        }
-      ]
+      career: ['Eurodéputée FN (2017-2019, remplaçante de Marine Le Pen)'],
+      justiceIncidents: []
     }
   },
   {
@@ -7110,33 +7106,155 @@ export const politicians = [
     ongoingCases: 0,
     details: {
       career: ['Eurodéputée FN (2014-2019)'],
-      justiceIncidents: [
-        {
-          type: 'Condamnation (première instance)',
-          date: '2025-03-31',
-          description: 'Condamnée dans l\'affaire des assistants parlementaires du FN au Parlement européen.',
-          penalty: 'Peine avec sursis',
-          status: 'Appel en cours'
-        }
-      ]
+      justiceIncidents: []
     }
   },
   {
     id: nextId++,
     name: 'Dominique Martin',
     party: 'rn',
-    position: 'Ex-eurodéputé FN',
+    position: 'Ex-eurodéputé FN (2014-2019)',
     convictions: 0,
     ongoingCases: 0,
     details: {
-      career: ['Eurodéputé FN'],
+      career: ['Eurodéputé FN (2014-2019)'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Wallerand de Saint-Just',
+    party: 'rn',
+    position: 'Ancien trésorier du FN/RN',
+    convictions: 1,
+    ongoingCases: 0,
+    details: {
+      career: [
+        'Avocat',
+        'Trésorier du Front National / Rassemblement National',
+        'Candidat aux municipales de Paris (2014)'
+      ],
+      justiceIncidents: [
+        {
+          type: 'Condamnation',
+          date: '2024-06',
+          description: 'Condamné définitivement dans l\'affaire du micro-parti Jeanne, créé pour financer les campagnes de Marine Le Pen. Pourvoi en cassation rejeté en juin 2024.',
+          penalty: '1 an de prison avec sursis, 2 ans d\'inéligibilité',
+          status: 'Définitive (cassation rejetée)',
+          sources: [
+            { title: 'Wikipedia - Affaire Jeanne', url: 'https://fr.wikipedia.org/wiki/Affaire_Jeanne' }
+          ]
+        },
+        {
+          type: 'Condamnation (première instance)',
+          date: '2025-03-31',
+          description: 'Condamné dans l\'affaire des assistants parlementaires du FN au Parlement européen en tant que trésorier du parti. A fait appel.',
+          penalty: '2 ans de prison avec sursis, 3 ans d\'inéligibilité',
+          status: 'Procès en appel en cours depuis janvier 2026',
+          sources: [
+            { title: 'FranceInfo - 25 condamnations assistants FN', url: 'https://www.franceinfo.fr/politique/front-national/affaire-des-assistants-fn-au-parlement-europeen/marine-le-pen-louis-aliot-julien-odoul-on-a-liste-les-25-condamnations-a-l-issue-du-proces-des-assistants-parlementaires-du-fn_7162527.html' }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Marie-Christine Arnautu',
+    party: 'rn',
+    position: 'Ancienne eurodéputée FN (2014-2019)',
+    convictions: 1,
+    ongoingCases: 0,
+    details: {
+      career: [
+        'Vice-présidente du Front National',
+        'Eurodéputée FN (2014-2019)'
+      ],
+      justiceIncidents: [
+        {
+          type: 'Condamnation',
+          date: '2025-03-31',
+          description: 'Condamnée dans l\'affaire des assistants parlementaires du FN au Parlement européen pour détournement de fonds publics. N\'a pas fait appel, condamnation définitive.',
+          penalty: '18 mois de prison avec sursis, 800€ d\'amende, 3 ans d\'inéligibilité',
+          status: 'Définitive (pas d\'appel)',
+          sources: [
+            { title: 'FranceInfo - 25 condamnations assistants FN', url: 'https://www.franceinfo.fr/politique/front-national/affaire-des-assistants-fn-au-parlement-europeen/marine-le-pen-louis-aliot-julien-odoul-on-a-liste-les-25-condamnations-a-l-issue-du-proces-des-assistants-parlementaires-du-fn_7162527.html' }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Marie-Christine Boutonnet',
+    party: 'rn',
+    position: 'Ancienne eurodéputée FN (2014-2019)',
+    convictions: 1,
+    ongoingCases: 0,
+    details: {
+      career: [
+        'Eurodéputée FN (2014-2019)'
+      ],
+      justiceIncidents: [
+        {
+          type: 'Condamnation',
+          date: '2025-03-31',
+          description: 'Condamnée dans l\'affaire des assistants parlementaires du FN au Parlement européen pour détournement de fonds publics. N\'a pas fait appel, condamnation définitive.',
+          penalty: '18 mois de prison avec sursis, 3 ans d\'inéligibilité avec sursis',
+          status: 'Définitive (pas d\'appel)',
+          sources: [
+            { title: 'FranceInfo - 25 condamnations assistants FN', url: 'https://www.franceinfo.fr/politique/front-national/affaire-des-assistants-fn-au-parlement-europeen/marine-le-pen-louis-aliot-julien-odoul-on-a-liste-les-25-condamnations-a-l-issue-du-proces-des-assistants-parlementaires-du-fn_7162527.html' }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Dominique Bilde',
+    party: 'rn',
+    position: 'Ancienne eurodéputée FN (2014-2024)',
+    convictions: 1,
+    ongoingCases: 0,
+    details: {
+      career: [
+        'Eurodéputée FN/RN (2014-2024)'
+      ],
+      justiceIncidents: [
+        {
+          type: 'Condamnation',
+          date: '2025-03-31',
+          description: 'Condamnée dans l\'affaire des assistants parlementaires du FN au Parlement européen pour détournement de fonds publics. Emploi fictif d\'assistant parlementaire en 2014. N\'a pas fait appel, condamnation définitive.',
+          penalty: '18 mois de prison avec sursis, 3 ans d\'inéligibilité avec sursis, remboursement de 40 320€',
+          status: 'Définitive (pas d\'appel)',
+          sources: [
+            { title: 'France Bleu - Dominique Bilde condamnée', url: 'https://www.francebleu.fr/infos/politique/l-ex-eurodeputee-de-meurthe-et-moselle-dominique-bilde-condamnee-dans-l-affaire-des-assistants-parlementaires-du-fn-2373373' }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Fernand Le Rachinel',
+    party: 'rn',
+    position: 'Ancien eurodéputé FN (2004-2009)',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      career: [
+        'Eurodéputé FN (2004-2009)'
+      ],
       justiceIncidents: [
         {
           type: 'Condamnation (première instance)',
           date: '2025-03-31',
-          description: 'Condamné dans l\'affaire des assistants parlementaires du FN au Parlement européen.',
-          penalty: 'Peine avec sursis',
-          status: 'Appel en cours'
+          description: 'Condamné dans l\'affaire des assistants parlementaires du FN au Parlement européen pour détournement de fonds publics. A fait appel.',
+          penalty: '18 mois de prison avec sursis, 3 ans d\'inéligibilité',
+          status: 'Procès en appel en cours depuis janvier 2026',
+          sources: [
+            { title: 'FranceInfo - 25 condamnations assistants FN', url: 'https://www.franceinfo.fr/politique/front-national/affaire-des-assistants-fn-au-parlement-europeen/marine-le-pen-louis-aliot-julien-odoul-on-a-liste-les-25-condamnations-a-l-issue-du-proces-des-assistants-parlementaires-du-fn_7162527.html' }
+          ]
         }
       ]
     }
