@@ -10,14 +10,16 @@ export default function SearchBar({ searchTerm, onSearchChange, politicians }) {
   const navigate = useNavigate()
   const wrapperRef = useRef(null)
 
+  const normalize = (str) => str.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase()
+
   const suggestions = searchTerm.length >= 1
     ? (politicians || []).filter(p => {
-        const term = searchTerm.toLowerCase()
+        const term = normalize(searchTerm)
         const party = getPartyById(p.party)
         return (
-          p.name.toLowerCase().includes(term) ||
-          (party?.name || '').toLowerCase().includes(term) ||
-          p.position.toLowerCase().includes(term)
+          normalize(p.name).includes(term) ||
+          normalize(party?.name || '').includes(term) ||
+          normalize(p.position).includes(term)
         )
       }).slice(0, 8)
     : []

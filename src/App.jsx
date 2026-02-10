@@ -6,7 +6,8 @@ import PartyCard from './components/PartyCard'
 import PoliticianDetail from './components/PoliticianDetail'
 import PartyDetail from './components/PartyDetail'
 import MentionsLegales from './components/MentionsLegales'
-import { politicians as politiciansData, parties as partiesData } from './data/frenchPolitics'
+import { politicians as politiciansData, parties as partiesData, getPoliticiansByParty } from './data/frenchPolitics'
+import { computePartySeverity } from './utils/severityScore'
 import './index.css'
 
 function HomePage() {
@@ -14,9 +15,13 @@ function HomePage() {
   const [politicians] = useState(() => politiciansData.filter(p => !p.deceased))
 
   const visibleParties = useMemo(() => {
-    return partiesData.filter(party =>
-      politicians.some(p => p.party === party.id)
-    )
+    return partiesData
+      .filter(party => politicians.some(p => p.party === party.id))
+      .sort((a, b) => {
+        const sevA = computePartySeverity(getPoliticiansByParty(a.id).filter(p => !p.deceased))
+        const sevB = computePartySeverity(getPoliticiansByParty(b.id).filter(p => !p.deceased))
+        return sevB.average - sevA.average
+      })
   }, [politicians])
 
   const totalStats = useMemo(() => {

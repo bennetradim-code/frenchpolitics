@@ -71,13 +71,12 @@ export default function PartyCard({ party }) {
                   <span style={{ fontSize: '10px', fontWeight: 600 }}>pts/pers.</span>
                 </span>
               )}
-              <div className="flex flex-wrap gap-1.5 text-xs text-gray-600">
+              <div className="flex flex-wrap gap-1.5 text-xs">
                 {stats.totalConvictions > 0 && (
-                  <span>{stats.totalConvictions} condamnation{stats.totalConvictions > 1 ? 's' : ''}</span>
+                  <span className="bg-red-100 text-red-700 px-1.5 py-0.5 rounded font-semibold">{stats.totalConvictions} condamnation{stats.totalConvictions > 1 ? 's' : ''}</span>
                 )}
-                {stats.totalConvictions > 0 && stats.totalOngoingCases > 0 && <span>·</span>}
                 {stats.totalOngoingCases > 0 && (
-                  <span>{stats.totalOngoingCases} affaire{stats.totalOngoingCases > 1 ? 's' : ''} en cours</span>
+                  <span className="bg-orange-100 text-orange-700 px-1.5 py-0.5 rounded font-semibold">{stats.totalOngoingCases} affaire{stats.totalOngoingCases > 1 ? 's' : ''} en cours</span>
                 )}
               </div>
             </div>
