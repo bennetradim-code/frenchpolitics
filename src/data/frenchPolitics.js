@@ -149,6 +149,16 @@ export const parties = [
     seats: 17
   },
   {
+    id: 'reconquete',
+    name: 'Reconquête',
+    leader: 'Éric Zemmour',
+    color: '#1A2C5B',
+    ideology: 'Droite nationaliste, Conservatisme',
+    founded: 2021,
+    members: 100000,
+    seats: 0
+  },
+  {
     id: 'ni',
     name: 'Non-inscrits (NI)',
     leader: '-',
@@ -217,8 +227,58 @@ export const politicians = [
   },
   {
     id: nextId++,
+    name: 'Éric Zemmour',
+    party: 'reconquete',
+    position: 'Président de Reconquête, candidat à la présidentielle 2022',
+    convictions: 3,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1958-08-31',
+      birthPlace: 'Montreuil',
+      career: [
+        'Journaliste au Figaro (1996-2021)',
+        'Chroniqueur TV (CNews, 2019-2021)',
+        'Candidat à l\'élection présidentielle (2022)',
+        'Président de Reconquête (2021-)'
+      ],
+      justiceIncidents: [
+        {
+          type: 'Condamnation',
+          date: '2011-02',
+          description: 'Condamné définitivement pour provocation à la discrimination raciale. Sur Canal+ (émission "Salut les Terriens", mars 2010), il déclare que "la plupart des trafiquants sont noirs et arabes, c\'est comme ça, c\'est un fait".',
+          penalty: '10 000€ d\'amende',
+          status: 'Condamnation définitive',
+          sources: [
+            { title: 'Condamnation Zemmour 2011 - Le Monde', url: 'https://www.lemonde.fr/societe/article/2011/02/18/eric-zemmour-condamne-pour-provocation-a-la-discrimination-raciale_1481785_3224.html' }
+          ]
+        },
+        {
+          type: 'Condamnation',
+          date: '2020-09',
+          description: 'Condamné définitivement pour provocation à la haine religieuse envers les musulmans. Lors de la "Convention de la droite" (septembre 2019), il tient des propos jugés comme une incitation à la haine envers les musulmans.',
+          penalty: '10 000€ d\'amende',
+          status: 'Condamnation définitive',
+          sources: [
+            { title: 'Condamnation Zemmour Convention de la droite - Le Figaro', url: 'https://www.lefigaro.fr/actualite-france/eric-zemmour-condamne-en-appel-pour-injure-et-provocation-a-la-haine-envers-les-musulmans-20200923' }
+          ]
+        },
+        {
+          type: 'Condamnation',
+          date: '2022-01',
+          description: 'Condamné définitivement pour provocation à la haine raciale. Sur CNews (septembre 2020), il qualifie les mineurs isolés étrangers de "voleurs, assassins, violeurs".',
+          penalty: '10 000€ d\'amende',
+          status: 'Condamnation définitive',
+          sources: [
+            { title: 'Condamnation Zemmour mineurs isolés - France Info', url: 'https://www.francetvinfo.fr/politique/eric-zemmour/eric-zemmour-condamne-a-10-000-euros-d-amende-pour-provocation-a-la-haine-raciale_4920487.html' }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    id: nextId++,
     name: 'Nicolas Bay',
-    party: 'rn',
+    party: 'reconquete',
     position: 'Ancien eurodéputé RN puis Reconquête',
     convictions: 0,
     ongoingCases: 0,
@@ -6965,7 +7025,7 @@ export const politicians = [
   {
     id: nextId++,
     name: 'Gilbert Collard',
-    party: 'rn',
+    party: 'reconquete',
     position: 'Ex-député RN (2017-2022), eurodéputé RN puis Reconquête (2022-2024)',
     convictions: 1,
     ongoingCases: 0,
