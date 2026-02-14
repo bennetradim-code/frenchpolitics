@@ -1,4 +1,10 @@
-@import "tailwindcss";
+@import "tailwindcss" source(none);
+@source "./components";
+@source "./utils";
+@source "./hooks";
+@source "./App.jsx";
+@source "./main.jsx";
+@source "../index.html";
 
 body {
   background-color: rgb(249 250 251);

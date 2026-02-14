@@ -6,6 +6,7 @@ import PartyCard from './components/PartyCard'
 import PoliticianDetail from './components/PoliticianDetail'
 import PartyDetail from './components/PartyDetail'
 import MentionsLegales from './components/MentionsLegales'
+import Classement from './components/Classement'
 import { politicians as politiciansData, parties as partiesData, getPoliticiansByParty } from './data/frenchPolitics'
 import { computePartySeverity } from './utils/severityScore'
 import './index.css'
@@ -70,6 +71,15 @@ function HomePage() {
               <p className="text-3xl font-bold text-purple-600">{totalStats.withIncidents}</p>
             </div>
           </div>
+
+          <div className="mt-4 flex justify-end">
+            <Link
+              to="/classement"
+              className="inline-flex items-center gap-1.5 text-sm font-medium text-blue-600 hover:text-blue-800 transition"
+            >
+              Voir le classement complet &rarr;
+            </Link>
+          </div>
         </div>
       </header>
 
@@ -105,6 +115,7 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/politician/:id" element={<PoliticianDetail />} />
         <Route path="/party/:id" element={<PartyDetail />} />
+        <Route path="/classement" element={<Classement />} />
         <Route path="/mentions-legales" element={<MentionsLegales />} />
       </Routes>
 
