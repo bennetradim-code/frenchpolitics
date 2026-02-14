@@ -15,17 +15,9 @@ export default function Classement() {
     const living = politiciansData.filter(p => !p.deceased)
     return [...living]
       .map(p => ({ ...p, _severity: computeSeverityScore(p).total }))
+      .filter(p => p._severity > 0)
       .sort((a, b) => {
         if (a._severity !== b._severity) return b._severity - a._severity
-        // Tie-breaker: MEX > Enquête > clean
-        const tierOf = (p) => {
-          const incs = p.details?.justiceIncidents || []
-          if (incs.some(i => (i.type || '').includes('Mise en examen'))) return 2
-          if (incs.some(i => (i.type || '').includes('Enquête'))) return 1
-          return 0
-        }
-        const tierA = tierOf(a), tierB = tierOf(b)
-        if (tierA !== tierB) return tierB - tierA
         return a.name.localeCompare(b.name, 'fr')
       })
   }, [])
@@ -61,7 +53,7 @@ export default function Classement() {
         <div className="p-6 border-b">
           <h1 className="text-2xl font-bold text-gray-900">Classement par sévérité</h1>
           <p className="text-sm text-gray-500 mt-1">
-            {rankedPoliticians.length} personnalités classées par score de sévérité décroissant.
+            {rankedPoliticians.length} personnalités condamnées, classées par score de sévérité décroissant.
             Le score est calculé à partir des peines prononcées lors de condamnations définitives.
           </p>
         </div>
