@@ -108,7 +108,7 @@ function App() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       <ScrollToTop />
-      <header className="bg-white shadow-md">
+      <header className="bg-white shadow-md sticky top-0 z-50">
         <div className="max-w-6xl mx-auto px-4 py-3">
           <Link to="/" className="text-2xl font-bold text-gray-900 hover:text-blue-700 transition">
             French Politics Tracker
