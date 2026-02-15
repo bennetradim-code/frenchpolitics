@@ -36,12 +36,9 @@ function HomePage() {
 
   return (
     <>
-      <header className="bg-white shadow">
-        <div className="max-w-6xl mx-auto px-4 py-8">
-          <Link to="/" className="text-4xl font-bold text-gray-900 hover:text-blue-700 transition">
-            French Politics Tracker
-          </Link>
-          <p className="text-gray-600 mt-2">Suivi complet des partis politiques français et des affaires judiciaires des personnalités politiques</p>
+      <div className="bg-white shadow">
+        <div className="max-w-6xl mx-auto px-4 py-6">
+          <p className="text-gray-600 mt-1">Suivi complet des partis politiques français et des affaires judiciaires des personnalités politiques</p>
 
           <div className="bg-amber-50 border border-amber-200 rounded-lg p-3 mt-4 text-xs text-amber-800 leading-relaxed">
             <strong>Avertissement :</strong> Ce site est un projet informatif généré et maintenu de manière automatisée
@@ -81,7 +78,7 @@ function HomePage() {
             </Link>
           </div>
         </div>
-      </header>
+      </div>
 
       <main className="max-w-6xl mx-auto px-4 py-8">
         <SearchBar searchTerm={searchTerm} onSearchChange={setSearchTerm} politicians={politicians} />
@@ -111,6 +108,13 @@ function App() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       <ScrollToTop />
+      <header className="bg-white shadow-md">
+        <div className="max-w-6xl mx-auto px-4 py-3">
+          <Link to="/" className="text-2xl font-bold text-gray-900 hover:text-blue-700 transition">
+            French Politics Tracker
+          </Link>
+        </div>
+      </header>
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/politician/:id" element={<PoliticianDetail />} />

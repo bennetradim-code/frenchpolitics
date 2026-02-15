@@ -1,11 +1,13 @@
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 export default function MentionsLegales() {
+  const navigate = useNavigate()
+
   return (
     <main className="max-w-4xl mx-auto px-4 py-8">
-      <Link to="/" className="inline-flex items-center text-blue-500 hover:text-blue-700 mb-6 font-medium transition">
-        &larr; Retour à l'accueil
-      </Link>
+      <button onClick={() => navigate(-1)} className="inline-flex items-center text-blue-500 hover:text-blue-700 mb-6 font-medium transition cursor-pointer">
+        &larr; Retour
+      </button>
 
       <div className="bg-white rounded-lg shadow-lg overflow-hidden">
         <div className="p-8">

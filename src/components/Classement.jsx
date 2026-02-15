@@ -1,5 +1,5 @@
 import { useMemo, useState, useEffect, useRef, useCallback } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { politicians as politiciansData, getPartyById } from '../data/frenchPolitics'
 import { computeSeverityScore } from '../utils/severityScore'
 import PoliticianAvatar from './PoliticianAvatar'
@@ -8,6 +8,7 @@ import SeverityStamp from './SeverityStamp'
 const PAGE_SIZE = 30
 
 export default function Classement() {
+  const navigate = useNavigate()
   const [visibleCount, setVisibleCount] = useState(PAGE_SIZE)
   const sentinelRef = useRef(null)
 
@@ -45,9 +46,9 @@ export default function Classement() {
 
   return (
     <main className="max-w-4xl mx-auto px-4 py-8">
-      <Link to="/" className="inline-flex items-center text-blue-500 hover:text-blue-700 mb-6 font-medium transition">
-        &larr; Retour à l'accueil
-      </Link>
+      <button onClick={() => navigate(-1)} className="inline-flex items-center text-blue-500 hover:text-blue-700 mb-6 font-medium transition cursor-pointer">
+        &larr; Retour
+      </button>
 
       <div className="bg-white rounded-lg shadow-lg overflow-hidden">
         <div className="p-6 border-b">

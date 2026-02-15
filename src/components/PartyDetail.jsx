@@ -1,4 +1,4 @@
-import { useParams, Link } from 'react-router-dom'
+import { useParams, Link, useNavigate } from 'react-router-dom'
 import { parties, getPoliticiansByParty, getPartyStats } from '../data/frenchPolitics'
 import { computeSeverityScore, computePartySeverity, getSeverityColor } from '../utils/severityScore'
 import PoliticianAvatar from './PoliticianAvatar'
@@ -7,6 +7,7 @@ import SeverityStamp from './SeverityStamp'
 
 export default function PartyDetail() {
   const { id } = useParams()
+  const navigate = useNavigate()
   const party = parties.find(p => p.id === id)
 
   if (!party) {
@@ -45,9 +46,9 @@ export default function PartyDetail() {
 
   return (
     <main className="max-w-4xl mx-auto px-4 py-8">
-      <Link to="/" className="inline-flex items-center text-blue-500 hover:text-blue-700 mb-6 font-medium transition">
-        &larr; Retour à l'accueil
-      </Link>
+      <button onClick={() => navigate(-1)} className="inline-flex items-center text-blue-500 hover:text-blue-700 mb-6 font-medium transition cursor-pointer">
+        &larr; Retour
+      </button>
 
       <div className="bg-white rounded-lg shadow-lg overflow-hidden">
         {/* En-tête du parti */}

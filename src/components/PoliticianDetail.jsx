@@ -1,4 +1,4 @@
-import { useParams, Link } from 'react-router-dom'
+import { useParams, Link, useNavigate } from 'react-router-dom'
 import { politicians, getPartyById } from '../data/frenchPolitics'
 import SeverityStamp from './SeverityStamp'
 import { parsePenalty } from '../utils/penaltyParser'
@@ -6,6 +6,7 @@ import PoliticianAvatar from './PoliticianAvatar'
 
 export default function PoliticianDetail() {
   const { id } = useParams()
+  const navigate = useNavigate()
   const politician = politicians.find(p => p.id === Number(id))
 
   if (!politician) {
@@ -54,9 +55,9 @@ export default function PoliticianDetail() {
 
   return (
     <main className="max-w-4xl mx-auto px-4 py-8">
-      <Link to="/" className="inline-flex items-center text-blue-500 hover:text-blue-700 mb-6 font-medium transition">
-        &larr; Retour à la liste
-      </Link>
+      <button onClick={() => navigate(-1)} className="inline-flex items-center text-blue-500 hover:text-blue-700 mb-6 font-medium transition cursor-pointer">
+        &larr; Retour
+      </button>
 
       <div className="bg-white rounded-lg shadow-lg overflow-hidden">
         {/* Hero */}
