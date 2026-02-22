@@ -12447,6 +12447,692 @@ export const politicians = [
       justiceIncidents: []
     }
   },
+  {
+    id: nextId++,
+    name: 'Christophe Bay',
+    party: 'rn',
+    position: 'Eurodéputé RN',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1962-09-06',
+      birthPlace: 'Vincennes',
+      career: [
+        'Préfet de l\'Aube (2011-2014)',
+        'Préfet de la Dordogne (2014-2016)',
+        'Eurodéputé RN (2024-)'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Jean-Paul Garraud',
+    party: 'rn',
+    position: 'Eurodéputé RN, président de la délégation française RN',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1956-02-27',
+      birthPlace: 'Toulouse',
+      career: [
+        'Magistrat (1983-2002)',
+        'Député de Gironde (2002-2012)',
+        'Eurodéputé RN (2019-)'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'France Jamet',
+    party: 'rn',
+    position: 'Eurodéputée RN',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1961-02-05',
+      birthPlace: 'Paris',
+      career: [
+        'Secrétaire juridique',
+        'Conseillère régionale d\'Occitanie',
+        'Eurodéputée RN (2017-)'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Virginie Joron',
+    party: 'rn',
+    position: 'Eurodéputée RN',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1973-12-11',
+      birthPlace: 'Troyes',
+      career: [
+        'Cadre en assurances',
+        'Conseillère régionale du Grand Est (2015-2019)',
+        'Eurodéputée RN (2019-)'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Philippe Olivier',
+    party: 'rn',
+    position: 'Eurodéputé RN, conseiller de Marine Le Pen',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1961-08-30',
+      birthPlace: 'Juvisy-sur-Orge',
+      career: [
+        'Conseiller régional d\'Île-de-France (1992-2004)',
+        'Membre du cabinet de Marine Le Pen (2018-)',
+        'Eurodéputé RN (2019-)'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Gilles Pennelle',
+    party: 'rn',
+    position: 'Eurodéputé RN, ancien directeur général du RN',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1962-07-20',
+      birthPlace: 'Dieppe',
+      career: [
+        'Professeur d\'histoire-géographie (1985-2014)',
+        'Directeur général du RN (2014-2024)',
+        'Eurodéputé RN (2024-)'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'André Rougé',
+    party: 'rn',
+    position: 'Eurodéputé RN',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1961-12-23',
+      birthPlace: 'Paris',
+      career: [
+        'Fondateur du think tank Les Horaces (2015)',
+        'Délégué national RN pour l\'Outre-mer',
+        'Eurodéputé RN (2019-2024, 2024-)'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Alexandre Varaut',
+    party: 'rn',
+    position: 'Eurodéputé RN',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1966-01-18',
+      birthPlace: 'Neuilly-sur-Seine',
+      career: [
+        'Avocat à la Cour (1990-)',
+        'Eurodéputé MPF (1999-2004)',
+        'Eurodéputé RN (2024-)'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Pascal Canfin',
+    party: 'ensemble',
+    position: 'Eurodéputé Renaissance, président Commission Environnement',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1974-08-22',
+      birthPlace: 'Arras',
+      career: [
+        'Journaliste Alternatives Économiques (2003-2009)',
+        'Ministre délégué au Développement (2012-2014)',
+        'Directeur général WWF France (2016-2019)',
+        'Eurodéputé Renaissance (2009-2012, 2019-)'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Fabienne Keller',
+    party: 'ensemble',
+    position: 'Eurodéputée Renaissance, ancienne sénatrice',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1959-10-20',
+      birthPlace: 'Sélestat',
+      career: [
+        'Maire de Strasbourg (2001-2008)',
+        'Sénatrice du Bas-Rhin (2005-2019)',
+        'Eurodéputée Renaissance (2019-)'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Sandro Gozi',
+    party: 'ensemble',
+    position: 'Eurodéputé Renaissance',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1968-03-25',
+      birthPlace: 'Sogliano al Rubicone (Italie)',
+      career: [
+        'Secrétaire d\'État aux Affaires européennes (Italie, 2014-2018)',
+        'Secrétaire général du Parti démocrate européen',
+        'Eurodéputé Renaissance (2019-)'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Christophe Grudler',
+    party: 'ensemble',
+    position: 'Eurodéputé Renaissance MoDem',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1965-04-09',
+      birthPlace: 'Belfort',
+      career: [
+        'Journaliste et rédacteur en chef (1990-2014)',
+        'Directeur des éditions du Lion (2014-2019)',
+        'Eurodéputé Renaissance (2019-)'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Stéphanie Yon-Courtin',
+    party: 'ensemble',
+    position: 'Eurodéputée Renaissance',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1974-03-28',
+      birthPlace: 'Coutances',
+      career: [
+        'Avocate spécialisée en droit de la concurrence (2004-2019)',
+        'Maire de Saint-Contest (jusqu\'en 2019)',
+        'Conseillère régionale de Normandie',
+        'Eurodéputée Renaissance (2019-)'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Laurence Farreng',
+    party: 'ensemble',
+    position: 'Eurodéputée Renaissance MoDem',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1966-09-06',
+      birthPlace: 'Nîmes',
+      career: [
+        'Directrice de la communication de Pau (2015-2019)',
+        'Conseillère régionale de Nouvelle-Aquitaine (2021-)',
+        'Eurodéputée Renaissance (2019-)'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Aurore Lalucq',
+    party: 'ps',
+    position: 'Eurodéputée PS Place Publique, présidente Commission ECON',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1979-04-17',
+      birthPlace: 'Longjumeau',
+      career: [
+        'Économiste',
+        'Co-fondatrice et co-directrice de l\'Institut Veblen (jusqu\'en 2019)',
+        'Eurodéputée PS (2019-)'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Christophe Clergeau',
+    party: 'ps',
+    position: 'Eurodéputé PS',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1968-09-01',
+      birthPlace: 'Nantes',
+      career: [
+        'Enseignant-chercheur (1999-2022)',
+        'Vice-président Conseil régional Pays de la Loire (2009-2015)',
+        'Secrétaire national PS pour l\'Europe (2019-)',
+        'Eurodéputé PS (2023-)'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'François Kalfon',
+    party: 'ps',
+    position: 'Eurodéputé PS',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1968-06-11',
+      birthPlace: 'Sarcelles',
+      career: [
+        'Conseiller régional d\'Île-de-France (2004-2024)',
+        'Eurodéputé PS (2024-)'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Nora Mebarek',
+    party: 'ps',
+    position: 'Eurodéputée PS',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1972-07-22',
+      birthPlace: 'Port-Saint-Louis-du-Rhône',
+      career: [
+        'Élue locale à Arles (2001-2020)',
+        'Eurodéputée PS (2020-)'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Damien Carême',
+    party: 'lfi',
+    position: 'Eurodéputé LFI, ancien maire de Grande-Synthe',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1960-11-16',
+      birthPlace: 'Joeuf',
+      career: [
+        'Maire de Grande-Synthe (2001-2019)',
+        'Eurodéputé EELV puis LFI (2019-)',
+        'Pionnier de l\'écologie sociale et de la justice climatique'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Leïla Chaibi',
+    party: 'lfi',
+    position: 'Eurodéputée LFI',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1982-10-05',
+      birthPlace: 'Dijon',
+      career: [
+        'Diplômée de Sciences Po Toulouse (2005)',
+        'Co-fondatrice du comité de désobéissance civile de LFI',
+        'Eurodéputée LFI (2019-)',
+        'Présidente de la délégation LFI au Parlement européen'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Emma Fourreau',
+    party: 'lfi',
+    position: 'Eurodéputée LFI',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1999-10-01',
+      birthPlace: 'Pontault-Combault',
+      career: [
+        'Baccalauréat Littéraire mention très bien (2017)',
+        'Sciences Po Rennes',
+        'Eurodéputée LFI (2024-)',
+        'Plus jeune eurodéputée française élue'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Marina Mesure',
+    party: 'lfi',
+    position: 'Eurodéputée LFI, présidente délégation LFI',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1989-07-12',
+      birthPlace: 'Gréasque',
+      career: [
+        'Diplômée de HEC Montréal (2013)',
+        'Syndicaliste européenne (10+ ans)',
+        'Eurodéputée LFI (2022-)',
+        'Membre commissions ITRE, INTA et SEDE'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Younous Omarjee',
+    party: 'lfi',
+    position: 'Eurodéputé LFI, Vice-Président du Parlement européen',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1969-09-30',
+      birthPlace: 'Saint-Denis (Réunion)',
+      career: [
+        'Eurodéputé (2012-)',
+        'Président Commission développement régional PE (2019-2024)',
+        'Vice-Président du Parlement européen (2024-)'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Arash Saeidi',
+    party: 'lfi',
+    position: 'Eurodéputé LFI',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1975-05-25',
+      birthPlace: 'Téhéran',
+      career: [
+        'Chef d\'entreprise dans la restauration à Angers',
+        'Ancien coordinateur national du mouvement Génération·s',
+        'Eurodéputé LFI (2024-)',
+        'Membre commissions transports, agriculture et affaires juridiques'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Anthony Smith',
+    party: 'lfi',
+    position: 'Eurodéputé LFI, inspecteur du travail',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1975-04-03',
+      birthPlace: 'Soissons',
+      career: [
+        'Professeur d\'économie',
+        'Inspecteur du travail',
+        'Responsable syndical CGT au ministère du Travail',
+        'Eurodéputé LFI (2024-)'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'David Cormand',
+    party: 'ecolo',
+    position: 'Eurodéputé EELV, ancien secrétaire national',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1974-11-30',
+      birthPlace: 'France',
+      career: [
+        'Licence d\'histoire, Université de Rouen',
+        'Conseiller régional de Haute-Normandie (2007-2015)',
+        'Secrétaire national EELV (2016-2019)',
+        'Eurodéputé EELV (2019-)'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Mounir Satouri',
+    party: 'ecolo',
+    position: 'Eurodéputé EELV',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1975-05-25',
+      birthPlace: 'Casablanca',
+      career: [
+        'Militant droits de l\'homme au Maroc',
+        'Naturalisé français (2002)',
+        'Conseiller régional Île-de-France (2010-2021)',
+        'Eurodéputé EELV (2019-)',
+        'Président sous-commission des droits de l\'homme PE'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Mélissa Camara',
+    party: 'ecolo',
+    position: 'Eurodéputée EELV',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1991-11-27',
+      birthPlace: 'Région de Rouen',
+      career: [
+        'Travailleuse sociale',
+        'Conseillère municipale de Lille',
+        'Militante écoféministe',
+        'Eurodéputée EELV (2024-)'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Majdouline Sbai',
+    party: 'ecolo',
+    position: 'Eurodéputée EELV',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1977-09-10',
+      birthPlace: 'Nord',
+      career: [
+        'Sociologue, DEA Science Politique, ingénieure environnement',
+        'Fondatrice université populaire et citoyenne Roubaix',
+        'Vice-Présidente Conseil Régional Nord-Pas-de-Calais (2010-2015)',
+        'Eurodéputée EELV (2024-)'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Christophe Gomart',
+    party: 'lr',
+    position: 'Eurodéputé LR, général de corps d\'armée',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1960-06-20',
+      birthPlace: 'France',
+      career: [
+        'Diplômé de Saint-Cyr (1983)',
+        'Commandant des opérations spéciales (2011-2013)',
+        'Directeur du renseignement militaire (2013-2017)',
+        'Eurodéputé LR (2024-)',
+        'Premier vice-président commission sécurité et défense PE'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Céline Imart',
+    party: 'lr',
+    position: 'Eurodéputée LR, agricultrice',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1982-08-24',
+      birthPlace: 'France',
+      career: [
+        'Diplômée Sciences Po Paris et Essec',
+        'Directrice financière Bolloré Chili',
+        'Agricultrice céréalière dans le Tarn',
+        'Vice-présidente Jeunes agriculteurs (2014-2018)',
+        'Eurodéputée LR (2024-)'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Isabelle Le Callennec',
+    party: 'lr',
+    position: 'Eurodéputée LR, maire de Vitré',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1966-10-14',
+      birthPlace: 'France',
+      career: [
+        'Diplômée Celsa (1992)',
+        'Collaboratrice de Pierre Méhaignerie (19 ans)',
+        'Députée Ille-et-Vilaine (2012-2017)',
+        'Maire de Vitré (2020-)',
+        'Eurodéputée LR (2024-)'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Laurent Castillo',
+    party: 'lr',
+    position: 'Eurodéputé LR, chirurgien ORL',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1962-03-12',
+      birthPlace: 'Casablanca',
+      career: [
+        'Major en chirurgie à Nice',
+        'Professeur des universités',
+        'Président de l\'IUFC de Nice (Institut universitaire face et cou)',
+        'Eurodéputé LR (2024-)'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Claire Fita',
+    party: 'ps',
+    position: 'Eurodéputée PS',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1976-12-31',
+      birthPlace: 'France',
+      career: [
+        'Vice-présidente Région Occitanie',
+        'Eurodéputée PS-Place publique (2024-)'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Jean-Marc Germain',
+    party: 'ps',
+    position: 'Eurodéputé PS',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1966-06-12',
+      birthPlace: 'Lyon',
+      career: [
+        'Diplômé École Polytechnique',
+        'Direction de la Prévision au ministère de l\'Économie (1992)',
+        'Député Hauts-de-Seine (2012-2017)',
+        'Eurodéputé PS-Place publique (2024-)'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Pierre Jouvet',
+    party: 'ps',
+    position: 'Eurodéputé PS, secrétaire général PS',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1986-10-06',
+      birthPlace: 'Valence',
+      career: [
+        'Sciences Po Lyon',
+        'Collaborateur sénateur Didier Guillaume (7 ans)',
+        'Maire de Saint-Vallier (2020-2024)',
+        'Secrétaire général du Parti socialiste (2023-)',
+        'Eurodéputé PS-Place publique (2024-)'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Murielle Laurent',
+    party: 'ps',
+    position: 'Eurodéputée PS',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1977-09-21',
+      birthPlace: 'Bourgogne',
+      career: [
+        'Maire de Feyzin (2017-2024)',
+        'Secrétaire fédérale PS Rhône',
+        'Eurodéputée PS-Place publique (2024-)'
+      ],
+      justiceIncidents: []
+    }
+  },
 ]
 
 /**
