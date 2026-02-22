@@ -46,7 +46,7 @@ export const CONVICTION_CATEGORIES = {
     keywords: [
       'haine raciale', 'discrimination raciale', 'injure raciale',
       'injures racistes', 'provocation à la discrimination',
-      'raciste', 'racisme', 'noirs et arabes', 'islamiser',
+      'raciste', 'racistes', 'racisme', 'noirs et arabes', 'islamiser',
       'invasion', 'immigrés', 'colonisateurs'
     ]
   },
@@ -64,7 +64,7 @@ export const CONVICTION_CATEGORIES = {
     label: 'Diffamation et injures',
     color: '#ca8a04', // yellow-600
     keywords: [
-      'diffamation', 'injure publique', 'injure', 'provocation à la haine religieuse',
+      'diffamation', 'injure publique', 'provocation à la haine religieuse',
       'calomnie'
     ]
   },
@@ -82,7 +82,7 @@ export const CONVICTION_CATEGORIES = {
     label: 'Autres infractions',
     color: '#64748b', // slate-500
     keywords: [
-      'harcèlement', 'usage de stupéfiants', 'conduite en état d\'ivresse',
+      'harcèlement moral', 'usage de stupéfiants', 'conduite en état d\'ivresse',
       'favoritisme', 'prise illégale d\'intérêts', 'non-déclaration',
       'patrimoine', 'HATVP', 'négligence', 'falsification'
     ]
@@ -105,9 +105,14 @@ export function categorizeConviction(incident) {
 
   // Vérifier chaque catégorie
   Object.values(CONVICTION_CATEGORIES).forEach(category => {
-    const hasMatch = category.keywords.some(keyword =>
-      fullText.includes(keyword.toLowerCase())
-    );
+    const hasMatch = category.keywords.some(keyword => {
+      const keywordLower = keyword.toLowerCase();
+      // Utiliser une regex avec word boundaries des deux côtés pour éviter les faux positifs
+      // Ex: "viol" ne doit pas matcher "violences"
+      const escapedKeyword = keywordLower.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+      const regex = new RegExp(`\\b${escapedKeyword}\\b`, 'i');
+      return regex.test(fullText);
+    });
 
     if (hasMatch) {
       categories.push(category.id);
