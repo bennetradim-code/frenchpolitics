@@ -3,7 +3,7 @@ import { parties, getPoliticiansByParty, getPartyStats } from '../data/frenchPol
 import { computeSeverityScore, computePartySeverity, getSeverityColor } from '../utils/severityScore'
 import PoliticianAvatar from './PoliticianAvatar'
 import PartyAvatar from './PartyAvatar'
-import SeverityStamp from './SeverityStamp'
+import RankBadge from './RankBadge'
 
 export default function PartyDetail() {
   const { id } = useParams()
@@ -208,7 +208,7 @@ export default function PartyDetail() {
                     </p>
                     <p className="text-sm text-gray-500 truncate">{pol.position}</p>
                   </div>
-                  <SeverityStamp politician={pol} size="sm" />
+                  <RankBadge politician={pol} size="sm" />
                 </Link>
               ))}
           </div>

@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import { politicians as politiciansData, getPartyById } from '../data/frenchPolitics'
 import { computeSeverityScore } from '../utils/severityScore'
 import PoliticianAvatar from './PoliticianAvatar'
-import SeverityStamp from './SeverityStamp'
+import RankBadge from './RankBadge'
 
 const PAGE_SIZE = 30
 
@@ -96,7 +96,7 @@ export default function Classement() {
                     )}
                   </div>
                 </div>
-                <SeverityStamp politician={pol} size="sm" />
+                <RankBadge politician={pol} size="sm" />
               </Link>
             )
           })}

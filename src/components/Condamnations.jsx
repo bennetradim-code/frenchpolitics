@@ -4,7 +4,7 @@ import { politicians as politiciansData, getPartyById, parties } from '../data/f
 import { CONVICTION_CATEGORIES, getAllConvictions, countConvictionsByCategory } from '../utils/convictionCategories'
 import { computeSeverityScore } from '../utils/severityScore'
 import PoliticianAvatar from './PoliticianAvatar'
-import SeverityStamp from './SeverityStamp'
+import RankBadge from './RankBadge'
 
 const PAGE_SIZE = 30
 
@@ -275,7 +275,7 @@ export default function Condamnations() {
                   </div>
 
                   <div className="flex-shrink-0">
-                    <SeverityStamp politician={politician} size="sm" />
+                    <RankBadge politician={politician} size="sm" />
                   </div>
                 </Link>
               </div>

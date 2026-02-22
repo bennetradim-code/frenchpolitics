@@ -3,6 +3,8 @@ import { politicians, getPartyById } from '../data/frenchPolitics'
 import SeverityStamp from './SeverityStamp'
 import { parsePenalty } from '../utils/penaltyParser'
 import PoliticianAvatar from './PoliticianAvatar'
+import { getRank, getTotalRanked } from '../utils/getRank'
+import { computeSeverityScore } from '../utils/severityScore'
 
 export default function PoliticianDetail() {
   const { id } = useParams()
@@ -90,7 +92,30 @@ export default function PoliticianDetail() {
             )}
 
             <div className="mt-4">
-              <SeverityStamp politician={politician} size="lg" />
+              {(() => {
+                const rank = getRank(politician.id)
+                const totalRanked = getTotalRanked()
+                const { total: severity } = computeSeverityScore(politician)
+
+                return (
+                  <div className="flex items-start gap-3">
+                    {rank && (
+                      <div className="flex flex-col items-center gap-1">
+                        <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide">
+                          Classement
+                        </div>
+                        <div className="text-3xl font-bold text-gray-900">
+                          #{rank}
+                        </div>
+                        <div className="text-xs text-gray-400">
+                          / {totalRanked}
+                        </div>
+                      </div>
+                    )}
+                    <SeverityStamp politician={politician} size="lg" />
+                  </div>
+                )
+              })()}
             </div>
           </div>
         </div>

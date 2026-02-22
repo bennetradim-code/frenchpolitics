@@ -2,7 +2,7 @@ import { useState, useRef, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { getPartyById } from '../data/frenchPolitics'
 import PoliticianAvatar from './PoliticianAvatar'
-import SeverityStamp from './SeverityStamp'
+import RankBadge from './RankBadge'
 
 export default function SearchBar({ searchTerm, onSearchChange, politicians }) {
   const [isOpen, setIsOpen] = useState(false)
@@ -98,7 +98,7 @@ export default function SearchBar({ searchTerm, onSearchChange, politicians }) {
                     {party?.name || p.party} — {p.position}
                   </p>
                 </div>
-                <SeverityStamp politician={p} size="sm" />
+                <RankBadge politician={p} size="sm" />
               </button>
             )
           })}
