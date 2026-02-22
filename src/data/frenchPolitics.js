@@ -587,7 +587,7 @@ export const politicians = [
     party: 'lr',
     position: 'Ancien Président de la République',
     convictions: 2,
-    ongoingCases: 1,
+    ongoingCases: 0,
     details: {
       birthDate: '1955-01-28',
       birthPlace: 'Paris',
@@ -612,22 +612,25 @@ export const politicians = [
         {
           type: 'Condamnation',
           date: '2021',
-          description: 'Condamné pour financement illégal de sa campagne présidentielle de 2012 (affaire Bygmalion). Dépassement massif des plafonds légaux de dépenses.',
-          penalty: '1 an de prison ferme, 10 ans d\'inéligibilité',
-          status: 'Condamné',
+          description: 'Condamné définitivement pour financement illégal de sa campagne présidentielle de 2012 (affaire Bygmalion). Dépassement massif des plafonds légaux de dépenses. Condamné en première instance (2021), confirmé en appel (2023), pourvoi en cassation rejeté le 26 novembre 2025.',
+          charges: ['Financement illégal de campagne électorale'],
+          penalty: '1 an de prison dont 6 mois ferme',
+          status: 'Condamnation définitive (cassation rejetée novembre 2025)',
           sources: [
-            { title: 'Affaire Bygmalion - Wikipedia', url: 'https://fr.wikipedia.org/wiki/Affaire_Bygmalion' },
-            { title: 'Le Monde - Bygmalion Sarkozy', url: 'https://www.lemonde.fr' }
+            { title: 'France Info - Bygmalion définitif', url: 'https://www.franceinfo.fr/societe/affaire/les-affaires-sarkozy/affaire-bygmalion-nicolas-sarkozy-definitivement-condamne-pour-le-financement-illegal-de-sa-campagne-presidentielle-de-2012-apres-le-rejet-de-son-pourvoi-en-cassation_7638986.html' },
+            { title: 'Affaire Bygmalion - Wikipedia', url: 'https://fr.wikipedia.org/wiki/Affaire_Bygmalion' }
           ]
         },
         {
-          type: 'Mise en examen',
-          date: '2023',
-          description: 'Affaire des contrats libyens. Mise en examen pour blanchiment de fraude concernant les financements reçus du régime libyen de Kadhafi.',
-          status: 'En cours',
+          type: 'Condamnation (première instance)',
+          date: '2025-09',
+          description: 'Condamné en première instance dans l\'affaire du financement libyen de sa campagne présidentielle de 2007. Reconnu coupable d\'association de malfaiteurs et de corruption passive. Mandat de dépôt prononcé avec exécution provisoire. Procès en appel prévu du 16 mars au 3 juin 2026.',
+          charges: ['Association de malfaiteurs', 'Corruption passive', 'Financement illégal de campagne'],
+          penalty: '5 ans de prison ferme avec mandat de dépôt et exécution provisoire',
+          status: 'Appel prévu mars-juin 2026',
           sources: [
-            { title: 'Le Monde - Affaire Libye Sarkozy', url: 'https://www.lemonde.fr' },
-            { title: 'Mediapart - Contrats libyens', url: 'https://www.mediapart.fr' }
+            { title: 'France 24 - Sarkozy Libye', url: 'https://www.france24.com/fr/france/20250926-scandales-politico-financiers-quels-sont-pr%C3%A9sidents-ministres-d%C3%A9j%C3%A0-condamn%C3%A9s' },
+            { title: 'Le Monde - Affaire Libye Sarkozy', url: 'https://www.lemonde.fr' }
           ]
         }
       ]
@@ -2411,12 +2414,14 @@ export const politicians = [
       justiceIncidents: [
         {
           type: 'Condamnation',
-          date: '2017',
-          description: 'Condamné pour fraude fiscale par non-déclaration de revenus et non-paiement d\'impôts. Affaire révélée sous le nom de \u00ab phobie administrative \u00bb.',
-          penalty: '3 mois de prison avec sursis + 5 000\u20ac d\'amende',
-          status: 'Condamné',
+          date: '2019-09',
+          description: 'Condamné définitivement pour fraude fiscale par non-déclaration de revenus et non-paiement d\'impôts entre 2009 et 2013. Affaire révélée sous le nom de \u00ab phobie administrative \u00bb. Condamné en première instance en 2017, confirmé en appel, pourvoi en cassation rejeté en septembre 2019.',
+          charges: ['Fraude fiscale'],
+          penalty: '1 an de prison avec sursis, 3 ans d\'inéligibilité',
+          status: 'Condamnation définitive (cassation rejetée)',
           sources: [
-            { title: 'Thomas Thévenoud - Wikipedia', url: 'https://fr.wikipedia.org/wiki/Thomas_Th%C3%A9venoud' }
+            { title: 'Public Sénat - Condamnation définitive Thévenoud', url: 'https://www.publicsenat.fr/actualites/non-classe/fraude-fiscale-condamnation-definitive-de-l-ex-ministre-thomas-thevenoud-145302' },
+            { title: 'France Bleu - Thévenoud définitivement condamné', url: 'https://www.francebleu.fr/infos/faits-divers-justice/fraude-fiscale-l-ex-secretaire-d-etat-thomas-thevenoud-definitivement-condamne-1568294396' }
           ]
         }
       ]
@@ -3661,6 +3666,37 @@ export const politicians = [
   },
   {
     id: nextId++,
+    name: 'Nathalie Elimas',
+    party: 'modem',
+    position: 'Ancienne secrétaire d\'État à l\'Éducation, députée du Val-d\'Oise',
+    convictions: 1,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1973-10-15',
+      birthPlace: 'Garges-lès-Gonesse',
+      career: [
+        'Secrétaire d\'État à l\'Éducation prioritaire (2020-2022)',
+        'Députée du Val-d\'Oise (2017-2022)',
+        'Vice-présidente du MoDem'
+      ],
+      justiceIncidents: [
+        {
+          type: 'Condamnation',
+          date: '2025-06-16',
+          description: 'Condamnée pour harcèlement moral envers cinq membres de son cabinet ministériel entre 2020 et 2022. Méthodes de management agressives, brimades répétées, humiliations publiques.',
+          charges: ['Harcèlement moral'],
+          penalty: '10 mois de prison avec sursis, 3 ans d\'inéligibilité, 5 000€ d\'amende',
+          status: 'Condamnation définitive',
+          sources: [
+            { title: 'France Info - Condamnation Elimas', url: 'https://www.franceinfo.fr/faits-divers/justice-proces/l-ex-secretaire-d-etat-nathalie-elimas-condamnee-a-10-mois-de-prison-avec-sursis-pour-harcelement-moral_7317459.html' },
+            { title: 'France 24 - Harcèlement moral Elimas', url: 'https://www.france24.com/fr/info-en-continu/20250403-harc%C3%A8lement-moral-10-mois-de-prison-avec-sursis-requis-contre-l-ex-secr%C3%A9taire-d-%C3%A9tat-nathalie-elimas' }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    id: nextId++,
     name: 'Catherine Vautrin',
     party: 'ensemble',
     position: 'Ministre du Travail, de la Santé et des Solidarités',
@@ -4644,6 +4680,36 @@ export const politicians = [
         'Maire d\'Ajaccio (2014-2022)'
       ],
       justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Xavier Lacombe',
+    party: 'horizons',
+    position: 'Député de Corse-du-Sud, maire de Peri',
+    convictions: 0,
+    ongoingCases: 1,
+    details: {
+      birthDate: '1975-12-23',
+      birthPlace: 'Ajaccio',
+      career: [
+        'Député de Corse-du-Sud (2024-, suppléant de Laurent Marcangeli)',
+        'Maire de Peri (2020-)',
+        'Préfet hors cadre (2015-2020)'
+      ],
+      justiceIncidents: [
+        {
+          type: 'Mise en examen',
+          date: '2025-01-21',
+          description: 'Mis en examen pour complicité de faux et détention de faux dans le cadre de l\'affaire des procurations litigieuses lors des élections territoriales de Corse de 2021. Contrôle judiciaire initialement imposé puis annulé par la Cour de cassation en juin 2025.',
+          charges: ['Complicité de faux', 'Détention de faux'],
+          status: 'Mise en examen en cours',
+          sources: [
+            { title: 'France 3 Corse - Lacombe mis en examen', url: 'https://france3-regions.franceinfo.fr/corse/corse-du-sud/procurations-litigieuses-xavier-lacombe-mis-en-examen-3095095.html' },
+            { title: 'Corse Net Infos - Lacombe', url: 'https://www.corsenetinfos.corsica/Le-nouveau-depute-de-Corse-du-Sud-Xavier-Lacombe-mis-en-examen-et-place-sous-controle-judiciaire_a82563.html' }
+          ]
+        }
+      ]
     }
   },
   {
