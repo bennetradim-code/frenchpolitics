@@ -13133,6 +13133,314 @@ export const politicians = [
       justiceIncidents: []
     }
   },
+  {
+    id: nextId++,
+    name: 'Mathilde Androuët',
+    party: 'rn',
+    position: 'Eurodéputée RN',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1984-07-03',
+      birthPlace: 'Rueil-Malmaison',
+      career: [
+        'Sciences Po Aix',
+        'Assistante parlementaire de Florian Philippot (2014-2019)',
+        'Eurodéputée RN (2019-)',
+        'Réélue eurodéputée (2024-)'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Marie-Luce Brasier-Clain',
+    party: 'rn',
+    position: 'Eurodéputée RN',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1959-10-19',
+      birthPlace: 'La Réunion',
+      career: [
+        'Infirmière d\'État (1985-2022)',
+        'Infirmière urgentiste (1985-1998)',
+        'Eurodéputée RN (2024-)'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Marie Dauchy',
+    party: 'rn',
+    position: 'Eurodéputée RN',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1987-02-05',
+      birthPlace: 'Calais',
+      career: [
+        'Université de Savoie (diplôme 2013)',
+        'Responsable relations commerciales',
+        'Conseillère régionale Auvergne-Rhône-Alpes',
+        'Eurodéputée RN (2022-)',
+        'Réélue eurodéputée (2024-)'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Valérie Deloge',
+    party: 'rn',
+    position: 'Eurodéputée RN',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1966-05-09',
+      birthPlace: 'Fontenay-aux-Roses',
+      career: [
+        'Éleveuse d\'ovins en Bresse',
+        'Conseillère régionale Bourgogne-Franche-Comté (2021-2024)',
+        'Eurodéputée RN (2024-)'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Mélanie Disdier',
+    party: 'rn',
+    position: 'Eurodéputée RN',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1974-01-27',
+      birthPlace: 'Cambrai',
+      career: [
+        'Commerçante à Caudry',
+        'Conseillère municipale de Caudry (2003-)',
+        'Conseillère régionale Hauts-de-France (2004-2010, 2015-2024)',
+        'Eurodéputée RN (2024-)'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Anne-Sophie Frigout',
+    party: 'rn',
+    position: 'Eurodéputée RN',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1991-04-11',
+      birthPlace: 'Reims',
+      career: [
+        'Professeure d\'histoire-géographie',
+        'Conseillère régionale Grand Est',
+        'Députée de la Marne (2022-2024)',
+        'Eurodéputée RN (2024-)'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Angéline Furet',
+    party: 'rn',
+    position: 'Eurodéputée RN',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1981-07-24',
+      birthPlace: 'Le Mans',
+      career: [
+        'Master en droit et sciences politiques (Université d\'Aix-en-Provence)',
+        'Direction générale de communautés de communes en Sarthe',
+        'Secrétaire départementale RN en Sarthe',
+        'Eurodéputée RN (2024-)'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Julien Leonardelli',
+    party: 'rn',
+    position: 'Eurodéputé RN',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1987-07-14',
+      birthPlace: 'Lavelanet',
+      career: [
+        'Conseiller régional Occitanie (2016-)',
+        'Conseiller municipal de Fronton (2020-2024)',
+        'Eurodéputé RN (2024-)'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Aleksandar Nikolic',
+    party: 'rn',
+    position: 'Eurodéputé RN',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1986-10-04',
+      birthPlace: 'La Garenne-Colombes',
+      career: [
+        'Sapeur-pompier volontaire',
+        'Commerçant en prêt-à-porter',
+        'Conseiller municipal de Saint-Rémy-sur-Avre (2020-)',
+        'Tête de liste RN Centre-Val de Loire aux régionales 2021',
+        'Eurodéputé RN (2024-)'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Pascale Piera',
+    party: 'rn',
+    position: 'Eurodéputée RN',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1967-02-23',
+      birthPlace: 'France',
+      career: [
+        'DEA Droit pénal et sciences criminelles',
+        'Avocat au barreau de Paris',
+        'Juge d\'instruction',
+        'Vice-présidente juge des libertés et de la détention (TJ Meaux)',
+        'Eurodéputée RN (2024-)'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Pierre Pimpie',
+    party: 'rn',
+    position: 'Eurodéputé RN',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1971-09-10',
+      birthPlace: 'Hyères',
+      career: [
+        'IEP Paris',
+        'ENA (promotion 2013)',
+        'Directeur général adjoint EPSF',
+        'Chef du bureau du droit de la commande publique (ministère de l\'Écologie)',
+        'Eurodéputé RN (2024-)'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Julie Rechagneux',
+    party: 'rn',
+    position: 'Eurodéputée RN',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1996-01-24',
+      birthPlace: 'Clermont-Ferrand',
+      career: [
+        'Master en droit public (Université de Bordeaux)',
+        'Conseillère régionale Nouvelle-Aquitaine (2021-)',
+        'Conseillère municipale de Lormont',
+        'Eurodéputée RN (2024-)'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Pierre-Romain Thionnet',
+    party: 'rn',
+    position: 'Eurodéputé RN',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1994-01-19',
+      birthPlace: 'Pontarlier',
+      career: [
+        'Secrétaire général de La Cocarde (syndicat étudiant)',
+        'Collaborateur parlementaire de Jordan Bardella (2019-2022)',
+        'Président du RNJ (Rassemblement national de la jeunesse)',
+        'Conseiller régional Île-de-France',
+        'Eurodéputé RN (2024-)'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Rody Tolassy',
+    party: 'rn',
+    position: 'Eurodéputé RN',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1987-09-21',
+      birthPlace: 'Pointe-à-Pitre',
+      career: [
+        'Chef d\'entreprise (équipements hydrauliques et pneumatiques)',
+        'Délégué départemental RN Guadeloupe',
+        'Eurodéputé RN (2024-)'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Matthieu Valet',
+    party: 'rn',
+    position: 'Eurodéputé RN',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1986-01-04',
+      birthPlace: 'Lille',
+      career: [
+        'ENSP (École Nationale Supérieure de la Police)',
+        'Gardien de la Paix (2005)',
+        'Commissaire de police (2018)',
+        'Porte-parole SICP (Syndicat indépendant des commissaires de police)',
+        'Eurodéputé RN (2024-)'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Laurence Trochu',
+    party: 'ni',
+    position: 'Eurodéputée NI (ex-Reconquête)',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1973-07-04',
+      birthPlace: 'France',
+      career: [
+        'Professeur agrégée de philosophie',
+        'Conseillère municipale de Guyancourt (2014-)',
+        'Conseillère départementale des Yvelines (2015-2021)',
+        'Porte-parole de François Fillon (primaire LR 2016)',
+        'Présidente du Mouvement conservateur (2018-2024)',
+        'Eurodéputée La France fière (2024-)'
+      ],
+      justiceIncidents: []
+    }
+  },
 ]
 
 /**
