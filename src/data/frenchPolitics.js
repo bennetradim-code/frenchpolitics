@@ -13441,6 +13441,238 @@ export const politicians = [
       justiceIncidents: []
     }
   },
+  {
+    id: nextId++,
+    name: 'Séverine Werbrouck',
+    party: 'rn',
+    position: 'Eurodéputée RN',
+    convictions: 0,
+    ongoingCases: 1,
+    details: {
+      birthDate: '1970-10-31',
+      birthPlace: 'Pau',
+      career: [
+        'Conseillère régionale Nouvelle-Aquitaine',
+        'Conseillère municipale de Saint-Pierre-d\'Oléron',
+        'Co-gérante de MPC-Media Publicité Conseil',
+        'Eurodéputée RN (2024-)'
+      ],
+      justiceIncidents: [
+        {
+          type: 'Enquête',
+          date: '2024-06',
+          description: 'Enquête pour banqueroute ouverte par le parquet de La Rochelle fin juin 2024 contre X. Son mari Pascal Markowsky, député RN, et elle-même sont soupçonnés de surfacturation via leur entreprise d\'imprimerie MPC-Media Publicité Conseil. Une enquête du site LesJours.fr a révélé que le couple a multiplié et surfacturé des commandes payées avec l\'argent public. Par ailleurs, elle a omis de notifier au conseil régional de Nouvelle-Aquitaine qu\'elle avait été élue eurodéputée en septembre 2024 et a continué à percevoir indûment ses indemnités pendant six mois, avant d\'être contrainte de rembourser 10 624,35 euros à la région en mars 2025.',
+          status: 'Enquête en cours',
+          sources: [
+            { title: 'Enquête banqueroute Pascal Markowsky et Séverine Werbrouck - LesJours', url: 'https://lesjours.fr/obsessions/rn-derniere-marche-2/ep2-pascal-markowsky-banqueroute/' },
+            { title: 'Les opportuns oublis de l\'eurodéputée RN Séverine Werbrouck - LesJours', url: 'https://lesjours.fr/obsessions/rn-conquete-pouvoir/ep22-severine-werbrouck-oublis/' },
+            { title: 'Députés RN épinglés par une enquête - France 3', url: 'https://france3-regions.franceinfo.fr/nouvelle-aquitaine/charente-maritime/la-rochelle/les-deputes-rn-pascal-markowsky-et-severine-werbrouck-epingles-par-une-enquete-du-site-lesjours-fr-3140606.html' }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Grégory Allione',
+    party: 'ensemble',
+    position: 'Eurodéputé Renaissance, ancien chef des sapeurs-pompiers',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1971-07-25',
+      birthPlace: 'Toulon',
+      career: [
+        'Sapeur-pompier (1988-)',
+        'Chef des sapeurs-pompiers des Bouches-du-Rhône (2014-2023)',
+        'Président de la Fédération nationale des sapeurs-pompiers (2018-)',
+        'Directeur de l\'École nationale supérieure des officiers de sapeurs-pompiers (jusqu\'en 2024)',
+        'Eurodéputé Renaissance (2024-)'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Gilles Boyer',
+    party: 'ensemble',
+    position: 'Eurodéputé Renaissance Horizons',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1971-07-04',
+      birthPlace: 'Paris',
+      career: [
+        'Directeur juridique des investissements RPR (1997)',
+        'Directeur de cabinet d\'Alain Juppé à Bordeaux (2002-2004, 2006-)',
+        'Directeur des relations institutionnelles du groupe M6 (2004-2006)',
+        'Conseiller spécial du Premier ministre Édouard Philippe (2017-2019)',
+        'Eurodéputé Renaissance (2019-)'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Jérémy Decerle',
+    party: 'ensemble',
+    position: 'Eurodéputé Renaissance, éleveur',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1984-07-01',
+      birthPlace: 'Saint-Rémy',
+      career: [
+        'Bac pro CGEA (Conduite et gestion d\'exploitations agricoles)',
+        'Aide familial agricole à Chevagny-sur-Guye',
+        'Éleveur de vaches charolaises (2008-)',
+        'Administrateur Jeunes Agriculteurs Saône-et-Loire (2006-2019)',
+        'Eurodéputé Renaissance (2019-)'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Valérie Devaux',
+    party: 'ensemble',
+    position: 'Eurodéputée Renaissance UDI',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1964-06-19',
+      birthPlace: 'France',
+      career: [
+        'Professeur certifiée d\'espagnol',
+        'Conseillère municipale d\'Amiens (2014-2024)',
+        'Adjointe au maire d\'Amiens (2020-2024)',
+        'Conseillère départementale de la Somme (2021-)',
+        'Eurodéputée Renaissance (2024-)'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Bernard Guetta',
+    party: 'ensemble',
+    position: 'Eurodéputé Renaissance, journaliste',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1951-01-28',
+      birthPlace: 'Boulogne-Billancourt',
+      career: [
+        'Journaliste au Monde (1978-1990)',
+        'Chroniqueur à France Inter (27 ans)',
+        'Rédacteur en chef de L\'Expansion (1991-1993)',
+        'Rédacteur en chef du Nouvel Observateur (1996-1999)',
+        'Prix Albert-Londres (1981)',
+        'Eurodéputé Renaissance (2019-)'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Thomas Pellerin-Carlin',
+    party: 'ps',
+    position: 'Eurodéputé PS Place Publique',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1989-11-05',
+      birthPlace: 'Caen',
+      career: [
+        'Master en études européennes politiques et administratives (Collège d\'Europe, Bruges)',
+        'Master en affaires européennes (Sciences Po Lille)',
+        'Chercheur à l\'Institut Jacques Delors (2016-2022)',
+        'Chercheur à I4CE - Institute for Climate Economics (2022-2024)',
+        'Eurodéputé PS Place Publique (2024-)'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Emma Rafowicz',
+    party: 'ps',
+    position: 'Eurodéputée PS, présidente des Jeunes socialistes',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1995-06-24',
+      birthPlace: 'Paris',
+      career: [
+        'Licence d\'allemand (Université Paris-IV)',
+        'Licence Information et communication (CELSA)',
+        'Master Médias et management (CELSA)',
+        'Adjointe au maire du 11e arrondissement de Paris (2020-)',
+        'Présidente du Mouvement des jeunes socialistes',
+        'Eurodéputée PS (2024-)'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Chloé Ridel',
+    party: 'ps',
+    position: 'Eurodéputée PS, porte-parole du PS',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1991-11-25',
+      birthPlace: 'Clamart',
+      career: [
+        'Diplômée de Sciences Po Paris',
+        'Diplômée de l\'École nationale d\'administration (ENA)',
+        'Ministère de l\'Économie et des Finances (2017-2022)',
+        'Porte-parole du Parti socialiste (2023-)',
+        'Co-fondatrice de l\'Institut Rousseau (2020)',
+        'Eurodéputée PS Place Publique (2024-)'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Eric Sargiacomo',
+    party: 'ps',
+    position: 'Eurodéputé PS',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1969-10-31',
+      birthPlace: 'France',
+      career: [
+        'Premier secrétaire fédéral PS des Landes',
+        'Conseiller régional de Nouvelle-Aquitaine (2021-)',
+        'Eurodéputé PS (2024-)'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Malika Sorel',
+    party: 'ni',
+    position: 'Eurodéputée non-inscrite (ex-RN)',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1960',
+      birthPlace: 'Marseille',
+      career: [
+        'Membre du Haut Conseil à l\'intégration (quinquennat Sarkozy)',
+        'Essayiste',
+        'Numéro 2 de la liste RN aux européennes 2024',
+        'Eurodéputée (2024-)',
+        'A quitté la délégation RN au Parlement européen (avril 2025)'
+      ],
+      justiceIncidents: []
+    }
+  },
 ]
 
 /**
