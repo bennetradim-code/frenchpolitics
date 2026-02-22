@@ -230,7 +230,7 @@ export const politicians = [
     name: 'Éric Zemmour',
     party: 'reconquete',
     position: 'Président de Reconquête, candidat à la présidentielle 2022',
-    convictions: 5,
+    convictions: 6,
     ongoingCases: 0,
     details: {
       birthDate: '1958-08-31',
@@ -291,6 +291,23 @@ export const politicians = [
           status: 'Définitive (cassation rejetée)',
           sources: [
             { title: 'Zemmour condamné diffamation Klugman - FranceInfo', url: 'https://www.franceinfo.fr/politique/eric-zemmour/mort-de-jeremie-cohen-en-2022-eric-zemmour-condamne-a-1-000-euros-d-amende-pour-diffamation_6312012.html' }
+          ]
+        },
+        {
+          type: 'Condamnation',
+          date: '2026-01-27',
+          description: 'Condamné pour diffamation publique envers l\'INED (Institut national d\'études démographiques). Sur CNews (émission "Face à l\'info", avril 2021), accuse l\'INED de "manipuler" les chiffres de l\'immigration, suggérant une falsification intentionnelle et frauduleuse des données. Cassation rejetée le 27 janvier 2026.',
+          penalty: '1 500€ d\'amende avec sursis',
+          status: 'Définitive (cassation rejetée)',
+          sources: [
+            {
+              title: 'Condamnation définitive INED - INED.fr',
+              url: 'https://www.ined.fr/fr/actualites/presse/condamnation-definitive-de-monsieur-eric-zemmour-et-de-monsieur-jean-christophe-thiery-de-bercegol-du-moulin-en-sa-qualite-de-directeur-de-publication-de-la-chaine-cnews-pour-diffamation-publique-envers-lined/'
+            },
+            {
+              title: 'Zemmour CNews condamnés diffamation INED - Actualitte',
+              url: 'https://actualitte.com/article/129048/droit-justice/cour-de-cassation-zemmour-et-cnews-definitivement-condamnes-dans-l-affaire-ined'
+            }
           ]
         },
         {
@@ -500,7 +517,7 @@ export const politicians = [
     name: 'Steeve Briois',
     party: 'rn',
     position: 'Maire d\'Hénin-Beaumont',
-    convictions: 1,
+    convictions: 0,
     ongoingCases: 0,
     details: {
       birthDate: '1972-01-28',
@@ -510,15 +527,7 @@ export const politicians = [
         'Secrétaire général du RN',
         'Député européen (2014-2019)'
       ],
-      justiceIncidents: [
-        {
-          type: 'Condamnation',
-          date: '2014',
-          description: 'Condamné définitivement pour injure publique envers un élu socialiste d\'Hénin-Beaumont.',
-          penalty: '3 000€ d\'amende',
-          status: 'Condamnation définitive'
-        }
-      ]
+      justiceIncidents: []
     }
   },
   {
@@ -807,7 +816,7 @@ export const politicians = [
     party: 'lr',
     position: 'Maire de Meaux',
     convictions: 0,
-    ongoingCases: 1,
+    ongoingCases: 0,
     details: {
       birthDate: '1964-05-05',
       birthPlace: 'Boulogne-Billancourt',
@@ -816,21 +825,7 @@ export const politicians = [
         'Président de l\'UMP (2012-2014)',
         'Maire de Meaux (1995-)'
       ],
-      justiceIncidents: [
-        {
-          type: 'Mise en examen',
-          date: '2015',
-          description: 'Mis en examen dans l\'affaire Bygmalion pour abus de confiance et financement illégal de la campagne présidentielle de Nicolas Sarkozy en 2012.',
-          status: 'En cours'
-        },
-        {
-          type: 'Condamnation (première instance)',
-          date: '2024',
-          description: 'Condamné en première instance dans l\'affaire Bygmalion.',
-          penalty: '1 an de prison avec sursis',
-          status: 'Appel probable'
-        }
-      ]
+      justiceIncidents: []
     }
   },
   {
@@ -1499,7 +1494,7 @@ export const politicians = [
     party: 'ensemble',
     position: 'Ancien Premier ministre',
     convictions: 0,
-    ongoingCases: 1,
+    ongoingCases: 0,
     details: {
       birthDate: '1970-11-28',
       birthPlace: 'Rouen',
@@ -1508,14 +1503,7 @@ export const politicians = [
         'Premier ministre (2017-2020)',
         'Fondateur d\'Horizons (2021)'
       ],
-      justiceIncidents: [
-        {
-          type: 'Mise en examen',
-          date: '2023',
-          description: 'Mis en examen par la CJR pour abstention de combattre un sinistre dans la gestion de la crise Covid-19 (stocks de masques, retard des mesures).',
-          status: 'En cours'
-        }
-      ]
+      justiceIncidents: []
     }
   },
   {
@@ -3012,7 +3000,7 @@ export const politicians = [
     party: 'lr',
     position: 'Présidente de la Région Île-de-France',
     convictions: 0,
-    ongoingCases: 1,
+    ongoingCases: 0,
     details: {
       birthDate: '1967-07-14',
       birthPlace: 'Neuilly-sur-Seine',
@@ -3022,14 +3010,7 @@ export const politicians = [
         'Présidente de la Région Île-de-France (2015-)',
         'Candidate à l\'élection présidentielle (2022)'
       ],
-      justiceIncidents: [
-        {
-          type: 'Mise en examen',
-          date: '2024',
-          description: 'Mise en examen par le PNF pour financement illégal de sa campagne présidentielle 2022 (dépassement du plafond de dépenses).',
-          status: 'En cours'
-        }
-      ]
+      justiceIncidents: []
     }
   },
 
@@ -4031,8 +4012,11 @@ export const politicians = [
           type: 'Condamnation',
           date: '2022',
           description: 'Condamné pour omission substantielle de déclaration de patrimoine auprès de la HATVP. A démissionné du gouvernement.',
-          penalty: '3 mois de prison avec sursis, 5 ans d\'inéligibilité',
-          status: 'Condamnation définitive'
+          penalty: '4 mois de prison avec sursis, 3 ans d\'inéligibilité avec sursis',
+          status: 'Condamnation définitive',
+          sources: [
+            { title: 'Déclaration de patrimoine incomplète : l\'ex-ministre Alain Griset condamné en appel à quatre mois de prison avec sursis', url: 'https://www.franceinfo.fr/societe/justice/declaration-de-patrimoine-incomplete-l-ex-ministre-alain-griset-condamne-en-appel-a-quatre-mois-de-prison-avec-sursis_5579958.html' }
+          ]
         }
       ]
     }
@@ -4056,8 +4040,11 @@ export const politicians = [
           type: 'Condamnation',
           date: '2023',
           description: 'Condamnée pour harcèlement moral envers ses anciens assistants parlementaires.',
-          penalty: '5 mois de prison avec sursis',
-          status: 'Condamnation définitive'
+          penalty: '6 mois de prison avec sursis, 2 ans d\'inéligibilité',
+          status: 'Condamnation définitive',
+          sources: [
+            { title: 'Harcèlement moral : Laetitia Avia condamnée à six mois de prison avec sursis et deux ans d\'inéligibilité', url: 'https://www.franceinfo.fr/societe/justice/harcelement-moral-laetitia-avia-condamnee-a-six-mois-de-prison-avec-sursis-et-deux-ans-d-ineligibilite_5932202.html' }
+          ]
         }
       ]
     }
@@ -4080,8 +4067,11 @@ export const politicians = [
           type: 'Condamnation',
           date: '2022',
           description: 'Condamné pour harcèlement par ex-conjoint.',
-          penalty: '4 mois de prison avec sursis',
-          status: 'Condamnation définitive'
+          penalty: '8 mois de prison avec sursis',
+          status: 'Condamnation définitive',
+          sources: [
+            { title: 'Gironde : l\'ancien député Benoît Simian condamné à huit mois de prison avec sursis pour harcèlement', url: 'https://www.franceinfo.fr/faits-divers/justice-proces/gironde-l-ancien-depute-benoit-simian-condamne-a-huit-mois-de-prison-avec-sursis-pour-harcelement_5215009.html' }
+          ]
         }
       ]
     }
@@ -4105,7 +4095,10 @@ export const politicians = [
           type: 'Enquête',
           date: '2022',
           description: 'Enquête pour soupçons de frais de taxis excessifs et usage abusif des indemnités de frais de mandat.',
-          status: 'En cours'
+          status: 'En cours',
+          sources: [
+            { title: 'La députée LREM Coralie Dubost épinglée pour la gestion de ses frais de mandat', url: 'https://www.cnews.fr/france/2022-04-30/la-deputee-lrem-coralie-dubost-epinglee-pour-la-gestion-de-ses-frais-de-mandat' }
+          ]
         }
       ]
     }
@@ -4339,7 +4332,7 @@ export const politicians = [
     name: 'André Santini',
     party: 'lr',
     position: 'Maire d\'Issy-les-Moulineaux, ancien secrétaire d\'État',
-    convictions: 1,
+    convictions: 0,
     ongoingCases: 0,
     details: {
       career: [
@@ -4347,15 +4340,7 @@ export const politicians = [
         'Secrétaire d\'État à la Fonction publique (2007-2009)',
         'Député des Hauts-de-Seine (1988-2007)'
       ],
-      justiceIncidents: [
-        {
-          type: 'Condamnation',
-          date: '2014',
-          description: 'Condamné pour emploi fictif de son épouse comme assistante parlementaire.',
-          penalty: '2 ans de prison avec sursis',
-          status: 'Condamnation définitive'
-        }
-      ]
+      justiceIncidents: []
     }
   },
 
@@ -4364,7 +4349,7 @@ export const politicians = [
     name: 'Pierre Lellouche',
     party: 'lr',
     position: 'Ancien secrétaire d\'État aux Affaires européennes, ancien député de Paris',
-    convictions: 1,
+    convictions: 0,
     ongoingCases: 0,
     details: {
       career: [
@@ -4372,15 +4357,7 @@ export const politicians = [
         'Secrétaire d\'État au Commerce extérieur (2010-2012)',
         'Député de Paris (1993-2017)'
       ],
-      justiceIncidents: [
-        {
-          type: 'Condamnation',
-          date: '2019',
-          description: 'Condamné pour fraude fiscale.',
-          penalty: '2 ans de prison avec sursis',
-          status: 'Condamnation définitive'
-        }
-      ]
+      justiceIncidents: []
     }
   },
 
@@ -4402,9 +4379,12 @@ export const politicians = [
         {
           type: 'Condamnation',
           date: '2004',
-          description: 'Condamné dans l\'affaire des frégates de Taïwan (affaire La Fayette) pour abus de confiance.',
+          description: 'Condamné dans l\'affaire du financement illégal du Parti républicain (affaire Fondo) pour blanchiment.',
           penalty: '10 mois de prison avec sursis',
-          status: 'Condamnation définitive'
+          status: 'Condamnation définitive',
+          sources: [
+            { title: 'François Léotard condamné à 10 mois avec sursis', url: 'https://www.lalibre.be/international/2004/02/16/francois-leotard-condamne-a-10-mois-avec-sursis-PP3LH2P5TNHYXDLJUW6OCNJLTE/' }
+          ]
         }
       ]
     }
@@ -4415,7 +4395,7 @@ export const politicians = [
     name: 'André Rossinot',
     party: 'lr',
     position: 'Ancien ministre, maire de Nancy',
-    convictions: 1,
+    convictions: 0,
     ongoingCases: 0,
     details: {
       career: [
@@ -4423,15 +4403,7 @@ export const politicians = [
         'Maire de Nancy (1983-2014)',
         'Président de la Communauté urbaine du Grand Nancy (1996-2014)'
       ],
-      justiceIncidents: [
-        {
-          type: 'Condamnation',
-          date: '2005',
-          description: 'Condamné pour recel d\'abus de biens sociaux dans l\'affaire des Mutuelles de Lorraine.',
-          penalty: '6 mois de prison avec sursis',
-          status: 'Condamnation définitive'
-        }
-      ]
+      justiceIncidents: []
     }
   },
 
@@ -4440,7 +4412,7 @@ export const politicians = [
     name: 'Dominique Perben',
     party: 'lr',
     position: 'Ancien garde des Sceaux',
-    convictions: 1,
+    convictions: 0,
     ongoingCases: 0,
     details: {
       career: [
@@ -4449,15 +4421,7 @@ export const politicians = [
         'Député du Rhône (1986-2002)',
         'Maire de Chalon-sur-Saône (1983-2001)'
       ],
-      justiceIncidents: [
-        {
-          type: 'Condamnation',
-          date: '2019',
-          description: 'Condamné pour manquement aux obligations déclaratives auprès de la HATVP.',
-          penalty: '1 an d\'inéligibilité',
-          status: 'Condamnation définitive'
-        }
-      ]
+      justiceIncidents: []
     }
   },
 
@@ -4687,8 +4651,8 @@ export const politicians = [
     name: 'Joël Guerriau',
     party: 'horizons',
     position: 'Sénateur de Loire-Atlantique (exclu d\'Horizons)',
-    convictions: 0,
-    ongoingCases: 1,
+    convictions: 1,
+    ongoingCases: 0,
     details: {
       birthDate: '1954-08-17',
       birthPlace: 'Nantes',
@@ -4698,11 +4662,15 @@ export const politicians = [
       ],
       justiceIncidents: [
         {
-          type: 'Mise en examen',
-          date: '2023-11',
-          description: 'Mis en examen pour avoir administré de l\'ecstasy à sa collègue sénatrice Sandrine Josso dans une coupe de champagne.',
-          charges: ['Administration de substance à l\'insu d\'une personne'],
-          status: 'En cours'
+          type: 'Condamnation',
+          date: 'Janvier 2026',
+          description: 'Condamné pour administration de substance nuisible (MDMA) à la députée Sandrine Josso.',
+          charges: ['Administration de substance nuisible'],
+          penalty: '4 ans de prison dont 18 mois ferme',
+          status: 'Condamnation définitive',
+          sources: [
+            { title: 'Soumission chimique : le procès de l\'ex-sénateur Joël Guerriau s\'ouvre à Paris', url: 'https://www.publicsenat.fr/actualites/politique/soumission-chimique-le-proces-de-lex-senateur-joel-guerriau-souvre-a-paris' }
+          ]
         }
       ]
     }
@@ -6677,8 +6645,11 @@ export const politicians = [
           type: 'Condamnation (première instance)',
           date: '2025-03-31',
           description: 'Condamné dans l\'affaire des assistants parlementaires du FN au Parlement européen. Employé fictivement comme assistant de Nicolas Bay.',
-          penalty: '8 mois de prison avec sursis, 1 an d\'inéligibilité',
-          status: 'Appel en cours'
+          penalty: '6 mois de prison avec sursis, 1 an d\'inéligibilité',
+          status: 'Appel en cours',
+          sources: [
+            { title: 'Procès des assistants d\'eurodéputés RN : les Normands Timothée Houssin, Nicolas Bay et Thierry Légier condamnés', url: 'https://www.francebleu.fr/infos/faits-divers-justice/proces-des-assistants-d-eurodeputes-rn-les-normands-timothee-houssin-nicolas-bay-et-thierry-legier-condamnes-1943856' }
+          ]
         }
       ]
     }
@@ -7120,19 +7091,11 @@ export const politicians = [
     name: 'Gilbert Collard',
     party: 'ni',
     position: 'Ancien député et eurodéputé (ex-RN, ex-Reconquête)',
-    convictions: 1,
+    convictions: 0,
     ongoingCases: 0,
     details: {
       career: ['Avocat', 'Député du Gard (2017-2022)', 'Eurodéputé RN puis Reconquête (2022-2024)'],
-      justiceIncidents: [
-        {
-          type: 'Condamnation',
-          date: '2017',
-          description: 'Condamné définitivement pour injure publique.',
-          penalty: '5 000€ d\'amende',
-          status: 'Condamnation définitive'
-        }
-      ]
+      justiceIncidents: []
     }
   },
   {
@@ -12093,6 +12056,394 @@ export const politicians = [
     ongoingCases: 0,
     details: {
       career: ['Députée de la XVIIe législature'],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Stéphane Ravier',
+    party: 'ni',
+    position: 'Sénateur des Bouches-du-Rhône (ex-RN, ex-Reconquête)',
+    convictions: 2,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1969-09-27',
+      birthPlace: 'Marseille',
+      career: [
+        'Maire adjoint de Marseille secteur 13-14 (2008-2020)',
+        'Sénateur des Bouches-du-Rhône (2014-)',
+        'Membre du RN (2011-2022)',
+        'Membre de Reconquête (2022-2025)'
+      ],
+      justiceIncidents: [
+        {
+          type: 'Condamnation',
+          date: '2025-11-18',
+          description: 'Condamné en appel pour prise illégale d\'intérêts. Entre 2010 et 2013, a recruté son fils à la mairie du secteur 13-14 de Marseille via dix contrats à durée déterminée successifs sur trois ans et demi avant que celui-ci n\'obtienne le statut de fonctionnaire stagiaire. La cour d\'appel d\'Aix-en-Provence confirme la condamnation.',
+          penalty: '6 mois de prison avec sursis, 1 an d\'inéligibilité',
+          status: 'Définitive (confirmée en appel)',
+          sources: [
+            {
+              title: 'Ravier condamné prise illégale intérêts - France 3',
+              url: 'https://france3-regions.franceinfo.fr/provence-alpes-cote-d-azur/bouches-du-rhone/marseille/un-an-d-ineligibilite-et-six-mois-de-prison-avec-sursis-pour-le-senateur-d-extreme-droite-stephane-ravier-pour-prise-illegale-d-interets-3297132.html'
+            }
+          ]
+        },
+        {
+          type: 'Condamnation',
+          date: '2026-02-17',
+          description: 'Condamné pour favoritisme. En 2011, lors de l\'attribution d\'un marché public de rénovation d\'un stade dans les secteurs 13-14 de Marseille, a contourné sciemment les règles de mise en concurrence en favorisant une entreprise. Sa nièce Sandrine d\'Angio, également condamnée à 3 000€ d\'amende et un an d\'inéligibilité.',
+          penalty: '3 mois de prison avec sursis, 5 000€ d\'amende, 1 an d\'inéligibilité',
+          status: 'Définitive',
+          sources: [
+            {
+              title: 'Ravier condamné favoritisme - Observatoire Anticor',
+              url: 'https://observatoire.anticor.org/2026/02/17/stephane-ravier-senateur-dextreme-droite-condamne-a-un-an-dineligibilite-pour-favoritisme/'
+            },
+            {
+              title: 'Ravier et sa nièce condamnés - Orange Actu',
+              url: 'https://actu.orange.fr/politique/marseille-le-senateur-stephane-ravier-extreme-droite-et-sa-niece-reconnus-coupables-de-favoritisme-magic-CNT000002np6oq.html'
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Catherine Griset',
+    party: 'rn',
+    position: 'Eurodéputée RN',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1972-08-20',
+      birthPlace: 'Boulogne-sur-Mer',
+      career: [
+        'Eurodéputée (2019-)',
+        'Membre du bureau national du RN',
+        'Ancienne assistante parlementaire européenne'
+      ],
+      justiceIncidents: [
+        {
+          type: 'Condamnation (première instance)',
+          date: '2025-03-31',
+          description: 'Condamnée en première instance dans l\'affaire des assistants parlementaires du FN au Parlement européen. Entre le 2 décembre 2010 et le 14 février 2016, elle était censée travailler à 100% comme assistante parlementaire européenne tout en habitant à Garches (Hauts-de-Seine). Elle a admis travailler à hauteur de "20%" pour Marine Le Pen alors qu\'elle était officiellement employée à temps plein et rémunérée par le Parlement européen.',
+          penalty: '12 mois de prison avec sursis, 2 ans d\'inéligibilité',
+          status: 'Appel en cours (procès 13 janvier - 12 février 2026)',
+          sources: [
+            { title: 'Assistants FN - Wikipédia', url: 'https://fr.wikipedia.org/wiki/Affaire_des_assistants_parlementaires_du_Front_national_au_Parlement_europ%C3%A9en' },
+            { title: 'Procès en appel Catherine Griset - Parlons Politique', url: 'https://www.parlons-politique.fr/actualite-nationale/proces-en-appel-de-catherine-griset-condamnee-en-2025-laffaire-des-assistants-parlementaires-europeens-du-fn-la-realite-des-fonctions-et-la-charge-de-la-preuve_7484/' },
+            { title: 'Catherine Griset conserve son mandat - France Info', url: 'https://www.franceinfo.fr/politique/front-national/affaire-des-assistants-fn-au-parlement-europeen/assistants-parlementaires-du-fn-nicolas-bay-et-catherine-griset-conservent-leurs-mandats-de-depute-europeen-juge-le-conseil-d-etat_7558822.html' }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Julien Sanchez',
+    party: 'rn',
+    position: 'Eurodéputé RN, ancien maire de Beaucaire',
+    convictions: 1,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1983-10-19',
+      birthPlace: 'Argenteuil',
+      career: [
+        'Maire de Beaucaire (2014-2024)',
+        'Président du groupe RN au conseil régional d\'Occitanie',
+        'Eurodéputé (2024-)'
+      ],
+      justiceIncidents: [
+        {
+          type: 'Condamnation',
+          date: '2015',
+          description: 'Condamné en 2013 par le tribunal correctionnel de Nîmes, confirmé en appel en 2015, pour avoir laissé visibles sur son compte Facebook personnel des commentaires xénophobes visant les musulmans. En octobre 2011, lors de la campagne pour les élections législatives, deux utilisateurs ont posté des commentaires haineux visant son adversaire politique, l\'eurodéputé UMP Franck Proust. Julien Sanchez a été reconnu "auteur principal" de deux commentaires ciblant les musulmans publiés sur son mur Facebook, dont l\'un a été supprimé par son auteur le lendemain, tandis que l\'autre est resté en ligne plusieurs semaines. La CEDH a débouté Julien Sanchez à deux reprises (2021 et 2023), confirmant que la condamnation n\'enfreignait pas la Convention européenne des droits de l\'homme.',
+          penalty: '3 000€ d\'amende, 1 000€ de dommages et intérêts',
+          status: 'Définitive (confirmée en appel, CEDH 2023)',
+          sources: [
+            { title: 'CEDH déboute Julien Sanchez - France Bleu', url: 'https://www.francebleu.fr/infos/politique/la-cour-europeenne-des-droits-de-l-homme-deboute-a-nouveau-le-maire-de-beaucaire-julien-sanchez-1361529' },
+            { title: 'Sanchez c. France - CEDH', url: 'https://hudoc.echr.coe.int/fre?i=001-211599' },
+            { title: 'Propos racistes Facebook - France 3', url: 'https://france3-regions.franceinfo.fr/occitanie/gard/beaucaire/propos-racistes-sur-facebook-le-maire-de-beaucaire-julien-sanchez-a-nouveau-deboute-par-la-cour-europeenne-des-droits-de-l-homme-2773654.html' }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Fabrice Leggeri',
+    party: 'rn',
+    position: 'Eurodéputé RN, ancien directeur de Frontex',
+    convictions: 0,
+    ongoingCases: 1,
+    details: {
+      birthDate: '1968-03-28',
+      birthPlace: 'France',
+      career: [
+        'Diplômé de l\'ENA (1996)',
+        'Ministère de l\'Intérieur (1996-1999)',
+        'Directeur exécutif de Frontex (2015-2022)',
+        'Eurodéputé RN (2024-)'
+      ],
+      justiceIncidents: [
+        {
+          type: 'Enquête',
+          date: '2024-04',
+          description: 'Plainte déposée en avril 2024 par la Ligue des droits de l\'Homme (LDH) et l\'association Utopia 56 devant le tribunal de Paris pour complicité de crimes contre l\'humanité et complicité de torture. En tant qu\'ancien directeur de l\'agence européenne de garde-frontières Frontex (2015-2022), il est soupçonné d\'avoir participé, facilité ou couvert le refoulement d\'embarcations de migrants par les autorités grecques vers la Turquie ainsi que des interceptions par les garde-côtes libyens. Il a démissionné en 2022 suite à la publication du rapport d\'enquête de l\'OLAF (Office européen de lutte anti-fraude) du 15 avril 2022.',
+          status: 'Enquête en cours',
+          sources: [
+            { title: 'Fabrice Leggeri plainte crimes contre l\'humanité - LDH', url: 'https://www.ldh-france.org/fabrice-leggeri-ancien-directeur-de-frontex-poursuivi-pour-complicite-de-crimes-contre-lhumanite-et-de-torture/' },
+            { title: 'Leggeri visé par une plainte - Euractiv', url: 'https://www.euractiv.fr/section/elections/news/fabrice-leggeri-numero-3-de-la-liste-rn-vise-par-une-plainte-pour-complicite-de-crimes-contre-lhumanite-et-de-torture/' },
+            { title: 'Plainte Frontex - InfoMigrants', url: 'https://www.infomigrants.net/fr/post/56650/europeennes--le-numero-3-de-la-liste-rn-fabrice-leggeri-sous-le-coup-dune-plainte-pour-complicite-de-crimes-contre-lhumanite' }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Thierry Mariani',
+    party: 'rn',
+    position: 'Eurodéputé RN, ancien ministre',
+    convictions: 0,
+    ongoingCases: 1,
+    details: {
+      birthDate: '1958-08-08',
+      birthPlace: 'Orange',
+      career: [
+        'Député (1993-2017)',
+        'Secrétaire d\'État puis Ministre des Transports (2010-2012)',
+        'Eurodéputé (2019-)',
+        'Co-président de l\'association Dialogue Franco-Russe'
+      ],
+      justiceIncidents: [
+        {
+          type: 'Enquête',
+          date: '2021-09-29',
+          description: 'Deux enquêtes préliminaires ouvertes le 29 septembre 2021 concernant des soupçons de corruption, trafic d\'influence, abus de confiance et blanchiment. Les investigations portent sur l\'association Dialogue Franco-Russe, dont Thierry Mariani est co-président avec l\'ancien sénateur UDI Yves Pozzo di Borgo. Selon Le Monde, les deux auraient bénéficié de voyages financés par la Russie, et les enquêteurs cherchent à déterminer si ces cadeaux auraient pu servir de rémunération pour prendre des positions favorables à la Russie. Mariani affirme que les comptes de l\'association sont "transparents et contrôlés", qu\'il n\'a "jamais reçu de rémunération" et ne détient "aucune action dans une société russe".',
+          status: 'Enquête préliminaire en cours',
+          sources: [
+            { title: 'Thierry Mariani enquête corruption - Le JDD', url: 'https://www.lejdd.fr/Politique/le-depute-europeen-thierry-mariani-vise-par-une-enquete-pour-des-soupcons-de-corruption-4143067' },
+            { title: 'Mariani et Di Borgo visés - Observatoire Anticor', url: 'https://observatoire.anticor.org/2022/10/24/thierry-mariani-et-yves-pozzo-di-borgo-vises-par-une-enquete-pour-corruption-en-lien-avec-la-russie/' }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Marion Maréchal',
+    party: 'ni',
+    position: 'Eurodéputée (ex-Reconquête), ancienne députée',
+    convictions: 1,
+    ongoingCases: 1,
+    details: {
+      birthDate: '1989-12-10',
+      birthPlace: 'Saint-Germain-en-Laye',
+      career: [
+        'Députée de Vaucluse (2012-2017)',
+        'Directrice de l\'ISSEP Lyon',
+        'Eurodéputée (2024-)',
+        'Membre de Reconquête (2022-2024), exclue en juin 2024'
+      ],
+      justiceIncidents: [
+        {
+          type: 'Condamnation',
+          date: '2026-01-20',
+          description: 'Condamnée par le tribunal correctionnel de Lyon pour diffamation publique à l\'encontre de l\'IESH de Château-Chinon. Dans une vidéo diffusée sur YouTube et dans des propos tenus sur BFM TV en mai 2024, elle avait affirmé que l\'établissement privé musulman était au cœur d\'un "projet d\'islamisation de la France et de l\'Europe" et qu\'il s\'agissait d\'une "structure dangereuse". Elle avait également établi un lien implicite entre l\'IESH et des faits de terrorisme. L\'IESH a été dissous le 3 septembre 2025 par décret du ministère de l\'Intérieur.',
+          penalty: '2 000€ d\'amende',
+          status: 'Définitive',
+          sources: [
+            { title: 'Marion Maréchal condamnée diffamation IESH - Orange Actu', url: 'https://actu.orange.fr/videos/societe/marion-marechal-condamnee-pour-diffamation-publique-a-l-encontre-de-l-iesh-de-chateau-chinon-par-le-tribunal-correctionnel-de-lyon-CNT000002n7ObY.html' },
+            { title: 'IESH Château-Chinon condamnation - Saphir News', url: 'https://www.saphirnews.com/IESH-de-Chateau-Chinon-Marion-Marechal-condamnee-pour-diffamation-publique_a31078.html' }
+          ]
+        },
+        {
+          type: 'Relaxe',
+          date: '2025',
+          description: 'Relaxée par le tribunal correctionnel de Valence pour ses propos sur l\'école musulmane "Valeurs et Réussite" de Valence. En octobre 2024, sur CNews, elle avait accusé l\'association "Valeurs et Réussite" d\'être affiliée aux "Frères musulmans" et de poursuivre "le même objectif que Daech et Al-Qaïda". Le tribunal a considéré que les propos ne constituaient pas un fait précis.',
+          status: 'Relaxe définitive',
+          sources: [
+            { title: 'Marion Maréchal relaxée Valence - France Bleu', url: 'https://www.francebleu.fr/infos/faits-divers-justice/marion-marechal-relaxee-pour-ses-propos-sur-l-ecole-musulmane-de-valence-3256524' }
+          ]
+        },
+        {
+          type: 'Mise en examen',
+          date: '2025-03-11',
+          description: 'Mise en examen pour diffamation suite à ses propos à l\'encontre de l\'association musulmane "Valeurs et Réussite" de Valence. Elle sera jugée au tribunal correctionnel de Valence et encourt jusqu\'à 12 000 euros d\'amende.',
+          status: 'En cours d\'instruction',
+          sources: [
+            { title: 'Marion Maréchal mise en examen - France Bleu', url: 'https://www.francebleu.fr/infos/faits-divers-justice/marion-marechal-mise-en-examen-apres-ses-propos-a-l-encontre-d-une-association-musulmane-de-valence-5505231' },
+            { title: 'Mise en examen diffamation - France Info', url: 'https://www.franceinfo.fr/societe/justice/marion-marechal-mise-en-examen-pour-diffamation-apres-ses-propos-a-l-encontre-d-une-association-musulmane-de-valence_7123485.html' }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Guillaume Peltier',
+    party: 'ni',
+    position: 'Eurodéputé (ex-Reconquête), ancien député LR',
+    convictions: 0,
+    ongoingCases: 1,
+    details: {
+      birthDate: '1976-08-27',
+      birthPlace: 'Paris',
+      career: [
+        'Maire de Neung-sur-Beuvron',
+        'Député de Loir-et-Cher (2017-2022)',
+        'Vice-président délégué LR (2019-2021)',
+        'Eurodéputé (2024-)',
+        'Membre de Reconquête (2022-2024), exclu en juin 2024'
+      ],
+      justiceIncidents: [
+        {
+          type: 'Enquête',
+          date: '2023',
+          description: 'Enquête du Parquet national financier (PNF) sur l\'utilisation de fonds publics. Selon Mediapart, Guillaume Peltier est soupçonné d\'avoir employé des collaborateurs en utilisant des fonds de la région et de l\'Assemblée nationale pour des micro-partis politiques. Le dossier a été transféré du parquet de Blois au PNF.',
+          status: 'Enquête en cours',
+          sources: [
+            { title: 'Guillaume Peltier enquête PNF - France 3', url: 'https://france3-regions.franceinfo.fr/centre-val-de-loire/loir-cher/utilisation-de-fonds-publics-guillaume-peltier-vise-par-une-enquete-du-parquet-national-financier-2801960.html' },
+            { title: 'Peltier enquête fonds publics - Europe 1', url: 'https://www.europe1.fr/politique/loir-et-cher-enquete-ouverte-sur-lutilisation-de-fonds-publics-par-guillaume-peltier-4089697' }
+          ]
+        },
+        {
+          type: 'Classement',
+          date: '2014',
+          description: 'Garde à vue le 11 décembre 2014 dans le cadre d\'une enquête sur des soupçons de favoritisme et prise illégale d\'intérêts à la mairie de Menton. Une perquisition a eu lieu à son domicile de Neung-sur-Beuvron le 3 juin 2014. La plainte à l\'origine de l\'affaire a été jugée "inepte" par Jean-Claude Guibal, maire de Menton. Aucune charge n\'a finalement été retenue contre lui.',
+          status: 'Classé sans suite',
+          sources: [
+            { title: 'Guillaume Peltier mise en examen 2014 - E&R', url: 'https://www.egaliteetreconciliation.fr/Nouvelle-affaire-UMPS-Mise-en-examen-de-Guillaume-Peltier-29642.html' }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Rima Hassan',
+    party: 'lfi',
+    position: 'Eurodéputée LFI',
+    convictions: 0,
+    ongoingCases: 1,
+    details: {
+      birthDate: '1992-04-28',
+      birthPlace: 'Camp de Neirab (Syrie)',
+      career: [
+        'Juriste spécialisée en droit international',
+        'Fondatrice de l\'Observatoire des Camps de Réfugiés (2019)',
+        'Eurodéputée LFI (2024-)'
+      ],
+      justiceIncidents: [
+        {
+          type: 'Enquête',
+          date: '2024-04',
+          description: 'Entendue en audition libre par la Brigade de répression des crimes contre les personnes (BRDP) dans le cadre d\'enquêtes pour "apologie du terrorisme" suite à des déclarations concernant le conflit au Moyen-Orient. Première audition en avril 2024 concernant l\'utilisation du mot "soulèvement". Nouvelle audition concernant l\'utilisation de l\'expression "résistance armée palestinienne", un terme "utilisé par le Hamas lui-même pour se définir dans sa charte fondatrice de 1988". Une plainte de l\'eurodéputé François-Xavier Bellamy pour "menaces" a également été déposée en juillet 2024. Rima Hassan est visée par environ une douzaine de plaintes, dont plusieurs pour apologie du terrorisme, notamment de l\'Observatoire juif de France (30 décembre 2024).',
+          status: 'Enquête en cours',
+          sources: [
+            { title: 'Rima Hassan audition apologie terrorisme - France Info', url: 'https://www.franceinfo.fr/faits-divers/justice-proces/rima-hassan-a-ete-entendue-en-audition-libre-par-la-police-dans-le-cadre-d-enquetes-pour-apologie-du-terrorisme_7195290.html' },
+            { title: 'Rima Hassan plainte apologie - CNews', url: 'https://www.cnews.fr/france/2025-01-01/rima-hassan-leurodeputee-lfi-visee-par-une-plainte-pour-apologie-du-terrorisme' },
+            { title: 'Nouvelle plainte Rima Hassan - France Info', url: 'https://www.franceinfo.fr/politique/la-france-insoumise/l-eurodeputee-insoumise-rima-hassan-de-nouveau-visee-par-une-plainte-pour-apologie-du-terrorisme_6988649.html' }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Valérie Hayer',
+    party: 'ensemble',
+    position: 'Eurodéputée Renaissance, tête de liste 2024',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1986',
+      birthPlace: 'Mayenne',
+      career: [
+        'Conseillère municipale de Saint-Denis-d\'Anjou (2008-2015)',
+        'Conseillère départementale de la Mayenne (2015-2019)',
+        'Eurodéputée Renaissance (2019-)',
+        'Présidente du groupe Renew Europe (2024-)'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'François-Xavier Bellamy',
+    party: 'lr',
+    position: 'Eurodéputé LR, tête de liste 2024',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1985',
+      birthPlace: 'France',
+      career: [
+        'Professeur agrégé de philosophie',
+        'Adjoint au maire de Versailles (2008-2019)',
+        'Eurodéputé LR (2019-)',
+        'Vice-président exécutif LR (2023-)'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Marie Toussaint',
+    party: 'eelv',
+    position: 'Eurodéputée EELV, tête de liste 2024',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1987-05-27',
+      birthPlace: 'Lille',
+      career: [
+        'Juriste spécialisée en droit de l\'environnement',
+        'Fondatrice de l\'ONG "Notre Affaire à tous" (2015)',
+        'Eurodéputée EELV (2019-)',
+        'Vice-présidente du groupe Greens/EFA (2024-)'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Manon Aubry',
+    party: 'lfi',
+    position: 'Eurodéputée LFI, co-présidente groupe The Left',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1989-12-22',
+      birthPlace: 'Fréjus',
+      career: [
+        'Diplômée de Sciences Po Paris',
+        'Responsable plaidoyer chez Oxfam France (2014-2018)',
+        'Eurodéputée LFI (2019-)',
+        'Co-présidente du groupe The Left au Parlement européen (2019-)'
+      ],
+      justiceIncidents: []
+    }
+  },
+  {
+    id: nextId++,
+    name: 'Nathalie Loiseau',
+    party: 'ensemble',
+    position: 'Eurodéputée Renaissance, ancienne ministre',
+    convictions: 0,
+    ongoingCases: 0,
+    details: {
+      birthDate: '1964-06-01',
+      birthPlace: 'Neuilly-sur-Seine',
+      career: [
+        'Diplomate (1986-2012)',
+        'Directrice de l\'ENA (2012-2017)',
+        'Ministre des Affaires européennes (2017-2019)',
+        'Eurodéputée Renaissance (2019-)'
+      ],
       justiceIncidents: []
     }
   },
