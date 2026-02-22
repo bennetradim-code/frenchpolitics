@@ -22,12 +22,21 @@ export const CONVICTION_CATEGORIES = {
   },
   violencesSexuelles: {
     id: 'violencesSexuelles',
-    label: 'Violences et agressions sexuelles',
+    label: 'Violences sexuelles',
     color: '#7c3aed', // violet-600
     keywords: [
       'viol', 'viols', 'agression sexuelle', 'agressions sexuelles',
+      'harcèlement sexuel', 'atteinte sexuelle', 'administration de substance nuisible'
+    ]
+  },
+  violencesPhysiques: {
+    id: 'violencesPhysiques',
+    label: 'Violences physiques',
+    color: '#c026d3', // fuchsia-600
+    keywords: [
       'violences conjugales', 'violences volontaires', 'violences sur',
-      'harcèlement sexuel', 'administration de substance nuisible'
+      'violence physique', 'coups', 'agression physique',
+      'violences en réunion'
     ]
   },
   racisme: {

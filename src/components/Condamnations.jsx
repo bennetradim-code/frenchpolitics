@@ -75,8 +75,6 @@ export default function Condamnations() {
   const toggleCategory = (categoryId) => {
     setSelectedCategories(prev => {
       if (prev.includes(categoryId)) {
-        // Ne pas désélectionner si c'est la dernière catégorie
-        if (prev.length === 1) return prev
         return prev.filter(c => c !== categoryId)
       } else {
         return [...prev, categoryId]
@@ -89,8 +87,7 @@ export default function Condamnations() {
   }
 
   const deselectAll = () => {
-    // Garder au moins une catégorie sélectionnée
-    setSelectedCategories([Object.keys(CONVICTION_CATEGORIES)[0]])
+    setSelectedCategories([])
   }
 
   return (
